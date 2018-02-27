@@ -1,0 +1,520 @@
+/*******************************************************************************
+ *
+ *
+ * Styles for the unitedwayr11 demo layout.
+ ******************************************************************************/
+@media -sass-debug-info{filename{font-family:file\:\/\/\/drupal7\/main\/htdocs\/sites\/uwcark\.org\/themes\/unitedwayr11\/sass\/variables\/_headings\.scss}line{font-family:\0000315}}
+h1.title {
+  margin-top: 0; }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/drupal7\/main\/htdocs\/sites\/uwcark\.org\/themes\/unitedwayr11\/sass\/variables\/_headings\.scss}line{font-family:\0000319}}
+h2.block__title {
+  font-family: bold;
+  font-weight: normal;
+  font-size: 1em;
+  padding-bottom: .5em; }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/drupal7\/main\/htdocs\/sites\/uwcark\.org\/themes\/unitedwayr11\/sass\/variables\/_headings\.scss}line{font-family:\0000322}}
+  .sidebar-first h2.block__title, .sidebar-second h2.block__title {
+    border-bottom: none;
+    padding-bottom: none;
+    margin-bottom: .6em;
+    margin-top: 0; }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/drupal7\/main\/htdocs\/sites\/uwcark\.org\/themes\/unitedwayr11\/sass\/variables\/_typography\.scss}line{font-family:\000032}}
+body {
+  color: #454545;
+  font: 13px/1.833em Arial; }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/drupal7\/main\/htdocs\/sites\/uwcark\.org\/themes\/unitedwayr11\/sass\/variables\/_typography\.scss}line{font-family:\000036}}
+a:link, a:visited {
+  color: #10167f;
+  outline: medium none;
+  text-decoration: none; }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/drupal7\/main\/htdocs\/sites\/uwcark\.org\/themes\/unitedwayr11\/sass\/variables\/_typography\.scss}line{font-family:\0000311}}
+a:hover {
+  color: #000064;
+  text-decoration: underline; }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/drupal7\/main\/htdocs\/sites\/uwcark\.org\/themes\/unitedwayr11\/sass\/variables\/_typography\.scss}line{font-family:\0000315}}
+a:active {
+  color: #10167f;
+  outline: medium none;
+  text-decoration: none; }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/drupal7\/main\/htdocs\/sites\/uwcark\.org\/themes\/unitedwayr11\/sass\/variables\/_typography\.scss}line{font-family:\0000320}}
+hr {
+  background: none repeat scroll 0 0 #5294c1;
+  border: medium none;
+  height: 1px;
+  margin: 0;
+  padding: 0; }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/drupal7\/main\/htdocs\/sites\/uwcark\.org\/themes\/unitedwayr11\/sass\/variables\/_typography\.scss}line{font-family:\0000327}}
+h1, h2, h3, h4, h5, h6 {
+  color: #ff9600;
+  font-family: "din-condensed-web"; }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/drupal7\/main\/htdocs\/sites\/uwcark\.org\/themes\/unitedwayr11\/sass\/variables\/_typography\.scss}line{font-family:\0000331}}
+h1 {
+  font-size: 2.083em; }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/drupal7\/main\/htdocs\/sites\/uwcark\.org\/themes\/unitedwayr11\/sass\/variables\/_typography\.scss}line{font-family:\0000334}}
+h2 {
+  font-size: 2.8em; }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/drupal7\/main\/htdocs\/sites\/uwcark\.org\/themes\/unitedwayr11\/sass\/variables\/_typography\.scss}line{font-family:\0000337}}
+h1.site-name, h2.site-name {
+  font-size: 36px; }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/drupal7\/main\/htdocs\/sites\/uwcark\.org\/themes\/unitedwayr11\/sass\/variables\/_typography\.scss}line{font-family:\0000340}}
+h2.block-title {
+  font-size: 1.75em;
+  margin: 0; }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/drupal7\/main\/htdocs\/sites\/uwcark\.org\/themes\/unitedwayr11\/sass\/variables\/_typography\.scss}line{font-family:\0000344}}
+h2.node-title {
+  font-size: 2.083em; }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/drupal7\/main\/htdocs\/sites\/uwcark\.org\/themes\/unitedwayr11\/sass\/variables\/_typography\.scss}line{font-family:\0000347}}
+h3 {
+  color: #0a1274;
+  font-size: 2em; }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/drupal7\/main\/htdocs\/sites\/uwcark\.org\/themes\/unitedwayr11\/sass\/variables\/_typography\.scss}line{font-family:\0000351}}
+h4 {
+  color: #0a1274;
+  font-size: 1.25em; }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/drupal7\/main\/htdocs\/sites\/uwcark\.org\/themes\/unitedwayr11\/sass\/variables\/_typography\.scss}line{font-family:\0000355}}
+h5 {
+  font-size: 1.083em; }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/drupal7\/main\/htdocs\/sites\/uwcark\.org\/themes\/unitedwayr11\/sass\/variables\/_typography\.scss}line{font-family:\0000358}}
+h6 {
+  font-size: 1em; }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/drupal7\/main\/htdocs\/sites\/uwcark\.org\/themes\/unitedwayr11\/sass\/variables\/_typography\.scss}line{font-family:\0000361}}
+ol {
+  list-style: outside none decimal; }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/drupal7\/main\/htdocs\/sites\/uwcark\.org\/themes\/unitedwayr11\/sass\/variables\/_typography\.scss}line{font-family:\0000364}}
+ul {
+  list-style: outside none disc; }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/drupal7\/main\/htdocs\/sites\/uwcark\.org\/themes\/unitedwayr11\/sass\/variables\/_typography\.scss}line{font-family:\0000367}}
+ul ul, ol ol {
+  padding-top: 0.5em; }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/drupal7\/main\/htdocs\/sites\/uwcark\.org\/themes\/unitedwayr11\/sass\/variables\/_typography\.scss}line{font-family:\0000370}}
+.node ol, .node ul {
+  padding-left: 1.2em; }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/drupal7\/main\/htdocs\/sites\/uwcark\.org\/themes\/unitedwayr11\/sass\/variables\/_typography\.scss}line{font-family:\0000373}}
+.node ul.inline, .node ol.inline {
+  padding-left: 0; }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/drupal7\/main\/htdocs\/sites\/uwcark\.org\/themes\/unitedwayr11\/sass\/variables\/_typography\.scss}line{font-family:\0000376}}
+p, dl, hr, h1, h2, h3, h4, h5, h6, ol, ul, pre, table, address, fieldset {
+  margin-bottom: 13px; }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/drupal7\/main\/htdocs\/sites\/uwcark\.org\/themes\/unitedwayr11\/sass\/variables\/_typography\.scss}line{font-family:\0000379}}
+dt, .admin h3 {
+  font-size: 18px;
+  margin: 0; }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/drupal7\/main\/htdocs\/sites\/uwcark\.org\/themes\/unitedwayr11\/sass\/variables\/_typography\.scss}line{font-family:\0000383}}
+dd {
+  font-size: 0.9em;
+  font-style: italic;
+  margin-bottom: 13px;
+  padding-left: 10px; }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/drupal7\/main\/htdocs\/sites\/uwcark\.org\/themes\/unitedwayr11\/sass\/layouts\/unitedwayr11\/unitedwayr11\.layout\.scss}line{font-family:\0000315}}
+.l-constrained, .l-region--highlighted, .l-region--footer, .l-page {
+  width: 100%;
+  margin: 0 auto;
+  *zoom: 1; }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/oeadmin\/\.rvm\/gems\/ruby-1\.9\.3-p545\@omega\.unitedwayr11\/gems\/compass-0\.12\.2\/frameworks\/compass\/stylesheets\/compass\/utilities\/general\/_clearfix\.scss}line{font-family:\0000338}}
+  .l-constrained:after, .l-region--highlighted:after, .l-region--footer:after, .l-page:after {
+    content: "";
+    display: table;
+    clear: both; }
+
+/* Header */
+@media -sass-debug-info{filename{font-family:file\:\/\/\/drupal7\/main\/htdocs\/sites\/uwcark\.org\/themes\/unitedwayr11\/sass\/layouts\/unitedwayr11\/unitedwayr11\.layout\.scss}line{font-family:\0000322}}
+.l-region--header {
+  padding: 18px 0; }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/drupal7\/main\/htdocs\/sites\/uwcark\.org\/themes\/unitedwayr11\/sass\/layouts\/unitedwayr11\/unitedwayr11\.layout\.scss}line{font-family:\0000325}}
+  .l-region--header .block {
+    float: right; }
+
+/* Content Area */
+@media -sass-debug-info{filename{font-family:file\:\/\/\/drupal7\/main\/htdocs\/sites\/uwcark\.org\/themes\/unitedwayr11\/sass\/layouts\/unitedwayr11\/unitedwayr11\.layout\.scss}line{font-family:\0000331}}
+.l-highlighted-wrapper {
+  padding: 18px 0; }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/drupal7\/main\/htdocs\/sites\/uwcark\.org\/themes\/unitedwayr11\/sass\/layouts\/unitedwayr11\/unitedwayr11\.layout\.scss}line{font-family:\0000337}}
+.l-region--help {
+  margin-bottom: 18px; }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/drupal7\/main\/htdocs\/sites\/uwcark\.org\/themes\/unitedwayr11\/sass\/layouts\/unitedwayr11\/unitedwayr11\.layout\.scss}line{font-family:\0000340}}
+.l-main {
+  *margin-top: 36px;
+  *margin-bottom: 36px; }
+
+/* Sidebars */
+@media -sass-debug-info{filename{font-family:file\:\/\/\/drupal7\/main\/htdocs\/sites\/uwcark\.org\/themes\/unitedwayr11\/sass\/layouts\/unitedwayr11\/unitedwayr11\.layout\.scss}line{font-family:\0000347}}
+.l-region--sidebar-first,
+.l-region--sidebar-second {
+  padding: 0 1em; }
+
+/* Footer */
+@media -sass-debug-info{filename{font-family:file\:\/\/\/drupal7\/main\/htdocs\/sites\/uwcark\.org\/themes\/unitedwayr11\/sass\/layouts\/unitedwayr11\/unitedwayr11\.layout\.scss}line{font-family:\0000352}}
+.l-footer-wrapper {
+  padding: 18px 0; }
+
+@media (min-width: 64em) {
+@media -sass-debug-info{filename{font-family:file\:\/\/\/drupal7\/main\/htdocs\/sites\/uwcark\.org\/themes\/unitedwayr11\/sass\/layouts\/unitedwayr11\/unitedwayr11\.layout\.scss}line{font-family:\0000361}}
+  .l-constrained, .l-region--highlighted, .l-region--footer, .l-page {
+    width: 100%; }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/drupal7\/main\/htdocs\/sites\/uwcark\.org\/themes\/unitedwayr11\/sass\/layouts\/unitedwayr11\/unitedwayr11\.layout\.scss}line{font-family:\0000364}}
+  .main-menu-superfish-block {
+    display: none; }
+
+  /* Header */
+@media -sass-debug-info{filename{font-family:file\:\/\/\/drupal7\/main\/htdocs\/sites\/uwcark\.org\/themes\/unitedwayr11\/sass\/layouts\/unitedwayr11\/unitedwayr11\.layout\.scss}line{font-family:\0000368}}
+  .l-branding {
+    width: 100%;
+    float: right;
+    margin-left: 0;
+    margin-right: 0;
+    clear: none; }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/drupal7\/main\/htdocs\/sites\/uwcark\.org\/themes\/unitedwayr11\/sass\/layouts\/unitedwayr11\/unitedwayr11\.layout\.scss}line{font-family:\0000371}}
+  .l-region--navigation {
+    width: 48.93617%;
+    float: left;
+    margin-right: -100%;
+    margin-left: 25.53191%;
+    clear: none; }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/drupal7\/main\/htdocs\/sites\/uwcark\.org\/themes\/unitedwayr11\/sass\/layouts\/unitedwayr11\/unitedwayr11\.layout\.scss}line{font-family:\0000374}}
+  .l-region--header {
+    width: 23.40426%;
+    float: right;
+    margin-left: 0;
+    margin-right: 0;
+    clear: none; }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/drupal7\/main\/htdocs\/sites\/uwcark\.org\/themes\/unitedwayr11\/sass\/layouts\/unitedwayr11\/unitedwayr11\.layout\.scss}line{font-family:\0000377}}
+  .l-region--live-united {
+    width: 100%;
+    float: right;
+    margin-left: 0;
+    margin-right: 0;
+    clear: none; }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/drupal7\/main\/htdocs\/sites\/uwcark\.org\/themes\/unitedwayr11\/sass\/layouts\/unitedwayr11\/unitedwayr11\.layout\.scss}line{font-family:\0000380}}
+  .l-region--banner {
+    width: 100%;
+    float: right;
+    margin-left: 0;
+    margin-right: 0;
+    clear: none; }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/drupal7\/main\/htdocs\/sites\/uwcark\.org\/themes\/unitedwayr11\/sass\/layouts\/unitedwayr11\/unitedwayr11\.layout\.scss}line{font-family:\0000383}}
+  .l-region--postscript-bottom {
+    width: 100%;
+    float: right;
+    margin-left: 0;
+    margin-right: 0;
+    clear: none; }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/drupal7\/main\/htdocs\/sites\/uwcark\.org\/themes\/unitedwayr11\/sass\/layouts\/unitedwayr11\/unitedwayr11\.layout\.scss}line{font-family:\0000386}}
+  .l-region--get-involved {
+    width: 100%;
+    float: right;
+    margin-left: 0;
+    margin-right: 0;
+    clear: none; }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/drupal7\/main\/htdocs\/sites\/uwcark\.org\/themes\/unitedwayr11\/sass\/layouts\/unitedwayr11\/unitedwayr11\.layout\.scss}line{font-family:\0000389}}
+  .l-region--social-media {
+    width: 100%;
+    float: right;
+    margin-left: 0;
+    margin-right: 0;
+    clear: none; }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/drupal7\/main\/htdocs\/sites\/uwcark\.org\/themes\/unitedwayr11\/sass\/layouts\/unitedwayr11\/unitedwayr11\.layout\.scss}line{font-family:\0000394}}
+  .l-region--footer-top1 {
+    width: 48.93617%;
+    float: left;
+    margin-right: -100%;
+    margin-left: 0%;
+    clear: none; }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/drupal7\/main\/htdocs\/sites\/uwcark\.org\/themes\/unitedwayr11\/sass\/layouts\/unitedwayr11\/unitedwayr11\.layout\.scss}line{font-family:\0000397}}
+  .l-region--footer-top2 {
+    width: 48.93617%;
+    float: right;
+    margin-left: 0;
+    margin-right: 0;
+    clear: none; }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/drupal7\/main\/htdocs\/sites\/uwcark\.org\/themes\/unitedwayr11\/sass\/layouts\/unitedwayr11\/unitedwayr11\.layout\.scss}line{font-family:\00003100}}
+  .l-region--footer-bottom1 {
+    width: 48.93617%;
+    float: left;
+    margin-right: -100%;
+    margin-left: 0%;
+    clear: none;
+    clear: both;
+    float: none; }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/drupal7\/main\/htdocs\/sites\/uwcark\.org\/themes\/unitedwayr11\/sass\/layouts\/unitedwayr11\/unitedwayr11\.layout\.scss}line{font-family:\00003105}}
+  .l-region--footer-bottom2 {
+    width: 23.40426%;
+    float: left;
+    margin-right: -100%;
+    margin-left: 0%;
+    clear: none; }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/drupal7\/main\/htdocs\/sites\/uwcark\.org\/themes\/unitedwayr11\/sass\/layouts\/unitedwayr11\/unitedwayr11\.layout\.scss}line{font-family:\00003108}}
+  .l-region--footer-bottom3 {
+    width: 23.40426%;
+    float: left;
+    margin-right: -100%;
+    margin-left: 25.53191%;
+    clear: none; }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/drupal7\/main\/htdocs\/sites\/uwcark\.org\/themes\/unitedwayr11\/sass\/layouts\/unitedwayr11\/unitedwayr11\.layout\.scss}line{font-family:\00003111}}
+  .l-region--footer-bottom4 {
+    width: 23.40426%;
+    float: left;
+    margin-right: -100%;
+    margin-left: 51.06383%;
+    clear: none; }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/drupal7\/main\/htdocs\/sites\/uwcark\.org\/themes\/unitedwayr11\/sass\/layouts\/unitedwayr11\/unitedwayr11\.layout\.scss}line{font-family:\00003114}}
+  .l-region--footer-bottom5 {
+    width: 23.40426%;
+    float: right;
+    margin-left: 0;
+    margin-right: 0;
+    clear: none; }
+
+  /* Sidebars */
+@media -sass-debug-info{filename{font-family:file\:\/\/\/drupal7\/main\/htdocs\/sites\/uwcark\.org\/themes\/unitedwayr11\/sass\/layouts\/unitedwayr11\/unitedwayr11\.layout\.scss}line{font-family:\00003122}}
+  .has-two-sidebars .l-content,
+  .has-one-sidebar .l-content {
+    width: 100%;
+    float: right;
+    margin-left: 0;
+    margin-right: 0;
+    clear: none; }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/drupal7\/main\/htdocs\/sites\/uwcark\.org\/themes\/unitedwayr11\/sass\/layouts\/unitedwayr11\/unitedwayr11\.layout\.scss}line{font-family:\00003126}}
+  .has-two-sidebars .l-region--sidebar-first,
+  .has-two-sidebars .l-region--sidebar-second,
+  .has-one-sidebar .l-region--sidebar-first,
+  .has-one-sidebar .l-region--sidebar-second {
+    width: 100%;
+    float: right;
+    margin-left: 0;
+    margin-right: 0;
+    clear: none;
+    clear: right; } }
+@media (min-width: 70em) {
+@media -sass-debug-info{filename{font-family:file\:\/\/\/drupal7\/main\/htdocs\/sites\/uwcark\.org\/themes\/unitedwayr11\/sass\/layouts\/unitedwayr11\/unitedwayr11\.layout\.scss}line{font-family:\00003134}}
+  .l-constrained, .l-region--highlighted, .l-region--footer {
+    width: 90%; }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/drupal7\/main\/htdocs\/sites\/uwcark\.org\/themes\/unitedwayr11\/sass\/layouts\/unitedwayr11\/unitedwayr11\.layout\.scss}line{font-family:\00003137}}
+  .main-menu-superfish-block {
+    display: block; }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/drupal7\/main\/htdocs\/sites\/uwcark\.org\/themes\/unitedwayr11\/sass\/layouts\/unitedwayr11\/unitedwayr11\.layout\.scss}line{font-family:\00003140}}
+  .footer-bottom-zone {
+    width: 100%; }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/drupal7\/main\/htdocs\/sites\/uwcark\.org\/themes\/unitedwayr11\/sass\/layouts\/unitedwayr11\/unitedwayr11\.layout\.scss}line{font-family:\00003142}}
+    .footer-bottom-zone .footer-bottom-inner {
+      width: 80%; }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/drupal7\/main\/htdocs\/sites\/uwcark\.org\/themes\/unitedwayr11\/sass\/layouts\/unitedwayr11\/unitedwayr11\.layout\.scss}line{font-family:\00003146}}
+  .l-region {
+    clear: both; }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/drupal7\/main\/htdocs\/sites\/uwcark\.org\/themes\/unitedwayr11\/sass\/layouts\/unitedwayr11\/unitedwayr11\.layout\.scss}line{font-family:\00003153}}
+  .l-region--branding {
+    width: 23.40426%;
+    float: left;
+    margin-right: -100%;
+    margin-left: 0%;
+    clear: none; }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/drupal7\/main\/htdocs\/sites\/uwcark\.org\/themes\/unitedwayr11\/sass\/layouts\/unitedwayr11\/unitedwayr11\.layout\.scss}line{font-family:\00003156}}
+  .l-region--live-united {
+    width: 31.91489%;
+    float: left;
+    margin-right: -100%;
+    margin-left: 17.02128%;
+    clear: none; }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/drupal7\/main\/htdocs\/sites\/uwcark\.org\/themes\/unitedwayr11\/sass\/layouts\/unitedwayr11\/unitedwayr11\.layout\.scss}line{font-family:\00003159}}
+  .l-region--header1 {
+    width: 31.91489%;
+    float: right;
+    margin-left: 0;
+    margin-right: 0;
+    clear: none; }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/drupal7\/main\/htdocs\/sites\/uwcark\.org\/themes\/unitedwayr11\/sass\/layouts\/unitedwayr11\/unitedwayr11\.layout\.scss}line{font-family:\00003162}}
+  .l-region--header2 {
+    width: 40.42553%;
+    float: right;
+    margin-left: 0;
+    margin-right: 0;
+    clear: none;
+    clear: right; }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/drupal7\/main\/htdocs\/sites\/uwcark\.org\/themes\/unitedwayr11\/sass\/layouts\/unitedwayr11\/unitedwayr11\.layout\.scss}line{font-family:\00003166}}
+  .l-region--menu {
+    width: 100%;
+    float: right;
+    margin-left: 0;
+    margin-right: 0;
+    clear: none; }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/drupal7\/main\/htdocs\/sites\/uwcark\.org\/themes\/unitedwayr11\/sass\/layouts\/unitedwayr11\/unitedwayr11\.layout\.scss}line{font-family:\00003169}}
+  .l-region--postscript-bottom {
+    width: 100%;
+    float: right;
+    margin-left: 0;
+    margin-right: 0;
+    clear: none; }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/drupal7\/main\/htdocs\/sites\/uwcark\.org\/themes\/unitedwayr11\/sass\/layouts\/unitedwayr11\/unitedwayr11\.layout\.scss}line{font-family:\00003172}}
+  .l-region--banner {
+    width: 100%;
+    float: right;
+    margin-left: 0;
+    margin-right: 0;
+    clear: none;
+    clear: both; }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/drupal7\/main\/htdocs\/sites\/uwcark\.org\/themes\/unitedwayr11\/sass\/layouts\/unitedwayr11\/unitedwayr11\.layout\.scss}line{font-family:\00003176}}
+  .l-region--get-involved {
+    width: 40.42553%;
+    float: left;
+    margin-right: -100%;
+    margin-left: 0%;
+    clear: none; }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/drupal7\/main\/htdocs\/sites\/uwcark\.org\/themes\/unitedwayr11\/sass\/layouts\/unitedwayr11\/unitedwayr11\.layout\.scss}line{font-family:\00003179}}
+  .l-region--social-media {
+    width: 57.44681%;
+    float: right;
+    margin-left: 0;
+    margin-right: 0;
+    clear: none; }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/drupal7\/main\/htdocs\/sites\/uwcark\.org\/themes\/unitedwayr11\/sass\/layouts\/unitedwayr11\/unitedwayr11\.layout\.scss}line{font-family:\00003182}}
+  .l-region--footer-top1 {
+    width: 48.93617%;
+    float: left;
+    margin-right: -100%;
+    margin-left: 0%;
+    clear: none; }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/drupal7\/main\/htdocs\/sites\/uwcark\.org\/themes\/unitedwayr11\/sass\/layouts\/unitedwayr11\/unitedwayr11\.layout\.scss}line{font-family:\00003185}}
+  .l-region--footer-top2 {
+    width: 48.93617%;
+    float: right;
+    margin-left: 0;
+    margin-right: 0;
+    clear: none; }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/drupal7\/main\/htdocs\/sites\/uwcark\.org\/themes\/unitedwayr11\/sass\/layouts\/unitedwayr11\/unitedwayr11\.layout\.scss}line{font-family:\00003188}}
+  .l-region--footer-bottom1 {
+    width: 48.93617%;
+    float: left;
+    margin-right: -100%;
+    margin-left: 0%;
+    clear: none;
+    clear: both;
+    float: none; }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/drupal7\/main\/htdocs\/sites\/uwcark\.org\/themes\/unitedwayr11\/sass\/layouts\/unitedwayr11\/unitedwayr11\.layout\.scss}line{font-family:\00003193}}
+  .l-region--footer-bottom2 {
+    width: 23.40426%;
+    float: left;
+    margin-right: -100%;
+    margin-left: 0%;
+    clear: none; }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/drupal7\/main\/htdocs\/sites\/uwcark\.org\/themes\/unitedwayr11\/sass\/layouts\/unitedwayr11\/unitedwayr11\.layout\.scss}line{font-family:\00003196}}
+  .l-region--footer-bottom3 {
+    width: 23.40426%;
+    float: left;
+    margin-right: -100%;
+    margin-left: 25.53191%;
+    clear: none; }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/drupal7\/main\/htdocs\/sites\/uwcark\.org\/themes\/unitedwayr11\/sass\/layouts\/unitedwayr11\/unitedwayr11\.layout\.scss}line{font-family:\00003199}}
+  .l-region--footer-bottom4 {
+    width: 23.40426%;
+    float: left;
+    margin-right: -100%;
+    margin-left: 51.06383%;
+    clear: none; }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/drupal7\/main\/htdocs\/sites\/uwcark\.org\/themes\/unitedwayr11\/sass\/layouts\/unitedwayr11\/unitedwayr11\.layout\.scss}line{font-family:\00003202}}
+  .l-region--footer-bottom5 {
+    width: 23.40426%;
+    float: right;
+    margin-left: 0;
+    margin-right: 0;
+    clear: none; }
+
+  /* Sidebars */
+@media -sass-debug-info{filename{font-family:file\:\/\/\/drupal7\/main\/htdocs\/sites\/uwcark\.org\/themes\/unitedwayr11\/sass\/layouts\/unitedwayr11\/unitedwayr11\.layout\.scss}line{font-family:\00003210}}
+  .has-one-sidebar .l-content {
+    width: 74.46809%;
+    float: right;
+    margin-left: 0;
+    margin-right: 0;
+    clear: none; }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/drupal7\/main\/htdocs\/sites\/uwcark\.org\/themes\/unitedwayr11\/sass\/layouts\/unitedwayr11\/unitedwayr11\.layout\.scss}line{font-family:\00003213}}
+  .has-one-sidebar .l-region--sidebar-first {
+    width: 23.40426%;
+    float: left;
+    margin-right: -100%;
+    margin-left: 0%;
+    clear: none;
+    clear: none; }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/drupal7\/main\/htdocs\/sites\/uwcark\.org\/themes\/unitedwayr11\/sass\/layouts\/unitedwayr11\/unitedwayr11\.layout\.scss}line{font-family:\00003219}}
+  .has-two-sidebars .l-content {
+    width: 48.93617%;
+    float: left;
+    margin-right: -100%;
+    margin-left: 0%;
+    clear: none; }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/drupal7\/main\/htdocs\/sites\/uwcark\.org\/themes\/unitedwayr11\/sass\/layouts\/unitedwayr11\/unitedwayr11\.layout\.scss}line{font-family:\00003223}}
+  .has-two-sidebars .l-region--sidebar-first,
+  .has-two-sidebars .l-region--sidebar-second {
+    width: 23.40426%;
+    float: left;
+    margin-right: -100%;
+    margin-left: 51.06383%;
+    clear: none;
+    clear: none; }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/drupal7\/main\/htdocs\/sites\/uwcark\.org\/themes\/unitedwayr11\/sass\/layouts\/unitedwayr11\/unitedwayr11\.layout\.scss}line{font-family:\00003227}}
+  .has-two-sidebars .l-region--sidebar-second {
+    width: 23.40426%;
+    float: right;
+    margin-left: 0;
+    margin-right: 0;
+    clear: none; } }
