@@ -1,0 +1,11 @@
+/Users/jollikhoo/RazorPagesMovie/bin/Debug/netcoreapp2.0/RazorPagesMovie.deps.json
+/Users/jollikhoo/RazorPagesMovie/bin/Debug/netcoreapp2.0/RazorPagesMovie.runtimeconfig.json
+/Users/jollikhoo/RazorPagesMovie/bin/Debug/netcoreapp2.0/RazorPagesMovie.runtimeconfig.dev.json
+/Users/jollikhoo/RazorPagesMovie/bin/Debug/netcoreapp2.0/RazorPagesMovie.dll
+/Users/jollikhoo/RazorPagesMovie/bin/Debug/netcoreapp2.0/RazorPagesMovie.pdb
+/Users/jollikhoo/RazorPagesMovie/obj/Debug/netcoreapp2.0/RazorPagesMovie.csproj.CoreCompileInputs.cache
+/Users/jollikhoo/RazorPagesMovie/obj/Debug/netcoreapp2.0/RazorPagesMovie.AssemblyInfoInputs.cache
+/Users/jollikhoo/RazorPagesMovie/obj/Debug/netcoreapp2.0/RazorPagesMovie.AssemblyInfo.cs
+/Users/jollikhoo/RazorPagesMovie/obj/Debug/netcoreapp2.0/RazorPagesMovie.dll
+/Users/jollikhoo/RazorPagesMovie/obj/Debug/netcoreapp2.0/RazorPagesMovie.pdb
+/Users/jollikhoo/RazorPagesMovie/obj/Debug/netcoreapp2.0/RazorPagesMovie.csprojResolveAssemblyReference.cache
