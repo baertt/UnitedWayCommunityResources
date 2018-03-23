@@ -1,19 +1,43 @@
 ﻿@page
 @model ContactModel
 @{
-    ViewData["Title"] = "Contact";
+    ViewData["Title"] = "Organization Information Update";
 }
-<h2>@ViewData["Title"]</h2>
-<h3>@Model.Message</h3>
 
-<address>
-    One Microsoft Way<br />
-    Redmond, WA 98052-6399<br />
-    <abbr title="Phone">P:</abbr>
-    425.555.0100
-</address>
+<html>
+<body>
+    <p>
+        Enter your name.
+    </p>
+    <div asp-validation-summary="All"></div>
+    <form method="POST">
+        <div>Organization Name: <input asp-for="Customer.Name" /></div>
 
-<address>
-    <strong>Support:</strong> <a href="mailto:Support@example.com">Support@example.com</a><br />
-    <strong>Marketing:</strong> <a href="mailto:Marketing@example.com">Marketing@example.com</a>
-</address>
+        <!-- Address -->
+        <div>Street Address: <input asp-for="Customer.Street_Address" /></div>
+        <div>City: <input asp-for="Customer.City" /></div>
+        <div>Zip Code: <input asp-for="Customer.Zip" /></div>
+
+        <!-- Contact Information -->
+        <div>Email Address: <input asp-for="Customer.Email" /></div>
+        <div>Phone Number: <input asp-for="Customer.Phone" /></div>
+
+        <!-- Resources -->
+        <div>Clothing: <input asp-for="Customer.Clothing" /></div>
+        <div>Education: <input asp-for="Customer.Education" /></div>
+        <div>Employment: <input asp-for="Customer.Employment" /></div>
+        <div>Finances: <input asp-for="Customer.Finances" /></div>
+        <div>Food: <input asp-for="Customer.Food" /></div>
+        <div>Natural Disaster: <input asp-for="Customer.Natural_Disaster" /></div>
+        <div>Senior Assistance: <input asp-for="Customer.Senior" /></div>
+        <div>Rent and Utilities Assistance: <input asp-for="Customer.Rent_Utilities" /></div>
+        <div>Medical and Prescription Assistance: <input asp-for="Customer.Medical_Prescription" /></div>
+        <div>Veterans Assistance: <input asp-for="Customer.Veterans" /></div>
+        <div>Other Resources: <input asp-for="Customer.Other_Resources" /></div>
+        <div>Other Resources Text: <input asp-for="Customer.Other_Resources_Text" /></div>
+
+
+        <input type="submit" />
+    </form>
+</body>
+</html>
