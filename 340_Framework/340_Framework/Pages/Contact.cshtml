@@ -6,205 +6,204 @@
 
 <html>
 <body>
-    <p>
-        Enter your name.
-    </p>
     <div asp-validation-summary="All"></div>
     <form method="POST">
-        <div>Organization Name: <input asp-for="Customer.Name" /></div>
+        <div>Organization Name: <input asp-for="Orgs.Name" /></div>
 
         <!-- Address -->
-        <div>Street Address: <input asp-for="Customer.Street_Address" /></div>
-        <div>City: <input asp-for="Customer.City" /></div>
-        <div>Zip Code: <input asp-for="Customer.Zip" /></div>
+        <div>Street Address: <input asp-for="Orgs.Street_Address" /></div>
+        <div>City: <input asp-for="Orgs.City" /></div>
+        <div>Zip Code: <input asp-for="Orgs.Zip" /></div>
 
         <!-- Contact Information -->
-        <div>Email Address: <input asp-for="Customer.Email" /></div>
-        <div>Phone Number: <input asp-for="Customer.Phone" /></div>
+        <div>Email Address: <input asp-for="Orgs.Email" /></div>
+        <div>Phone Number: <input asp-for="Orgs.Phone" /></div>
 
         <!-- Resources -->
-        <div>Clothing: <input asp-for="Customer.Clothing" /></div>
-        <div>Education: <input asp-for="Customer.Education" /></div>
-        <div>Employment: <input asp-for="Customer.Employment" /></div>
-        <div>Finances: <input asp-for="Customer.Finances" /></div>
-        <div>Food: <input asp-for="Customer.Food" /></div>
-        <div>Natural Disaster: <input asp-for="Customer.Natural_Disaster" /></div>
-        <div>Senior Assistance: <input asp-for="Customer.Senior" /></div>
-        <div>Rent and Utilities Assistance: <input asp-for="Customer.Rent_Utilities" /></div>
-        <div>Medical and Prescription Assistance: <input asp-for="Customer.Medical_Prescription" /></div>
-        <div>Veterans Assistance: <input asp-for="Customer.Veterans" /></div>
-        <div>Other Resources: <input asp-for="Customer.Other_Resources" /></div>
-        <div>Other Resources Text: <input asp-for="Customer.Other_Resources_Text" /></div>
+        <div>Clothing: <input asp-for="Orgs.Clothing" /></div>
+        <div>Education: <input asp-for="Orgs.Education" /></div>
+        <div>Employment: <input asp-for="Orgs.Employment" /></div>
+        <div>Finances: <input asp-for="Orgs.Finances" /></div>
+        <div>Food: <input asp-for="Orgs.Food" /></div>
+        <div>Natural Disaster: <input asp-for="Orgs.Natural_Disaster" /></div>
+        <div>Senior Assistance: <input asp-for="Orgs.Senior" /></div>
+        <div>Rent and Utilities Assistance: <input asp-for="Orgs.Rent_Utilities" /></div>
+        <div>Medical and Prescription Assistance: <input asp-for="Orgs.Medical_Prescription" /></div>
+        <div>Veterans Assistance: <input asp-for="Orgs.Veterans" /></div>
+        <div>Other Resources: <input asp-for="Orgs.Other_Resources" /></div>
+        <div>Other Resources Text: <input asp-for="Orgs.Other_Resources_Text" /></div>
 
         <!-- Requirements for Help -->
-        <div>Requires Photo ID: <input asp-for="Customer.Photo_ID" /></div>
-        <div>Other Requirements: <input asp-for="Customer.Other_Requirements" /></div>
-        <div>Other Requirements: <input asp-for="Customer.Other_Requirements_Text" /></div>
+        <div>Requires Photo ID: <input asp-for="Orgs.Photo_ID" /></div>
+        <div>Other Requirements: <input asp-for="Orgs.Other_Requirements" /></div>
+        <div>Other Requirements: <input asp-for="Orgs.Other_Requirements_Text" /></div>
 
         <!-- Appointments -->
-        <div>Appointments Availible: <input asp-for="Customer.Appointments_Availible" /></div>
-        <div>Appointments Required: <input asp-for="Customer.Appointments_Required" /></div>
+        <div>Appointments Availible: <input asp-for="Orgs.Appointments_Availible" /></div>
+        <div>Appointments Required: <input asp-for="Orgs.Appointments_Required" /></div>
 
         <!-- Days Open -->
         <div> 1st 2nd 3rd 4th</div>
         <div>
-            Monday: <input asp-for="Customer.Monday1" /> <input asp-for="Customer.Monday2" />
-            <input asp-for="Customer.Monday3" /> <input asp-for="Customer.Monday4" />
+            Monday: <input asp-for="Orgs.Monday1" /> <input asp-for="Orgs.Monday2" />
+            <input asp-for="Orgs.Monday3" /> <input asp-for="Orgs.Monday4" />
         </div>
         <div>
-            Tuesday: <input asp-for="Customer.Tuesday1" /> <input asp-for="Customer.Tuesday2" />
-            <input asp-for="Customer.Tuesday3" /> <input asp-for="Customer.Tuesday4" />
+            Tuesday: <input asp-for="Orgs.Tuesday1" /> <input asp-for="Orgs.Tuesday2" />
+            <input asp-for="Orgs.Tuesday3" /> <input asp-for="Orgs.Tuesday4" />
         </div>
         <div>
-            Wednesday: <input asp-for="Customer.Wednesday1" /> <input asp-for="Customer.Wednesday2" />
-            <input asp-for="Customer.Wednesday3" /> <input asp-for="Customer.Wednesday4" />
+            Wednesday: <input asp-for="Orgs.Wednesday1" /> <input asp-for="Orgs.Wednesday2" />
+            <input asp-for="Orgs.Wednesday3" /> <input asp-for="Orgs.Wednesday4" />
         </div>
         <div>
-            Thursday: <input asp-for="Customer.Thursday1" /> <input asp-for="Customer.Thursday2" />
-            <input asp-for="Customer.Thursday3" /> <input asp-for="Customer.Thursday4" />
+            Thursday: <input asp-for="Orgs.Thursday1" /> <input asp-for="Orgs.Thursday2" />
+            <input asp-for="Orgs.Thursday3" /> <input asp-for="Orgs.Thursday4" />
         </div>
         <div>
-            Friday: <input asp-for="Customer.Friday1" /> <input asp-for="Customer.Friday2" />
-            <input asp-for="Customer.Friday3" /> <input asp-for="Customer.Friday4" />
+            Friday: <input asp-for="Orgs.Friday1" /> <input asp-for="Orgs.Friday2" />
+            <input asp-for="Orgs.Friday3" /> <input asp-for="Orgs.Friday4" />
         </div>
         <div>
-            Saturday: <input asp-for="Customer.Saturday1" /> <input asp-for="Customer.Saturday2" />
-            <input asp-for="Customer.Saturday3" /> <input asp-for="Customer.Saturday4" />
+            Saturday: <input asp-for="Orgs.Saturday1" /> <input asp-for="Orgs.Saturday2" />
+            <input asp-for="Orgs.Saturday3" /> <input asp-for="Orgs.Saturday4" />
         </div>
         <div>
-            Sunday: <input asp-for="Customer.Sunday1" /> <input asp-for="Customer.Sunday2" />
-            <input asp-for="Customer.Sunday3" /> <input asp-for="Customer.Sunday4" />
+            Sunday: <input asp-for="Orgs.Sunday1" /> <input asp-for="Orgs.Sunday2" />
+            <input asp-for="Orgs.Sunday3" /> <input asp-for="Orgs.Sunday4" />
         </div>
         <div>
             24HR 6:00 6:30 7:00 7:30 8:00 8:30 9:00 9:30 10:00 10:30 11:00 11:30 12:00 12:30
             1:00 1:30 2:00 2:30 3:00 3:30 4:00 4:30 5:00 5:30 6:00 6:30 7:00 7:30 8:00 8:30
         </div>
         <div>
-            Monday: <input asp-for="Customer.Monday24HR" />
-            <input asp-for="Customer.Monday600" /> <input asp-for="Customer.Monday630" />
-            <input asp-for="Customer.Monday700" /> <input asp-for="Customer.Monday730" />
-            <input asp-for="Customer.Monday800" /> <input asp-for="Customer.Monday830" />
-            <input asp-for="Customer.Monday900" /> <input asp-for="Customer.Monday930" />
-            <input asp-for="Customer.Monday1000" /> <input asp-for="Customer.Monday1030" />
-            <input asp-for="Customer.Monday1100" /> <input asp-for="Customer.Monday1130" />
-            <input asp-for="Customer.Monday1200" /> <input asp-for="Customer.Monday1230" />
-            <input asp-for="Customer.Monday1300" /> <input asp-for="Customer.Monday1330" />
-            <input asp-for="Customer.Monday1400" /> <input asp-for="Customer.Monday1430" />
-            <input asp-for="Customer.Monday1500" /> <input asp-for="Customer.Monday1530" />
-            <input asp-for="Customer.Monday1600" /> <input asp-for="Customer.Monday1630" />
-            <input asp-for="Customer.Monday1700" /> <input asp-for="Customer.Monday1730" />
-            <input asp-for="Customer.Monday1800" /> <input asp-for="Customer.Monday1830" />
-            <input asp-for="Customer.Monday1900" /> <input asp-for="Customer.Monday1930" />
-            <input asp-for="Customer.Monday2000" /> <input asp-for="Customer.Monday2030" />
+            Monday: <input asp-for="Orgs.Monday24HR" />
+            <input asp-for="Orgs.Monday600" /> <input asp-for="Orgs.Monday630" />
+            <input asp-for="Orgs.Monday700" /> <input asp-for="Orgs.Monday730" />
+            <input asp-for="Orgs.Monday800" /> <input asp-for="Orgs.Monday830" />
+            <input asp-for="Orgs.Monday900" /> <input asp-for="Orgs.Monday930" />
+            <input asp-for="Orgs.Monday1000" /> <input asp-for="Orgs.Monday1030" />
+            <input asp-for="Orgs.Monday1100" /> <input asp-for="Orgs.Monday1130" />
+            <input asp-for="Orgs.Monday1200" /> <input asp-for="Orgs.Monday1230" />
+            <input asp-for="Orgs.Monday1300" /> <input asp-for="Orgs.Monday1330" />
+            <input asp-for="Orgs.Monday1400" /> <input asp-for="Orgs.Monday1430" />
+            <input asp-for="Orgs.Monday1500" /> <input asp-for="Orgs.Monday1530" />
+            <input asp-for="Orgs.Monday1600" /> <input asp-for="Orgs.Monday1630" />
+            <input asp-for="Orgs.Monday1700" /> <input asp-for="Orgs.Monday1730" />
+            <input asp-for="Orgs.Monday1800" /> <input asp-for="Orgs.Monday1830" />
+            <input asp-for="Orgs.Monday1900" /> <input asp-for="Orgs.Monday1930" />
+            <input asp-for="Orgs.Monday2000" /> <input asp-for="Orgs.Monday2030" />
         </div>
         <div>
-            Tuesday: <input asp-for="Customer.Tuesday24HR" />
-            <input asp-for="Customer.Tuesday600" /> <input asp-for="Customer.Tuesday630" />
-            <input asp-for="Customer.Tuesday700" /> <input asp-for="Customer.Tuesday730" />
-            <input asp-for="Customer.Tuesday800" /> <input asp-for="Customer.Tuesday830" />
-            <input asp-for="Customer.Tuesday900" /> <input asp-for="Customer.Tuesday930" />
-            <input asp-for="Customer.Tuesday1000" /> <input asp-for="Customer.Tuesday1030" />
-            <input asp-for="Customer.Tuesday1100" /> <input asp-for="Customer.Tuesday1130" />
-            <input asp-for="Customer.Tuesday1200" /> <input asp-for="Customer.Tuesday1230" />
-            <input asp-for="Customer.Tuesday1300" /> <input asp-for="Customer.Tuesday1330" />
-            <input asp-for="Customer.Tuesday1400" /> <input asp-for="Customer.Tuesday1430" />
-            <input asp-for="Customer.Tuesday1500" /> <input asp-for="Customer.Tuesday1530" />
-            <input asp-for="Customer.Tuesday1600" /> <input asp-for="Customer.Tuesday1630" />
-            <input asp-for="Customer.Tuesday1700" /> <input asp-for="Customer.Tuesday1730" />
-            <input asp-for="Customer.Tuesday1800" /> <input asp-for="Customer.Tuesday1830" />
-            <input asp-for="Customer.Tuesday1900" /> <input asp-for="Customer.Tuesday1930" />
-            <input asp-for="Customer.Tuesday2000" /> <input asp-for="Customer.Tuesday2030" />
+            Tuesday: <input asp-for="Orgs.Tuesday24HR" />
+            <input asp-for="Orgs.Tuesday600" /> <input asp-for="Orgs.Tuesday630" />
+            <input asp-for="Orgs.Tuesday700" /> <input asp-for="Orgs.Tuesday730" />
+            <input asp-for="Orgs.Tuesday800" /> <input asp-for="Orgs.Tuesday830" />
+            <input asp-for="Orgs.Tuesday900" /> <input asp-for="Orgs.Tuesday930" />
+            <input asp-for="Orgs.Tuesday1000" /> <input asp-for="Orgs.Tuesday1030" />
+            <input asp-for="Orgs.Tuesday1100" /> <input asp-for="Orgs.Tuesday1130" />
+            <input asp-for="Orgs.Tuesday1200" /> <input asp-for="Orgs.Tuesday1230" />
+            <input asp-for="Orgs.Tuesday1300" /> <input asp-for="Orgs.Tuesday1330" />
+            <input asp-for="Orgs.Tuesday1400" /> <input asp-for="Orgs.Tuesday1430" />
+            <input asp-for="Orgs.Tuesday1500" /> <input asp-for="Orgs.Tuesday1530" />
+            <input asp-for="Orgs.Tuesday1600" /> <input asp-for="Orgs.Tuesday1630" />
+            <input asp-for="Orgs.Tuesday1700" /> <input asp-for="Orgs.Tuesday1730" />
+            <input asp-for="Orgs.Tuesday1800" /> <input asp-for="Orgs.Tuesday1830" />
+            <input asp-for="Orgs.Tuesday1900" /> <input asp-for="Orgs.Tuesday1930" />
+            <input asp-for="Orgs.Tuesday2000" /> <input asp-for="Orgs.Tuesday2030" />
         </div>
         <div>
-            Wednesday: <input asp-for="Customer.Wednesday24HR" />
-            <input asp-for="Customer.Wednesday600" /> <input asp-for="Customer.Wednesday630" />
-            <input asp-for="Customer.Wednesday700" /> <input asp-for="Customer.Wednesday730" />
-            <input asp-for="Customer.Wednesday800" /> <input asp-for="Customer.Wednesday830" />
-            <input asp-for="Customer.Wednesday900" /> <input asp-for="Customer.Wednesday930" />
-            <input asp-for="Customer.Wednesday1000" /> <input asp-for="Customer.Wednesday1030" />
-            <input asp-for="Customer.Wednesday1100" /> <input asp-for="Customer.Wednesday1130" />
-            <input asp-for="Customer.Wednesday1200" /> <input asp-for="Customer.Wednesday1230" />
-            <input asp-for="Customer.Wednesday1300" /> <input asp-for="Customer.Wednesday1330" />
-            <input asp-for="Customer.Wednesday1400" /> <input asp-for="Customer.Wednesday1430" />
-            <input asp-for="Customer.Wednesday1500" /> <input asp-for="Customer.Wednesday1530" />
-            <input asp-for="Customer.Wednesday1600" /> <input asp-for="Customer.Wednesday1630" />
-            <input asp-for="Customer.Wednesday1700" /> <input asp-for="Customer.Wednesday1730" />
-            <input asp-for="Customer.Wednesday1800" /> <input asp-for="Customer.Wednesday1830" />
-            <input asp-for="Customer.Wednesday1900" /> <input asp-for="Customer.Wednesday1930" />
-            <input asp-for="Customer.Wednesday2000" /> <input asp-for="Customer.Wednesday2030" />
+            Wednesday: <input asp-for="Orgs.Wednesday24HR" />
+            <input asp-for="Orgs.Wednesday600" /> <input asp-for="Orgs.Wednesday630" />
+            <input asp-for="Orgs.Wednesday700" /> <input asp-for="Orgs.Wednesday730" />
+            <input asp-for="Orgs.Wednesday800" /> <input asp-for="Orgs.Wednesday830" />
+            <input asp-for="Orgs.Wednesday900" /> <input asp-for="Orgs.Wednesday930" />
+            <input asp-for="Orgs.Wednesday1000" /> <input asp-for="Orgs.Wednesday1030" />
+            <input asp-for="Orgs.Wednesday1100" /> <input asp-for="Orgs.Wednesday1130" />
+            <input asp-for="Orgs.Wednesday1200" /> <input asp-for="Orgs.Wednesday1230" />
+            <input asp-for="Orgs.Wednesday1300" /> <input asp-for="Orgs.Wednesday1330" />
+            <input asp-for="Orgs.Wednesday1400" /> <input asp-for="Orgs.Wednesday1430" />
+            <input asp-for="Orgs.Wednesday1500" /> <input asp-for="Orgs.Wednesday1530" />
+            <input asp-for="Orgs.Wednesday1600" /> <input asp-for="Orgs.Wednesday1630" />
+            <input asp-for="Orgs.Wednesday1700" /> <input asp-for="Orgs.Wednesday1730" />
+            <input asp-for="Orgs.Wednesday1800" /> <input asp-for="Orgs.Wednesday1830" />
+            <input asp-for="Orgs.Wednesday1900" /> <input asp-for="Orgs.Wednesday1930" />
+            <input asp-for="Orgs.Wednesday2000" /> <input asp-for="Orgs.Wednesday2030" />
         </div>
         <div>
-            Thursday: <input asp-for="Customer.Thursday24HR" />
-            <input asp-for="Customer.Thursday600" /> <input asp-for="Customer.Thursday630" />
-            <input asp-for="Customer.Thursday700" /> <input asp-for="Customer.Thursday730" />
-            <input asp-for="Customer.Thursday800" /> <input asp-for="Customer.Thursday830" />
-            <input asp-for="Customer.Thursday900" /> <input asp-for="Customer.Thursday930" />
-            <input asp-for="Customer.Thursday1000" /> <input asp-for="Customer.Thursday1030" />
-            <input asp-for="Customer.Thursday1100" /> <input asp-for="Customer.Thursday1130" />
-            <input asp-for="Customer.Thursday1200" /> <input asp-for="Customer.Thursday1230" />
-            <input asp-for="Customer.Thursday1300" /> <input asp-for="Customer.Thursday1330" />
-            <input asp-for="Customer.Thursday1400" /> <input asp-for="Customer.Thursday1430" />
-            <input asp-for="Customer.Thursday1500" /> <input asp-for="Customer.Thursday1530" />
-            <input asp-for="Customer.Thursday1600" /> <input asp-for="Customer.Thursday1630" />
-            <input asp-for="Customer.Thursday1700" /> <input asp-for="Customer.Thursday1730" />
-            <input asp-for="Customer.Thursday1800" /> <input asp-for="Customer.Thursday1830" />
-            <input asp-for="Customer.Thursday1900" /> <input asp-for="Customer.Thursday1930" />
-            <input asp-for="Customer.Thursday2000" /> <input asp-for="Customer.Thursday2030" />
+            Thursday: <input asp-for="Orgs.Thursday24HR" />
+            <input asp-for="Orgs.Thursday600" /> <input asp-for="Orgs.Thursday630" />
+            <input asp-for="Orgs.Thursday700" /> <input asp-for="Orgs.Thursday730" />
+            <input asp-for="Orgs.Thursday800" /> <input asp-for="Orgs.Thursday830" />
+            <input asp-for="Orgs.Thursday900" /> <input asp-for="Orgs.Thursday930" />
+            <input asp-for="Orgs.Thursday1000" /> <input asp-for="Orgs.Thursday1030" />
+            <input asp-for="Orgs.Thursday1100" /> <input asp-for="Orgs.Thursday1130" />
+            <input asp-for="Orgs.Thursday1200" /> <input asp-for="Orgs.Thursday1230" />
+            <input asp-for="Orgs.Thursday1300" /> <input asp-for="Orgs.Thursday1330" />
+            <input asp-for="Orgs.Thursday1400" /> <input asp-for="Orgs.Thursday1430" />
+            <input asp-for="Orgs.Thursday1500" /> <input asp-for="Orgs.Thursday1530" />
+            <input asp-for="Orgs.Thursday1600" /> <input asp-for="Orgs.Thursday1630" />
+            <input asp-for="Orgs.Thursday1700" /> <input asp-for="Orgs.Thursday1730" />
+            <input asp-for="Orgs.Thursday1800" /> <input asp-for="Orgs.Thursday1830" />
+            <input asp-for="Orgs.Thursday1900" /> <input asp-for="Orgs.Thursday1930" />
+            <input asp-for="Orgs.Thursday2000" /> <input asp-for="Orgs.Thursday2030" />
         </div>
         <div>
-            Friday: <input asp-for="Customer.Friday24HR" />
-            <input asp-for="Customer.Friday600" /> <input asp-for="Customer.Friday630" />
-            <input asp-for="Customer.Friday700" /> <input asp-for="Customer.Friday730" />
-            <input asp-for="Customer.Friday800" /> <input asp-for="Customer.Friday830" />
-            <input asp-for="Customer.Friday900" /> <input asp-for="Customer.Friday930" />
-            <input asp-for="Customer.Friday1000" /> <input asp-for="Customer.Friday1030" />
-            <input asp-for="Customer.Friday1100" /> <input asp-for="Customer.Friday1130" />
-            <input asp-for="Customer.Friday1200" /> <input asp-for="Customer.Friday1230" />
-            <input asp-for="Customer.Friday1300" /> <input asp-for="Customer.Friday1330" />
-            <input asp-for="Customer.Friday1400" /> <input asp-for="Customer.Friday1430" />
-            <input asp-for="Customer.Friday1500" /> <input asp-for="Customer.Friday1530" />
-            <input asp-for="Customer.Friday1600" /> <input asp-for="Customer.Friday1630" />
-            <input asp-for="Customer.Friday1700" /> <input asp-for="Customer.Friday1730" />
-            <input asp-for="Customer.Friday1800" /> <input asp-for="Customer.Friday1830" />
-            <input asp-for="Customer.Friday1900" /> <input asp-for="Customer.Friday1930" />
-            <input asp-for="Customer.Friday2000" /> <input asp-for="Customer.Friday2030" />
+            Friday: <input asp-for="Orgs.Friday24HR" />
+            <input asp-for="Orgs.Friday600" /> <input asp-for="Orgs.Friday630" />
+            <input asp-for="Orgs.Friday700" /> <input asp-for="Orgs.Friday730" />
+            <input asp-for="Orgs.Friday800" /> <input asp-for="Orgs.Friday830" />
+            <input asp-for="Orgs.Friday900" /> <input asp-for="Orgs.Friday930" />
+            <input asp-for="Orgs.Friday1000" /> <input asp-for="Orgs.Friday1030" />
+            <input asp-for="Orgs.Friday1100" /> <input asp-for="Orgs.Friday1130" />
+            <input asp-for="Orgs.Friday1200" /> <input asp-for="Orgs.Friday1230" />
+            <input asp-for="Orgs.Friday1300" /> <input asp-for="Orgs.Friday1330" />
+            <input asp-for="Orgs.Friday1400" /> <input asp-for="Orgs.Friday1430" />
+            <input asp-for="Orgs.Friday1500" /> <input asp-for="Orgs.Friday1530" />
+            <input asp-for="Orgs.Friday1600" /> <input asp-for="Orgs.Friday1630" />
+            <input asp-for="Orgs.Friday1700" /> <input asp-for="Orgs.Friday1730" />
+            <input asp-for="Orgs.Friday1800" /> <input asp-for="Orgs.Friday1830" />
+            <input asp-for="Orgs.Friday1900" /> <input asp-for="Orgs.Friday1930" />
+            <input asp-for="Orgs.Friday2000" /> <input asp-for="Orgs.Friday2030" />
         </div>
         <div>
-            Saturday: <input asp-for="Customer.Saturday24HR" />
-            <input asp-for="Customer.Saturday600" /> <input asp-for="Customer.Saturday630" />
-            <input asp-for="Customer.Saturday700" /> <input asp-for="Customer.Saturday730" />
-            <input asp-for="Customer.Saturday800" /> <input asp-for="Customer.Saturday830" />
-            <input asp-for="Customer.Saturday900" /> <input asp-for="Customer.Saturday930" />
-            <input asp-for="Customer.Saturday1000" /> <input asp-for="Customer.Saturday1030" />
-            <input asp-for="Customer.Saturday1100" /> <input asp-for="Customer.Saturday1130" />
-            <input asp-for="Customer.Saturday1200" /> <input asp-for="Customer.Saturday1230" />
-            <input asp-for="Customer.Saturday1300" /> <input asp-for="Customer.Saturday1330" />
-            <input asp-for="Customer.Saturday1400" /> <input asp-for="Customer.Saturday1430" />
-            <input asp-for="Customer.Saturday1500" /> <input asp-for="Customer.Saturday1530" />
-            <input asp-for="Customer.Saturday1600" /> <input asp-for="Customer.Saturday1630" />
-            <input asp-for="Customer.Saturday1700" /> <input asp-for="Customer.Saturday1730" />
-            <input asp-for="Customer.Saturday1800" /> <input asp-for="Customer.Saturday1830" />
-            <input asp-for="Customer.Saturday1900" /> <input asp-for="Customer.Saturday1930" />
-            <input asp-for="Customer.Saturday2000" /> <input asp-for="Customer.Saturday2030" />
+            Saturday: <input asp-for="Orgs.Saturday24HR" />
+            <input asp-for="Orgs.Saturday600" /> <input asp-for="Orgs.Saturday630" />
+            <input asp-for="Orgs.Saturday700" /> <input asp-for="Orgs.Saturday730" />
+            <input asp-for="Orgs.Saturday800" /> <input asp-for="Orgs.Saturday830" />
+            <input asp-for="Orgs.Saturday900" /> <input asp-for="Orgs.Saturday930" />
+            <input asp-for="Orgs.Saturday1000" /> <input asp-for="Orgs.Saturday1030" />
+            <input asp-for="Orgs.Saturday1100" /> <input asp-for="Orgs.Saturday1130" />
+            <input asp-for="Orgs.Saturday1200" /> <input asp-for="Orgs.Saturday1230" />
+            <input asp-for="Orgs.Saturday1300" /> <input asp-for="Orgs.Saturday1330" />
+            <input asp-for="Orgs.Saturday1400" /> <input asp-for="Orgs.Saturday1430" />
+            <input asp-for="Orgs.Saturday1500" /> <input asp-for="Orgs.Saturday1530" />
+            <input asp-for="Orgs.Saturday1600" /> <input asp-for="Orgs.Saturday1630" />
+            <input asp-for="Orgs.Saturday1700" /> <input asp-for="Orgs.Saturday1730" />
+            <input asp-for="Orgs.Saturday1800" /> <input asp-for="Orgs.Saturday1830" />
+            <input asp-for="Orgs.Saturday1900" /> <input asp-for="Orgs.Saturday1930" />
+            <input asp-for="Orgs.Saturday2000" /> <input asp-for="Orgs.Saturday2030" />
         </div>
         <div>
-            Sunday: <input asp-for="Customer.Sunday24HR" />
-            <input asp-for="Customer.Sunday600" /> <input asp-for="Customer.Sunday630" />
-            <input asp-for="Customer.Sunday700" /> <input asp-for="Customer.Sunday730" />
-            <input asp-for="Customer.Sunday800" /> <input asp-for="Customer.Sunday830" />
-            <input asp-for="Customer.Sunday900" /> <input asp-for="Customer.Sunday930" />
-            <input asp-for="Customer.Sunday1000" /> <input asp-for="Customer.Sunday1030" />
-            <input asp-for="Customer.Sunday1100" /> <input asp-for="Customer.Sunday1130" />
-            <input asp-for="Customer.Sunday1200" /> <input asp-for="Customer.Sunday1230" />
-            <input asp-for="Customer.Sunday1300" /> <input asp-for="Customer.Sunday1330" />
-            <input asp-for="Customer.Sunday1400" /> <input asp-for="Customer.Sunday1430" />
-            <input asp-for="Customer.Sunday1500" /> <input asp-for="Customer.Sunday1530" />
-            <input asp-for="Customer.Sunday1600" /> <input asp-for="Customer.Sunday1630" />
-            <input asp-for="Customer.Sunday1700" /> <input asp-for="Customer.Sunday1730" />
-            <input asp-for="Customer.Sunday1800" /> <input asp-for="Customer.Sunday1830" />
-            <input asp-for="Customer.Sunday1900" /> <input asp-for="Customer.Sunday1930" />
-            <input asp-for="Customer.Sunday2000" /> <input asp-for="Customer.Sunday2030" />
+            Sunday: <input asp-for="Orgs.Sunday24HR" />
+            <input asp-for="Orgs.Sunday600" /> <input asp-for="Orgs.Sunday630" />
+            <input asp-for="Orgs.Sunday700" /> <input asp-for="Orgs.Sunday730" />
+            <input asp-for="Orgs.Sunday800" /> <input asp-for="Orgs.Sunday830" />
+            <input asp-for="Orgs.Sunday900" /> <input asp-for="Orgs.Sunday930" />
+            <input asp-for="Orgs.Sunday1000" /> <input asp-for="Orgs.Sunday1030" />
+            <input asp-for="Orgs.Sunday1100" /> <input asp-for="Orgs.Sunday1130" />
+            <input asp-for="Orgs.Sunday1200" /> <input asp-for="Orgs.Sunday1230" />
+            <input asp-for="Orgs.Sunday1300" /> <input asp-for="Orgs.Sunday1330" />
+            <input asp-for="Orgs.Sunday1400" /> <input asp-for="Orgs.Sunday1430" />
+            <input asp-for="Orgs.Sunday1500" /> <input asp-for="Orgs.Sunday1530" />
+            <input asp-for="Orgs.Sunday1600" /> <input asp-for="Orgs.Sunday1630" />
+            <input asp-for="Orgs.Sunday1700" /> <input asp-for="Orgs.Sunday1730" />
+            <input asp-for="Orgs.Sunday1800" /> <input asp-for="Orgs.Sunday1830" />
+            <input asp-for="Orgs.Sunday1900" /> <input asp-for="Orgs.Sunday1930" />
+            <input asp-for="Orgs.Sunday2000" /> <input asp-for="Orgs.Sunday2030" />
         </div>
+
+        <div>Additional Comments: <input asp-for="Orgs.Additional_Comments" /></div>
 
         <input type="submit" />
     </form>

@@ -14,7 +14,7 @@ namespace _340_Framework.Pages
         }
 
         [BindProperty]
-        public Organization Customer { get; set; }
+        public Organization Orgs { get; set; }
 
         public async Task<IActionResult> OnPostAsync()
         {
@@ -23,7 +23,7 @@ namespace _340_Framework.Pages
                 return Page();
             }
 
-            _db.Customers.Add(Customer);
+            _db.Organization.Add(Orgs);
             await _db.SaveChangesAsync();
             return RedirectToPage("/Index");
         }

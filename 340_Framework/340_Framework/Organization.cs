@@ -290,5 +290,9 @@ namespace _340_Framework
         public bool Sunday2000 { get; set; }
         public bool Sunday2030 { get; set; }
         public bool Sunday24HR { get; set; }
+
+
+        // Additional Comments
+        public string Additional_Comments { get; set; }
     }
 }

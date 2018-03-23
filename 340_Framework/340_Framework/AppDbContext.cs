@@ -9,6 +9,6 @@ namespace _340_Framework
         {
         }
 
-        public DbSet<Organization> Customers { get; set; }
+        public DbSet<Organization> Organization { get; set; }
     }
 }
