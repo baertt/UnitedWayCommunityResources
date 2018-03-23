@@ -9,6 +9,7 @@ namespace _340_Framework
         {
         }
 
-        public DbSet<Organization> Organization { get; set; }
+        public DbSet<Models.Organization> Organization { get; set; }
+        public DbSet<Resources> Resources { get; set; }
     }
 }

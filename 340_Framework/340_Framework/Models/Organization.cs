@@ -1,13 +1,13 @@
 ﻿using System.ComponentModel.DataAnnotations;
 
-namespace _340_Framework
+namespace _340_Framework.Models
 {
     public class Organization
     {
         public int Id { get; set; }
 
         // Name
-        [Required, StringLength(100)]
+        [Required]
         public string Name { get; set; }
 
         // Address
@@ -18,20 +18,6 @@ namespace _340_Framework
         // Contact Information
         public string Email { get; set; }
         public int Phone { get; set; }
-
-        // Resources Offered
-        public bool Clothing { get; set; }
-        public bool Education { get; set; }
-        public bool Employment { get; set; }
-        public bool Finances { get; set; }
-        public bool Food { get; set; }
-        public bool Natural_Disaster { get; set; }
-        public bool Senior { get; set; }
-        public bool Rent_Utilities { get; set; }
-        public bool Medical_Prescription { get; set; }
-        public bool Veterans { get; set; }
-        public bool Other_Resources { get; set; }
-        public string Other_Resources_Text { get; set; }
 
         // Requirements
         public bool Photo_ID { get; set; }
@@ -291,8 +277,8 @@ namespace _340_Framework
         public bool Sunday2030 { get; set; }
         public bool Sunday24HR { get; set; }
 
-
         // Additional Comments
         public string Additional_Comments { get; set; }
+
     }
 }

@@ -4,8 +4,13 @@
     ViewData["Title"] = "Organization Information Update";
 }
 
+@{
+    var currentDateTime = DateTime.Now;
+}
+
 <html>
 <body>
+    <!-- use @currentDateTime  to get current time-->
     <div asp-validation-summary="All"></div>
     <form method="POST">
         <div>Organization Name: <input asp-for="Orgs.Name" /></div>
@@ -20,18 +25,18 @@
         <div>Phone Number: <input asp-for="Orgs.Phone" /></div>
 
         <!-- Resources -->
-        <div>Clothing: <input asp-for="Orgs.Clothing" /></div>
-        <div>Education: <input asp-for="Orgs.Education" /></div>
-        <div>Employment: <input asp-for="Orgs.Employment" /></div>
-        <div>Finances: <input asp-for="Orgs.Finances" /></div>
-        <div>Food: <input asp-for="Orgs.Food" /></div>
-        <div>Natural Disaster: <input asp-for="Orgs.Natural_Disaster" /></div>
-        <div>Senior Assistance: <input asp-for="Orgs.Senior" /></div>
-        <div>Rent and Utilities Assistance: <input asp-for="Orgs.Rent_Utilities" /></div>
-        <div>Medical and Prescription Assistance: <input asp-for="Orgs.Medical_Prescription" /></div>
-        <div>Veterans Assistance: <input asp-for="Orgs.Veterans" /></div>
-        <div>Other Resources: <input asp-for="Orgs.Other_Resources" /></div>
-        <div>Other Resources Text: <input asp-for="Orgs.Other_Resources_Text" /></div>
+        <div>Clothing: <input asp-for="Resources.Clothing" /></div>
+        <div>Education: <input asp-for="Resources.Education" /></div>
+        <div>Employment: <input asp-for="Resources.Employment" /></div>
+        <div>Finances: <input asp-for="Resources.Finances" /></div>
+        <div>Food: <input asp-for="Resources.Food" /></div>
+        <div>Natural Disaster: <input asp-for="Resources.Natural_Disaster" /></div>
+        <div>Senior Assistance: <input asp-for="Resources.Senior" /></div>
+        <div>Rent and Utilities Assistance: <input asp-for="Resources.Rent_Utilities" /></div>
+        <div>Medical and Prescription Assistance: <input asp-for="Resources.Medical_Prescription" /></div>
+        <div>Veterans Assistance: <input asp-for="Resources.Veterans" /></div>
+        <div>Other Resources: <input asp-for="Resources.Other_Resources" /></div>
+        <div>Other Resources Text: <input asp-for="Resources.Other_Resources_Text" /></div>
 
         <!-- Requirements for Help -->
         <div>Requires Photo ID: <input asp-for="Orgs.Photo_ID" /></div>

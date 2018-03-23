@@ -9,3 +9,14 @@
 /Users/jollikhoo/RazorPagesMovie/obj/Debug/netcoreapp2.0/RazorPagesMovie.dll
 /Users/jollikhoo/RazorPagesMovie/obj/Debug/netcoreapp2.0/RazorPagesMovie.pdb
 /Users/jollikhoo/RazorPagesMovie/obj/Debug/netcoreapp2.0/RazorPagesMovie.csprojResolveAssemblyReference.cache
+C:\Users\kates\source\repos\UnitedWayCommunityResources\RazorPagesMovie\bin\Debug\netcoreapp2.0\RazorPagesMovie.deps.json
+C:\Users\kates\source\repos\UnitedWayCommunityResources\RazorPagesMovie\bin\Debug\netcoreapp2.0\RazorPagesMovie.runtimeconfig.json
+C:\Users\kates\source\repos\UnitedWayCommunityResources\RazorPagesMovie\bin\Debug\netcoreapp2.0\RazorPagesMovie.runtimeconfig.dev.json
+C:\Users\kates\source\repos\UnitedWayCommunityResources\RazorPagesMovie\bin\Debug\netcoreapp2.0\RazorPagesMovie.dll
+C:\Users\kates\source\repos\UnitedWayCommunityResources\RazorPagesMovie\bin\Debug\netcoreapp2.0\RazorPagesMovie.pdb
+C:\Users\kates\source\repos\UnitedWayCommunityResources\RazorPagesMovie\obj\Debug\netcoreapp2.0\RazorPagesMovie.csprojResolveAssemblyReference.cache
+C:\Users\kates\source\repos\UnitedWayCommunityResources\RazorPagesMovie\obj\Debug\netcoreapp2.0\RazorPagesMovie.csproj.CoreCompileInputs.cache
+C:\Users\kates\source\repos\UnitedWayCommunityResources\RazorPagesMovie\obj\Debug\netcoreapp2.0\RazorPagesMovie.AssemblyInfoInputs.cache
+C:\Users\kates\source\repos\UnitedWayCommunityResources\RazorPagesMovie\obj\Debug\netcoreapp2.0\RazorPagesMovie.AssemblyInfo.cs
+C:\Users\kates\source\repos\UnitedWayCommunityResources\RazorPagesMovie\obj\Debug\netcoreapp2.0\RazorPagesMovie.dll
+C:\Users\kates\source\repos\UnitedWayCommunityResources\RazorPagesMovie\obj\Debug\netcoreapp2.0\RazorPagesMovie.pdb

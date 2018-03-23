@@ -13122,28 +13122,36 @@
     ]
   },
   "packageFolders": {
-    "/Users/jollikhoo/.nuget/packages/": {},
-    "/usr/local/share/dotnet/sdk/NuGetFallbackFolder": {}
+    "C:\\Users\\kates\\.nuget\\packages\\": {},
+    "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackagesFallback\\": {},
+    "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder": {}
   },
   "project": {
     "version": "1.0.0",
+    "restoreSettings": {
+      "hideWarningsAndErrors": true
+    },
     "restore": {
-      "projectUniqueName": "/Users/jollikhoo/RazorPagesMovie/RazorPagesMovie.csproj",
+      "projectUniqueName": "C:\\Users\\kates\\source\\repos\\UnitedWayCommunityResources\\RazorPagesMovie\\RazorPagesMovie.csproj",
       "projectName": "RazorPagesMovie",
-      "projectPath": "/Users/jollikhoo/RazorPagesMovie/RazorPagesMovie.csproj",
-      "packagesPath": "/Users/jollikhoo/.nuget/packages/",
-      "outputPath": "/Users/jollikhoo/RazorPagesMovie/obj/",
+      "projectPath": "C:\\Users\\kates\\source\\repos\\UnitedWayCommunityResources\\RazorPagesMovie\\RazorPagesMovie.csproj",
+      "packagesPath": "C:\\Users\\kates\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\kates\\source\\repos\\UnitedWayCommunityResources\\RazorPagesMovie\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
-        "/usr/local/share/dotnet/sdk/NuGetFallbackFolder"
+        "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackagesFallback\\",
+        "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
       ],
       "configFilePaths": [
-        "/Users/jollikhoo/.nuget/NuGet/NuGet.Config"
+        "C:\\Users\\kates\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.Fallback.config"
       ],
       "originalTargetFrameworks": [
         "netcoreapp2.0"
       ],
       "sources": {
+        "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
         "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {

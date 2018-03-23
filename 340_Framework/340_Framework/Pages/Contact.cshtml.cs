@@ -14,7 +14,8 @@ namespace _340_Framework.Pages
         }
 
         [BindProperty]
-        public Organization Orgs { get; set; }
+        public Models.Organization Orgs { get; set; }
+        public Resources Resources { get; set; }
 
         public async Task<IActionResult> OnPostAsync()
         {
