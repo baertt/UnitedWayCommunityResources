@@ -5,7 +5,7 @@ using System.Threading.Tasks;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
-using _340_Framework;
+using _340_Framework.Data;
 
 namespace _340_Framework.Controllers
 {

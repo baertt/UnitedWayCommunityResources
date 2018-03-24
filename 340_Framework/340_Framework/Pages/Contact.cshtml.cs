@@ -1,6 +1,7 @@
 ﻿using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 using Microsoft.AspNetCore.Mvc;
+using _340_Framework.Data;
 
 namespace _340_Framework.Pages
 {
@@ -15,7 +16,7 @@ namespace _340_Framework.Pages
 
         [BindProperty]
         public Models.Organization Orgs { get; set; }
-        public Resources Resources { get; set; }
+        public Models.Resources Resources { get; set; }
 
         public async Task<IActionResult> OnPostAsync()
         {

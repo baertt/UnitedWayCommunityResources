@@ -1,6 +1,6 @@
 ﻿using System.ComponentModel.DataAnnotations;
 
-namespace _340_Framework
+namespace _340_Framework.Models
 {
     public class Resources
     {

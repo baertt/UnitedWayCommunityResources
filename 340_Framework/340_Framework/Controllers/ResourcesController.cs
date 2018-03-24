@@ -5,7 +5,7 @@ using System.Threading.Tasks;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
-using _340_Framework;
+using _340_Framework.Data;
 
 namespace _340_Framework.Controllers
 {
@@ -22,7 +22,7 @@ namespace _340_Framework.Controllers
 
         // GET: api/Resources
         [HttpGet]
-        public IEnumerable<Resources> GetResources()
+        public IEnumerable<Models.Resources> GetResources()
         {
             return _context.Resources;
         }
@@ -48,7 +48,7 @@ namespace _340_Framework.Controllers
 
         // PUT: api/Resources/5
         [HttpPut("{id}")]
-        public async Task<IActionResult> PutResources([FromRoute] int id, [FromBody] Resources resources)
+        public async Task<IActionResult> PutResources([FromRoute] int id, [FromBody] Models.Resources resources)
         {
             if (!ModelState.IsValid)
             {
@@ -83,7 +83,7 @@ namespace _340_Framework.Controllers
 
         // POST: api/Resources
         [HttpPost]
-        public async Task<IActionResult> PostResources([FromBody] Resources resources)
+        public async Task<IActionResult> PostResources([FromBody] Models.Resources resources)
         {
             if (!ModelState.IsValid)
             {
