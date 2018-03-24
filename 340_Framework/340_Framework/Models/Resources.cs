@@ -9,7 +9,7 @@ namespace _340_Framework.Models
         // Foreign Key
         public int OrgsId { get; set; }
         // Navigation property
-        public Models.Organization Orgs { get; set; }
+        public Organization Organization { get; set; }
 
         // Resources Offered
         public bool Clothing { get; set; }

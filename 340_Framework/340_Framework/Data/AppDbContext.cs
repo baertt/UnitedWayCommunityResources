@@ -12,12 +12,14 @@ namespace _340_Framework.Data
 
         public DbSet<Organization> Organization { get; set; }
         public DbSet<Resources> Resources { get; set; }
+        public DbSet<Times> Times { get; set; }
 
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
             modelBuilder.Entity<Organization>().ToTable("Organization");
             modelBuilder.Entity<Resources>().ToTable("Resource");
+            modelBuilder.Entity<Times>().ToTable("Time");
         }
     }
 }
