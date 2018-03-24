@@ -7,7 +7,7 @@ namespace _340_Framework.Models
         public int Id { get; set; }
 
         // Foreign Key
-        public int OrgsId { get; set; }
+        public int OrganizationId { get; set; }
         // Navigation property
         public Organization Organization { get; set; }
 

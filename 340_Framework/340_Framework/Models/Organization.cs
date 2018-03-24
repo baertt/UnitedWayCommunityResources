@@ -4,7 +4,7 @@ namespace _340_Framework.Models
 {
     public class Organization
     {
-        public int Id { get; set; }
+        public int OrganizationId { get; set; }
 
         // Name
         [Required]
@@ -17,7 +17,8 @@ namespace _340_Framework.Models
 
         // Contact Information
         public string Email { get; set; }
-        public int Phone { get; set; }
+        public string Phone { get; set; }
+        public string Website { get; set; }
 
         // Requirements
         public bool Photo_ID { get; set; }
