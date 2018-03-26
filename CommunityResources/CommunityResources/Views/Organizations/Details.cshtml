@@ -53,6 +53,111 @@
         <dd>
             @Html.DisplayFor(model => model.Additional_Comments)
         </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Times)
+        </dt>
+        <dd>
+            <table class="table">
+                <tr>
+                    <th>Day</th>
+                    <th>Repeat</th>
+                    <th>Start Time</th>
+                    <th>End Time</th>
+                </tr>
+                @foreach (var item in Model.Times)
+            {
+                <tr>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Day)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Repeat)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Time_Start)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Time_End)
+                    </td>
+                </tr>
+        }
+            </table>
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Resources)
+        </dt>
+
+        @foreach (var item in Model.Resources)
+    {
+        @if (item.Education.Equals(true))
+    {
+        <dd>
+            @Html.DisplayNameFor(modelItem => item.Education)
+        </dd>
+}
+        @if (item.Clothing.Equals(true))
+    {
+        <dd>
+            @Html.DisplayNameFor(modelItem => item.Clothing)
+        </dd>
+}
+        @if (item.Employment.Equals(true))
+    {
+        <dd>
+            @Html.DisplayNameFor(modelItem => item.Employment)
+        </dd>
+}
+        @if (item.Finances.Equals(true))
+    {
+        <dd>
+            @Html.DisplayNameFor(modelItem => item.Finances)
+        </dd>
+}
+        @if (item.Food.Equals(true))
+    {
+        <dd>
+            @Html.DisplayNameFor(modelItem => item.Food)
+        </dd>
+}
+        @if (item.Medical_Prescription.Equals(true))
+    {
+        <dd>
+            @Html.DisplayNameFor(modelItem => item.Medical_Prescription)
+        </dd>
+}
+        @if (item.Natural_Disaster.Equals(true))
+    {
+        <dd>
+            @Html.DisplayNameFor(modelItem => item.Natural_Disaster)
+        </dd>
+}
+        @if (item.Rent_Utilities.Equals(true))
+    {
+        <dd>
+            @Html.DisplayNameFor(modelItem => item.Rent_Utilities)
+        </dd>
+}
+        @if (item.Veterans.Equals(true))
+    {
+        <dd>
+            @Html.DisplayNameFor(modelItem => item.Veterans)
+        </dd>
+}
+        @if (item.Senior.Equals(true))
+    {
+        <dd>
+            @Html.DisplayNameFor(modelItem => item.Senior)
+        </dd>
+}
+        @if (item.Other_Resources.Equals(true))
+    {
+        <dd>
+            @Html.DisplayFor(modelItem => item.Other_Resources_Text)
+        </dd>
+}
+
+}
+
     </dl>
 </div>
 <div>

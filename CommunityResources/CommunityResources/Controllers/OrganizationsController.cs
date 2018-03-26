@@ -28,13 +28,19 @@ namespace CommunityResources.Controllers
         // GET: Organizations/Details/5
         public async Task<IActionResult> Details(int? id)
         {
+
             if (id == null)
             {
                 return NotFound();
             }
 
             var organization = await _context.Organizations
+                .Include(org => org.Contacts)
+                .Include(org => org.Resources)
+                .Include(org => org.Times)
+                .AsNoTracking()
                 .SingleOrDefaultAsync(m => m.Id == id);
+
             if (organization == null)
             {
                 return NotFound();

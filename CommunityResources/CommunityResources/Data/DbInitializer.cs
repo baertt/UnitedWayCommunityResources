@@ -67,7 +67,7 @@ namespace CommunityResources.Data
                 Veterans =false,Other_Resources=false,Other_Resources_Text=""},
             new Resource{OrganizationId=4,Clothing=false,Education=false,Employment=false,Finances=false,Food=true,
                 Natural_Disaster =false,Senior=false, Rent_Utilities=false,Medical_Prescription=false,
-                Veterans =false,Other_Resources=false,Other_Resources_Text="Hygiene Items"},
+                Veterans =false,Other_Resources=true,Other_Resources_Text="Hygiene Items"},
             //new Resource{OrganizationId=,Clothing=false,Education=false,Employment=false,Finances=false,Food=false,
                 //Natural_Disaster =false,Senior=false, Rent_Utilities=false,Medical_Prescription=false,
                 //Veterans =false,Other_Resources=false,Other_Resources_Text=""},
