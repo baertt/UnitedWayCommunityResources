@@ -54,6 +54,40 @@
             @Html.DisplayFor(model => model.Additional_Comments)
         </dd>
         <dt>
+            @Html.DisplayNameFor(model => model.Contacts)
+        </dt>
+        <dd>
+            <table class="table">
+                <tr>
+                    <th>Street Address</th>
+                    <th>Phone</th>
+                    <th>Email</th>
+                    <th>Website</th>
+                </tr>
+                @foreach (var item in Model.Contacts)
+            {
+                <tr>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Street_Address)
+                        <br />
+                        @Html.DisplayFor(modelItem => item.City)
+                        <br />
+                        @Html.DisplayFor(modelItem => item.Zip)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Phone)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Email)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Website)
+                    </td>
+                </tr>
+        }
+            </table>
+        </dd>
+        <dt>
             @Html.DisplayNameFor(model => model.Times)
         </dt>
         <dd>
@@ -149,12 +183,10 @@
             @Html.DisplayNameFor(modelItem => item.Senior)
         </dd>
 }
-        @if (item.Other_Resources.Equals(true))
-    {
         <dd>
             @Html.DisplayFor(modelItem => item.Other_Resources_Text)
         </dd>
-}
+
 
 }
 
