@@ -70,9 +70,8 @@
                     <td>
                         @Html.DisplayFor(modelItem => item.Street_Address)
                         <br />
-                        @Html.DisplayFor(modelItem => item.City)
-                        <br />
-                        @Html.DisplayFor(modelItem => item.Zip)
+                        @Html.DisplayFor(modelItem => item.Town_Address)
+                        
                     </td>
                     <td>
                         @Html.DisplayFor(modelItem => item.Phone)
@@ -94,9 +93,9 @@
             <table class="table">
                 <tr>
                     <th>Day</th>
-                    <th>Repeat</th>
-                    <th>Start Time</th>
-                    <th>End Time</th>
+                    <th>Week of the Month</th>
+                    <th>Opening Time</th>
+                    <th>Closing Time</th>
                 </tr>
                 @foreach (var item in Model.Times)
             {

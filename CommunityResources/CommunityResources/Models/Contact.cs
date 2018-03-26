@@ -17,16 +17,37 @@ namespace CommunityResources.Models
 
         // Address
 
+        [Display(Name ="Street Address")]
         public string Street_Address { get; set; }
 
         public string City { get; set; }
 
         public int Zip { get; set; }
 
+        [Display(Name = "Address")]
+        public string AddressFull
+        {
+            get
+            {
+                return Street_Address + '\n'+ City + ", AR " + Zip;
+            }
+        }
+
+        [Display(Name = "Area")]
+        public string Town_Address
+        {
+            get
+            {
+                return City + ", AR " + Zip;
+            }
+        }
+
 
 
         // Contact Information
 
+        //If we want to validate email formats...
+        //[RegularExpression(@"^[A - Z0 - 9._ % +-] +@(?:[A - Z0 - 9 -] +\.)+[A-Z]{2,}$")]
         public string Email { get; set; }
 
         public string Phone { get; set; }

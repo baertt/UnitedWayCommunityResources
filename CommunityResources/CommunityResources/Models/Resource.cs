@@ -35,18 +35,25 @@ namespace CommunityResources.Models
 
         public bool Food { get; set; }
 
+        [Display(Name = "Natural Disaster Assistance")]
         public bool Natural_Disaster { get; set; }
 
+        [Display(Name = "Senior Assistance")]
         public bool Senior { get; set; }
 
+        [Display(Name = "Rent and Utilities Assistance")]
         public bool Rent_Utilities { get; set; }
 
+        [Display(Name = "Medical and Prescription Assistance")]
         public bool Medical_Prescription { get; set; }
 
+        [Display(Name = "Veterans Services")]
         public bool Veterans { get; set; }
 
+        [Display(Name = "Other Resources")]
         public bool Other_Resources { get; set; }
 
+        [Display(Name = "Other Resources (Details)")]
         public string Other_Resources_Text { get; set; }
 
 
