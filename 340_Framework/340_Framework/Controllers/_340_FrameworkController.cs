@@ -21,7 +21,7 @@ namespace _340_Framework.Controllers
         // GET: _340_Framework
         public async Task<IActionResult> Index()
         {
-            return View(await _context.Organization.ToListAsync());
+            return View(await _context.Organizations.ToListAsync());
         }
 
         // GET: _340_Framework/Details/5

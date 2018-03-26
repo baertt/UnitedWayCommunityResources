@@ -25,7 +25,7 @@ namespace _340_Framework.Pages
                 return Page();
             }
 
-            _db.Organization.Add(Orgs);
+            _db.Organizations.Add(Orgs);
             await _db.SaveChangesAsync();
             return RedirectToPage("/Index");
         }

@@ -1,7 +1,5 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.Linq;
-using System.Threading.Tasks;
 using _340_Framework.Models;
 
 namespace _340_Framework.Data
@@ -13,7 +11,7 @@ namespace _340_Framework.Data
             context.Database.EnsureCreated();
 
             // Look for any Orgs
-            if (context.Organization.Any())
+            if (context.Organizations.Any())
             {
                 return;   // DB has been seeded
             }
@@ -38,9 +36,10 @@ namespace _340_Framework.Data
             };
             foreach (Organization s in orgs)
             {
-                context.Organization.Add(s);
+                context.Organizations.Add(s);
             }
             context.SaveChanges();
+
 
             var times = new Times[]
             {
@@ -63,6 +62,8 @@ namespace _340_Framework.Data
                 context.Times.Add(t);
             }
             context.SaveChanges();
+
+
 
             var resources = new Resources[]
             {

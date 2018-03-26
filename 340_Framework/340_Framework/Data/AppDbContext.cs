@@ -10,7 +10,7 @@ namespace _340_Framework.Data
         {
         }
 
-        public DbSet<Organization> Organization { get; set; }
+        public DbSet<Organization> Organizations { get; set; }
         public DbSet<Resources> Resources { get; set; }
         public DbSet<Times> Times { get; set; }
 

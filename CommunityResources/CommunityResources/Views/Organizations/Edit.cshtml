@@ -1,0 +1,73 @@
+﻿@model CommunityResources.Models.Organization
+
+@{
+    ViewData["Title"] = "Edit";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Edit</h2>
+
+<h4>Organization</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="Edit">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <input type="hidden" asp-for="Id" />
+            <div class="form-group">
+                <label asp-for="Name" class="control-label"></label>
+                <input asp-for="Name" class="form-control" />
+                <span asp-validation-for="Name" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <div class="checkbox">
+                    <label>
+                        <input asp-for="Photo_ID" /> @Html.DisplayNameFor(model => model.Photo_ID)
+                    </label>
+                </div>
+            </div>
+            <div class="form-group">
+                <div class="checkbox">
+                    <label>
+                        <input asp-for="Other_Requirements" /> @Html.DisplayNameFor(model => model.Other_Requirements)
+                    </label>
+                </div>
+            </div>
+            <div class="form-group">
+                <label asp-for="Other_Requirements_Text" class="control-label"></label>
+                <input asp-for="Other_Requirements_Text" class="form-control" />
+                <span asp-validation-for="Other_Requirements_Text" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <div class="checkbox">
+                    <label>
+                        <input asp-for="Appointments_Availible" /> @Html.DisplayNameFor(model => model.Appointments_Availible)
+                    </label>
+                </div>
+            </div>
+            <div class="form-group">
+                <div class="checkbox">
+                    <label>
+                        <input asp-for="Appointments_Required" /> @Html.DisplayNameFor(model => model.Appointments_Required)
+                    </label>
+                </div>
+            </div>
+            <div class="form-group">
+                <label asp-for="Additional_Comments" class="control-label"></label>
+                <input asp-for="Additional_Comments" class="form-control" />
+                <span asp-validation-for="Additional_Comments" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Save" class="btn btn-default" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-action="Index">Back to List</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

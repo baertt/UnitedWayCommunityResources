@@ -1,4 +1,5 @@
-﻿using System.ComponentModel.DataAnnotations;
+﻿using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
 
 namespace _340_Framework.Models
 {
@@ -28,6 +29,12 @@ namespace _340_Framework.Models
         // Appointments
         public bool Appointments_Availible { get; set; }
         public bool Appointments_Required { get; set; }
+
+        public ICollection<Times> Times { get; set; }
+        public Resources Resources { get; set; }
+        
+
+
 
         //// Days Open
         //public bool Monday1 { get; set; }
