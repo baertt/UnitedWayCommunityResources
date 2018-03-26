@@ -60,14 +60,27 @@ namespace CommunityResources.Controllers
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Create([Bind("Id,Name,Photo_ID,Other_Requirements,Other_Requirements_Text,Appointments_Availible,Appointments_Required,Additional_Comments")] Organization organization)
+        public async Task<IActionResult> Create(
+            [Bind("Name,Photo_ID,Other_Requirements,Other_Requirements_Text,Appointments_Availible,Appointments_Required,Additional_Comments")] Organization organization)
         {
-            if (ModelState.IsValid)
+            try
             {
-                _context.Add(organization);
-                await _context.SaveChangesAsync();
-                return RedirectToAction(nameof(Index));
+
+                if (ModelState.IsValid)
+                {
+                    _context.Add(organization);
+                    await _context.SaveChangesAsync();
+                    return RedirectToAction(nameof(Index));
+                }
             }
+            catch (DbUpdateException /* ex */)
+            {
+                //Log the error (uncomment ex variable name and write a log.
+                ModelState.AddModelError("", "Unable to save changes. " +
+                    "Try again, and if the problem persists " +
+                    "see your system administrator.");
+            }
+
             return View(organization);
         }
 
@@ -90,54 +103,63 @@ namespace CommunityResources.Controllers
         // POST: Organizations/Edit/5
         // To protect from overposting attacks, please enable the specific properties you want to bind to, for 
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
-        [HttpPost]
+        [HttpPost, ActionName("Edit")]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Edit(int id, [Bind("Id,Name,Photo_ID,Other_Requirements,Other_Requirements_Text,Appointments_Availible,Appointments_Required,Additional_Comments")] Organization organization)
+        public async Task<IActionResult> EditPost(int? id)
         {
-            if (id != organization.Id)
+            if (id == null)
             {
                 return NotFound();
             }
-
-            if (ModelState.IsValid)
+            var organizationToUpdate = await _context.Organizations.SingleOrDefaultAsync(org => org.Id == id);
+            if (await TryUpdateModelAsync<Organization>(
+                organizationToUpdate,
+                "",
+                org => org.Name, org => org.Photo_ID, org => org.Other_Requirements, 
+                org => org.Other_Requirements_Text, org => org.Appointments_Availible,
+                org => org.Appointments_Required, org => org.Additional_Comments))
             {
                 try
                 {
-                    _context.Update(organization);
                     await _context.SaveChangesAsync();
+                    return RedirectToAction(nameof(Index));
                 }
-                catch (DbUpdateConcurrencyException)
+                catch (DbUpdateException /* ex */)
                 {
-                    if (!OrganizationExists(organization.Id))
-                    {
-                        return NotFound();
-                    }
-                    else
-                    {
-                        throw;
-                    }
+                    //Log the error (uncomment ex variable name and write a log.)
+                    ModelState.AddModelError("", "Unable to save changes. " +
+                        "Try again, and if the problem persists, " +
+                        "see your system administrator.");
                 }
-                return RedirectToAction(nameof(Index));
             }
-            return View(organization);
+            return View(organizationToUpdate);
         }
 
         // GET: Organizations/Delete/5
-        public async Task<IActionResult> Delete(int? id)
+        public async Task<IActionResult> Delete(int? id, bool? saveChangesError = false)
         {
+            
             if (id == null)
             {
                 return NotFound();
             }
 
             var organization = await _context.Organizations
+                .AsNoTracking()
                 .SingleOrDefaultAsync(m => m.Id == id);
             if (organization == null)
             {
                 return NotFound();
             }
+                if (saveChangesError.GetValueOrDefault())
+                {
+                    ViewData["ErrorMessage"] =
+                        "Delete failed. Try again, and if the problem persists " +
+                        "see your system administrator.";
+                }
 
-            return View(organization);
+
+                return View(organization);
         }
 
         // POST: Organizations/Delete/5
@@ -145,10 +167,26 @@ namespace CommunityResources.Controllers
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> DeleteConfirmed(int id)
         {
-            var organization = await _context.Organizations.SingleOrDefaultAsync(m => m.Id == id);
-            _context.Organizations.Remove(organization);
-            await _context.SaveChangesAsync();
-            return RedirectToAction(nameof(Index));
+            var organization = await _context.Organizations
+                .AsNoTracking()
+                .SingleOrDefaultAsync(m => m.Id == id);
+            if (organization == null)
+            {
+                return RedirectToAction(nameof(Index));
+            }
+
+            try
+            {
+
+                _context.Organizations.Remove(organization);
+                await _context.SaveChangesAsync();
+                return RedirectToAction(nameof(Index));
+            }
+            catch (DbUpdateException /* ex */)
+            {
+                //Log the error (uncomment ex variable name and write a log.)
+                return RedirectToAction(nameof(Delete), new { id = id, saveChangesError = true });
+            }
         }
 
         private bool OrganizationExists(int id)
