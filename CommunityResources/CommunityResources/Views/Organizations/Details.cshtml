@@ -5,6 +5,14 @@
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="~/css/site.css" type="text/css" runat="server">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+    <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
+
+</head>
 <h2>Details</h2>
 
 <div>
@@ -71,7 +79,7 @@
                         @Html.DisplayFor(modelItem => item.Street_Address)
                         <br />
                         @Html.DisplayFor(modelItem => item.Town_Address)
-                        
+
                     </td>
                     <td>
                         @Html.DisplayFor(modelItem => item.Phone)
@@ -168,6 +176,12 @@
     {
         <dd>
             @Html.DisplayNameFor(modelItem => item.Rent_Utilities)
+        </dd>
+}
+        @if (item.Housing.Equals(true))
+    {
+        <dd>
+            @Html.DisplayNameFor(modelItem => item.Housing)
         </dd>
 }
         @if (item.Veterans.Equals(true))

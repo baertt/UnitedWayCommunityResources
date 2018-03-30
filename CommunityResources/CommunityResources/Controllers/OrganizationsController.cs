@@ -25,6 +25,24 @@ namespace CommunityResources.Controllers
             return View(await _context.Organizations.ToListAsync());
         }
 
+        public IActionResult AddContacts()
+        {
+            return View();
+        }
+
+        [HttpPost]
+        public async Task<IActionResult> AddContacts(string website)
+        {
+            if (website != null)
+            {
+                ViewData["RowsAffected"] =
+                    await _context.Database.ExecuteSqlCommandAsync(
+                        "INSERT INTO Contact (Website) VALUES",
+                        parameters: website);
+            }
+            return View();
+        }
+
         // GET: Organizations/Details/5
         public async Task<IActionResult> Details(int? id)
         {
