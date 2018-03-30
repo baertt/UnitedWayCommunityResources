@@ -80,29 +80,32 @@
         <tbody>
             @foreach (var item in Model)
     {
-        <tr>
-            <td>
-                @Html.DisplayFor(modelItem => item.Name)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Photo_ID)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Other_Requirements)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Other_Requirements_Text)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Appointments_Availible)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Appointments_Required)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Additional_Comments)
-            </td>
-        </tr>
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Name)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Photo_ID)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Other_Requirements)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Other_Requirements_Text)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Appointments_Availible)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Appointments_Required)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Additional_Comments)
+                </td>
+                <td>
+                    <a asp-area="" asp-controller="Organizations" asp-action="Details" asp-route-id="@item.Id">Details</a>
+                </td>
+            </tr>
 }
         </tbody>
     </table>
