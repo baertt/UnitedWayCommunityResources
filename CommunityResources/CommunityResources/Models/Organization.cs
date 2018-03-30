@@ -33,7 +33,7 @@ namespace CommunityResources.Models
 
         public ICollection<Contact> Contacts { get; set; }
         public ICollection<Time> Times { get; set; }
-        public ICollection<Resource> Resources { get; set; }
+        public Resource Resources { get; set; }
         
 
     }

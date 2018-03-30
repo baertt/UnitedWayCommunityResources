@@ -128,76 +128,74 @@
             @Html.DisplayNameFor(model => model.Resources)
         </dt>
 
-        @foreach (var item in Model.Resources)
-    {
-        @if (item.Education.Equals(true))
+        @if (Model.Resources.Education.Equals(true))
     {
         <dd>
-            @Html.DisplayNameFor(modelItem => item.Education)
+            @Html.DisplayNameFor(modelItem => Model.Resources.Education)
         </dd>
 }
-        @if (item.Clothing.Equals(true))
+        @if (Model.Resources.Clothing.Equals(true))
     {
         <dd>
-            @Html.DisplayNameFor(modelItem => item.Clothing)
+            @Html.DisplayNameFor(modelItem => Model.Resources.Clothing)
         </dd>
 }
-        @if (item.Employment.Equals(true))
+        @if (Model.Resources.Employment.Equals(true))
     {
         <dd>
-            @Html.DisplayNameFor(modelItem => item.Employment)
+            @Html.DisplayNameFor(modelItem => Model.Resources.Employment)
         </dd>
 }
-        @if (item.Finances.Equals(true))
+        @if (Model.Resources.Finances.Equals(true))
     {
         <dd>
-            @Html.DisplayNameFor(modelItem => item.Finances)
+            @Html.DisplayNameFor(modelItem => Model.Resources.Finances)
         </dd>
 }
-        @if (item.Food.Equals(true))
+        @if (Model.Resources.Food.Equals(true))
     {
         <dd>
-            @Html.DisplayNameFor(modelItem => item.Food)
+            @Html.DisplayNameFor(modelItem => Model.Resources.Food)
         </dd>
 }
-        @if (item.Medical_Prescription.Equals(true))
+        @if (Model.Resources.Medical_Prescription.Equals(true))
     {
         <dd>
-            @Html.DisplayNameFor(modelItem => item.Medical_Prescription)
+            @Html.DisplayNameFor(modelItem => Model.Resources.Medical_Prescription)
         </dd>
 }
-        @if (item.Natural_Disaster.Equals(true))
+        @if (Model.Resources.Natural_Disaster.Equals(true))
     {
         <dd>
-            @Html.DisplayNameFor(modelItem => item.Natural_Disaster)
+            @Html.DisplayNameFor(modelItem => Model.Resources.Natural_Disaster)
         </dd>
 }
-        @if (item.Rent_Utilities.Equals(true))
+        @if (Model.Resources.Rent_Utilities.Equals(true))
     {
         <dd>
-            @Html.DisplayNameFor(modelItem => item.Rent_Utilities)
+            @Html.DisplayNameFor(modelItem => Model.Resources.Rent_Utilities)
         </dd>
 }
-        @if (item.Housing.Equals(true))
+        @if (Model.Resources.Housing.Equals(true))
     {
         <dd>
-            @Html.DisplayNameFor(modelItem => item.Housing)
+            @Html.DisplayNameFor(modelItem => Model.Resources.Housing)
         </dd>
 }
-        @if (item.Veterans.Equals(true))
+        @if (Model.Resources.Veterans.Equals(true))
     {
         <dd>
-            @Html.DisplayNameFor(modelItem => item.Veterans)
+            @Html.DisplayNameFor(modelItem => Model.Resources.Veterans)
         </dd>
 }
-        @if (item.Senior.Equals(true))
+        @if (Model.Resources.Senior.Equals(true))
     {
         <dd>
-            @Html.DisplayNameFor(modelItem => item.Senior)
+            @Html.DisplayNameFor(modelItem => Model.Resources.Senior)
         </dd>
 }
         <dd>
-            @Html.DisplayFor(modelItem => item.Other_Resources_Text)
+            @Html.DisplayFor(modelItem => Model.Resources.Other_Resources_Text)
         </dd>
 
 
