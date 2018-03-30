@@ -5,14 +5,23 @@
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
-<h2>Index</h2>
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="~/css/site.css" type="text/css" runat="server">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
 
-<p>
-    <a asp-action="Create">Create New</a>
-</p>
-<table class="table">
-    <thead>
-        <tr>
+    <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
+
+</head>
+<body>
+    <h2>Index</h2>
+
+    <p>
+        <a asp-action="Create">Create New</a>
+    </p>
+    <table class="table">
+        <thead>
+            <tr>
                 <th>
                     @Html.DisplayNameFor(model => model.Name)
                 </th>
@@ -34,39 +43,41 @@
                 <th>
                     @Html.DisplayNameFor(model => model.Additional_Comments)
                 </th>
-            <th></th>
-        </tr>
-    </thead>
-    <tbody>
-@foreach (var item in Model) {
-        <tr>
-            <td>
-                @Html.DisplayFor(modelItem => item.Name)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Photo_ID)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Other_Requirements)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Other_Requirements_Text)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Appointments_Availible)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Appointments_Required)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Additional_Comments)
-            </td>
-            <td>
-                <a asp-action="Edit" asp-route-id="@item.Id">Edit</a> |
-                <a asp-action="Details" asp-route-id="@item.Id">Details</a> |
-                <a asp-action="Delete" asp-route-id="@item.Id">Delete</a>
-            </td>
-        </tr>
-}
-    </tbody>
-</table>
+                <th></th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var item in Model)
+            {
+                <tr>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Name)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Photo_ID)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Other_Requirements)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Other_Requirements_Text)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Appointments_Availible)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Appointments_Required)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Additional_Comments)
+                    </td>
+                    <td>
+                        <a asp-action="Edit" asp-route-id="@item.Id">Edit</a> |
+                        <a asp-action="Details" asp-route-id="@item.Id">Details</a> |
+                        <a asp-action="Delete" asp-route-id="@item.Id">Delete</a>
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>
+</body>
