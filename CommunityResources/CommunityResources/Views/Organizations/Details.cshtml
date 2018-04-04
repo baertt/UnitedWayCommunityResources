@@ -5,9 +5,37 @@
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="~/css/site.css" type="text/css" runat="server">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+    <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
+
+</head>
 <h2>Details</h2>
 
 <div>
+    <header class="container">
+
+        <div class="row">
+
+            <h1 class="col-sm-10" id="title">Community Resources</h1>
+
+            <div id="google_translate_element"></div>
+            <script type="text/javascript">
+
+                function googleTranslateElementInit() {
+
+                    new google.translate.TranslateElement({ pageLanguage: 'en', layout: google.translate.TranslateElement.InlineLayout.SIMPLE, autoDisplay: false }, 'google_translate_element');
+
+                }
+
+            </script>
+            <script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+
+        </div>
+    </header>
     <h4>Organization</h4>
     <hr />
     <dl class="dl-horizontal">
@@ -64,26 +92,24 @@
                     <th>Email</th>
                     <th>Website</th>
                 </tr>
-                @foreach (var item in Model.Contacts)
-            {
                 <tr>
                     <td>
-                        @Html.DisplayFor(modelItem => item.Street_Address)
+                        @Html.DisplayFor(modelItem => Model.Contacts.Street_Address)
                         <br />
-                        @Html.DisplayFor(modelItem => item.Town_Address)
-                        
+                        @Html.DisplayFor(modelItem => Model.Contacts.Town_Address)
+
                     </td>
                     <td>
-                        @Html.DisplayFor(modelItem => item.Phone)
+                        @Html.DisplayFor(modelItem => Model.Contacts.Phone)
                     </td>
                     <td>
-                        @Html.DisplayFor(modelItem => item.Email)
+                        @Html.DisplayFor(modelItem => Model.Contacts.Email)
                     </td>
                     <td>
-                        @Html.DisplayFor(modelItem => item.Website)
+                        @Html.DisplayFor(modelItem => Model.Contacts.Website)
                     </td>
                 </tr>
-        }
+
             </table>
         </dd>
         <dt>
@@ -98,96 +124,100 @@
                     <th>Closing Time</th>
                 </tr>
                 @foreach (var item in Model.Times)
-            {
-                <tr>
-                    <td>
-                        @Html.DisplayFor(modelItem => item.Day)
-                    </td>
-                    <td>
-                        @Html.DisplayFor(modelItem => item.Repeat)
-                    </td>
-                    <td>
-                        @Html.DisplayFor(modelItem => item.Time_Start)
-                    </td>
-                    <td>
-                        @Html.DisplayFor(modelItem => item.Time_End)
-                    </td>
-                </tr>
-        }
+                {
+                    <tr>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.Day)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.Repeat)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.Time_Start)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.Time_End)
+                        </td>
+                    </tr>
+                }
             </table>
         </dd>
         <dt>
             @Html.DisplayNameFor(model => model.Resources)
         </dt>
 
-        @foreach (var item in Model.Resources)
-    {
-        @if (item.Education.Equals(true))
-    {
+        @if (Model.Resources.Education.Equals(true))
+        {
+            <dd>
+                @Html.DisplayNameFor(modelItem => Model.Resources.Education)
+            </dd>
+        }
+        @if (Model.Resources.Clothing.Equals(true))
+        {
+            <dd>
+                @Html.DisplayNameFor(modelItem => Model.Resources.Clothing)
+            </dd>
+        }
+        @if (Model.Resources.Employment.Equals(true))
+        {
+            <dd>
+                @Html.DisplayNameFor(modelItem => Model.Resources.Employment)
+            </dd>
+        }
+        @if (Model.Resources.Finances.Equals(true))
+        {
+            <dd>
+                @Html.DisplayNameFor(modelItem => Model.Resources.Finances)
+            </dd>
+        }
+        @if (Model.Resources.Food.Equals(true))
+        {
+            <dd>
+                @Html.DisplayNameFor(modelItem => Model.Resources.Food)
+            </dd>
+        }
+        @if (Model.Resources.Medical_Prescription.Equals(true))
+        {
+            <dd>
+                @Html.DisplayNameFor(modelItem => Model.Resources.Medical_Prescription)
+            </dd>
+        }
+        @if (Model.Resources.Natural_Disaster.Equals(true))
+        {
+            <dd>
+                @Html.DisplayNameFor(modelItem => Model.Resources.Natural_Disaster)
+            </dd>
+        }
+        @if (Model.Resources.Rent_Utilities.Equals(true))
+        {
+            <dd>
+                @Html.DisplayNameFor(modelItem => Model.Resources.Rent_Utilities)
+            </dd>
+        }
+        @if (Model.Resources.Housing.Equals(true))
+        {
+            <dd>
+                @Html.DisplayNameFor(modelItem => Model.Resources.Housing)
+            </dd>
+        }
+        @if (Model.Resources.Veterans.Equals(true))
+        {
+            <dd>
+                @Html.DisplayNameFor(modelItem => Model.Resources.Veterans)
+            </dd>
+        }
+        @if (Model.Resources.Senior.Equals(true))
+        {
+            <dd>
+                @Html.DisplayNameFor(modelItem => Model.Resources.Senior)
+            </dd>
+        }
         <dd>
-            @Html.DisplayNameFor(modelItem => item.Education)
-        </dd>
-}
-        @if (item.Clothing.Equals(true))
-    {
-        <dd>
-            @Html.DisplayNameFor(modelItem => item.Clothing)
-        </dd>
-}
-        @if (item.Employment.Equals(true))
-    {
-        <dd>
-            @Html.DisplayNameFor(modelItem => item.Employment)
-        </dd>
-}
-        @if (item.Finances.Equals(true))
-    {
-        <dd>
-            @Html.DisplayNameFor(modelItem => item.Finances)
-        </dd>
-}
-        @if (item.Food.Equals(true))
-    {
-        <dd>
-            @Html.DisplayNameFor(modelItem => item.Food)
-        </dd>
-}
-        @if (item.Medical_Prescription.Equals(true))
-    {
-        <dd>
-            @Html.DisplayNameFor(modelItem => item.Medical_Prescription)
-        </dd>
-}
-        @if (item.Natural_Disaster.Equals(true))
-    {
-        <dd>
-            @Html.DisplayNameFor(modelItem => item.Natural_Disaster)
-        </dd>
-}
-        @if (item.Rent_Utilities.Equals(true))
-    {
-        <dd>
-            @Html.DisplayNameFor(modelItem => item.Rent_Utilities)
-        </dd>
-}
-        @if (item.Veterans.Equals(true))
-    {
-        <dd>
-            @Html.DisplayNameFor(modelItem => item.Veterans)
-        </dd>
-}
-        @if (item.Senior.Equals(true))
-    {
-        <dd>
-            @Html.DisplayNameFor(modelItem => item.Senior)
-        </dd>
-}
-        <dd>
-            @Html.DisplayFor(modelItem => item.Other_Resources_Text)
+            @Html.DisplayFor(modelItem => Model.Resources.Other_Resources_Text)
         </dd>
 
 
-}
+
 
     </dl>
 </div>

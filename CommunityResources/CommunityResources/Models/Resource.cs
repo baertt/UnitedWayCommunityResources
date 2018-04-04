@@ -35,6 +35,8 @@ namespace CommunityResources.Models
 
         public bool Food { get; set; }
 
+        public bool Housing { get; set; }
+
         [Display(Name = "Natural Disaster Assistance")]
         public bool Natural_Disaster { get; set; }
 

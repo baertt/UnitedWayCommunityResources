@@ -31,9 +31,9 @@ namespace CommunityResources.Models
         [Display(Name = "Additional Comments")]
         public string Additional_Comments { get; set; }
 
-        public ICollection<Contact> Contacts { get; set; }
+        public Contact Contacts { get; set; }
         public ICollection<Time> Times { get; set; }
-        public ICollection<Resource> Resources { get; set; }
+        public Resource Resources { get; set; }
         
 
     }
