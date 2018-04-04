@@ -26,7 +26,7 @@ namespace CommunityResources.Controllers
 
         public async Task<IActionResult> InitialResults(int?id)
         {
-            var organization = from s in _context.Organizations
+            var organization = from s in _context.Organizations.Include(c => c.Contacts)
                                select s;
             if (id == 1) { 
             organization = organization.Where(s => s.Resources.Clothing.Equals(true));
