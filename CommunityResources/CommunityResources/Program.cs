@@ -9,6 +9,8 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.Logging;
 using Microsoft.Extensions.DependencyInjection;
 using CommunityResources.Data;
+using Microsoft.EntityFrameworkCore;
+using CommunityResources.Models;
 
 namespace CommunityResources
 {
@@ -23,8 +25,12 @@ namespace CommunityResources
                 var services = scope.ServiceProvider;
                 try
                 {
-                    var context = services.GetRequiredService<CommunityResourcesContext>();
+                    var context = services.GetRequiredService<Data.CommunityResourcesContext>();
+                    // requires using Microsoft.EntityFrameworkCore;
+                    context.Database.Migrate();
+                    // Requires using CommunityResources.Models;
                     DbInitializer.Initialize(context);
+                    Console.WriteLine("Initialized.");
                 }
                 catch (Exception ex)
                 {

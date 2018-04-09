@@ -13,4 +13,11 @@
     <DotNetCliToolReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Tools" Version="2.0.2" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Compile Remove="Data\ResourceContext.cs" />
+    <Compile Remove="Models\SeedData.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Remove="MvcResource.db" />
+  </ItemGroup>
 </Project>

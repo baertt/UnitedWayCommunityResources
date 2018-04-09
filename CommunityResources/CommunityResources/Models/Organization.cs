@@ -15,9 +15,9 @@ namespace CommunityResources.Models
 
         // Requirements
         [Display(Name = "Photo ID is Required")]
-        public bool Photo_ID { get; set; }
+        public int Photo_ID { get; set; }
         [Display(Name = "There are other requirements")]
-        public bool Other_Requirements { get; set; }
+        public int Other_Requirements { get; set; }
         [Display(Name = "Other Requirements")]
         public string Other_Requirements_Text { get; set; }
 
@@ -25,9 +25,9 @@ namespace CommunityResources.Models
 
         // Appointments
         [Display(Name = "Appointments are Availible")]
-        public bool Appointments_Availible { get; set; }
+        public int Appointments_Availible { get; set; }
         [Display(Name = "Appointments are Required")]
-        public bool Appointments_Required { get; set; }
+        public int Appointments_Required { get; set; }
         [Display(Name = "Additional Comments")]
         public string Additional_Comments { get; set; }
 
