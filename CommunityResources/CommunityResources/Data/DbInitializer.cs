@@ -10,8 +10,8 @@ namespace CommunityResources.Data
         {
             context.Database.EnsureCreated();
 
-            
-             //Look for any students.
+
+            //Look for any students.
             if (context.Organizations.Any())
             {
                 return;   // DB has been seeded
@@ -21,26 +21,26 @@ namespace CommunityResources.Data
             {
             new Organization{Name="Single Parent Scholarship Fund of Faulkner County", Photo_ID=0, Other_Requirements=0,
                 Other_Requirements_Text ="Recipients must be a single parent and enrolled in a college, university or trade school to receive a scholarship.",
-                Appointments_Availible =1, Appointments_Required=0, Additional_Comments=""},
+                    Appointments_Available =1, Appointments_Required=0, Additional_Comments=""},
             new Organization{Name="CHDC Volunteer Services", Photo_ID=1, Other_Requirements=0, Other_Requirements_Text="",
-                Appointments_Availible =1, Appointments_Required=1, Additional_Comments=""},
+                Appointments_Available =1, Appointments_Required=1, Additional_Comments=""},
             new Organization{Name="Faulkner County Long Term Recovery Board", Photo_ID=0, Other_Requirements=0,
-                Other_Requirements_Text ="", Appointments_Availible=0, Appointments_Required=0, Additional_Comments=""},
+                Other_Requirements_Text ="", Appointments_Available=0, Appointments_Required=0, Additional_Comments=""},
             new Organization{Name="The Storehouse Client Choice Pantry", Photo_ID=0, Other_Requirements=0, Other_Requirements_Text="",
-                Appointments_Availible =0, Appointments_Required=0, Additional_Comments="" },
+                Appointments_Available =0, Appointments_Required=0, Additional_Comments="" },
             new Organization{Name="Hope and Compassion Ministries", Photo_ID=0, Other_Requirements=0, Other_Requirements_Text="",
-                Appointments_Availible =1, Appointments_Required=0, Additional_Comments=""},
-            new Organization{Name="United Way", Photo_ID=1, Other_Requirements=0, Other_Requirements_Text="", Appointments_Availible=1,
+                Appointments_Available =1, Appointments_Required=0, Additional_Comments=""},
+            new Organization{Name="United Way", Photo_ID=1, Other_Requirements=0, Other_Requirements_Text="", Appointments_Available=1,
                 Appointments_Required=1, Additional_Comments=""},
-            new Organization{Name="Conway FUMC", Photo_ID=1, Other_Requirements=0, Other_Requirements_Text="", Appointments_Availible=0,
+            new Organization{Name="Conway FUMC", Photo_ID=1, Other_Requirements=0, Other_Requirements_Text="", Appointments_Available=0,
                 Appointments_Required=0, Additional_Comments=""},
-            new Organization{Name="The CALL", Photo_ID=0, Other_Requirements=0, Other_Requirements_Text="", Appointments_Availible=1,
+            new Organization{Name="The CALL", Photo_ID=0, Other_Requirements=0, Other_Requirements_Text="", Appointments_Available=1,
                 Appointments_Required=1, Additional_Comments="They can call anytime"},
-            new Organization{Name="Faulkner County Juvenile Court", Photo_ID=0, Other_Requirements=1, Other_Requirements_Text="Court Order", Appointments_Availible=1,
+            new Organization{Name="Faulkner County Juvenile Court", Photo_ID=0, Other_Requirements=1, Other_Requirements_Text="Court Order", Appointments_Available=1,
                 Appointments_Required=1, Additional_Comments=""},
-            new Organization{Name="Haven", Photo_ID=0, Other_Requirements=0, Other_Requirements_Text="", Appointments_Availible=1,
+            new Organization{Name="Haven", Photo_ID=0, Other_Requirements=0, Other_Requirements_Text="", Appointments_Available=1,
                 Appointments_Required=1, Additional_Comments=""}, 
-            //new Organization{Name="", Photo_ID=, Other_Requirements=, Other_Requirements_Text="", Appointments_Availible=,
+            //new Organization{Name="", Photo_ID=, Other_Requirements=, Other_Requirements_Text="", Appointments_available=,
             //Appointments_Required=, Additional_Comments=""} 
             };
             foreach (Organization org in organizations)

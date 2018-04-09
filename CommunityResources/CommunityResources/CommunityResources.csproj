@@ -14,10 +14,9 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Compile Remove="Data\ResourceContext.cs" />
-    <Compile Remove="Models\SeedData.cs" />
+    <None Remove="MvcResource.db" />
   </ItemGroup>
   <ItemGroup>
-    <None Remove="MvcResource.db" />
+    <Compile Remove="Models\DBContext.cs" />
   </ItemGroup>
 </Project>

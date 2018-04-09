@@ -25,7 +25,7 @@ namespace CommunityResources.Models
 
         // Appointments
         [Display(Name = "Appointments are Availible")]
-        public int Appointments_Availible { get; set; }
+        public int Appointments_Available { get; set; }
         [Display(Name = "Appointments are Required")]
         public int Appointments_Required { get; set; }
         [Display(Name = "Additional Comments")]
@@ -34,7 +34,7 @@ namespace CommunityResources.Models
         public Contact Contacts { get; set; }
         public ICollection<Time> Times { get; set; }
         public Resource Resources { get; set; }
-        
+
 
     }
 }
