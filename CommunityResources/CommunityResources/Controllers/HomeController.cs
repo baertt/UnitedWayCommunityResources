@@ -29,55 +29,55 @@ namespace CommunityResources.Controllers
             var organization = from s in _context.Organizations.Include(c => c.Contacts)
                                select s;
             if (id == 1) { 
-            organization = organization.Where(s => s.Resources.Clothing.Equals(true));
+            organization = organization.Where(s => s.Resources.Clothing.Equals(1));
             }
             else if (id == 2)
             {
-                organization = organization.Where(s => s.Resources.Education.Equals(true));
+                organization = organization.Where(s => s.Resources.Education.Equals(1));
             }
             else if (id == 2)
             {
-                organization = organization.Where(s => s.Resources.Education.Equals(true));
+                organization = organization.Where(s => s.Resources.Education.Equals(1));
             }
             else if (id == 3)
             {
-                organization = organization.Where(s => s.Resources.Employment.Equals(true));
+                organization = organization.Where(s => s.Resources.Employment.Equals(1));
             }
             else if (id == 4)
             {
-                organization = organization.Where(s => s.Resources.Finances.Equals(true));
+                organization = organization.Where(s => s.Resources.Finances.Equals(1));
             }
             else if (id == 5)
             {
-                organization = organization.Where(s => s.Resources.Food.Equals(true));
+                organization = organization.Where(s => s.Resources.Food.Equals(1));
             }
             else if (id == 6)
             {
-                organization = organization.Where(s => s.Resources.Housing.Equals(true));
+                organization = organization.Where(s => s.Resources.Housing.Equals(1));
             }
             else if (id == 7)
             {
-                organization = organization.Where(s => s.Resources.Natural_Disaster.Equals(true));
+                organization = organization.Where(s => s.Resources.Natural_Disaster.Equals(1));
             }
             else if (id == 8)
             {
-                organization = organization.Where(s => s.Resources.Senior.Equals(true));
+                organization = organization.Where(s => s.Resources.Senior.Equals(1));
             }
             else if (id == 9)
             {
-                organization = organization.Where(s => s.Resources.Rent_Utilities.Equals(true));
+                organization = organization.Where(s => s.Resources.Rent_Utilities.Equals(1));
             }
             else if (id == 10)
             {
-                organization = organization.Where(s => s.Resources.Medical_Prescription.Equals(true));
+                organization = organization.Where(s => s.Resources.Medical_Prescription.Equals(1));
             }
             else if (id == 11)
             {
-                organization = organization.Where(s => s.Resources.Veterans.Equals(true));
+                organization = organization.Where(s => s.Resources.Veterans.Equals(1));
             }
             else if (id == 12)
             {
-                organization = organization.Where(s => s.Resources.Other_Resources.Equals(true));
+                organization = organization.Where(s => s.Resources.Other_Resources.Equals(1));
             }
             return View(await organization.AsNoTracking().ToListAsync());
 
