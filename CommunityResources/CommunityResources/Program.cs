@@ -29,7 +29,7 @@ namespace CommunityResources
                     // requires using Microsoft.EntityFrameworkCore;
                     context.Database.Migrate();
                     // Requires using CommunityResources.Models;
-                    //DbInitializer.Initialize(context);
+                    DbInitializer.Initialize(context);
                 }
                 catch (Exception ex)
                 {

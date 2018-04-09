@@ -25,35 +25,35 @@ namespace CommunityResources.Models
 
         // Resources Offered
 
-        public bool Clothing { get; set; }
+        public int Clothing { get; set; }
 
-        public bool Education { get; set; }
+        public int Education { get; set; }
 
-        public bool Employment { get; set; }
+        public int Employment { get; set; }
 
-        public bool Finances { get; set; }
+        public int Finances { get; set; }
 
-        public bool Food { get; set; }
+        public int Food { get; set; }
 
-        public bool Housing { get; set; }
+        public int Housing { get; set; }
 
         [Display(Name = "Natural Disaster Assistance")]
-        public bool Natural_Disaster { get; set; }
+        public int Natural_Disaster { get; set; }
 
         [Display(Name = "Senior Assistance")]
-        public bool Senior { get; set; }
+        public int Senior { get; set; }
 
         [Display(Name = "Rent and Utilities Assistance")]
-        public bool Rent_Utilities { get; set; }
+        public int Rent_Utilities { get; set; }
 
         [Display(Name = "Medical and Prescription Assistance")]
-        public bool Medical_Prescription { get; set; }
+        public int Medical_Prescription { get; set; }
 
         [Display(Name = "Veterans Services")]
-        public bool Veterans { get; set; }
+        public int Veterans { get; set; }
 
         [Display(Name = "Other Resources")]
-        public bool Other_Resources { get; set; }
+        public int Other_Resources { get; set; }
 
         [Display(Name = "Other Resources (Details)")]
         public string Other_Resources_Text { get; set; }
