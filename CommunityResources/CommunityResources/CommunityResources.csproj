@@ -16,10 +16,6 @@
   </ItemGroup>
 
   <ItemGroup>
-    <None Remove="MvcResource.db" />
-    <None Remove="Resources.db" />
-  </ItemGroup>
-  <ItemGroup>
-    <Compile Remove="Models\DBContext.cs" />
-  </ItemGroup>
+    <Compile Remove="wwwroot\css\updatedsite.cs" />
+</ItemGroup>
 </Project>
