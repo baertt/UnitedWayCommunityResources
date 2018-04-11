@@ -16,14 +16,10 @@
   </ItemGroup>
 
   <ItemGroup>
-<<<<<<< HEAD
-    <Compile Remove="wwwroot\css\updatedsite.cs" />
-=======
     <None Remove="MvcResource.db" />
     <None Remove="Resources.db" />
   </ItemGroup>
   <ItemGroup>
     <Compile Remove="Models\DBContext.cs" />
->>>>>>> e91ed36a1420f7f56e29ab37cb9810ea0afef83f
   </ItemGroup>
 </Project>
