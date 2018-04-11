@@ -35,11 +35,6 @@
 
             </script>
             <script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
-
-
-
-
-
         </div>
 
 
@@ -50,10 +45,7 @@
     <p>
         <a asp-action="Create">Create New</a>
     </p>
-
     <table class="table">
-
-
         <thead>
             <tr>
                 <th>
@@ -88,22 +80,43 @@
             {
                 <tr>
                     <td>
-                        @Html.DisplayFor(modelItem => item.Name)
+                        <h5>@item.Name</h5>
+
                     </td>
                     <td>
-                        @Html.DisplayFor(modelItem => item.Photo_ID)
+                         <script type="text/javascript">
+                            if( @item.Photo_ID === 1 ) {
+                                document.write("✔");
+                                //@item.Photo_ID = 0;
+                            }
+                        </script>
                     </td>
                     <td>
-                        @Html.DisplayFor(modelItem => item.Other_Requirements)
+                        <script type="text/javascript">
+                            if( @item.Other_Requirements === 1 ) {
+                                document.write("✔");
+                                //@item.Photo_ID = 0;
+                            }
+                        </script>
                     </td>
                     <td>
                         @Html.DisplayFor(modelItem => item.Other_Requirements_Text)
                     </td>
                     <td>
-                        @Html.DisplayFor(modelItem => item.Appointments_Available)
+                        <script type="text/javascript">
+                            if( @item.Appointments_Available === 1 ) {
+                                document.write("✔");
+                                //@item.Photo_ID = 0;
+                            }
+                        </script>
                     </td>
                     <td>
-                        @Html.DisplayFor(modelItem => item.Appointments_Required)
+                        <script type="text/javascript">
+                            if( @item.Appointments_Required === 1 ) {
+                                document.write("✔");
+                                //@item.Photo_ID = 0;
+                            }
+                        </script>
                     </td>
                     <td>
                         @Html.DisplayFor(modelItem => item.Additional_Comments)
