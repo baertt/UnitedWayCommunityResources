@@ -29,7 +29,7 @@ namespace CommunityResources.Controllers
             var organization = from s in _context.Organizations.Include(c => c.Contacts)
                                select s;
             if (id == 1) { 
-            organization = organization.Where(s => s.Resources.Clothing.Equals(1));
+                organization = organization.Where(s => s.Resources.Clothing.Equals(1));
             }
             else if (id == 2)
             {
