@@ -13,17 +13,17 @@ namespace CommunityResources.Models
         public int TimesId { get; set; }
 
         [Display(Name = "Opening Time")]
-        public TimeSpan Time_Start { get; set; } //Use Military Time
+        public string Time_Start { get; set; } //Use Military Time
 
         [Display(Name = "Closing Time")]
-        public TimeSpan Time_End { get; set; }
+        public string Time_End { get; set; }
 
         [Display(Name = "Week of the Month")]
         public int Repeat { get; set; } // Week of month event occurs
 
 
 
-        public DayOfWeek Day { get; set; }
+        public string Day { get; set; }
 
 
 

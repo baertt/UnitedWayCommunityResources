@@ -1,0 +1,80 @@
+﻿
+@{
+    ViewData["Title"] = "Results";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+
+}
+
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>United Way Community Resources</title>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="~/css/site.css" type="text/css" runat="server">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+    <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
+
+</head>
+
+<body>
+    <header class="container">
+        <div class="row">
+
+            <h1 class="col-sm-10" id="title">Community Resources</h1>
+
+            <div id="google_translate_element"></div>
+            <script type="text/javascript">
+
+                function googleTranslateElementInit() {
+
+                    new google.translate.TranslateElement({ pageLanguage: 'en', layout: google.translate.TranslateElement.InlineLayout.SIMPLE, autoDisplay: false }, 'google_translate_element');
+
+                }
+            </script>
+            <script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+        </div>
+    </header>
+    <div class="refine">
+        <div class="row">
+
+            <div class="col-sm-1"> </div>
+            <div class="col-sm-5">
+                <div class="rheading"> Location</div>
+                <form>
+                    Your location:<br>
+                    <input type="text" name="location"><br>
+                </form>
+                <div class="dropdown">
+                    <button onclick="myFunction()" class="dropbtn" id="lang">
+                        Distance from you:
+                    </button>
+                    <div id="myDropdown" class="dropdown-content">
+                        <a href="#">3 Miles</a>
+                        <a href="#">5 Miles</a>
+                        <a href="#">10 Miles</a>
+                        <a href="#"> 25 Miles</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-5">
+                <div class="rheading">Availability</div>
+                <form>
+                    Time:<br>
+                    <input type="text" name="location"><br>
+                </form>
+                </div>
+            </div>
+            <div class="col-sm-1"></div>
+        </div>
+ 
+    <div class="search">
+        <button class="col-sm-2" type="button" id="lang"> Search</button>
+    </div>
+    <h4>Exact Match</h4>
+    <h4>Other Results</h4>
+
+</body>
+</html>
+

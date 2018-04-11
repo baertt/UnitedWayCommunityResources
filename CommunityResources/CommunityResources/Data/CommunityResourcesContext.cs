@@ -12,7 +12,7 @@ namespace CommunityResources.Data
     {
 
 
-        public CommunityResourcesContext(DbContextOptions options) : base(options)
+        public CommunityResourcesContext(DbContextOptions<CommunityResourcesContext> options) : base(options)
         {
         }
         public DbSet<Organization> Organizations { get; set; }

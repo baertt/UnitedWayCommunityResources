@@ -259,3 +259,7 @@ paket-files/
 # Python Tools for Visual Studio (PTVS)
 __pycache__/
 *.pyc
+CommunityResources/CommunityResources/CommunityResources.sln
+.DS_Store
+CommunityResources/.DS_Store
+CommunityResources/CommunityResources/.DS_Store

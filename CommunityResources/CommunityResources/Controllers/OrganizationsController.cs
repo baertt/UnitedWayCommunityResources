@@ -25,6 +25,7 @@ namespace CommunityResources.Controllers
             return View(await _context.Organizations.ToListAsync());
         }
 
+
         // GET: Organizations/Details/5
         public async Task<IActionResult> Details(int? id)
         {
@@ -115,8 +116,8 @@ namespace CommunityResources.Controllers
             if (await TryUpdateModelAsync<Organization>(
                 organizationToUpdate,
                 "",
-                org => org.Name, org => org.Photo_ID, org => org.Other_Requirements, 
-                org => org.Other_Requirements_Text, org => org.Appointments_Availible,
+                org => org.Name, org => org.Photo_ID, org => org.Other_Requirements,
+                org => org.Other_Requirements_Text, org => org.Appointments_Available,
                 org => org.Appointments_Required, org => org.Additional_Comments))
             {
                 try
@@ -138,7 +139,7 @@ namespace CommunityResources.Controllers
         // GET: Organizations/Delete/5
         public async Task<IActionResult> Delete(int? id, bool? saveChangesError = false)
         {
-            
+
             if (id == null)
             {
                 return NotFound();
@@ -151,15 +152,15 @@ namespace CommunityResources.Controllers
             {
                 return NotFound();
             }
-                if (saveChangesError.GetValueOrDefault())
-                {
-                    ViewData["ErrorMessage"] =
-                        "Delete failed. Try again, and if the problem persists " +
-                        "see your system administrator.";
-                }
+            if (saveChangesError.GetValueOrDefault())
+            {
+                ViewData["ErrorMessage"] =
+                    "Delete failed. Try again, and if the problem persists " +
+                    "see your system administrator.";
+            }
 
 
-                return View(organization);
+            return View(organization);
         }
 
         // POST: Organizations/Delete/5
