@@ -18,4 +18,7 @@
   <ItemGroup>
     <Compile Remove="wwwroot\css\updatedsite.cs" />
 </ItemGroup>
+  <ItemGroup>
+    <None Remove="Views\Home\GracesResults.html" />
+  </ItemGroup>
 </Project>
