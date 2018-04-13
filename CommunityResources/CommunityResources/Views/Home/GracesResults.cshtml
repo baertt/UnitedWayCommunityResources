@@ -1,5 +1,514 @@
-﻿@*
-    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
-*@
-@{
-}
+﻿<!DOCTYPE html>
+<!--[if IEMobile 7]><html class="no-js ie iem7" lang="en" dir="ltr"><![endif]-->
+<!--[if lte IE 6]><html class="no-js ie lt-ie9 lt-ie8 lt-ie7" lang="en" dir="ltr"><![endif]-->
+<!--[if (IE 7)&(!IEMobile)]><html class="no-js ie lt-ie9 lt-ie8" lang="en" dir="ltr"><![endif]-->
+<!--[if IE 8]><html class="no-js ie lt-ie9" lang="en" dir="ltr"><![endif]-->
+<!--[if (gte IE 9)|(gt IEMobile 7)]><html class="no-js ie" lang="en" dir="ltr" prefix="fb: http://www.facebook.com/2008/fbml content: http://purl.org/rss/1.0/modules/content/ dc: http://purl.org/dc/terms/ foaf: http://xmlns.com/foaf/0.1/ og: http://ogp.me/ns# rdfs: http://www.w3.org/2000/01/rdf-schema# sioc: http://rdfs.org/sioc/ns# sioct: http://rdfs.org/sioc/types# skos: http://www.w3.org/2004/02/skos/core# xsd: http://www.w3.org/2001/XMLSchema#"><![endif]-->
+<!--[if !IE]><!-->
+<html class="no-js" lang="en" dir="ltr" prefix="fb: http://www.facebook.com/2008/fbml content: http://purl.org/rss/1.0/modules/content/ dc: http://purl.org/dc/terms/ foaf: http://xmlns.com/foaf/0.1/ og: http://ogp.me/ns# rdfs: http://www.w3.org/2000/01/rdf-schema# sioc: http://rdfs.org/sioc/ns# sioct: http://rdfs.org/sioc/types# skos: http://www.w3.org/2004/02/skos/core# xsd: http://www.w3.org/2001/XMLSchema#">
+<!--<![endif]-->
+<head>
+    <title>Clothing  | United Way of Central Arkansas</title>
+    <meta charset="utf-8" />
+    <link rel="profile" href="http://www.w3.org/1999/xhtml/vocab" />
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <meta name="HandheldFriendly" content="true" />
+    <meta name="MobileOptimized" content="width" />
+    <meta http-equiv="cleartype" content="on" />
+    <link rel="apple-touch-icon-precomposed" href="https://www.uwcark.org/sites/uwcark.org/files/fav-icon2_4.png" type="image/png" />
+    <link rel="apple-touch-icon" href="https://www.uwcark.org/sites/uwcark.org/files/fav-icon2_3.png" type="image/png" />
+    <meta name="Generator" content="Drupal 7 (http://drupal.org)" />
+    <link rel="shortcut icon" href="https://www.uwcark.org/sites/uwcark.org/files/fav-icon_1_1.png" type="image/png" />
+    <link rel="canonical" href="/clothing" />
+    <link rel="shortlink" href="/node/155" />
+    <meta name="viewport" content="width=device-width" />
+    <link rel="stylesheet" href="~/css/site.css" type="text/css" runat="server">
+ 
+    <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
+    <style>
+        @import url("https://www.uwcark.org/sites/uwcark.org/themes/omega/omega/css/modules/system/system.base.css?p5trry");
+        @import url("https://www.uwcark.org/sites/uwcark.org/themes/omega/omega/css/modules/system/system.menus.theme.css?p5trry");
+        @import url("https://www.uwcark.org/sites/uwcark.org/themes/omega/omega/css/modules/system/system.messages.theme.css?p5trry");
+        @import url("https://www.uwcark.org/sites/uwcark.org/themes/omega/omega/css/modules/system/system.theme.css?p5trry");
+        @import url("https://www.uwcark.org/sites/uwcark.org/modules/calendar/css/calendar_multiday.css?p5trry");
+        @import url("https://www.uwcark.org/sites/uwcark.org/modules/date/date_api/date.css?p5trry");
+        @import url("https://www.uwcark.org/sites/uwcark.org/modules/date/date_popup/themes/datepicker.1.7.css?p5trry");
+        @import url("https://www.uwcark.org/sites/uwcark.org/modules/date/date_repeat_field/date_repeat_field.css?p5trry");
+        @import url("https://www.uwcark.org/sites/uwcark.org/themes/omega/omega/css/modules/field/field.theme.css?p5trry");
+        @import url("https://www.uwcark.org/modules/node/node.css?p5trry");
+        @import url("https://www.uwcark.org/sites/uwcark.org/themes/omega/omega/css/modules/search/search.theme.css?p5trry");
+        @import url("https://www.uwcark.org/sites/uwcark.org/themes/omega/omega/css/modules/user/user.base.css?p5trry");
+        @import url("https://www.uwcark.org/sites/uwcark.org/themes/omega/omega/css/modules/user/user.theme.css?p5trry");
+        @import url("https://www.uwcark.org/sites/uwcark.org/modules/views/css/views.css?p5trry");
+        @import url("https://www.uwcark.org/sites/uwcark.org/modules/media/modules/media_wysiwyg/css/media_wysiwyg.base.css?p5trry");
+    </style>
+    <style>
+        @import url("https://www.uwcark.org/sites/uwcark.org/modules/ctools/css/ctools.css?p5trry");
+        @import url("https://www.uwcark.org/sites/all/modules/jquerymenu/jquerymenu.css?p5trry");
+        @import url("https://www.uwcark.org/sites/uwcark.org/libraries/mmenu/main/src/css/jquery.mmenu.all.css?p5trry");
+        @import url("https://www.uwcark.org/sites/uwcark.org/modules/mmenu/themes/mm-fresh/styles/mm-fresh.css?p5trry");
+        @import url("https://www.uwcark.org/sites/uwcark.org/libraries/superfish/css/superfish.css?p5trry");
+        @import url("https://www.uwcark.org/sites/uwcark.org/libraries/superfish/style/default.css?p5trry");
+    </style>
+    <style>
+        @import url("https://www.uwcark.org/sites/uwcark.org/themes/unitedwayr11/css/unitedwayr11.normalize.css?p5trry");
+        @import url("https://www.uwcark.org/sites/uwcark.org/themes/unitedwayr11/css/unitedwayr11.hacks.css?p5trry");
+        @import url("https://www.uwcark.org/sites/uwcark.org/themes/unitedwayr11/css/unitedwayr11.styles.css?p5trry");
+        @import url("https://www.uwcark.org/sites/uwcark.org/themes/unitedwayr11/css/zocial.css?p5trry");
+    </style>
+    <!--[if lte IE 8]>
+    <style>
+    @import url("https://www.uwcark.org/sites/uwcark.org/themes/unitedwayr11/css/unitedwayr11.no-query.css?p5trry");
+    </style>
+    <![endif]-->
+    <style>
+        @import url("https://www.uwcark.org/sites/uwcark.org/themes/unitedwayr11/css/layouts/unitedwayr11/unitedwayr11.layout.css?p5trry");
+        @import url("https://www.uwcark.org/sites/uwcark.org/files/fontyourface/wysiwyg.css?p5trry");
+    </style>
+    <!--[if lte IE 8]>
+    <style>
+    @import url("https://www.uwcark.org/sites/uwcark.org/themes/unitedwayr11/css/layouts/unitedwayr11/unitedwayr11.layout.no-query.css?p5trry");
+    </style>
+    <![endif]-->
+    <script src="https://www.uwcark.org/sites/uwcark.org/modules/jquery_update/replace/jquery/1.8/jquery.min.js?v=1.8.3"></script>
+    <script src="https://www.uwcark.org/misc/jquery.once.js?v=1.2"></script>
+    <script src="https://www.uwcark.org/misc/drupal.js?p5trry"></script>
+    <script src="https://www.uwcark.org/sites/uwcark.org/themes/omega/omega/js/no-js.js?p5trry"></script>
+    <script src="https://www.uwcark.org/sites/all/modules/jquerymenu/jquerymenu.js?p5trry"></script>
+    <script src="https://www.uwcark.org/sites/uwcark.org/modules/google_analytics/googleanalytics.js?p5trry"></script>
+    <script>(function(i,s,o,g,r,a,m){i["GoogleAnalyticsObject"]=r;i[r]=i[r]||function(){(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)})(window,document,"script","//www.google-analytics.com/analytics.js","ga");ga("create", "UA-60902616-1", {"cookieDomain":"auto"});ga("set", "anonymizeIp", true);ga("send", "pageview");</script>
+    <script src="https://use.typekit.com/fsj0vff.js"></script>
+    <script>try{Typekit.load();}catch(e){}</script>
+    <script src="https://www.uwcark.org/sites/uwcark.org/modules/mmenu/js/mmenu.js?p5trry"></script>
+    <script src="https://www.uwcark.org/sites/uwcark.org/libraries/mmenu/hammer/hammer.js?p5trry"></script>
+    <script src="https://www.uwcark.org/sites/uwcark.org/libraries/mmenu/jquery.hammer/jquery.hammer.js?p5trry"></script>
+    <script src="https://www.uwcark.org/sites/uwcark.org/libraries/mmenu/main/src/js/jquery.mmenu.min.all.js?p5trry"></script>
+    <script src="https://www.uwcark.org/sites/uwcark.org/libraries/superfish/jquery.hoverIntent.minified.js?p5trry"></script>
+    <script src="https://www.uwcark.org/sites/uwcark.org/libraries/superfish/sftouchscreen.js?p5trry"></script>
+    <script src="https://www.uwcark.org/sites/uwcark.org/libraries/superfish/supposition.js?p5trry"></script>
+    <script src="https://www.uwcark.org/sites/uwcark.org/libraries/superfish/jquery.bgiframe.min.js?p5trry"></script>
+    <script src="https://www.uwcark.org/sites/uwcark.org/libraries/superfish/superfish.js?p5trry"></script>
+    <script src="https://www.uwcark.org/sites/uwcark.org/libraries/superfish/supersubs.js?p5trry"></script>
+    <script src="https://www.uwcark.org/sites/uwcark.org/modules/superfish/superfish.js?p5trry"></script>
+    <script src="https://www.uwcark.org/sites/uwcark.org/themes/unitedwayr11/js/placeholder2.js?p5trry"></script>
+    <script src="https://www.uwcark.org/sites/uwcark.org/themes/unitedwayr11/js/onload.js?p5trry"></script>
+    <script src="https://www.uwcark.org/sites/uwcark.org/themes/unitedwayr11/js/unitedwayr11.behaviors.js?p5trry"></script>
+    <script src="https://www.uwcark.org/sites/uwcark.org/themes/unitedwayr11/js/jquery.browser.js?p5trry"></script>
+    <script>jQuery.extend(Drupal.settings, {"basePath":"\/","pathPrefix":"","jquerymenu":{"hover":0,"animate":1,"edit_link":1,"click_to_expand":0},"mmenu":{"mmenu_right":{"enabled":"1","title":"Right menu","name":"mmenu_right","blocks":[{"module_delta":"system|main-menu","menu_parameters":{"min_depth":"1"},"title":"Main menu","collapsed":"0","wrap":"1","module":"system","delta":"main-menu"},{"module_delta":"system|user-menu","menu_parameters":{"min_depth":"1"},"title":"User menu","collapsed":"0","wrap":"1","module":"system","delta":"user-menu"}],"options":{"classes":"mm-fresh mm-slide","effects":{"mm-slide":"mm-slide"},"slidingSubmenus":false,"clickOpen":{"open":true,"selector":"#mmenu22"},"counters":{"add":true,"update":true},"dragOpen":{"open":true,"pageNode":"body","threshold":100,"maxStartPos":50},"footer":{"add":true,"content":"","title":"Copyright \u00a92016","update":false},"header":{"add":true,"content":"United Way of Demo","title":"United Way of Demo","update":true},"labels":{"collapse":false},"offCanvas":{"enabled":true,"modal":false,"moveBackground":true,"position":"right","zposition":"front"},"searchfield":{"add":false,"addTo":"menu","search":false,"placeholder":"Search","noResults":"No results found.","showLinksOnly":true}},"configurations":{"clone":false,"preventTabbing":false,"panelNodetype":"div, ul, ol","transitionDuration":400,"classNames":{"label":"Label","panel":"Panel","selected":"Selected","buttonbars":{"buttonbar":"anchors"},"counters":{"counter":"Counter"},"fixedElements":{"fixedTop":"FixedTop","fixedBottom":"FixedBottom"},"footer":{"panelFooter":"Footer"},"header":{"panelHeader":"Header","panelNext":"Next","panelPrev":"Prev"},"labels":{"collapsed":"Collapsed"},"toggles":{"toggle":"Toggle","check":"Check"}},"dragOpen":{"width":{"perc":0.8,"min":140,"max":440},"height":{"perc":0.8,"min":140,"max":880}},"offCanvas":{"menuInjectMethod":"prepend","menuWrapperSelector":"body","pageNodetype":"div","pageSelector":"body \u003E div"}},"custom":[],"position":"right"}},"googleanalytics":{"trackOutbound":1,"trackMailto":1,"trackDownload":1,"trackDownloadExtensions":"7z|aac|arc|arj|asf|asx|avi|bin|csv|doc(x|m)?|dot(x|m)?|exe|flv|gif|gz|gzip|hqx|jar|jpe?g|js|mp(2|3|4|e?g)|mov(ie)?|msi|msp|pdf|phps|png|ppt(x|m)?|pot(x|m)?|pps(x|m)?|ppam|sld(x|m)?|thmx|qtm?|ra(m|r)?|sea|sit|tar|tgz|torrent|txt|wav|wma|wmv|wpd|xls(x|m|b)?|xlt(x|m)|xlam|xml|z|zip"},"superfish":{"1":{"id":"1","sf":{"animation":{"opacity":"show","height":"show"},"speed":"\u0027fast\u0027","autoArrows":false,"dropShadows":true,"disableHI":false},"plugins":{"touchscreen":{"mode":"window_width"},"supposition":true,"bgiframe":true,"supersubs":{"minWidth":"24.462","maxWidth":"24.462","extraWidth":1}}}},"urlIsAjaxTrusted":{"\/clothing":true}});</script>
+</head>
+<body class="html not-front not-logged-in page-node page-node- page-node-155 node-type-page section-clothing">
+    <a href="#main-content" class="element-invisible element-focusable">Skip to main content</a>
+    <div class="l-page has-one-sidebar has-sidebar-first">
+        <header class="l-header" role="banner">
+            <div class="l-constrained">
+                <div class="l-branding site-branding">
+                    <div class="l-region l-region--header1">
+                        <div id="block-block-2" class="block block--block donate-now-block block--block-2">
+                            <div class="block__content">
+                                <div>&nbsp;</div><ul>
+                                    <li class="help"><a href="/volunteer">Volunteer</a></li>
+                                    <li class="donate"><a href="/civicrm/contribute/transact?reset=1&amp;id=1">Donate</a></li>
+                                    <li class="donate"><a style="background:#ff9600!important;" href="https://docs.google.com/forms/d/1TkIU-AyiK2KNc97sD-KghVBVcdfGPGast6ZIxdI9-m0/edit">Share My Event</a></li>
+
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="l-region l-region--live-united">
+                        <div id="block-block-1" class="block block--block live-united-block block--block-1">
+                            <div class="block__content">
+                                <p><a href="http://www.uwcark.org"><img alt="" src="/sites/uwcark.org/files/live-united.png" style="width: 170px;" /></a>   </p>
+                            </div>
+                        </div>
+                    </div>
+                    <a href="/" title="Home" rel="home" class="site-branding__logo"><img src="https://www.uwcark.org/sites/uwcark.org/files/Central%20Arkansas.png" alt="Home" /></a>
+                    <div class="l-region l-region--mobilebtn">
+                        <div id="block-block-15" class="block block--block sliding-menu sliding-menu-block block--block-15">
+                            <div class="block__content">
+                                <p><img alt="" id="mmenu22" src="/sites/uwcark.org/files/Theme-1-menu.png" style="width: 44px; height: 25px;" /></p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="l-region l-region--sliding-button">
+                        <div id="block-multiblock-6" class="block block--multiblock mobile-menu block--multiblock-6">
+                            <div class="block__content">
+                                <!--[if IE]><div class="ie"><![endif]--><ul class="menu jquerymenu"><li class="parent closed"><span class="parent closed"></span><a href="/about-us">ABOUT US</a><ul><li class="leaf first"><a href="/history">History</a></li><li class="leaf"><a href="/board-directors">Board of Directors</a></li><li class="leaf"><a href="/staff">Staff</a></li><li class="leaf"><a href="/contact-us">Contact Us</a></li><li class="leaf"><a href="/node/244">2018 Committees &amp; Responsibilities</a></li><li class="leaf"><a href="/annual-reports-financials">Annual Reports &amp; Financials</a></li><li class="leaf"><a href="/job-openings">Job Openings</a></li><li class="leaf last"><a href="/intern-job-description">Internship Job Description</a></li></ul></li><li class="parent closed"><span class="parent closed"></span><a href="/direct-services">OUR WORK</a><ul><li class="leaf first"><a href="/direct-services">Direct Services</a></li><li class="parent closed"><span class="parent closed"></span><a href="/funded-agencies">2017-2018 Funded Partner Agencies</a><ul><li class="leaf first"><a href="/education-agencies">EDUCATION</a></li><li class="leaf"><a href="/health-agencies">Health</a></li><li class="leaf"><a href="/income-agencies">Income (Financial Stability)</a></li><li class="leaf last"><a href="/safety-net-agencies">Emergency Services</a></li></ul></li><li class="leaf last"><a href="/real-stories">Real Stories</a></li></ul></li><li class="parent closed"><span class="parent closed"></span><a href="/volunteer">GET INVOLVED</a><ul><li class="leaf first last"><a href="/volunteer">Volunteer</a></li></ul></li><li class="parent closed"><span class="parent closed"></span><a href="/16campaign">CAMPAIGN</a><ul><li class="parent closed first"><span class="parent closed first"></span><a href="/liveunited" title="LIVE UNITED">LIVE UNITED</a><ul><li class="leaf first last"><a href="/LIVEUNITEDSHIRT">Join the Movement!</a></li></ul></li><li class="leaf"><a href="/campaign-resource-center">Campaign Resource Center</a></li><li class="leaf"><a href="/campaign-order-form" title="Sign up your business today" target="_blank">Campaign Order Form</a></li><li class="leaf last"><a href="/ccsurvey">Campaign Coordinator Survey</a></li></ul></li><li class="parent open"><span class="parent open"></span><a href="/help" title="Community Resources">Community Resources</a></li><li class="parent closed"><span class="parent closed"></span><a href="/united-way-central-arkansas-special-events">Events</a><ul><li class="leaf first"><a href="https://www.uwcark.org/events/calendar">Calendar of Events</a></li><li class="parent closed"><span class="parent closed"></span><a href="/free-tax-prep">Free Tax Preparation</a><ul><li class="leaf first"><a href="/drop-off-calendar">Drop Off Calendar</a></li><li class="leaf last"><a href="/volunteer-tax-training">Volunteer Training Calendar</a></li></ul></li><li class="leaf"><a href="/60th-birthday-party-0">60th Birthday Party</a></li><li class="parent closed"><span class="parent closed"></span><a href="/ccbootcamp">Campaign Coordinator Boot Camp</a><ul><li class="leaf first last"><a href="/campaign-coordinator-boot-camp">Campaign Coordinator Registration</a></li></ul></li><li class="parent closed"><span class="parent closed"></span><a href="/ceo-luncheon">CEO Luncheon</a><ul><li class="leaf first last"><a href="/ceo-awards-2015-2016">CEO AWARDS 2015</a></li></ul></li><li class="leaf"><a href="/jeans-bling">Jeans &amp; Bling</a></li><li class="leaf"><a href="/2017-pillar-party">Pillar Party</a></li><li class="parent closed"><span class="parent closed"></span><a href="/stuffthebus">Stuff The Bus</a><ul><li class="leaf first"><a href="/stuff-bus-2017-photo-gallery">Stuff the Bus 2017 Photo Gallery</a></li><li class="leaf last"><a href="/stuffthebuspartner">Stuff the Bus Partner</a></li></ul></li><li class="parent closed"><span class="parent closed"></span><a href="https://www.uwcark.org/turkey-trot-2017">Turkey Trot</a><ul><li class="first"><span class="first"></span><a href="/civicrm/event/register?cid=0&amp;reset=1&amp;id=194" title="Turkey Trot">Turkey Trot Registration</a></li><li class="leaf"><a href="/turkey-trot-volunteers" title="Sign up to volunteer!!">Turkey Trot Volunteers</a></li><li class="leaf"><a href="/turkey-trot-sponsorship">Sponsorship Information</a></li><li class="leaf"><a href="/turkey-trot-race-map">Race Map</a></li><li class="leaf"><a href="/turkey-trot-2017-photo-gallery">Turkey Trot 2017 Photo Gallery</a></li><li class="leaf"><a href="http://www.uwcark.org/turkey-trot-2016-photo-gallery">TURKEY TROT 2016 PHOTO GALLERY</a></li><li class="leaf last"><a href="/turkey-trot-2015-photo-gallery">Turkey Trot 2015 Photo Gallery</a></li></ul></li><li class="leaf last"><a href="/GiveUnitedAR">#GiveUnitedAR</a></li></ul></li><li class="parent closed"><span class="parent closed"></span><a href="/community-partners-1">Community Partners</a><ul><li class="leaf first"><a href="/365">365 Small Business Circle</a></li><li class="leaf last"><a href="/community-investment-partners">Community Investment Partners</a></li></ul></li><li class="leaf"><a href="/user/login">Login</a></li><li class="leaf last"><a href="/2018-agency-application">Grant Applications</a></li></ul><!--[if IE]></div><![endif]-->
+                            </div>
+                        </div>
+                    </div>
+                    <div class="l-region l-region--header2">
+                        <div id="block-block-21" class="block block--block social-media-block block--block-21">
+                            <div class="block__content">
+                                <p><a href="https://www.facebook.com/uwcark" target="_blank"><img alt="" src="/sites/uwcark.org/files/facebook_1.png" style="width: 45px; height: 45px;" /></a><a href="https://www.instagram.com/uwcark/" target="_blank"><img alt="" src="/sites/uwcark.org/files/unnamed_1.png" style="width: 45px; height: 45px;" /></a><a href="https://twitter.com/UWCARK" target="_blank"><img alt="" src="/sites/uwcark.org/files/twitter_2.png" style="width: 45px; height: 45px;" /></a><a href="https://www.linkedin.com/company/united-way-of-central-arkansas"><img alt="" src="/sites/uwcark.org/files/linked-in_1.png" style="width: 45px; height: 45px;" /></a><a href="https://www.youtube.com/channel/UCY08y2xv6FmpcICnedFLhmQ" target="_blank"><img alt="" src="/sites/uwcark.org/files/youtube_1.png" style="width: 45px; height: 45px;" /></a></p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </header>
+        <div class="l-menu-zone">
+            <div class="menu-wrapper l-constrained">
+                <div class="l-region l-region--menu">
+                    <div id="block-superfish-1" class="block block--superfish main-menu-superfish-block  block--superfish-1">
+                        <div class="block__content">
+                            <ul id="superfish-1" class="menu sf-menu sf-main-menu sf-horizontal sf-style-default sf-total-items-9 sf-parent-items-7 sf-single-items-2">
+                                <li id="menu-456-1" class="first odd sf-item-1 sf-depth-1 sf-total-children-8 sf-parent-children-0 sf-single-children-8 menuparent"><a href="/about-us" class="sf-depth-1 menuparent"><span>ABOUT US</span></a><ul><li id="menu-653-1" class="first odd sf-item-1 sf-depth-2 sf-no-children"><a href="/history" class="sf-depth-2"><span>History</span></a></li><li id="menu-650-1" class="middle even sf-item-2 sf-depth-2 sf-no-children"><a href="/board-directors" class="sf-depth-2"><span>Board of Directors</span></a></li><li id="menu-651-1" class="middle odd sf-item-3 sf-depth-2 sf-no-children"><a href="/staff" class="sf-depth-2"><span>Staff</span></a></li><li id="menu-546-1" class="middle even sf-item-4 sf-depth-2 sf-no-children"><a href="/contact-us" class="sf-depth-2"><span>Contact Us</span></a></li><li id="menu-1072-1" class="middle odd sf-item-5 sf-depth-2 sf-no-children"><a href="/node/244" class="sf-depth-2"><span>2018 Committees &amp; Responsibilities</span></a></li><li id="menu-914-1" class="middle even sf-item-6 sf-depth-2 sf-no-children"><a href="/annual-reports-financials" class="sf-depth-2"><span>Annual Reports &amp; Financials</span></a></li><li id="menu-1450-1" class="middle odd sf-item-7 sf-depth-2 sf-no-children"><a href="/job-openings" class="sf-depth-2"><span>Job Openings</span></a></li><li id="menu-1451-1" class="last even sf-item-8 sf-depth-2 sf-no-children"><a href="/intern-job-description" class="sf-depth-2"><span>Internship Job Description</span></a></li></ul></li>
+                                <li id="menu-457-1" class="middle even sf-item-2 sf-depth-1 sf-total-children-3 sf-parent-children-1 sf-single-children-2 menuparent"><a href="/direct-services" class="sf-depth-1 menuparent"><span>OUR WORK</span></a><ul><li id="menu-656-1" class="first odd sf-item-1 sf-depth-2 sf-no-children"><a href="/direct-services" class="sf-depth-2"><span>Direct Services</span></a></li><li id="menu-657-1" class="middle even sf-item-2 sf-depth-2 sf-total-children-4 sf-parent-children-0 sf-single-children-4 menuparent"><a href="/funded-agencies" class="sf-depth-2 menuparent"><span>2017-2018 Funded Partner Agencies</span></a><ul><li id="menu-658-1" class="first odd sf-item-1 sf-depth-3 sf-no-children"><a href="/education-agencies" class="sf-depth-3"><span>EDUCATION</span></a></li><li id="menu-659-1" class="middle even sf-item-2 sf-depth-3 sf-no-children"><a href="/health-agencies" class="sf-depth-3"><span>Health</span></a></li><li id="menu-660-1" class="middle odd sf-item-3 sf-depth-3 sf-no-children"><a href="/income-agencies" class="sf-depth-3"><span>Income (Financial Stability)</span></a></li><li id="menu-661-1" class="last even sf-item-4 sf-depth-3 sf-no-children"><a href="/safety-net-agencies" class="sf-depth-3"><span>Emergency Services</span></a></li></ul></li><li id="menu-932-1" class="last odd sf-item-3 sf-depth-2 sf-no-children"><a href="/real-stories" class="sf-depth-2"><span>Real Stories</span></a></li></ul></li>
+                                <li id="menu-458-1" class="middle odd sf-item-3 sf-depth-1 sf-total-children-1 sf-parent-children-0 sf-single-children-1 menuparent"><a href="/volunteer" class="sf-depth-1 menuparent"><span>GET INVOLVED</span></a><ul><li id="menu-654-1" class="firstandlast odd sf-item-1 sf-depth-2 sf-no-children"><a href="/volunteer" class="sf-depth-2"><span>Volunteer</span></a></li></ul></li>
+                                <li id="menu-655-1" class="middle even sf-item-4 sf-depth-1 sf-total-children-4 sf-parent-children-1 sf-single-children-3 menuparent"><a href="/16campaign" class="sf-depth-1 menuparent"><span>CAMPAIGN</span></a><ul><li id="menu-927-1" class="first odd sf-item-1 sf-depth-2 sf-total-children-1 sf-parent-children-0 sf-single-children-1 menuparent"><a href="/liveunited" title="LIVE UNITED" class="sf-depth-2 menuparent"><span>LIVE UNITED</span></a><ul><li id="menu-928-1" class="firstandlast odd sf-item-1 sf-depth-3 sf-no-children"><a href="/LIVEUNITEDSHIRT" class="sf-depth-3"><span>Join the Movement!</span></a></li></ul></li><li id="menu-921-1" class="middle even sf-item-2 sf-depth-2 sf-no-children"><a href="/campaign-resource-center" class="sf-depth-2"><span>Campaign Resource Center</span></a></li><li id="menu-919-1" class="middle odd sf-item-3 sf-depth-2 sf-no-children"><a href="/campaign-order-form" title="Sign up your business today" target="_blank" class="sf-depth-2"><span>Campaign Order Form</span></a></li><li id="menu-920-1" class="last even sf-item-4 sf-depth-2 sf-no-children"><a href="/ccsurvey" class="sf-depth-2"><span>Campaign Coordinator Survey</span></a></li></ul></li>
+                                <li id="menu-837-1" class="active-trail middle odd sf-item-5 sf-depth-1 sf-total-children-13 sf-parent-children-0 sf-single-children-13 menuparent"><a href="/help" title="Community Resources" class="sf-depth-1 menuparent"><span>Community Resources</span></a></li>
+                                <li id="menu-846-1" class="middle even sf-item-6 sf-depth-1 sf-total-children-10 sf-parent-children-5 sf-single-children-5 menuparent">
+                                    <a href="/united-way-central-arkansas-special-events" class="sf-depth-1 menuparent"><span>Events</span></a><ul>
+                                        <li id="menu-745-1" class="first odd sf-item-1 sf-depth-2 sf-no-children"><a href="https://www.uwcark.org/events/calendar" class="sf-depth-2"><span>Calendar of Events</span></a></li>
+                                        <li id="menu-1463-1" class="middle even sf-item-2 sf-depth-2 sf-total-children-2 sf-parent-children-0 sf-single-children-2 menuparent"><a href="/free-tax-prep" class="sf-depth-2 menuparent"><span>Free Tax Preparation</span></a><ul><li id="menu-1464-1" class="first odd sf-item-1 sf-depth-3 sf-no-children"><a href="/drop-off-calendar" class="sf-depth-3"><span>Drop Off Calendar</span></a></li><li id="menu-1465-1" class="last even sf-item-2 sf-depth-3 sf-no-children"><a href="/volunteer-tax-training" class="sf-depth-3"><span>Volunteer Training Calendar</span></a></li></ul></li>
+                                        <li id="menu-1448-1" class="middle odd sf-item-3 sf-depth-2 sf-no-children"><a href="/60th-birthday-party-0" class="sf-depth-2"><span>60th Birthday Party</span></a></li>
+                                        <li id="menu-922-1" class="middle even sf-item-4 sf-depth-2 sf-total-children-1 sf-parent-children-0 sf-single-children-1 menuparent"><a href="/ccbootcamp" class="sf-depth-2 menuparent"><span>Campaign Coordinator Boot Camp</span></a><ul><li id="menu-923-1" class="firstandlast odd sf-item-1 sf-depth-3 sf-no-children"><a href="/campaign-coordinator-boot-camp" class="sf-depth-3"><span>Campaign Coordinator Registration</span></a></li></ul></li>
+                                        <li id="menu-851-1" class="middle odd sf-item-5 sf-depth-2 sf-total-children-1 sf-parent-children-0 sf-single-children-1 menuparent"><a href="/ceo-luncheon" class="sf-depth-2 menuparent"><span>CEO Luncheon</span></a><ul><li id="menu-895-1" class="firstandlast odd sf-item-1 sf-depth-3 sf-no-children"><a href="/ceo-awards-2015-2016" class="sf-depth-3"><span>CEO AWARDS 2015</span></a></li></ul></li>
+                                        <li id="menu-849-1" class="middle even sf-item-6 sf-depth-2 sf-no-children"><a href="/jeans-bling" class="sf-depth-2"><span>Jeans &amp; Bling</span></a></li>
+                                        <li id="menu-852-1" class="middle odd sf-item-7 sf-depth-2 sf-no-children"><a href="/2017-pillar-party" class="sf-depth-2"><span>Pillar Party</span></a></li>
+                                        <li id="menu-850-1" class="middle even sf-item-8 sf-depth-2 sf-total-children-2 sf-parent-children-0 sf-single-children-2 menuparent">
+                                            <a href="/stuffthebus" class="sf-depth-2 menuparent"><span>Stuff The Bus</span></a><ul>
+                                                <li id="menu-1270-1" class="first odd sf-item-1 sf-depth-3 sf-no-children">
+                                                    <a href="/stuff-bus-2017-photo-gallery" class="sf-depth-3">
+                                                        <span>Stuff the Bus 2017 Photo Gallery</span>
+                                                    </a>
+                                                </li>
+                                                <li id="menu-924-1" class="last even sf-item-2 sf-depth-3 sf-no-children"><a href="/stuffthebuspartner" class="sf-depth-3"><span>Stuff the Bus Partner</span></a></li>
+                                            </ul>
+                                        </li>
+                                        <li id="menu-1268-1" class="middle odd sf-item-9 sf-depth-2 sf-total-children-7 sf-parent-children-0 sf-single-children-7 menuparent"><a href="https://www.uwcark.org/turkey-trot-2017" class="sf-depth-2 menuparent"><span>Turkey Trot</span></a><ul><li id="menu-746-1" class="first odd sf-item-1 sf-depth-3 sf-no-children"><a href="/civicrm/event/register?cid=0&amp;reset=1&amp;id=194" title="Turkey Trot" class="sf-depth-3"><span>Turkey Trot Registration</span></a></li><li id="menu-826-1" class="middle even sf-item-2 sf-depth-3 sf-no-children"><a href="/turkey-trot-volunteers" title="Sign up to volunteer!!" class="sf-depth-3"><span>Turkey Trot Volunteers</span></a></li><li id="menu-764-1" class="middle odd sf-item-3 sf-depth-3 sf-no-children"><a href="/turkey-trot-sponsorship" class="sf-depth-3"><span>Sponsorship Information</span></a></li><li id="menu-1449-1" class="middle even sf-item-4 sf-depth-3 sf-no-children"><a href="/turkey-trot-race-map" class="sf-depth-3"><span>Race Map</span></a></li><li id="menu-1467-1" class="middle odd sf-item-5 sf-depth-3 sf-no-children"><a href="/turkey-trot-2017-photo-gallery" class="sf-depth-3"><span>Turkey Trot 2017 Photo Gallery</span></a></li><li id="menu-1070-1" class="middle even sf-item-6 sf-depth-3 sf-no-children"><a href="http://www.uwcark.org/turkey-trot-2016-photo-gallery" class="sf-depth-3"><span>TURKEY TROT 2016 PHOTO GALLERY</span></a></li><li id="menu-1067-1" class="last odd sf-item-7 sf-depth-3 sf-no-children"><a href="/turkey-trot-2015-photo-gallery" class="sf-depth-3"><span>Turkey Trot 2015 Photo Gallery</span></a></li></ul></li>
+                                        <li id="menu-1462-1" class="last even sf-item-10 sf-depth-2 sf-no-children"><a href="/GiveUnitedAR" class="sf-depth-2"><span>#GiveUnitedAR</span></a></li>
+                                    </ul>
+                                </li>
+                                <li id="menu-929-1" class="middle odd sf-item-7 sf-depth-1 sf-total-children-2 sf-parent-children-0 sf-single-children-2 menuparent"><a href="/community-partners-1" class="sf-depth-1 menuparent"><span>Community Partners</span></a><ul><li id="menu-934-1" class="first odd sf-item-1 sf-depth-2 sf-no-children"><a href="/365" class="sf-depth-2"><span>365 Small Business Circle</span></a></li><li id="menu-1087-1" class="last even sf-item-2 sf-depth-2 sf-no-children"><a href="/community-investment-partners" class="sf-depth-2"><span>Community Investment Partners</span></a></li></ul></li>
+                                <li id="menu-897-1" class="middle even sf-item-8 sf-depth-1 sf-no-children"><a href="/user/login" class="sf-depth-1"><span>Login</span></a></li>
+                                <li id="menu-1627-1" class="last odd sf-item-9 sf-depth-1 sf-no-children"><a href="/2018-agency-application" class="sf-depth-1"><span>Grant Applications</span></a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+
+        <div class="l-main l-constrained">
+            <div class="l-content" role="main">
+                <h1>Clothing </h1>
+                <a id="main-content"></a>
+                <h2 class="element-invisible">You are here</h2><ul class="breadcrumb"><li><a href="/">Home</a></li><li><a href="/help" title="Community Resources">Community Resources</a></li></ul>
+
+                <article about="/clothing" typeof="foaf:Document" role="article" class="node node--page node--full node--page--full">
+                    <header>
+                        <span property="dc:title" content="Clothing " class="rdf-meta element-hidden"></span>
+                    </header>
+
+
+
+
+
+                    <header class="container">
+                        <div class="row">
+
+                            <h1 class="col-sm-10"></h1>
+
+                            <div id="google_translate_element"></div>
+                            <script type="text/javascript">
+
+                function googleTranslateElementInit() {
+
+                    new google.translate.TranslateElement({ pageLanguage: 'en', layout: google.translate.TranslateElement.InlineLayout.SIMPLE, autoDisplay: false }, 'google_translate_element');
+
+                }
+                            </script>
+                            <script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+                           
+                        </div>
+                    </header>
+
+                    <div class="refine">
+                        <div class="row">
+                            <div class="col-sm-1"> </div>
+                            <div class="col-sm-5">
+                                <div class="rheading"> Location</div>
+                                <form>
+                                    Your location:<br>
+                                    <input type="text" name="location"><br>
+                                </form>
+                                <div class="dropdown">
+                                    <button onclick="myFunction()" class="dropbtn" id="lang">
+                                        Distance from you:
+                                    </button>
+                                    <div id="myDropdown" class="dropdown-content">
+                                        <a href="#">3 Miles</a>
+                                        <a href="#">5 Miles</a>
+                                        <a href="#">10 Miles</a>
+                                        <a href="#"> 25 Miles</a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-sm-5">
+                                <div class="rheading">Availability</div>
+                                <form>
+                                    Time:<br>
+                                    <input type="text" name="location"><br>
+                                </form>
+                            </div>
+                        </div>
+                        <div class="col-sm-1"></div>
+                    </div>
+
+                    <div class="search">
+                        <button class="col-sm-2" type="button" id="lang"> Search</button>
+                    </div>
+                    <h3>Exact Match</h3>
+
+                    <h3>Other Results</h3>
+
+
+
+
+
+
+
+
+
+
+                    <div class="node__content">
+                        <div class="field field--name-body field--type-text-with-summary field--label-hidden">
+                            <div class="field__items">
+                                <div class="field__item even" property="content:encoded">
+                                    <div style="color: rgb(34, 34, 34); font-family: &quot;Helvetica Neue&quot;, Helvetica, Arial, sans-serif; font-size: 14px;"> </div>
+                                    <div style="color: rgb(34, 34, 34); font-family: &quot;Helvetica Neue&quot;, Helvetica, Arial, sans-serif; font-size: 14px;"> </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </article>
+            </div>
+            <aside class="l-region l-region--sidebar-first">
+                <div id="block-block-16" class="block block--block gav-links-inner block--block-16">
+                    <div class="block__content">
+                        <ul>
+                            <li class="one"><a class="one" href="/education-agencies" target="_self">EDUCATION</a></li>
+                            <li class="two"><a class="two" href="/income-agencies" target="_self">INCOME</a></li>
+                            <li class="three"><a class="three" href="/health-agencies" target="_self">HEALTH</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </aside>
+        </div>
+        <div class="civi-widgets">
+            <div class="civi-inner">
+            </div>
+        </div>
+        <div class="postscript-zone l-constrained">
+        </div>
+        <div class="getinvolved-zone l-constrained">
+        </div>
+        <footer class="l-footer-wrapper" role="contentinfo">
+            <div class="footer-wrapper">
+                <div class="footer-top-zone l-constrained">
+                    <div class="l-region l-region--footer-top1">
+                        <div id="block-block-11" class="block block--block footer-copyrite block--block-11">
+                            <div class="block__content">
+                                <p><img alt="" src="/sites/uwcark.org/files/live-united-footer.png" style="width: 230px;" /></p>
+                                <p><span style="font-size:14px;"><span style="color:#000080;"><span style="font-size:16px;"><strong>United Way of Central Arkansas</strong></span><br />1110 W. Oak Street</span><br /><span style="color: rgb(0, 0, 128);">PO Box 489</span><br /><span style="color: rgb(0, 0, 128);">Conway, AR  72033</span><br /><span style="color: rgb(0, 0, 128);">501-327-5087</span></span></p>
+                                <p style="text-align: center;"> </p>
+                                <p><img alt="" src="/sites/uwcark.org/files/UW%20Membership%20Photo.jpg" style="width: 218px; height: 110px;" /></p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="l-region l-region--footer-top2">
+                        <div id="block-search-form" role="search" class="block block--search search-form block--search-form">
+                            <div class="block__content">
+                                <form class="search-block-form" action="/clothing" method="post" id="search-block-form" accept-charset="UTF-8">
+                                    <div>
+                                        <div class="container-inline">
+                                            <h2 class="element-invisible">Search form</h2>
+                                            <div class="form-item form-type-textfield form-item-search-block-form">
+                                                <label class="element-invisible" for="edit-search-block-form--2">Search </label>
+                                                <input title="Enter the terms you wish to search for." type="text" id="edit-search-block-form--2" name="search_block_form" value="" size="15" maxlength="128" class="form-text" />
+                                            </div>
+                                            <div class="form-actions form-wrapper" id="edit-actions"><input type="submit" id="edit-submit" name="op" value="Search" class="form-submit" /></div><input type="hidden" name="form_build_id" value="form-PsgNk_619YfRGDWA9v17ISYq8EBbMtK2mgSO2y6gv_c" />
+                                            <input type="hidden" name="form_id" value="search_block_form" />
+                                        </div>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                        <div id="block-block-6" class="block block--block copyright-block block--block-6">
+                            <div class="block__content">
+                                <p>© 2018 <em>United Way of Central Arkansas</em>.  All Rights Reserved.</p>
+                            </div>
+                        </div>
+                        <div id="block-block-7" class="block block--block provided-by block--block-7">
+                            <div class="block__content">
+                                <p><span style="font-size:14px;"><span style="color: rgb(128, 128, 128);">Website by: </span><span style="font-family:arial,helvetica,sans-serif;"><a href="http://www.oneeach.com/"><span style="color: rgb(128, 128, 128);">OneEach Technologies</span></a></span></span></p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="l-region l-region--footer-bottom1">
+                        <div id="block-multiblock-4" class="block block--multiblock social-media-bottom block--multiblock-4">
+                            <div class="block__content">
+                                <p><a href="https://www.facebook.com/uwcark" target="_blank"><img alt="" src="/sites/uwcark.org/files/facebook_1.png" style="width: 45px; height: 45px;" /></a><a href="https://www.instagram.com/uwcark/" target="_blank"><img alt="" src="/sites/uwcark.org/files/unnamed_1.png" style="width: 45px; height: 45px;" /></a><a href="https://twitter.com/UWCARK" target="_blank"><img alt="" src="/sites/uwcark.org/files/twitter_2.png" style="width: 45px; height: 45px;" /></a><a href="https://www.linkedin.com/company/united-way-of-central-arkansas"><img alt="" src="/sites/uwcark.org/files/linked-in_1.png" style="width: 45px; height: 45px;" /></a><a href="https://www.youtube.com/channel/UCY08y2xv6FmpcICnedFLhmQ" target="_blank"><img alt="" src="/sites/uwcark.org/files/youtube_1.png" style="width: 45px; height: 45px;" /></a></p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="l-region l-region--search-mobile">
+                        <div id="block-multiblock-3" class="block block--multiblock search-form mobile block--multiblock-3">
+                            <div class="block__content">
+                                <form class="search-block-form--2" action="/clothing" method="post" id="search-block-form--2" accept-charset="UTF-8">
+                                    <div>
+                                        <div class="container-inline">
+                                            <h2 class="element-invisible">Search form</h2>
+                                            <div class="form-item form-type-textfield form-item-search-block-form">
+                                                <label class="element-invisible" for="edit-search-block-form--4">Search </label>
+                                                <input title="Enter the terms you wish to search for." type="text" id="edit-search-block-form--4" name="search_block_form" value="" size="15" maxlength="128" class="form-text" />
+                                            </div>
+                                            <div class="form-actions form-wrapper" id="edit-actions--2"><input type="submit" id="edit-submit--2" name="op" value="Search" class="form-submit" /></div><input type="hidden" name="form_build_id" value="form--V8Wb10zrkuFErjlLqO_3TsTaXBI-o5099gWrWSQQqI" />
+                                            <input type="hidden" name="form_id" value="search_block_form" />
+                                        </div>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom-zone ">
+                <div class="footer-bottom-inner">
+                    <div class="l-region l-region--footer-bottom2">
+                        <nav id="block-menu-menu-get-to-know-us" role="navigation" class="block block--menu block--menu-menu-get-to-know-us">
+                            <h2 class="block__title">GET TO KNOW US</h2>
+
+                            <ul class="menu">
+                                <li class="first leaf board-of-directors"><a href="/board-directors">Board of Directors</a></li>
+                                <li class="leaf staff"><a href="/staff">Staff</a></li>
+                                <li class="leaf about-us"><a href="/about-us">About Us</a></li>
+                                <li class="last leaf our-history"><a href="/history">Our History</a></li>
+                            </ul>
+                        </nav>
+                    </div>
+                    <div class="l-region l-region--footer-bottom3">
+                        <nav id="block-menu-menu-about-us-" role="navigation" class="block block--menu block--menu-menu-about-us-">
+                            <h2 class="block__title">Our Impact</h2>
+
+                            <ul class="menu">
+                                <li class="first leaf education"><a href="/education-agencies">Education</a></li>
+                                <li class="leaf income"><a href="/income-agencies">Income</a></li>
+                                <li class="leaf health"><a href="/health-agencies">Health</a></li>
+                                <li class="last leaf emergency-services"><a href="http://www.uwcark.org/safety-net-agencies">Emergency Services</a></li>
+                            </ul>
+                        </nav>
+                    </div>
+                    <div class="l-region l-region--footer-bottom4">
+                        <nav id="block-menu-menu-get-involved" role="navigation" class="block block--menu block--menu-menu-get-involved">
+                            <h2 class="block__title">Get involved</h2>
+
+                            <ul class="menu">
+                                <li class="first leaf give"><a href="/civicrm/contribute/transact?reset=1&amp;id=1">Give</a></li>
+                                <li class="leaf volunteer"><a href="/volunteer">Volunteer</a></li>
+                                <li class="last leaf special-events"><a href="http://www.uwcark.org/united-way-special-events">Special Events</a></li>
+                            </ul>
+                        </nav>
+                    </div>
+                    <div class="l-region l-region--footer-bottom5">
+                        <nav id="block-menu-menu-connect" role="navigation" class="block block--menu block--menu-menu-connect">
+                            <h2 class="block__title">Contact Us</h2>
+
+                            <ul class="menu">
+                                <li class="first leaf p-o-box-489"><a href="/contact-us">P.O Box 489 </a></li>
+                                <li class="leaf conway-ar-72033"><a href="/contact-us">Conway, AR 72033</a></li>
+                                <li class="leaf 1-501-327-5087"><a href="/contact-us">1-501-327-5087</a></li>
+                                <li class="last leaf mail-uwcark-org"><a href="/contact-us">mail@uwcark.org</a></li>
+                            </ul>
+                        </nav>
+                    </div>
+
+                </div>
+            </div>
+        </footer>
+        <script>document.getElementById("price_6").setAttribute("placeholder","Other Amount");</script>
+        <script>
+jQuery(".payment_options-group label").after("<br />");
+        </script>
+        <script>
+jQuery(".crm-profile-id-18 label").after("<br />");
+        </script>
+    </div>
+
+    <nav id="mmenu_right" class="mmenu-nav clearfix">
+        <ul>
+            <li class="mmenu-expanded">
+                <span class="mmenu-block-expanded mmenu-block"><i class="mmenu-block-icon mmenu-block-icon-system-main-menu"></i><span class="mmenu-block-title">Main menu</span></span>
+            </li>
+            <ul>
+                <li class="mmenu-block-wrap">
+                    <span>
+                        <ul class="mmenu-mm-list-level-1">
+                            <li class="mmenu-mm-list-mlid-456 mmenu-mm-list-path-node-12"><a href="/about-us" class="mmenu-mm-list "><i class="icon-list2"></i><span class="mmenu-block-title">ABOUT US</span></a><ul class="mmenu-mm-list-level-2"><li class="mmenu-mm-list-mlid-653 mmenu-mm-list-path-node-33"><a href="/history" class="mmenu-mm-list "><i class="icon-list2"></i><span class="mmenu-block-title">History</span></a></li><li class="mmenu-mm-list-mlid-650 mmenu-mm-list-path-node-30"><a href="/board-directors" class="mmenu-mm-list "><i class="icon-list2"></i><span class="mmenu-block-title">Board of Directors</span></a></li><li class="mmenu-mm-list-mlid-651 mmenu-mm-list-path-node-31"><a href="/staff" class="mmenu-mm-list "><i class="icon-list2"></i><span class="mmenu-block-title">Staff</span></a></li><li class="mmenu-mm-list-mlid-546 mmenu-mm-list-path-node-14"><a href="/contact-us" class="mmenu-mm-list "><i class="icon-list2"></i><span class="mmenu-block-title">Contact Us</span></a></li><li class="mmenu-mm-list-mlid-1072 mmenu-mm-list-path-node-244"><a href="/node/244" class="mmenu-mm-list "><i class="icon-list2"></i><span class="mmenu-block-title">2018 Committees & Responsibilities</span></a></li><li class="mmenu-mm-list-mlid-914 mmenu-mm-list-path-node-165"><a href="/annual-reports-financials" class="mmenu-mm-list "><i class="icon-list2"></i><span class="mmenu-block-title">Annual Reports & Financials</span></a></li><li class="mmenu-mm-list-mlid-1450 mmenu-mm-list-path-node-335"><a href="/job-openings" class="mmenu-mm-list "><i class="icon-list2"></i><span class="mmenu-block-title">Job Openings</span></a></li><li class="mmenu-mm-list-mlid-1451 mmenu-mm-list-path-node-336"><a href="/intern-job-description" class="mmenu-mm-list "><i class="icon-list2"></i><span class="mmenu-block-title">Internship Job Description</span></a></li></ul></li>
+                            <li class="mmenu-mm-list-mlid-457 mmenu-mm-list-path-node-36"><a href="/direct-services" class="mmenu-mm-list "><i class="icon-list2"></i><span class="mmenu-block-title">OUR WORK</span></a><ul class="mmenu-mm-list-level-2"><li class="mmenu-mm-list-mlid-656 mmenu-mm-list-path-node-36"><a href="/direct-services" class="mmenu-mm-list "><i class="icon-list2"></i><span class="mmenu-block-title">Direct Services</span></a></li><li class="mmenu-mm-list-mlid-657 mmenu-mm-list-path-node-37"><a href="/funded-agencies" class="mmenu-mm-list "><i class="icon-list2"></i><span class="mmenu-block-title">2017-2018 Funded Partner Agencies</span></a><ul class="mmenu-mm-list-level-3"><li class="mmenu-mm-list-mlid-658 mmenu-mm-list-path-node-38"><a href="/education-agencies" class="mmenu-mm-list "><i class="icon-list2"></i><span class="mmenu-block-title">EDUCATION</span></a></li><li class="mmenu-mm-list-mlid-659 mmenu-mm-list-path-node-51"><a href="/health-agencies" class="mmenu-mm-list "><i class="icon-list2"></i><span class="mmenu-block-title">Health</span></a></li><li class="mmenu-mm-list-mlid-660 mmenu-mm-list-path-node-65"><a href="/income-agencies" class="mmenu-mm-list "><i class="icon-list2"></i><span class="mmenu-block-title">Income (Financial Stability)</span></a></li><li class="mmenu-mm-list-mlid-661 mmenu-mm-list-path-node-70"><a href="/safety-net-agencies" class="mmenu-mm-list "><i class="icon-list2"></i><span class="mmenu-block-title">Emergency Services</span></a></li></ul></li><li class="mmenu-mm-list-mlid-932 mmenu-mm-list-path-node-231"><a href="/real-stories" class="mmenu-mm-list "><i class="icon-list2"></i><span class="mmenu-block-title">Real Stories</span></a></li></ul></li>
+                            <li class="mmenu-mm-list-mlid-458 mmenu-mm-list-path-node-34"><a href="/volunteer" class="mmenu-mm-list "><i class="icon-list2"></i><span class="mmenu-block-title">GET INVOLVED</span></a><ul class="mmenu-mm-list-level-2"><li class="mmenu-mm-list-mlid-654 mmenu-mm-list-path-node-34"><a href="/volunteer" class="mmenu-mm-list "><i class="icon-list2"></i><span class="mmenu-block-title">Volunteer</span></a></li></ul></li>
+                            <li class="mmenu-mm-list-mlid-655 mmenu-mm-list-path-node-35"><a href="/16campaign" class="mmenu-mm-list "><i class="icon-list2"></i><span class="mmenu-block-title">CAMPAIGN</span></a><ul class="mmenu-mm-list-level-2"><li class="mmenu-mm-list-mlid-927 mmenu-mm-list-path-node-224"><a href="/liveunited" class="mmenu-mm-list "><i class="icon-list2"></i><span class="mmenu-block-title">LIVE UNITED</span></a><ul class="mmenu-mm-list-level-3"><li class="mmenu-mm-list-mlid-928 mmenu-mm-list-path-node-225"><a href="/LIVEUNITEDSHIRT" class="mmenu-mm-list "><i class="icon-list2"></i><span class="mmenu-block-title">Join the Movement!</span></a></li></ul></li><li class="mmenu-mm-list-mlid-921 mmenu-mm-list-path-node-218"><a href="/campaign-resource-center" class="mmenu-mm-list "><i class="icon-list2"></i><span class="mmenu-block-title">Campaign Resource Center</span></a></li><li class="mmenu-mm-list-mlid-919 mmenu-mm-list-path-node-215"><a href="/campaign-order-form" class="mmenu-mm-list "><i class="icon-list2"></i><span class="mmenu-block-title">Campaign Order Form</span></a></li><li class="mmenu-mm-list-mlid-920 mmenu-mm-list-path-node-216"><a href="/ccsurvey" class="mmenu-mm-list "><i class="icon-list2"></i><span class="mmenu-block-title">Campaign Coordinator Survey</span></a></li></ul></li>
+                            <li class="mmenu-mm-list-mlid-837 mmenu-mm-list-path-node-130"><a href="/help" class="mmenu-mm-list "><i class="icon-list2"></i><span class="mmenu-block-title">Community Resources</span></a><ul class="mmenu-mm-list-level-2"><li class="mmenu-mm-list-mlid-905 mmenu-mm-list-path-node-155 active-trail"><a href="/clothing" class="mmenu-mm-list "><i class="icon-list2"></i><span class="mmenu-block-title">Clothing</span></a></li><li class="mmenu-mm-list-mlid-912 mmenu-mm-list-path-node-163"><a href="/education-youth-programs" class="mmenu-mm-list "><i class="icon-list2"></i><span class="mmenu-block-title">Education & Youth Programs</span></a></li><li class="mmenu-mm-list-mlid-1073 mmenu-mm-list-path-node-245"><a href="/employment-assistance" class="mmenu-mm-list "><i class="icon-list2"></i><span class="mmenu-block-title">Employment Assistance</span></a></li><li class="mmenu-mm-list-mlid-1075 mmenu-mm-list-path-node-247"><a href="/financial-assistance-and-other-household" class="mmenu-mm-list "><i class="icon-list2"></i><span class="mmenu-block-title">Financial Assistance and Other Household</span></a></li><li class="mmenu-mm-list-mlid-911 mmenu-mm-list-path-node-162"><a href="/food-pantry-0" class="mmenu-mm-list "><i class="icon-list2"></i><span class="mmenu-block-title">Food Pantry</span></a></li><li class="mmenu-mm-list-mlid-903 mmenu-mm-list-path-node-153"><a href="/housing-and-utility-assistance" class="mmenu-mm-list "><i class="icon-list2"></i><span class="mmenu-block-title">Housing and Utility Assistance</span></a></li><li class="mmenu-mm-list-mlid-913 mmenu-mm-list-path-node-164"><a href="/medical" class="mmenu-mm-list "><i class="icon-list2"></i><span class="mmenu-block-title">Medical</span></a></li><li class="mmenu-mm-list-mlid-910 mmenu-mm-list-path-node-161"><a href="/miscellaneous" class="mmenu-mm-list "><i class="icon-list2"></i><span class="mmenu-block-title">Miscellaneous</span></a></li><li class="mmenu-mm-list-mlid-1077 mmenu-mm-list-path-node-249"><a href="/natural-disaster" class="mmenu-mm-list "><i class="icon-list2"></i><span class="mmenu-block-title">Natural Diaster</span></a></li><li class="mmenu-mm-list-mlid-906 mmenu-mm-list-path-node-156"><a href="/shelters" class="mmenu-mm-list "><i class="icon-list2"></i><span class="mmenu-block-title">Shelters</span></a></li><li class="mmenu-mm-list-mlid-1076 mmenu-mm-list-path-node-248"><a href="/transportation" class="mmenu-mm-list "><i class="icon-list2"></i><span class="mmenu-block-title">Transportation</span></a></li><li class="mmenu-mm-list-mlid-909 mmenu-mm-list-path-node-160"><a href="/united-way-offices-arkansas" class="mmenu-mm-list "><i class="icon-list2"></i><span class="mmenu-block-title">United Way</span></a></li><li class="mmenu-mm-list-mlid-1074 mmenu-mm-list-path-node-246"><a href="/veterans-and-senior-assistance" class="mmenu-mm-list "><i class="icon-list2"></i><span class="mmenu-block-title">Veterans and Senior Assistance</span></a></li></ul></li>
+                            <li class="mmenu-mm-list-mlid-846 mmenu-mm-list-path-node-136">
+                                <a href="/united-way-central-arkansas-special-events" class="mmenu-mm-list "><i class="icon-list2"></i><span class="mmenu-block-title">Events</span></a><ul class="mmenu-mm-list-level-2">
+                                    <li class="mmenu-mm-list-mlid-745 mmenu-mm-list-path-https:--www.uwcark.org-events-calendar"><a href="https://www.uwcark.org/events/calendar" class="mmenu-mm-list "><i class="icon-list2"></i><span class="mmenu-block-title">Calendar of Events</span></a></li>
+                                    <li class="mmenu-mm-list-mlid-1463 mmenu-mm-list-path-node-345"><a href="/free-tax-prep" class="mmenu-mm-list "><i class="icon-list2"></i><span class="mmenu-block-title">Free Tax Preparation</span></a><ul class="mmenu-mm-list-level-3"><li class="mmenu-mm-list-mlid-1464 mmenu-mm-list-path-node-347"><a href="/drop-off-calendar" class="mmenu-mm-list "><i class="icon-list2"></i><span class="mmenu-block-title">Drop Off Calendar</span></a></li><li class="mmenu-mm-list-mlid-1465 mmenu-mm-list-path-node-348"><a href="/volunteer-tax-training" class="mmenu-mm-list "><i class="icon-list2"></i><span class="mmenu-block-title">Volunteer Training Calendar</span></a></li></ul></li>
+                                    <li class="mmenu-mm-list-mlid-1448 mmenu-mm-list-path-node-334"><a href="/60th-birthday-party-0" class="mmenu-mm-list "><i class="icon-list2"></i><span class="mmenu-block-title">60th Birthday Party</span></a></li>
+                                    <li class="mmenu-mm-list-mlid-922 mmenu-mm-list-path-node-219">
+                                        <a href="/ccbootcamp" class="mmenu-mm-list ">
+                                            <i class="icon-list2"></i><span class="mmenu-block-title">Campaign Coordinator Boot Camp</span>
+                                        </a><ul class="mmenu-mm-list-level-3"><li class="mmenu-mm-list-mlid-923 mmenu-mm-list-path-node-220"><a href="/campaign-coordinator-boot-camp" class="mmenu-mm-list "><i class="icon-list2"></i><span class="mmenu-block-title">Campaign Coordinator Registration</span></a></li></ul>
+                                    </li>
+                                    <li class="mmenu-mm-list-mlid-851 mmenu-mm-list-path-node-140"><a href="/ceo-luncheon" class="mmenu-mm-list "><i class="icon-list2"></i><span class="mmenu-block-title">CEO Luncheon</span></a><ul class="mmenu-mm-list-level-3"><li class="mmenu-mm-list-mlid-895 mmenu-mm-list-path-node-147"><a href="/ceo-awards-2015-2016" class="mmenu-mm-list "><i class="icon-list2"></i><span class="mmenu-block-title">CEO AWARDS 2015</span></a></li></ul></li>
+                                    <li class="mmenu-mm-list-mlid-849 mmenu-mm-list-path-node-138"><a href="/jeans-bling" class="mmenu-mm-list "><i class="icon-list2"></i><span class="mmenu-block-title">Jeans & Bling</span></a></li>
+                                    <li class="mmenu-mm-list-mlid-852 mmenu-mm-list-path-node-141"><a href="/2017-pillar-party" class="mmenu-mm-list "><i class="icon-list2"></i><span class="mmenu-block-title">Pillar Party</span></a></li>
+                                    <li class="mmenu-mm-list-mlid-850 mmenu-mm-list-path-node-139"><a href="/stuffthebus" class="mmenu-mm-list "><i class="icon-list2"></i><span class="mmenu-block-title">Stuff The Bus</span></a><ul class="mmenu-mm-list-level-3"><li class="mmenu-mm-list-mlid-1270 mmenu-mm-list-path-node-331"><a href="/stuff-bus-2017-photo-gallery" class="mmenu-mm-list "><i class="icon-list2"></i><span class="mmenu-block-title">Stuff the Bus 2017 Photo Gallery</span></a></li><li class="mmenu-mm-list-mlid-924 mmenu-mm-list-path-node-223"><a href="/stuffthebuspartner" class="mmenu-mm-list "><i class="icon-list2"></i><span class="mmenu-block-title">Stuff the Bus Partner</span></a></li></ul></li>
+                                    <li class="mmenu-mm-list-mlid-1268 mmenu-mm-list-path-https:--www.uwcark.org-turkey-trot-2017"><a href="https://www.uwcark.org/turkey-trot-2017" class="mmenu-mm-list "><i class="icon-list2"></i><span class="mmenu-block-title">Turkey Trot</span></a><ul class="mmenu-mm-list-level-3"><li class="mmenu-mm-list-mlid-746 mmenu-mm-list-path-civicrm-event-register"><a href="/civicrm/event/register" class="mmenu-mm-list "><i class="icon-list2"></i><span class="mmenu-block-title">Turkey Trot Registration</span></a></li><li class="mmenu-mm-list-mlid-826 mmenu-mm-list-path-node-111"><a href="/turkey-trot-volunteers" class="mmenu-mm-list "><i class="icon-list2"></i><span class="mmenu-block-title">Turkey Trot Volunteers</span></a></li><li class="mmenu-mm-list-mlid-764 mmenu-mm-list-path-node-106"><a href="/turkey-trot-sponsorship" class="mmenu-mm-list "><i class="icon-list2"></i><span class="mmenu-block-title">Sponsorship Information</span></a></li><li class="mmenu-mm-list-mlid-1449 mmenu-mm-list-path-node-239"><a href="/turkey-trot-race-map" class="mmenu-mm-list "><i class="icon-list2"></i><span class="mmenu-block-title">Race Map</span></a></li><li class="mmenu-mm-list-mlid-1467 mmenu-mm-list-path-node-350"><a href="/turkey-trot-2017-photo-gallery" class="mmenu-mm-list "><i class="icon-list2"></i><span class="mmenu-block-title">Turkey Trot 2017 Photo Gallery</span></a></li><li class="mmenu-mm-list-mlid-1070 mmenu-mm-list-path-http:--www.uwcark.org-turkey-trot-2016-photo-gallery"><a href="http://www.uwcark.org/turkey-trot-2016-photo-gallery" class="mmenu-mm-list "><i class="icon-list2"></i><span class="mmenu-block-title">TURKEY TROT 2016 PHOTO GALLERY</span></a></li><li class="mmenu-mm-list-mlid-1067 mmenu-mm-list-path-node-238"><a href="/turkey-trot-2015-photo-gallery" class="mmenu-mm-list "><i class="icon-list2"></i><span class="mmenu-block-title">Turkey Trot 2015 Photo Gallery</span></a></li></ul></li>
+                                    <li class="mmenu-mm-list-mlid-1462 mmenu-mm-list-path-node-338"><a href="/GiveUnitedAR" class="mmenu-mm-list "><i class="icon-list2"></i><span class="mmenu-block-title">#GiveUnitedAR</span></a></li>
+                                    <li class="mmenu-mm-list-mlid-892 mmenu-mm-list-path-node-135"><a href="/emergency-needs-application" class="mmenu-mm-list "><i class="icon-list2"></i><span class="mmenu-block-title">Emergency Needs Application</span></a></li>
+                                    <li class="mmenu-mm-list-mlid-891 mmenu-mm-list-path-node-134"><a href="/investment-grant-application" class="mmenu-mm-list "><i class="icon-list2"></i><span class="mmenu-block-title">Investment Grant Application</span></a></li>
+                                </ul>
+                            </li>
+                            <li class="mmenu-mm-list-mlid-929 mmenu-mm-list-path-node-226"><a href="/community-partners-1" class="mmenu-mm-list "><i class="icon-list2"></i><span class="mmenu-block-title">Community Partners</span></a><ul class="mmenu-mm-list-level-2"><li class="mmenu-mm-list-mlid-934 mmenu-mm-list-path-node-232"><a href="/365" class="mmenu-mm-list "><i class="icon-list2"></i><span class="mmenu-block-title">365 Small Business Circle</span></a></li><li class="mmenu-mm-list-mlid-1087 mmenu-mm-list-path-node-252"><a href="/community-investment-partners" class="mmenu-mm-list "><i class="icon-list2"></i><span class="mmenu-block-title">Community Investment Partners</span></a></li></ul></li>
+                            <li class="mmenu-mm-list-mlid-897 mmenu-mm-list-path-user-login"><a href="/user/login" class="mmenu-mm-list "><i class="icon-lock"></i><span class="mmenu-block-title">Login</span></a></li>
+                            <li class="mmenu-mm-list-mlid-1627 mmenu-mm-list-path-node-354"><a href="/2018-agency-application" class="mmenu-mm-list "><i class="icon-list2"></i><span class="mmenu-block-title">Grant Applications</span></a></li>
+                        </ul>
+                    </span>
+                </li>
+            </ul>
+            <li class="mmenu-expanded">
+                <span class="mmenu-block-expanded mmenu-block"><i class="mmenu-block-icon mmenu-block-icon-system-user-menu"></i><span class="mmenu-block-title">User menu</span></span>
+            </li>
+            <ul><li class="mmenu-block-wrap"><span><ul class="mmenu-mm-list-level-1"><li class="mmenu-mm-list-mlid-3 mmenu-mm-list-path-user"><a href="/user" class="mmenu-mm-list "><i class="icon-profile"></i><span class="mmenu-block-title">User account</span></a></li></ul></span></li></ul>
+        </ul>
+    </nav>
+    <script src="https://www.uwcark.org/sites/all/modules/addthis/addthis.js?p5trry"></script>
+</body>
+<script>
+        jQuery( document ).ready(function() {
+            if(jQuery('.webform-client-form *').hasClass('webform-progressbar')){
+                var page_num = jQuery('.current').children('.webform-progressbar-page-number').text();
+                if(page_num != '1'){
+                jQuery('.field--name-body').hide();
+                }
+            }
+        });
+</script>
+<script>
+ var button = document.getElementById('mmenu2'),
+    text = document.getElementById('block-multiblock-6');
+
+button.onclick = function() {
+  var isHidden = text.style.display == 'none';
+  text.style.display = isHidden ? 'block' : 'none';
+};
+</script>
+<script>
+  jQuery(document).ready(function () {
+              jQuery("#block-multiblock-6").hide();
+        });
+</script>
+</html>
