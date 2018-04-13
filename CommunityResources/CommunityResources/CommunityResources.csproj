@@ -21,4 +21,7 @@
   <ItemGroup>
     <None Remove="Views\Home\GracesResults.html" />
   </ItemGroup>
+  <ItemGroup>
+    <Content Remove="wwwroot\css\updatedsite.cs" />
+  </ItemGroup>
 </Project>
