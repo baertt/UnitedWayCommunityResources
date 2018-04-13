@@ -93,6 +93,12 @@ namespace CommunityResources.Controllers
             return View();
         }
 
+
+        public IActionResult GracesResults()
+        {
+            return View();
+        }
+
         public IActionResult Contact()
         {
             ViewData["Message"] = "Your contact page.";
