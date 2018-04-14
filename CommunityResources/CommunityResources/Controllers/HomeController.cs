@@ -19,8 +19,11 @@ namespace CommunityResources.Controllers
         {
             _context = context;
         }
+
         public IActionResult Index()
         {
+
+            System.Diagnostics.Debug.WriteLine("Just the Front");
             return View();
         }
 
@@ -28,12 +31,12 @@ namespace CommunityResources.Controllers
         {
             var organization = from s in _context.Organizations.Include(c => c.Contacts)
                                select s;
-            if (id == 1) { 
+
+            System.Diagnostics.Debug.WriteLine("Trying to get clothing info");
+            if (id == 1) {
+                System.Diagnostics.Debug.WriteLine("Clothssssssssssssssssssssssss");
                 organization = organization.Where(s => s.Resources.Clothing.Equals(1));
-            }
-            else if (id == 2)
-            {
-                organization = organization.Where(s => s.Resources.Education.Equals(1));
+                System.Diagnostics.Debug.WriteLine(organization.Count());
             }
             else if (id == 2)
             {
@@ -79,8 +82,8 @@ namespace CommunityResources.Controllers
             {
                 organization = organization.Where(s => s.Resources.Other_Resources.Equals(1));
             }
+            
             return View(await organization.AsNoTracking().ToListAsync());
-
             //return View(await _context.Organizations.ToListAsync());
         }
 
@@ -97,6 +100,11 @@ namespace CommunityResources.Controllers
         {
             ViewData["Message"] = "Your contact page.";
 
+            return View();
+        }
+
+        public IActionResult GracesResults()
+        {
             return View();
         }
 
