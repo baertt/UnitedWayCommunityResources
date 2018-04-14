@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace CommunityResources.Models
 {
-    public class Resource
+    public class Resource 
     {
         [Key]
         public int Id { get; set; }

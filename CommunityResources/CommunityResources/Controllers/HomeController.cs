@@ -29,7 +29,7 @@ namespace CommunityResources.Controllers
 
         public async Task<IActionResult> InitialResults(int?id)
         {
-            var organization = from s in _context.Organizations.Include(c => c.Contacts)
+            var organization = from s in _context.Organizations.Include(c => c.Contacts).OrderBy(s => s.Name)
                                select s;
 
             System.Diagnostics.Debug.WriteLine("Trying to get clothing info");
