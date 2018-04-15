@@ -22,7 +22,9 @@ namespace CommunityResources.Controllers
         // GET: Organizations
         public async Task<IActionResult> Index()
         {
-            return View(await _context.Organizations.ToListAsync());
+            var organization = from s in _context.Organizations.Include(c => c.Contacts).OrderBy(s => s.Name)
+                               select s;
+            return View(await organization.AsNoTracking().ToListAsync());
         }
 
 
@@ -93,7 +95,12 @@ namespace CommunityResources.Controllers
                 return NotFound();
             }
 
-            var organization = await _context.Organizations.SingleOrDefaultAsync(m => m.Id == id);
+            var organization = await _context.Organizations
+               .Include(org => org.Contacts)
+               .Include(org => org.Resources)
+               .Include(org => org.Times)
+               .AsNoTracking()
+               .SingleOrDefaultAsync(m => m.Id == id);
             if (organization == null)
             {
                 return NotFound();

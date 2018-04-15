@@ -1,0 +1,97 @@
+﻿@model CommunityResources.Models.Resource
+
+@{
+    ViewData["Title"] = "Edit";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Edit</h2>
+
+<h4>Resource</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="Edit">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <input type="hidden" asp-for="Id" />
+            <div class="form-group">
+                <label asp-for="OrganizationId" class="control-label"></label>
+                <select asp-for="OrganizationId" class="form-control" asp-items="ViewBag.OrganizationId"></select>
+                <span asp-validation-for="OrganizationId" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Clothing" class="control-label"></label>
+                <input asp-for="Clothing" class="form-control" />
+                <span asp-validation-for="Clothing" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Education" class="control-label"></label>
+                <input asp-for="Education" class="form-control" />
+                <span asp-validation-for="Education" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Employment" class="control-label"></label>
+                <input asp-for="Employment" class="form-control" />
+                <span asp-validation-for="Employment" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Finances" class="control-label"></label>
+                <input asp-for="Finances" class="form-control" />
+                <span asp-validation-for="Finances" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Food" class="control-label"></label>
+                <input asp-for="Food" class="form-control" />
+                <span asp-validation-for="Food" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Housing" class="control-label"></label>
+                <input asp-for="Housing" class="form-control" />
+                <span asp-validation-for="Housing" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Natural_Disaster" class="control-label"></label>
+                <input asp-for="Natural_Disaster" class="form-control" />
+                <span asp-validation-for="Natural_Disaster" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Senior" class="control-label"></label>
+                <input asp-for="Senior" class="form-control" />
+                <span asp-validation-for="Senior" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Rent_Utilities" class="control-label"></label>
+                <input asp-for="Rent_Utilities" class="form-control" />
+                <span asp-validation-for="Rent_Utilities" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Medical_Prescription" class="control-label"></label>
+                <input asp-for="Medical_Prescription" class="form-control" />
+                <span asp-validation-for="Medical_Prescription" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Veterans" class="control-label"></label>
+                <input asp-for="Veterans" class="form-control" />
+                <span asp-validation-for="Veterans" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Other_Resources" class="control-label"></label>
+                <input asp-for="Other_Resources" class="form-control" />
+                <span asp-validation-for="Other_Resources" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Other_Resources_Text" class="control-label"></label>
+                <input asp-for="Other_Resources_Text" class="form-control" />
+                <span asp-validation-for="Other_Resources_Text" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Save" class="btn btn-default" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-action="Index">Back to List</a>
+</div>
+

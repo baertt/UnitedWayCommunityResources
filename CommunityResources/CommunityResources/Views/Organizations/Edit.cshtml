@@ -53,6 +53,72 @@
                 </div>
             </div>
             <div class="form-group">
+                <div class="checkbox">
+                    <label>
+                        <input asp-for="Resources.Clothing" /> @Html.DisplayNameFor(model => model.Resources.Clothing)
+                    </label>
+                </div>
+                <div class="checkbox">
+                    <label>
+                        <input asp-for="Resources.Education" /> @Html.DisplayNameFor(model => model.Resources.Education)
+                    </label>
+                </div>
+                <div class="checkbox">
+                    <label>
+                        <input asp-for="Resources.Employment" /> @Html.DisplayNameFor(model => model.Resources.Employment)
+                    </label>
+                </div>
+                <div class="checkbox">
+                    <label>
+                        <input asp-for="Resources.Finances" /> @Html.DisplayNameFor(model => model.Resources.Finances)
+                    </label>
+                </div>
+                <div class="checkbox">
+                    <label>
+                        <input asp-for="Resources.Food" /> @Html.DisplayNameFor(model => model.Resources.Food)
+                    </label>
+                </div>
+                <div class="checkbox">
+                    <label>
+                        <input asp-for="Resources.Housing" /> @Html.DisplayNameFor(model => model.Resources.Housing)
+                    </label>
+                </div>
+                <div class="checkbox">
+                    <label>
+                        <input asp-for="Resources.Natural_Disaster" /> @Html.DisplayNameFor(model => model.Resources.Natural_Disaster)
+                    </label>
+                </div>
+                <div class="checkbox">
+                    <label>
+                        <input asp-for="Resources.Senior" /> @Html.DisplayNameFor(model => model.Resources.Senior)
+                    </label>
+                </div>
+                <div class="checkbox">
+                    <label>
+                        <input asp-for="Resources.Rent_Utilities" /> @Html.DisplayNameFor(model => model.Resources.Rent_Utilities)
+                    </label>
+                </div>
+                <div class="checkbox">
+                    <label>
+                        <input asp-for="Resources.Medical_Prescription" /> @Html.DisplayNameFor(model => model.Resources.Medical_Prescription)
+                    </label>
+                </div>
+                <div class="checkbox">
+                    <label>
+                        <input asp-for="Resources.Veterans" /> @Html.DisplayNameFor(model => model.Resources.Veterans)
+                    </label>
+                    <div class="checkbox">
+                        <label>
+                            <input asp-for="Resources.Other_Resources" /> @Html.DisplayNameFor(model => model.Resources.Other_Resources)
+                        </label>
+                    </div>
+                    <div >
+                        <label>
+                            <input asp-for="Resources.Other_Resources_Text" /> @Html.DisplayNameFor(model => model.Resources.Other_Resources_Text)
+                        </label>
+                </div>
+            </div>
+            <div class="form-group">
                 <label asp-for="Additional_Comments" class="control-label"></label>
                 <input asp-for="Additional_Comments" class="form-control" />
                 <span asp-validation-for="Additional_Comments" class="text-danger"></span>
