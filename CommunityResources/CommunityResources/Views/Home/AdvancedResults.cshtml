@@ -5,82 +5,94 @@
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
-<head>
-    <meta charset="UTF-8">
-    <link rel="stylesheet" href="~/css/site.css" type="text/css" runat="server">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
 
-    <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
+    <head>
+        <meta charset="UTF-8">
+        <link rel="stylesheet" href="~/css/site.css" type="text/css" runat="server">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
 
-</head>
-<body>
-    <header class="container">
-        <div class="row">
-            <h1 class="col-sm-10" id="title">Community Resources</h1>
-            <div id="google_translate_element"></div>
-            <script type="text/javascript">
+        <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
 
-                function googleTranslateElementInit() {
+    </head>
+    <body>
+        <header class="container">
+            <div class="row">
+                <h1 class="col-sm-10" id="title">Community Resources</h1>
+                <div id="google_translate_element"></div>
+                <script type="text/javascript">
 
-                    new google.translate.TranslateElement({ pageLanguage: 'en', layout: google.translate.TranslateElement.InlineLayout.SIMPLE, autoDisplay: false }, 'google_translate_element');
+                    function googleTranslateElementInit() {
 
-                }
+                        new google.translate.TranslateElement({ pageLanguage: 'en', layout: google.translate.TranslateElement.InlineLayout.SIMPLE, autoDisplay: false }, 'google_translate_element');
 
-            </script>
-            <script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
-        </div>
-    </header>
-    <h2>Results</h2>
+                    }
 
-    <form action="/Home/AdvancedResults" method="get">
+                </script>
+                <script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+            </div>
+        </header>
+        <h2>
+            Results
+        </h2>
+        @using (Html.BeginForm("AdvancedResults", "Home", FormMethod.Get))
+    {
+        <p>
+            Title: @Html.TextBox("searchString")
+            <input type="submit" value="Filter" />
+        </p>
+}
 
-        <fieldset>
-            Day of the Week <select id="DayOfWeek" name="DayOfWeek">
 
-    <option selected="selected" value=""></option>
 
-    <option  value=1>Monday</option>
+        <form action="/Home/AdvancedResults" method="get">
 
-    <option value=2>Tuesday</option>
+            <fieldset>
+                Day of the Week <select id="DayOfWeek" name="DayOfWeek">
 
-    <option value=3>Wednesday</option>
+                    <option selected="selected" value=""></option>
 
-    <option value=4>Thursday</option>
+                    <option value=1>Monday</option>
 
-    <option value=5>Friday</option>
+                    <option value=2>Tuesday</option>
 
-    <option value=6>Saturday</option>
+                    <option value=3>Wednesday</option>
 
-    <option value=7>Sunday</option>
+                    <option value=4>Thursday</option>
 
-</select>
-                           <p><input type="submit" value="Submit" /> </p>
+                    <option value=5>Friday</option>
 
-</fieldset>
+                    <option value=6>Saturday</option>
 
-    </form>
-    <table class="table">
-        <thead>
-            <tr>
-                <th>
-                    @Html.DisplayNameFor(model => model.Name)
-                </th>
-                <th>
-                    Email
-                </th>
+                    <option value=7>Sunday</option>
 
-                <th>
-                    Phone Number
-                </th>
+                </select>
+                <p><input type="submit" value="Submit" /> </p>
 
-                <th>
-                    @Html.DisplayNameFor(model => model.Contacts.AddressFull)
-                </th>
-                <th></th>
-            </tr>
-        </thead>
-        <tbody>
-            @foreach (var item in Model)
+            </fieldset>
+
+        </form>
+        <table class="table">
+            <thead>
+                <tr>
+                    <th>
+                        @Html.DisplayNameFor(model => model.Name)
+                    </th>
+                    <th>
+                        Email
+                    </th>
+
+                    <th>
+                        Phone Number
+                    </th>
+
+                    <th>
+                        @Html.DisplayNameFor(model => model.Contacts.AddressFull)
+                    </th>
+                    <th></th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var item in Model)
             {
                 <tr>
                     <td>
@@ -101,9 +113,9 @@
                         <a asp-area="" asp-controller="Organizations" asp-action="Details" asp-route-id="@item.Id">Details</a>
                     </td>
                 </tr>
-            }
-        </tbody>
-    </table>
-</body>
+        }
+            </tbody>
+        </table>
+    </body>
 
 

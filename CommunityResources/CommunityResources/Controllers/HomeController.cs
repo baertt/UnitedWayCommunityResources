@@ -7,6 +7,7 @@ using Microsoft.AspNetCore.Mvc;
 using CommunityResources.Models;
 using CommunityResources.Data;
 using Microsoft.EntityFrameworkCore;
+using Microsoft.AspNetCore.Mvc.Rendering;
 
 namespace CommunityResources.Controllers
 {
@@ -14,6 +15,7 @@ namespace CommunityResources.Controllers
     public class HomeController : Controller
     {
         private readonly CommunityResourcesContext _context;
+        
 
         public HomeController(CommunityResourcesContext context)
         {
@@ -27,87 +29,36 @@ namespace CommunityResources.Controllers
             return View();
         }
 
-        public IActionResult AdvancedResults()
+      
+
+
+
+        public ActionResult AdvancedResults(string movieGenre, string searchString)
         {
-            var organization = from s in _context.Organizations
-                               select s;
-            return View(organization);
+            //var DayLst = new List<string>();
 
-        }
 
-        [HttpPost]
-        public  ActionResult AdvancedResults(int? id)
-        {
+            //DayLst.Add("M");
+            //DayLst.Add("T");
+            //DayLst.Add("W");
+            //DayLst.Add("R");
+            //DayLst.Add("F");
+            //DayLst.Add("Sa");
+            //DayLst.Add("Su");
+            //ViewBag.movieGenres = new SelectList(DayLst);
 
-            string dayOfWeek = Request.Form["DayOfWeek"].ToString();
-            var organization = from s in _context.Organizations
-                               .Include(c => c.Contacts)
-                               .Include(c => c.Times)
-                               .OrderBy(c => c.Name)
-                               select s;
-            foreach (Organization s in organization)
+            var movies = from m in _context.Organizations
+                         .Include(m => m.Contacts)
+                         .OrderBy(m => m.Name)
+                         select m;
+
+            if (!String.IsNullOrEmpty(searchString))
             {
-                _context.Entry(s).Collection(t => t.Times).Load();
-                foreach (Time i in s.Times) { 
-                    if (i.Day.Equals("M") && dayOfWeek == "1")
-                    {
-
-                    }
-                    if (i.Day.Equals("T") && dayOfWeek == "2")
-                    {
-
-                    }
-                    if (i.Day.Equals("W") && dayOfWeek =="3")
-                    {
-
-                    }
-                    if (i.Day.Equals("R") && dayOfWeek == "4")
-                    {
-
-                    }
-                    if (i.Day.Equals("F") && dayOfWeek == "5")
-                    {
-
-                    }
-                    if (i.Day.Equals("Sa") && dayOfWeek == "6")
-                    {
-
-                    }
-                    if (i.Day.Equals("Su") && dayOfWeek == "7")
-                    {
-
-                    }
-                    //if (dayOfWeek == "Monday")
-                    //{
-                    //    organization = organization.Where(s);
-                    //}
-                    //else if (dayOfWeek == "Tuesday")
-                    //{
-                    //    organization = organization.Where(s => s.TimesNotList.Day.Equals("T"));
-                    //}
-                    //else if (dayOfWeek == "Wednesday")
-                    //{
-                    //    organization = organization.Where(s => s.TimesNotList.Day.Equals("W"));
-                    //}
-                    //else if (dayOfWeek == "Thursday")
-                    //{
-                    //    organization = organization.Where(s => s.TimesNotList.Day.Equals("R"));
-                    //}
-                    //else if (dayOfWeek == "Friday")
-                    //{
-                    //    organization = organization.Where(s => s.TimesNotList.Day.Equals("F"));
-                    //}
-                    //else if (dayOfWeek == "Saturday")
-                    //{
-                    //    organization = organization.Where(s => s.TimesNotList.Day.Equals("Sa"));
-                    //}
-                    //else if (dayOfWeek == "Sunday")
-                    //{
-                    //    organization = organization.Where(s => s.TimesNotList.Day.Equals("Su"));
-                    //}
-                }
+                movies = movies.Where(m => m.Name.Contains(searchString));
             }
-            return View(organization.AsNoTracking().ToListAsync());
+
+
+            return View(movies);
         }
 
         public async Task<IActionResult> InitialResults(int?id)
