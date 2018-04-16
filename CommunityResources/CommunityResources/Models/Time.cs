@@ -31,6 +31,6 @@ namespace CommunityResources.Models
 
         public Organization Organization { get; set; }
 
-
+       
     }
 }

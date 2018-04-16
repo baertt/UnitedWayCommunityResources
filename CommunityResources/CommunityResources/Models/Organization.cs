@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
 using System.Linq;
 using System.Threading.Tasks;
 
@@ -34,7 +35,9 @@ namespace CommunityResources.Models
         public string Last_Updated { get; set; }
 
         public Contact Contacts { get; set; }
+        
         public ICollection<Time> Times { get; set; }
+
         public Resource Resources { get; set; }
 
 
