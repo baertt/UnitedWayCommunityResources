@@ -4,8 +4,10 @@
 }
 
 body {
-    font-family: 'Montserrat', cursive;
-    background-color: #FFFFFF
+    font-family: "Helvetica Neue", "Helvetica", "Arial", "sans-serif";
+    font-size: xx-large;
+    background-color: lightcyan
+
 }
 
 #title {
@@ -31,13 +33,12 @@ body {
 }
 
 .caption {
-    color: #111C7C;
+    color: aquamarine;
+    /*color: #111C7C;*/
+    font-family: "Helvetica Neue", "Helvetica", "Arial", "sans-serif";
+    font-size: xx-large;
     font-weight: bolder;
     text-align: center
-}
-
-#imgcred {
-    font-size: small
 }
 
 .rheading {
