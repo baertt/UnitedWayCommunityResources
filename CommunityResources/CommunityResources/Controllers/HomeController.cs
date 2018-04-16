@@ -103,7 +103,7 @@ namespace CommunityResources.Controllers
             return View();
         }
 
-        public IActionResult GracesResults()
+        public IActionResult GracesResults2()
         {
             return View();
         }
