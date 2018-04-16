@@ -12,8 +12,15 @@ header {
     padding-bottom: 30px
 }
 
-.body {
-    background-color: #FFFFFF
+.col-md-1 {
+    height: 1px;
+    vertical-align: bottom;
+    display: table-cell;
+}
+
+ .body {
+     background-color: #124356;
+    /*background-color: #FFFFFF*/
 }
 
 #title {
