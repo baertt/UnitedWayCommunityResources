@@ -1,13 +1,19 @@
-﻿header {
+﻿.mainhead {
+}
+
+.toolbar {
+    background-color: #220081;
+    color: white;
+    font-size: small
+}
+
+header {
     padding: 20px;
     padding-bottom: 30px
 }
 
-body {
-    font-family: "Helvetica Neue", "Helvetica", "Arial", "sans-serif";
-    font-size: large;
-    background-color: white
-
+.body {
+    background-color: #FFFFFF
 }
 
 #title {
@@ -20,7 +26,7 @@ body {
 }
 
 #lang {
-    background-color: #111C7C;
+    background-color: #220081;
     color: white;
     font-weight: bolder
 }
@@ -33,11 +39,13 @@ body {
 }
 
 .caption {
-    color: #111C7C
-    font-family: "Helvetica Neue", "Helvetica", "Arial", "sans-serif";
-    font-size: large;
+    color: #111C7C;
     font-weight: bolder;
     text-align: center
+}
+
+#imgcred {
+    font-size: small
 }
 
 .rheading {
@@ -86,7 +94,46 @@ body {
     display: block
 }
 
-#imgcred {
-    font-size: smaller;
-    color: #FFFFFF
+.col-lg-1 {
+    padding-top: 20px;
+    padding-bottom: 20px;
+    border: solid white 1px;
+    text-align: center
+}
+
+.col-lg-2 {
+    padding-top: 20px;
+    padding-bottom: 20px;
+    border: solid white 1px;
+    text-align: center
+}
+
+.topbutton1 {
+    background: #220081;
+    color: white;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    border: solid white 1px;
+    text-align: center;
+    border-radius: 10px
+}
+
+.topbutton2 {
+    color: white;
+    background: #ff0000;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    border: solid white 1px;
+    text-align: center;
+    border-radius: 10px
+}
+
+.topbutton3 {
+    color: white;
+    background: #ff8f00;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    border: solid white 1px;
+    text-align: center;
+    border-radius: 10px
 }
