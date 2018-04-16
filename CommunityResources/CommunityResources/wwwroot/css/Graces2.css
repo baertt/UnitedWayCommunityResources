@@ -4,59 +4,66 @@
 .toolbar {
     background-color: #220081;
     color: white;
-    font-size: small
+    font-size: small;
 }
 
 header {
     padding: 20px;
-    padding-bottom: 30px
+    padding-bottom: 30px;
 }
 
-.body {
-    background-color: #FFFFFF
+.col-md-1 {
+    height: 10px;
+    vertical-align: bottom;
+    display: table-cell;
+}
+
+ .body {
+     background-color: #124356;
+    /*background-color: #FFFFFF*/
 }
 
 #title {
-    text-align: left
+    text-align: left;
 }
 
 .search {
     display: flex;
-    justify-content: center
+    justify-content: center;
 }
 
 #lang {
     background-color: #220081;
     color: white;
-    font-weight: bolder
+    font-weight: bolder;
 }
 
 .img-responsive {
     display: block;
     margin-left: auto;
     margin-right: auto;
-    padding: 20px
+    padding: 20px;
 }
 
 .caption {
     color: #111C7C;
     font-weight: bolder;
-    text-align: center
+    text-align: center;
 }
 
 #imgcred {
-    font-size: small
+    font-size: small;
 }
 
 .rheading {
     text-align: center;
     font-weight: bold;
-    font-size: large
+    font-size: large;
 }
 
 .col-sm-5 {
     border: 1px solid black;
-    padding: 10px
+    padding: 10px;
 }
 
 
@@ -64,13 +71,13 @@ header {
     color: white;
     padding: 16px;
     border: none;
-    cursor: pointer
+    cursor: pointer;
 }
 
 
 .dropdown {
     position: relative;
-    display: inline-block
+    display: inline-block;
 }
 
 /* Dropdown Content (Hidden by Default) */
@@ -80,32 +87,32 @@ header {
     background-color: white;
     min-width: 160px;
     box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-    z-index: 1
+    z-index: 1;
 }
 
     .dropdown-content a {
         color: black;
         padding: 12px 16px;
         text-decoration: none;
-        display: block
+        display: block;
     }
 
 .show {
-    display: block
+    display: block;
 }
 
 .col-lg-1 {
     padding-top: 20px;
     padding-bottom: 20px;
     border: solid white 1px;
-    text-align: center
+    text-align: center;
 }
 
 .col-lg-2 {
     padding-top: 20px;
     padding-bottom: 20px;
     border: solid white 1px;
-    text-align: center
+    text-align: center;
 }
 
 .topbutton1 {
@@ -115,7 +122,7 @@ header {
     padding-bottom: 20px;
     border: solid white 1px;
     text-align: center;
-    border-radius: 10px
+    border-radius: 10px;
 }
 
 .topbutton2 {
@@ -125,7 +132,7 @@ header {
     padding-bottom: 20px;
     border: solid white 1px;
     text-align: center;
-    border-radius: 10px
+    border-radius: 10px;
 }
 
 .topbutton3 {
@@ -135,5 +142,5 @@ header {
     padding-bottom: 20px;
     border: solid white 1px;
     text-align: center;
-    border-radius: 10px
+    border-radius: 10px;
 }
