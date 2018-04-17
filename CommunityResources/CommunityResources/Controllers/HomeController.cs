@@ -45,9 +45,9 @@ namespace CommunityResources.Controllers
             var times = from t in _context.Organizations.SelectMany(v => v.Times) select t;
             if (day != null) { 
             orgs = (from u in orgs
-                                       join ti in _context.Times
-                                       on u.Id equals ti.OrganizationId
-                                       where ti.Day == day select u).ToList();
+                    join ti in _context.Times
+                    on u.Id equals ti.OrganizationId
+                    where ti.Day == day select u).ToList();
         }
 
             return View(orgs);
@@ -55,7 +55,7 @@ namespace CommunityResources.Controllers
 
        
 
-        public ActionResult InitialResults(int?id, string day)
+        public ActionResult InitialResults(int?id, string day, int? repeats)
         {
             List<Organization> organization = (from s in _context.Organizations.Include(c => c.Times).OrderBy(s => s.Name)
                                                select s).ToList();
@@ -63,6 +63,10 @@ namespace CommunityResources.Controllers
             var weekdays = new SelectList(
                from c in _context.Times.Select(d => d.Day).Distinct().ToList() select c);
             ViewBag.day = weekdays;
+
+            var reps = new SelectList(
+               from c in _context.Times.Select(d => d.Repeat).Distinct().ToList() select c);
+            ViewBag.repeats = reps;
 
 
             System.Diagnostics.Debug.WriteLine("Trying to get clothing info");
@@ -169,6 +173,14 @@ namespace CommunityResources.Controllers
                         on s.Id equals ti.OrganizationId
                         where ti.Day == day
                         select s).ToList();
+            }
+            if (repeats != null)
+            {
+                organization = (from s in organization
+                                join ti in _context.Times
+                                on s.Id equals ti.OrganizationId
+                                where (ti.Repeat == repeats) || (ti.Repeat == 0)
+                                select s).Distinct().ToList();
             }
 
             return View(organization);

@@ -34,10 +34,11 @@
     @using (Html.BeginForm("InitialResults", "Home", FormMethod.Get))
     {
 
-        <div>
-            @Html.DropDownList("day", "Any Day")
-            <input type="submit" value="Filter" />
-        </div>
+    <div>
+        @Html.DropDownList("day", "Any Day")
+        @Html.DropDownList("repeats", "Which Week")
+        <input type="submit" value="Filter" />
+    </div>
     }
     <table class="table">
         <thead>
