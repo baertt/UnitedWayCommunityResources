@@ -34,17 +34,30 @@
         <h2>
             Results
         </h2>
-        @using (Html.BeginForm("AdvancedResults", "Home", FormMethod.Get))
+
+        <div>
+            @Html.DropDownList("Countries", "select a day of the week")
+        </div>
+
+        @foreach (var item in Model)
     {
-        <p>
-            Title: @Html.TextBox("searchString")
-            <input type="submit" value="Filter" />
-        </p>
+        <div>
+
+            @item.Name
+        </div>
 }
+        @*@using (Html.BeginForm("AdvancedResults", "Home", FormMethod.Get))
+            {
+                <p>
+                    Title: @Html.TextBox("searchString")
+                    Date: @Html.DropDownList("movieGenres")
+                    <input type="submit" value="Filter" />
+                </p>
+        }*@
 
 
 
-        <form action="/Home/AdvancedResults" method="get">
+        @*<form action="/Home/AdvancedResults" method="get">
 
             <fieldset>
                 Day of the Week <select id="DayOfWeek" name="DayOfWeek">
@@ -115,7 +128,7 @@
                 </tr>
         }
             </tbody>
-        </table>
+        </table>*@
     </body>
 
 

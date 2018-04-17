@@ -33,33 +33,27 @@ namespace CommunityResources.Controllers
 
 
 
-        public ActionResult AdvancedResults(string movieGenre, string searchString)
+        public ActionResult AdvancedResults(string movieGenres, string searchString)
         {
-            //var DayLst = new List<string>();
+            var countries = new SelectList(
+               from c in _context.Times.Select(d => d.Day).Distinct().ToList()select c);
+            ViewBag.Countries = countries;
 
+            var organization = from s in _context.Organizations.Include(c => c.Times).OrderBy(s => s.Name)
+                               select s;
 
-            //DayLst.Add("M");
-            //DayLst.Add("T");
-            //DayLst.Add("W");
-            //DayLst.Add("R");
-            //DayLst.Add("F");
-            //DayLst.Add("Sa");
-            //DayLst.Add("Su");
-            //ViewBag.movieGenres = new SelectList(DayLst);
+            var times = from t in _context.Organizations.SelectMany(v => v.Times) select t;
 
-            var movies = from m in _context.Organizations
-                         .Include(m => m.Contacts)
-                         .OrderBy(m => m.Name)
-                         select m;
+            List<Organization> orgs = (from u in _context.Organizations
+                                       join ti in _context.Times
+                                       on u.Id equals ti.OrganizationId
+                                       where ti.Day == "R" select u).ToList();
+           
 
-            if (!String.IsNullOrEmpty(searchString))
-            {
-                movies = movies.Where(m => m.Name.Contains(searchString));
-            }
-
-
-            return View(movies);
+            return View(orgs);
         }
+
+       
 
         public async Task<IActionResult> InitialResults(int?id)
         {
