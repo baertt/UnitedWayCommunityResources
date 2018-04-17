@@ -29,26 +29,26 @@ namespace CommunityResources.Controllers
             return View();
         }
 
-      
 
 
 
-        public ActionResult AdvancedResults(string movieGenres, string searchString)
+
+        public ActionResult AdvancedResults(string day, string searchString)
         {
             var countries = new SelectList(
-               from c in _context.Times.Select(d => d.Day).Distinct().ToList()select c);
-            ViewBag.Countries = countries;
+               from c in _context.Times.Select(d => d.Day).Distinct().ToList() select c);
+            ViewBag.day = countries;
 
-            var organization = from s in _context.Organizations.Include(c => c.Times).OrderBy(s => s.Name)
-                               select s;
+            List<Organization> orgs = (from s in _context.Organizations.Include(c => c.Times).OrderBy(s => s.Name)
+                               select s).ToList();
 
             var times = from t in _context.Organizations.SelectMany(v => v.Times) select t;
-
-            List<Organization> orgs = (from u in _context.Organizations
+            if (day != null) { 
+            orgs = (from u in _context.Organizations
                                        join ti in _context.Times
                                        on u.Id equals ti.OrganizationId
-                                       where ti.Day == "R" select u).ToList();
-           
+                                       where ti.Day == day select u).ToList();
+        }
 
             return View(orgs);
         }

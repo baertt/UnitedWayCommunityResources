@@ -34,11 +34,14 @@
         <h2>
             Results
         </h2>
+        @using (Html.BeginForm("AdvancedResults", "Home", FormMethod.Get))
+        {
 
         <div>
-            @Html.DropDownList("Countries", "select a day of the week")
+            @Html.DropDownList("day", "select a day of the week")
+            <input type="submit" value="Filter" />
         </div>
-
+        }
         @foreach (var item in Model)
     {
         <div>
