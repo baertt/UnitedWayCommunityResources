@@ -44,7 +44,7 @@ namespace CommunityResources.Controllers
 
             var times = from t in _context.Organizations.SelectMany(v => v.Times) select t;
             if (day != null) { 
-            orgs = (from u in _context.Organizations
+            orgs = (from u in orgs
                                        join ti in _context.Times
                                        on u.Id equals ti.OrganizationId
                                        where ti.Day == day select u).ToList();
@@ -55,63 +55,123 @@ namespace CommunityResources.Controllers
 
        
 
-        public async Task<IActionResult> InitialResults(int?id)
+        public ActionResult InitialResults(int?id, string day)
         {
-            var organization = from s in _context.Organizations.Include(c => c.Contacts).OrderBy(s => s.Name)
-                               select s;
+            List<Organization> organization = (from s in _context.Organizations.Include(c => c.Times).OrderBy(s => s.Name)
+                                               select s).ToList();
+
+            var weekdays = new SelectList(
+               from c in _context.Times.Select(d => d.Day).Distinct().ToList() select c);
+            ViewBag.day = weekdays;
+
 
             System.Diagnostics.Debug.WriteLine("Trying to get clothing info");
             if (id == 1) {
-                System.Diagnostics.Debug.WriteLine("Clothssssssssssssssssssssssss");
-                organization = organization.Where(s => s.Resources.Clothing.Equals(1));
-                System.Diagnostics.Debug.WriteLine(organization.Count());
+                organization = (from s in organization
+                                join ti in _context.Resources
+                                on s.Id equals ti.OrganizationId
+                                where ti.Clothing == 1
+                                select s).ToList();
             }
             else if (id == 2)
             {
-                organization = organization.Where(s => s.Resources.Education.Equals(1));
+                organization = (from s in organization
+                                join ti in _context.Resources
+                                on s.Id equals ti.OrganizationId
+                                where ti.Education == 1
+                                select s).ToList();
             }
             else if (id == 3)
             {
-                organization = organization.Where(s => s.Resources.Employment.Equals(1));
+                organization = (from s in organization
+                                join ti in _context.Resources
+                                on s.Id equals ti.OrganizationId
+                                where ti.Employment == 1
+                                select s).ToList();
             }
             else if (id == 4)
             {
-                organization = organization.Where(s => s.Resources.Finances.Equals(1));
+                organization = (from s in organization
+                                join ti in _context.Resources
+                                on s.Id equals ti.OrganizationId
+                                where ti.Finances== 1
+                                select s).ToList();
             }
             else if (id == 5)
             {
-                organization = organization.Where(s => s.Resources.Food.Equals(1));
+                organization = (from s in organization
+                                join ti in _context.Resources
+                                on s.Id equals ti.OrganizationId
+                                where ti.Food == 1
+                                select s).ToList();
             }
             else if (id == 6)
             {
-                organization = organization.Where(s => s.Resources.Housing.Equals(1));
+                organization = (from s in organization
+                                join ti in _context.Resources
+                                on s.Id equals ti.OrganizationId
+                                where ti.Housing == 1
+                                select s).ToList();
             }
             else if (id == 7)
             {
-                organization = organization.Where(s => s.Resources.Natural_Disaster.Equals(1));
+                organization = (from s in organization
+                                join ti in _context.Resources
+                                on s.Id equals ti.OrganizationId
+                                where ti.Natural_Disaster == 1
+                                select s).ToList();
             }
             else if (id == 8)
             {
-                organization = organization.Where(s => s.Resources.Senior.Equals(1));
+                organization = (from s in organization
+                                join ti in _context.Resources
+                                on s.Id equals ti.OrganizationId
+                                where ti.Senior == 1
+                                select s).ToList();
             }
             else if (id == 9)
             {
-                organization = organization.Where(s => s.Resources.Rent_Utilities.Equals(1));
+                organization = (from s in organization
+                                join ti in _context.Resources
+                                on s.Id equals ti.OrganizationId
+                                where ti.Rent_Utilities == 1
+                                select s).ToList();
             }
             else if (id == 10)
             {
-                organization = organization.Where(s => s.Resources.Medical_Prescription.Equals(1));
+                organization = (from s in organization
+                                join ti in _context.Resources
+                                on s.Id equals ti.OrganizationId
+                                where ti.Medical_Prescription == 1
+                                select s).ToList();
             }
             else if (id == 11)
             {
-                organization = organization.Where(s => s.Resources.Veterans.Equals(1));
+                organization = (from s in organization
+                                join ti in _context.Resources
+                                on s.Id equals ti.OrganizationId
+                                where ti.Veterans == 1
+                                select s).ToList();
             }
             else if (id == 12)
             {
-                organization = organization.Where(s => s.Resources.Other_Resources.Equals(1));
+                organization = (from s in organization
+                                join ti in _context.Resources
+                                on s.Id equals ti.OrganizationId
+                                where ti.Other_Resources == 1
+                                select s).ToList();
             }
-            
-            return View(await organization.AsNoTracking().ToListAsync());
+
+            if (day != null)
+            {
+                organization = (from s in organization
+                                join ti in _context.Times
+                        on s.Id equals ti.OrganizationId
+                        where ti.Day == day
+                        select s).ToList();
+            }
+
+            return View(organization);
             //return View(await _context.Organizations.ToListAsync());
         }
 

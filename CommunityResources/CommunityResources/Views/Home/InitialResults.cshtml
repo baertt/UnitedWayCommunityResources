@@ -31,6 +31,14 @@
         </div>
     </header>
     <h2>Results</h2>
+    @using (Html.BeginForm("InitialResults", "Home", FormMethod.Get))
+    {
+
+        <div>
+            @Html.DropDownList("day", "Any Day")
+            <input type="submit" value="Filter" />
+        </div>
+    }
     <table class="table">
         <thead>
             <tr>
@@ -54,26 +62,26 @@
         <tbody>
             @foreach (var item in Model)
             {
-            <tr>
-                <td>
-                    @Html.DisplayFor(modelItem => item.Name)
-                </td>
-                <td>
-                    @Html.DisplayFor(modelItem => item.Contacts.Email)
-                </td>
-                <td>
-                    @Html.DisplayFor(modelItem => item.Contacts.Phone)
-                </td>
-                <td>
-                    @Html.DisplayFor(modelItem => item.Contacts.Street_Address)
-                    <br />
-                    @Html.DisplayFor(modelItem => item.Contacts.Town_Address)
-                </td>
-                <td>
-                    <a asp-area="" asp-controller="Organizations" asp-action="Details" asp-route-id="@item.Id">Details</a>
-                </td>
-            </tr>
-}
+                <tr>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Name)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Contacts.Email)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Contacts.Phone)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Contacts.Street_Address)
+                        <br />
+                        @Html.DisplayFor(modelItem => item.Contacts.Town_Address)
+                    </td>
+                    <td>
+                        <a asp-area="" asp-controller="Organizations" asp-action="Details" asp-route-id="@item.Id">Details</a>
+                    </td>
+                </tr>
+            }
         </tbody>
     </table>
 </body>
