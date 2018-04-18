@@ -55,7 +55,7 @@ namespace CommunityResources.Controllers
 
        
 
-        public ActionResult InitialResults(int?id, string day, int? repeats)
+        public ActionResult InitialResults(int?id, string day, int? repeats, string timeS, string timeE)
         {
             List<Organization> organization = (from s in _context.Organizations.Include(c => c.Times).OrderBy(s => s.Name)
                                                select s).ToList();
@@ -182,6 +182,18 @@ namespace CommunityResources.Controllers
                                 where (ti.Repeat == repeats) || (ti.Repeat == 0)
                                 select s).Distinct().ToList();
             }
+            if (timeS != null && timeE != null)
+            { 
+
+                organization = (from s in organization
+                                join ti in _context.Times
+                                on s.Id equals ti.OrganizationId
+                                where ((DateTime.Compare(Convert.ToDateTime(ti.Time_End), Convert.ToDateTime(timeS)) > 0) )
+                                || (DateTime.Compare(Convert.ToDateTime(ti.Time_Start), Convert.ToDateTime(timeE)) < 0)
+                                select s).Distinct().ToList();
+            }
+
+
 
             return View(organization);
             //return View(await _context.Organizations.ToListAsync());
