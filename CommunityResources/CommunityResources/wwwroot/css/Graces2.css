@@ -1,7 +1,4 @@
-﻿.mainhead {
-}
-
-.toolbar {
+﻿.toolbar {
     background-color: #220081;
     color: white;
     font-size: small;
@@ -16,11 +13,11 @@ header {
     height: 10px;
     vertical-align: bottom;
     display: table-cell;
+    padding-top: 50px;
 }
 
- .body {
-     background-color: #124356;
-    /*background-color: #FFFFFF*/
+.body {
+    background-color: #FFFFFF;
 }
 
 #title {
@@ -116,6 +113,8 @@ header {
 }
 
 .topbutton1 {
+    display: flex;
+    justify-content: center;
     background: #220081;
     color: white;
     padding-top: 20px;
@@ -126,21 +125,27 @@ header {
 }
 
 .topbutton2 {
+    display: flex;
+    justify-content: center;
     color: white;
     background: #ff0000;
     padding-top: 20px;
     padding-bottom: 20px;
     border: solid white 1px;
     text-align: center;
-    border-radius: 10px;
+    border-radius: 10px
+
 }
 
 .topbutton3 {
+    display: flex;
+    justify-content: center;
     color: white;
     background: #ff8f00;
     padding-top: 20px;
     padding-bottom: 20px;
     border: solid white 1px;
     text-align: center;
-    border-radius: 10px;
+    border-radius: 10px
+
 }
