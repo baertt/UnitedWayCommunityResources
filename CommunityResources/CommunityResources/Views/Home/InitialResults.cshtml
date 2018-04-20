@@ -31,16 +31,36 @@
         </div>
     </header>
     <h2>Results</h2>
+    <form id="form1" runat="server">
+
+        <div>
+            <h3> Your Birthday:</h3>
+            <asp:Calendar ID="Calendar1" runat="server" SelectionMode="DayWeekMonth" onselectionchanged="Calendar1_SelectionChanged">
+            </asp:Calendar>
+        </div>
+
+        <p>
+            Todays date is:
+            <asp:Label ID="lblday" runat="server"></asp:Label>
+        </p>
+
+        <p>
+            Your Birday is:
+            <asp:Label ID="lblbday" runat="server"></asp:Label>
+        </p>
+
+    </form>
+
     @using (Html.BeginForm("InitialResults", "Home", FormMethod.Get))
     {
 
-    <div>
-        @Html.DropDownList("day", "Any Day")
-        @Html.DropDownList("repeats", "Which Week")
-        @Html.TextBox("timeS", "")
-        @Html.TextBox("timeE", "")
-        <input type="submit" value="Filter" />
-    </div>
+        <div>
+            @Html.DropDownList("day", "Any Day")
+            @Html.DropDownList("repeats", "Which Week")
+            @Html.TextBox("timeS", "")
+            @Html.TextBox("timeE", "")
+            <input type="submit" value="Filter" />
+        </div>
     }
     <table class="table">
         <thead>

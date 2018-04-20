@@ -36,7 +36,10 @@ namespace CommunityResources.Controllers
         public ActionResult AdvancedResults(string day, string searchString)
         {
             var countries = new SelectList(
-               from c in _context.Times.Select(d => d.Day).Distinct().ToList() select c);
+                 from c in Enum.GetValues(typeof(DayOfWeek)).Cast<DayOfWeek>()
+                .Select(dow => new { Value = (int)dow, Text = dow.ToString() })
+                .ToList() select c);
+               //from c in _context.Times.Select(d => d.Day).Distinct().ToList() select c);
             ViewBag.day = countries;
 
             List<Organization> orgs = (from s in _context.Organizations.Include(c => c.Times).OrderBy(s => s.Name)
@@ -188,16 +191,15 @@ namespace CommunityResources.Controllers
                 organization = (from s in organization
                                 join ti in _context.Times
                                 on s.Id equals ti.OrganizationId
-                                where ((DateTime.Compare(Convert.ToDateTime(ti.Time_End), Convert.ToDateTime(timeS)) > 0) )
-                                || (DateTime.Compare(Convert.ToDateTime(ti.Time_Start), Convert.ToDateTime(timeE)) < 0)
+                                where (((DateTime.Compare(Convert.ToDateTime(ti.Time_End), Convert.ToDateTime(timeS)) > 0) )
+                                && (DateTime.Compare(Convert.ToDateTime(ti.Time_Start), Convert.ToDateTime(timeE)) < 0))
                                 select s).Distinct().ToList();
             }
-
-
-
             return View(organization);
             //return View(await _context.Organizations.ToListAsync());
         }
+
+
 
 
 
