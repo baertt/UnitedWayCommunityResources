@@ -16,7 +16,7 @@ header {
     padding-top: 50px;
 }
 
-.body {
+body {
     background-color: #FFFFFF;
 }
 
@@ -142,7 +142,7 @@ header {
     justify-content: center;
     color: white;
     background: #ff8f00;
-    padding-top: 20px;
+    padding-top: 0px;
     padding-bottom: 20px;
     border: solid white 1px;
     text-align: center;
