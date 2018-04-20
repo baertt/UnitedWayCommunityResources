@@ -187,7 +187,6 @@ namespace CommunityResources.Controllers
             }
             if (timeS != null && timeE != null)
             { 
-
                 organization = (from s in organization
                                 join ti in _context.Times
                                 on s.Id equals ti.OrganizationId
