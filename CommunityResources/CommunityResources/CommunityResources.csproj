@@ -23,5 +23,6 @@
   </ItemGroup>
   <ItemGroup>
     <Content Remove="wwwroot\css\updatedsite.cs" />
+    <Content Remove="Views\Home\Contact.cshtml" />
   </ItemGroup>
 </Project>
