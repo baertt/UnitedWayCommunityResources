@@ -32,9 +32,10 @@ namespace CommunityResources.Controllers
 
 
 
-
+        [HttpPost]
         public ActionResult AdvancedResults(string day, string searchString)
         {
+
             var countries = new SelectList(
                  from c in Enum.GetValues(typeof(DayOfWeek)).Cast<DayOfWeek>()
                 .Select(dow => new { Value = (int)dow, Text = dow.ToString() })
@@ -58,7 +59,7 @@ namespace CommunityResources.Controllers
 
        
 
-        public ActionResult InitialResults(int?id, string day, int? repeats, string timeS, string timeE)
+        public ActionResult InitialResults(int?id, string day, int? repeats, string timeS, string timeE, string datepicker)
         {
             List<Organization> organization = (from s in _context.Organizations.Include(c => c.Times).OrderBy(s => s.Name)
                                                select s).ToList();

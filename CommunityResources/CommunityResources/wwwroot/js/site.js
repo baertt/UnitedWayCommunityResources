@@ -2,6 +2,14 @@
     document.getElementById("myDropdown").classList.toggle("show");
 }
 
+
+
+function funct() {
+            var date = $("#datepicker").datepicker({dateFormat: "yy-mm-dd" }).onSelect();
+            document.getElementById("date").value = str;
+}
+    
+
 window.onclick = function (event) {
     if (!event.target.matches('.dropbtn')) {
 
@@ -13,4 +21,5 @@ window.onclick = function (event) {
                 openDropdown.classList.remove('show');
             }
         }
-    }}
+    }
+};

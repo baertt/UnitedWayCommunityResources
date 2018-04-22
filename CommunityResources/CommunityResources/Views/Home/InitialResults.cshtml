@@ -32,20 +32,27 @@
         </div>
     </header>
     <h2>Results</h2>
-    <div id="datepicker"></div>
+    
+    <div id="datepicker">
+        <script>
+            $("#datepicker").datepicker();
+        </script>
+        
 
-    <script>
-        $("#datepicker").datepicker();
-    </script>
+    </div>
+    
+
     @using (Html.BeginForm("InitialResults", "Home", FormMethod.Get))
     {
-
         <div>
             @Html.DropDownList("day", "Any Day")
             @Html.DropDownList("repeats", "Which Week")
             @Html.TextBox("timeS", "")
             @Html.TextBox("timeE", "")
-            <input type="submit" value="Filter" />
+
+            <input id="datepicker" type="hidden" runat="server"/>
+
+            <input type="submit" value="Filter"  runat="server" OnClientClick="funct()" />
         </div>
     }
     <table class="table">
