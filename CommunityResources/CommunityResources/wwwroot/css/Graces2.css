@@ -1,7 +1,10 @@
 ﻿.toolbar {
+    font-family: 'Open Sans', sans-serif;
     background-color: #220081;
     color: white;
-    font-size: small;
+    font-size: inherit;
+    font-stretch: ultra-condensed;
+    font-weight: bolder;
 }
 
 header {
@@ -9,11 +12,19 @@ header {
     padding-bottom: 30px;
 }
 
+.results-title {
+    font-size: large;
+    color: #121B7C;
+}
+
 .col-md-1 {
     height: 10px;
     vertical-align: bottom;
     display: table-cell;
-    padding-top: 50px;
+    padding-top: 40px;
+    padding-bottom: 20px;
+    padding-left: 20px;
+    padding-right: 20px;
 }
 
 body {
