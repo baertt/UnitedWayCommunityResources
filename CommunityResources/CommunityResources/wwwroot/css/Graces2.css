@@ -7,7 +7,6 @@ header {
 
 body {
     background-color: white;
-    /*background-color: #FFFFFF;*/
 }
 
 .toolbar {
@@ -20,7 +19,7 @@ body {
 
 }
 
-.results-title {
+#results-title {
     font-size: large;
     font-weight: bolder;
     background-color: yellow;
@@ -28,13 +27,12 @@ body {
 }
 
 .col-md-1 {
-    height: 10px;
     vertical-align: bottom;
     display: table-cell;
-    padding-top: 40px;
+    padding-top: 10px;
     padding-bottom: 20px;
-    padding-left: 20px;
-    padding-right: 20px;
+    padding-left: 25px;
+    padding-right: 25px;
 }
 
 #title {
@@ -53,14 +51,15 @@ body {
 }
 
 .img-responsive {
+    font-family: Helvetica Nueve, Helvetica, Arial, san-serif;
     display: block;
     margin-left: auto;
     margin-right: auto;
-    padding: 20px;
+    padding: 20px
 }
 
 .caption {
-    color: #111C7C;
+    color: #11C7C;
     font-weight: bolder;
     text-align: center;
 }
@@ -123,6 +122,7 @@ body {
 }
 
 .col-lg-2 {
+    color: white;
     padding-top: 20px;
     padding-bottom: 20px;
     border: solid white 1px;

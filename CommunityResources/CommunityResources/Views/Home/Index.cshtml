@@ -7,7 +7,8 @@
   <title>United Way Community Resources</title>
   <meta charset="UTF-8">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
- <link rel="stylesheet" href="~/css/Graces2.css" type="text/css" runat="server"/>
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:700" rel="stylesheet">
+  <link rel="stylesheet" href="~/css/Graces2.css" type="text/css" runat="server"/>
 </head>
 
 <body>
@@ -77,10 +78,12 @@
      <div class = 'col-lg-2'>ABOUT US</div>
      <div class = 'col-lg-2'>OUR WORK</div>
      <div class = 'col-lg-2'>GET INVOLVED</div>
-     <div class = 'col-lg-2'>COMMUNITY RESOURCES</div>
-     <div class = 'col-lg-2'>EVENTS</div>
-     <div class = 'col-lg-2'>LOGIN</div>
+     <div class = 'col-lg-2'><a asp-area="" asp-controller="Home" asp-action="Index" style="color: white">COMMUNITY RESOURCES</a></div>
+     <div class = 'col-lg-2'><a asp-area="" asp-controller="Home" asp-action="GracesResults2" style="color: white">EVENTS</a></div>
+     <div class = 'col-lg-2'><a asp-area="" asp-controller="Organizations" asp-action="Index" style="color: white">LOGIN</a></div>
 </div>
+
+ </div>
     
   <header class="container">
     <div class="row">
