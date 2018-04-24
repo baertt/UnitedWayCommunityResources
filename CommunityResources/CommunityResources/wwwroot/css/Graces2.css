@@ -1,12 +1,11 @@
-﻿
-header {
+﻿header {
     padding: 20px;
-    padding-bottom: 30px;
+    padding-bottom: 30px
 }
 
 
 body {
-    background-color: white;
+    background-color: white
 }
 
 .toolbar {
@@ -15,15 +14,14 @@ body {
     color: white;
     font-size: inherit;
     font-stretch: ultra-condensed;
-    font-weight: bolder;
-
+    font-weight: bolder
 }
 
 #results-title {
     font-size: large;
     font-weight: bolder;
     background-color: #FFFFFF;
-    color: #121B7C;
+    color: #121B7C
 }
 
 .col-md-1 {
@@ -32,22 +30,22 @@ body {
     padding-top: 10px;
     padding-bottom: 20px;
     padding-left: 25px;
-    padding-right: 25px;
+    padding-right: 25px
 }
 
 #title {
-    text-align: left;
+    text-align: left
 }
 
 .search {
     display: flex;
-    justify-content: center;
+    justify-content: center
 }
 
 #lang {
     background-color: #220081;
     color: white;
-    font-weight: bolder;
+    font-weight: bolder
 }
 
 .img-responsive {
@@ -61,22 +59,22 @@ body {
 .caption {
     color: #11C7C;
     font-weight: bolder;
-    text-align: center;
+    text-align: center
 }
 
 #imgcred {
-    font-size: small;
+    font-size: small
 }
 
 .rheading {
     text-align: center;
     font-weight: bold;
-    font-size: large;
+    font-size: large
 }
 
 .col-sm-5 {
     border: 1px solid black;
-    padding: 10px;
+    padding: 10px
 }
 
 
@@ -84,13 +82,13 @@ body {
     color: white;
     padding: 16px;
     border: none;
-    cursor: pointer;
+    cursor: pointer
 }
 
 
 .dropdown {
     position: relative;
-    display: inline-block;
+    display: inline-block
 }
 
 /* Dropdown Content (Hidden by Default) */
@@ -100,25 +98,25 @@ body {
     background-color: white;
     min-width: 160px;
     box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-    z-index: 1;
+    z-index: 1
 }
 
     .dropdown-content a {
         color: black;
         padding: 12px 16px;
         text-decoration: none;
-        display: block;
+        display: block
     }
 
 .show {
-    display: block;
+    display: block
 }
 
 .col-lg-1 {
     padding-top: 20px;
     padding-bottom: 20px;
     border: solid white 1px;
-    text-align: center;
+    text-align: center
 }
 
 .col-lg-2 {
@@ -126,7 +124,7 @@ body {
     padding-top: 20px;
     padding-bottom: 20px;
     border: solid white 1px;
-    text-align: center;
+    text-align: center
 }
 
 .topbutton1 {
@@ -142,7 +140,7 @@ body {
     padding-bottom: 20px;
     border: solid white 1px;
     text-align: center;
-    border-radius: 10px;
+    border-radius: 10px
 }
 
 .topbutton2 {
@@ -158,7 +156,7 @@ body {
     padding-bottom: 20px;
     border: solid white 1px;
     text-align: center;
-    border-radius: 10px;
+    border-radius: 10px
 }
 
 .topbutton3 {
@@ -174,5 +172,44 @@ body {
     padding-bottom: 20px;
     border: solid white 1px;
     text-align: center;
-    border-radius: 10px;
+    border-radius: 10px
+}
+
+.topfoot {
+    background-color: #f2f2f2;
+    font-family: 'Open Sans', sans-serif;
+    color: #220081;
+    font-size: 14px
+}
+
+.bottomfoot {
+    background-color: #808080;
+    font-family: 'Open Sans', sans-serif;
+    color: white;
+    font-size: 14px
+}
+
+.search-container {
+    border: 10px #ff8f00
+}
+
+
+
+form input[type=text] {
+    padding: 10px;
+    font-size: 17px;
+    float: left;
+    width: 80%;
+    background: white;
+    border: 10px #ff8f00
+}
+
+form button {
+    float: left;
+    width: 20%;
+    padding: 10px;
+    background: #ff8f00;
+    color: white;
+    font-size: 17px;
+    border: 10px #ff8f00
 }
