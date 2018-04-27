@@ -46,9 +46,9 @@ namespace CommunityResources.Controllers
         }
 
         // GET: Contacts/Create
-        public IActionResult Create()
+        public IActionResult Create(int? id)
         {
-            ViewData["OrganizationId"] = new SelectList(_context.Organizations, "Id", "Name");
+            ViewData["OrganizationId"] = new SelectList(_context.Organizations.Where(m=> m.Id.Equals(id)), "Id", "Name");
             return View();
         }
 
@@ -82,7 +82,7 @@ namespace CommunityResources.Controllers
             {
                 return NotFound();
             }
-            ViewData["OrganizationId"] = new SelectList(_context.Organizations, "Id", "Name", contact.OrganizationId);
+            ViewData["OrganizationId"] = ViewData["OrganizationId"] = new SelectList(_context.Organizations.Where(m => m.Id.Equals(id)), "Id", "Name", contact.OrganizationId);
             return View(contact);
         }
 

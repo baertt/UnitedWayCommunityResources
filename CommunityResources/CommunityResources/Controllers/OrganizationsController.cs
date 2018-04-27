@@ -76,7 +76,7 @@ namespace CommunityResources.Controllers
                 {
                     _context.Add(organization);
                     await _context.SaveChangesAsync();
-                    return RedirectToAction(nameof(Index));
+                    return RedirectToAction("Create","Contacts", new { id = organization.Id });
                 }
             }
             catch (DbUpdateException /* ex */)
