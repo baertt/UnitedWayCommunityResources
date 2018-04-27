@@ -46,9 +46,9 @@ namespace CommunityResources.Controllers
         }
 
         // GET: Times/Create
-        public IActionResult Create()
+        public IActionResult Create(int? id)
         {
-            ViewData["OrganizationId"] = new SelectList(_context.Organizations, "Id", "Name");
+            ViewData["OrganizationId"] = new SelectList(_context.Organizations.Where(m => m.Id.Equals(id)), "Id", "Name");
             return View();
         }
 
@@ -65,6 +65,7 @@ namespace CommunityResources.Controllers
                 await _context.SaveChangesAsync();
                 return RedirectToAction(nameof(Index));
             }
+
             ViewData["OrganizationId"] = new SelectList(_context.Organizations, "Id", "Name", time.OrganizationId);
             return View(time);
         }
