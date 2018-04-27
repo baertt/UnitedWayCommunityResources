@@ -46,10 +46,22 @@ namespace CommunityResources.Controllers
         }
 
         // GET: Resources/Create
-        public IActionResult Create()
+        public IActionResult Create(int? id)
         {
+
+            if (id == null)
+            {
+                return NotFound();
+            }
+
+            var resource = _context.Resources.SingleOrDefaultAsync(m => m.Id == id);
+            if (resource == null)
+            {
+                return NotFound();
+            }
             ViewData["OrganizationId"] = new SelectList(_context.Organizations, "Id", "Name");
-            return View();
+            return View(resource);
+           
         }
 
         // POST: Resources/Create
@@ -57,8 +69,14 @@ namespace CommunityResources.Controllers
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Create([Bind("Id,OrganizationId,Clothing,Education,Employment,Finances,Food,Housing,Natural_Disaster,Senior,Rent_Utilities,Medical_Prescription,Veterans,Other_Resources,Other_Resources_Text")] Resource resource)
+        public async Task<IActionResult> Create(int id, [Bind("Id,OrganizationId,Clothing,Education,Employment,Finances,Food,Housing,Natural_Disaster,Senior,Rent_Utilities,Medical_Prescription,Veterans,Other_Resources,Other_Resources_Text")] Resource resource)
         {
+            if (id != resource.Id)
+            {
+                return NotFound();
+            }
+           
+
             if (ModelState.IsValid)
             {
                 _context.Add(resource);
