@@ -1,0 +1,60 @@
+﻿@model IEnumerable<CommunityResources.Models.Time>
+
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Index</h2>
+
+<p>
+    <a asp-action="Create">Create New</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+                <th>
+                    @Html.DisplayNameFor(model => model.Time_Start)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Time_End)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Repeat)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Day)
+                </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Organization)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Time_Start)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Time_End)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Repeat)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Day)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Organization.Name)
+            </td>
+            <td>
+                <a asp-action="Edit" asp-route-id="@item.TimesId">Edit</a> |
+                <a asp-action="Details" asp-route-id="@item.TimesId">Details</a> |
+                <a asp-action="Delete" asp-route-id="@item.TimesId">Delete</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>

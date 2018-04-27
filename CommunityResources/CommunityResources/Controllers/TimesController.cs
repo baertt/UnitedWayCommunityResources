@@ -10,23 +10,23 @@ using CommunityResources.Models;
 
 namespace CommunityResources.Controllers
 {
-    public class ContactsController : Controller
+    public class TimesController : Controller
     {
         private readonly CommunityResourcesContext _context;
 
-        public ContactsController(CommunityResourcesContext context)
+        public TimesController(CommunityResourcesContext context)
         {
             _context = context;
         }
 
-        // GET: Contacts
+        // GET: Times
         public async Task<IActionResult> Index()
         {
-            var communityResourcesContext = _context.Contacts.Include(c => c.Organization);
+            var communityResourcesContext = _context.Times.Include(t => t.Organization);
             return View(await communityResourcesContext.ToListAsync());
         }
 
-        // GET: Contacts/Details/5
+        // GET: Times/Details/5
         public async Task<IActionResult> Details(int? id)
         {
             if (id == null)
@@ -34,42 +34,42 @@ namespace CommunityResources.Controllers
                 return NotFound();
             }
 
-            var contact = await _context.Contacts
-                .Include(c => c.Organization)
-                .SingleOrDefaultAsync(m => m.Id == id);
-            if (contact == null)
+            var time = await _context.Times
+                .Include(t => t.Organization)
+                .SingleOrDefaultAsync(m => m.TimesId == id);
+            if (time == null)
             {
                 return NotFound();
             }
 
-            return View(contact);
+            return View(time);
         }
 
-        // GET: Contacts/Create
-        public IActionResult Create(int? id)
+        // GET: Times/Create
+        public IActionResult Create()
         {
-            ViewData["OrganizationId"] = new SelectList(_context.Organizations.Where(m=> m.Id.Equals(id)), "Id", "Name");
+            ViewData["OrganizationId"] = new SelectList(_context.Organizations, "Id", "Name");
             return View();
         }
 
-        // POST: Contacts/Create
+        // POST: Times/Create
         // To protect from overposting attacks, please enable the specific properties you want to bind to, for 
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Create([Bind("Id,OrganizationId,Street_Address,City,Zip,Email,Phone,Website")] Contact contact)
+        public async Task<IActionResult> Create([Bind("TimesId,Time_Start,Time_End,Repeat,Day,OrganizationId")] Time time)
         {
             if (ModelState.IsValid)
             {
-                _context.Add(contact);
+                _context.Add(time);
                 await _context.SaveChangesAsync();
-                return RedirectToAction("Create", "Resources", new { id = contact.OrganizationId});
+                return RedirectToAction(nameof(Index));
             }
-            ViewData["OrganizationId"] = new SelectList(_context.Organizations, "Id", "Name", contact.OrganizationId);
-            return View(contact);
+            ViewData["OrganizationId"] = new SelectList(_context.Organizations, "Id", "Name", time.OrganizationId);
+            return View(time);
         }
 
-        // GET: Contacts/Edit/5
+        // GET: Times/Edit/5
         public async Task<IActionResult> Edit(int? id)
         {
             if (id == null)
@@ -77,23 +77,23 @@ namespace CommunityResources.Controllers
                 return NotFound();
             }
 
-            var contact = await _context.Contacts.SingleOrDefaultAsync(m => m.Id == id);
-            if (contact == null)
+            var time = await _context.Times.SingleOrDefaultAsync(m => m.TimesId == id);
+            if (time == null)
             {
                 return NotFound();
             }
-            ViewData["OrganizationId"] = new SelectList(_context.Organizations.Where(m => m.Id.Equals(id)), "Id", "Name", contact.OrganizationId);
-            return View(contact);
+            ViewData["OrganizationId"] = new SelectList(_context.Organizations, "Id", "Name", time.OrganizationId);
+            return View(time);
         }
 
-        // POST: Contacts/Edit/5
+        // POST: Times/Edit/5
         // To protect from overposting attacks, please enable the specific properties you want to bind to, for 
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Edit(int id, [Bind("Id,OrganizationId,Street_Address,City,Zip,Email,Phone,Website")] Contact contact)
+        public async Task<IActionResult> Edit(int id, [Bind("TimesId,Time_Start,Time_End,Repeat,Day,OrganizationId")] Time time)
         {
-            if (id != contact.Id)
+            if (id != time.TimesId)
             {
                 return NotFound();
             }
@@ -102,12 +102,12 @@ namespace CommunityResources.Controllers
             {
                 try
                 {
-                    _context.Update(contact);
+                    _context.Update(time);
                     await _context.SaveChangesAsync();
                 }
                 catch (DbUpdateConcurrencyException)
                 {
-                    if (!ContactExists(contact.Id))
+                    if (!TimeExists(time.TimesId))
                     {
                         return NotFound();
                     }
@@ -118,11 +118,11 @@ namespace CommunityResources.Controllers
                 }
                 return RedirectToAction(nameof(Index));
             }
-            ViewData["OrganizationId"] = new SelectList(_context.Organizations, "Id", "Name", contact.OrganizationId);
-            return View(contact);
+            ViewData["OrganizationId"] = new SelectList(_context.Organizations, "Id", "Name", time.OrganizationId);
+            return View(time);
         }
 
-        // GET: Contacts/Delete/5
+        // GET: Times/Delete/5
         public async Task<IActionResult> Delete(int? id)
         {
             if (id == null)
@@ -130,31 +130,31 @@ namespace CommunityResources.Controllers
                 return NotFound();
             }
 
-            var contact = await _context.Contacts
-                .Include(c => c.Organization)
-                .SingleOrDefaultAsync(m => m.Id == id);
-            if (contact == null)
+            var time = await _context.Times
+                .Include(t => t.Organization)
+                .SingleOrDefaultAsync(m => m.TimesId == id);
+            if (time == null)
             {
                 return NotFound();
             }
 
-            return View(contact);
+            return View(time);
         }
 
-        // POST: Contacts/Delete/5
+        // POST: Times/Delete/5
         [HttpPost, ActionName("Delete")]
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> DeleteConfirmed(int id)
         {
-            var contact = await _context.Contacts.SingleOrDefaultAsync(m => m.Id == id);
-            _context.Contacts.Remove(contact);
+            var time = await _context.Times.SingleOrDefaultAsync(m => m.TimesId == id);
+            _context.Times.Remove(time);
             await _context.SaveChangesAsync();
             return RedirectToAction(nameof(Index));
         }
 
-        private bool ContactExists(int id)
+        private bool TimeExists(int id)
         {
-            return _context.Contacts.Any(e => e.Id == id);
+            return _context.Times.Any(e => e.TimesId == id);
         }
     }
 }
