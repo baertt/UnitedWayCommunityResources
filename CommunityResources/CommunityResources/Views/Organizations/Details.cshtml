@@ -60,7 +60,7 @@
         @if (Model.Appointments_Required.Equals(1)) {
             <dt> @Html.DisplayNameFor(model => model.Appointments_Required) </dt>
         }
-        @if (!Model.Additional_Comments.Equals(" ")) { 
+        @if (Model.Additional_Comments.Any()) { 
             <dt> @Html.DisplayNameFor(model => model.Additional_Comments) </dt>
             <dd> @Html.DisplayFor(model => model.Additional_Comments) </dd>
         }
@@ -87,6 +87,8 @@
 
             </table>
         </dd>
+        @if (Model.Times.Any())
+        {
         <dt> @Html.DisplayNameFor(model => model.Times) </dt>
         <dd>
             <table class="table">
@@ -96,7 +98,8 @@
                     <th>Opening Time</th>
                     <th>Closing Time</th>
                 </tr>
-                @foreach (var item in Model.Times) {
+                @foreach (var item in Model.Times)
+                {
                     <tr>
                         <td> @Html.DisplayFor(modelItem => item.Day) </td>
                         <td> @Html.DisplayFor(modelItem => item.Repeat) </td>
@@ -106,6 +109,7 @@
                 }
             </table>
         </dd>
+        }
         <dt> @Html.DisplayNameFor(model => model.Resources) </dt>
 
         @if (Model.Resources.Education.Equals(1)) {
