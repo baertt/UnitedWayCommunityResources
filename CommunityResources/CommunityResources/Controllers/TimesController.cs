@@ -26,6 +26,22 @@ namespace CommunityResources.Controllers
             return View(await communityResourcesContext.ToListAsync());
         }
 
+        public IActionResult AddTimes(int? id)
+        {
+            ViewData["FK"] = id;
+            List<Time> orgs = (from s in _context.Times.Include(c => c.Organization)
+                                       select s).ToList();
+            if (id != null) { 
+            orgs = (from ti in _context.Times
+                    join u in _context.Organizations
+                    on  ti.OrganizationId equals u.Id
+                    where ti.OrganizationId == id
+                    select ti).ToList();
+            }
+            return View(orgs);
+        }
+
+
         // GET: Times/Details/5
         public async Task<IActionResult> Details(int? id)
         {
@@ -48,6 +64,7 @@ namespace CommunityResources.Controllers
         // GET: Times/Create
         public IActionResult Create(int? id)
         {
+            ViewData["FK"] = id;
             ViewData["OrganizationId"] = new SelectList(_context.Organizations.Where(m => m.Id.Equals(id)), "Id", "Name");
             return View();
         }
@@ -63,7 +80,7 @@ namespace CommunityResources.Controllers
             {
                 _context.Add(time);
                 await _context.SaveChangesAsync();
-                return RedirectToAction(nameof(Index));
+                return RedirectToAction("AddTimes", "Times", new { id = time.OrganizationId });
             }
 
             ViewData["OrganizationId"] = new SelectList(_context.Organizations, "Id", "Name", time.OrganizationId);
@@ -117,7 +134,7 @@ namespace CommunityResources.Controllers
                         throw;
                     }
                 }
-                return RedirectToAction(nameof(Index));
+                return RedirectToAction("AddTimes", "Times", new { id = time.OrganizationId });
             }
             ViewData["OrganizationId"] = new SelectList(_context.Organizations, "Id", "Name", time.OrganizationId);
             return View(time);

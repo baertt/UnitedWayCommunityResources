@@ -49,6 +49,7 @@ namespace CommunityResources.Controllers
         public IActionResult Create(int? id)
         {
             ViewData["OrganizationId"] = new SelectList(_context.Organizations.Where(m=> m.Id.Equals(id)), "Id", "Name");
+            ViewData["FK"] = id;
             return View();
         }
 

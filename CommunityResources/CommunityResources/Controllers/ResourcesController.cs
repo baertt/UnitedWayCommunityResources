@@ -73,7 +73,7 @@ namespace CommunityResources.Controllers
             {
                 _context.Add(resource);
                 await _context.SaveChangesAsync();
-                return RedirectToAction("Create", "Times", new { id = resource.OrganizationId });
+                return RedirectToAction("AddTimes", "Times", new { id = resource.OrganizationId });
             }
             ViewData["OrganizationId"] = new SelectList(_context.Organizations, "Id", "Name", resource.OrganizationId);
             return View(resource);

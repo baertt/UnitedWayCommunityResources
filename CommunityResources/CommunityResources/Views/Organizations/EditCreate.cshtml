@@ -1,0 +1,66 @@
+﻿@model CommunityResources.Models.Organization
+
+@{
+    ViewData["Title"] = "EditCreate";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>EditCreate</h2>
+
+<h4>Organization</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="EditCreate">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <input type="hidden" asp-for="Id" />
+            <div class="form-group">
+                <label asp-for="Name" class="control-label"></label>
+                <input asp-for="Name" class="form-control" />
+                <span asp-validation-for="Name" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Photo_ID" class="control-label"></label>
+                <input asp-for="Photo_ID" class="form-control" />
+                <span asp-validation-for="Photo_ID" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Other_Requirements" class="control-label"></label>
+                <input asp-for="Other_Requirements" class="form-control" />
+                <span asp-validation-for="Other_Requirements" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Other_Requirements_Text" class="control-label"></label>
+                <input asp-for="Other_Requirements_Text" class="form-control" />
+                <span asp-validation-for="Other_Requirements_Text" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Appointments_Available" class="control-label"></label>
+                <input asp-for="Appointments_Available" class="form-control" />
+                <span asp-validation-for="Appointments_Available" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Appointments_Required" class="control-label"></label>
+                <input asp-for="Appointments_Required" class="form-control" />
+                <span asp-validation-for="Appointments_Required" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Additional_Comments" class="control-label"></label>
+                <input asp-for="Additional_Comments" class="form-control" />
+                <span asp-validation-for="Additional_Comments" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Last_Updated" class="control-label"></label>
+                <input asp-for="Last_Updated" class="form-control" />
+                <span asp-validation-for="Last_Updated" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Next" class="btn btn-default" />
+            </div>
+        </form>
+    </div>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}
