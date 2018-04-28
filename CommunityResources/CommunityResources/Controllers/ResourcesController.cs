@@ -126,7 +126,7 @@ namespace CommunityResources.Controllers
                         throw;
                     }
                 }
-                return RedirectToAction(nameof(Index));
+                return RedirectToAction("Index", "Organizations", new { id = resource.OrganizationId });
             }
             ViewData["OrganizationId"] = new SelectList(_context.Organizations, "Id", "Name", resource.OrganizationId);
             return View(resource);

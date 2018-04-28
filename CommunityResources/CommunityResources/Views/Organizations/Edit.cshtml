@@ -66,18 +66,12 @@
 </div>
 <div>
 
-    <a asp-action="Edit" asp-route-id="@Model.Id">Edit</a> |
 
-    <a asp-action="Index">Back to List</a> |
-
-    @* I know right here @Model.Contacts isn't doing what I need it to *@
-
-    @*  but frankly it SHOULD work, provided I can get http://localhost:53661/Organizations/Contact to be an actual webpage WHICH I DON'T KNOW HOW TO DO*@
+    <a asp-action="Index">Exit Without Saving</a> |
 
 
-        <a asp-controller="Contacts" asp-action="Edit"  asp-route-id="@Model.Contacts.Id">Edit Contact</a> |
 
-        <a asp-action="Times">Add Times</a>
+
 
 </div>
 

@@ -22,7 +22,11 @@ namespace CommunityResources.Controllers
         // GET: Organizations
         public async Task<IActionResult> Index(string searchString)
         {
-            var organization = from s in _context.Organizations.Include(c => c.Contacts).OrderBy(s => s.Name)
+            var organization = from s in _context.Organizations
+                               .Include(c => c.Contacts)
+                               .Include(t => t.Times)
+                               .Include(r => r.Resources)
+                               .OrderBy(s => s.Name)
                                select s;
             if (searchString != null) {
                 organization = organization.Where(s => s.Name.ToLower().Contains(searchString.ToLower()));

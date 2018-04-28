@@ -137,7 +137,8 @@ namespace CommunityResources.Controllers
                 return RedirectToAction("AddTimes", "Times", new { id = time.OrganizationId });
             }
             ViewData["OrganizationId"] = new SelectList(_context.Organizations, "Id", "Name", time.OrganizationId);
-            return View(time);
+
+            return RedirectToAction("AddTimes", "Times", new { id = time.OrganizationId });
         }
 
         // GET: Times/Delete/5
@@ -167,7 +168,7 @@ namespace CommunityResources.Controllers
             var time = await _context.Times.SingleOrDefaultAsync(m => m.TimesId == id);
             _context.Times.Remove(time);
             await _context.SaveChangesAsync();
-            return RedirectToAction(nameof(Index));
+            return RedirectToAction("AddTimes", "Times", new { id = time.OrganizationId });
         }
 
         private bool TimeExists(int id)
