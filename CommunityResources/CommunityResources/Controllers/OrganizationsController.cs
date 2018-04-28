@@ -71,11 +71,10 @@ namespace CommunityResources.Controllers
         [HttpPost]
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> Create(
-            [Bind("Name,Photo_ID,Other_Requirements,Other_Requirements_Text,Appointments_Availible,Appointments_Required,Additional_Comments")] Organization organization)
+            [Bind("Name,Photo_ID,Other_Requirements,Other_Requirements_Text,Appointments_Availible,Appointments_Required,Additional_Comments,Last_Updated")] Organization organization)
         {
             try
             {
-
                 if (ModelState.IsValid)
                 {
                     _context.Add(organization);

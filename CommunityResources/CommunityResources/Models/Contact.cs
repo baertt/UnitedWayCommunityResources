@@ -20,9 +20,12 @@ namespace CommunityResources.Models
         [Display(Name ="Street Address")]
         public string Street_Address { get; set; }
 
+        [Required]
         public string City { get; set; }
 
-        public int Zip { get; set; }
+        [Required]
+        [StringLength(5)]
+        public string Zip { get; set; }
 
         [Display(Name = "Address")]
         public string AddressFull
@@ -48,10 +51,13 @@ namespace CommunityResources.Models
 
         //If we want to validate email formats...
         //[RegularExpression(@"^[A - Z0 - 9._ % +-] +@(?:[A - Z0 - 9 -] +\.)+[A-Z]{2,}$")]
+        [EmailAddress]
         public string Email { get; set; }
 
+        [RegularExpression(@"^[2 - 9]\d{2}-\d{3}-\d{4}$")]
         public string Phone { get; set; }
 
+        
         public string Website { get; set; }
     }
 }
