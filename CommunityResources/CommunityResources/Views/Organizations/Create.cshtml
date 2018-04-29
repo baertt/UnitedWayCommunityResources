@@ -4,10 +4,15 @@
     ViewData["Title"] = "Create";
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
+<head><style>
+    th, td {
+        padding: 15px;
+    }
+</style></head>
 
 <h2>Create</h2>
 
-<h4>Organization</h4>
+<h4>Organization Information</h4>
 <hr />
 <div class="row">
     <div class="col-md-4">
@@ -18,56 +23,64 @@
                 <input asp-for="Name" class="form-control" />
                 <span asp-validation-for="Name" class="text-danger"></span>
             </div>
-            <div class="form-group">
-                <div class="checkbox">
-                    <label>
+            <table>
+                <tr>
+                    <th></th>
+                    <th>No</th>
+                    <th>Yes</th>
+                </tr>
 
-                        <input type="radio" name="Photo_ID" value="0" class="form-control"> No<br>
-                        <input type="radio" name="Photo_ID" value="1" class="form-control"> Yes<br>
-                         @Html.DisplayNameFor(model => model.Photo_ID)
-                    </label>
-                </div>
-            </div>
-            <div class="form-group">
-                <div class="checkbox">
-                    <label>
-                        <input type="radio" name="Other_Requirements" value="0" class="form-control"> No<br>
-                        <input type="radio" name="Other_Requirements" value="1" class="form-control"> Yes<br>
-                         @Html.DisplayNameFor(model => model.Other_Requirements)
-                    </label>
-                </div>
-            </div>
+                <tr class="form-group">
+                    <td>@Html.DisplayNameFor(model => model.Appointments_Available)</td>
+                    <td>
+                        <input type="radio" name="Appointments_Available" value="0" class="form-control" checked="checked">
+                    </td>
+                    <td>
+                        <input type="radio" name="Appointments_Available" value="1" class="form-control">
+                    </td>
+
+                </tr>
+                <tr class="form-group">
+                    <td>@Html.DisplayNameFor(model => model.Appointments_Required)</td>
+
+                    <td>
+                        <input type="radio" name="Appointments_Required" value="0" class="form-control" checked="checked">
+                    </td>
+                    <td>
+                        <input type="radio" name="Appointments_Required" value="1" class="form-control">
+                    </td>
+                </tr>
+                <tr class="form-group">
+                    <td>
+                        @Html.DisplayNameFor(model => model.Photo_ID)
+                    </td>
+                    <td><input type="radio" name="Photo_ID" value="0" class="form-control" checked="checked"> </td>
+                    <td><input type="radio" name="Photo_ID" value="1" class="form-control">  </td>
+                </tr>
+                <tr class="form-group">
+                    <td> @Html.DisplayNameFor(model => model.Other_Requirements)</td>
+                    <td>
+                        <input type="radio" name="Other_Requirements" value="0" class="form-control" checked="checked">
+                    </td>
+                    <td>
+                        <input type="radio" name="Other_Requirements" value="1" class="form-control"> 
+                    </td>
+
+                </tr>
+            </table>
             <div class="form-group">
                 <label asp-for="Other_Requirements_Text" class="control-label"></label>
                 <input asp-for="Other_Requirements_Text" class="form-control" />
                 <span asp-validation-for="Other_Requirements_Text" class="text-danger"></span>
             </div>
             <div class="form-group">
-                <div class="checkbox">
-                    <label>
-                        <input type="radio" name="Appointments_Available" value="0" class="form-control"> No<br>
-                        <input type="radio" name="Appointments_Available" value="1" class="form-control"> Yes<br>
-                        @Html.DisplayNameFor(model => model.Appointments_Available)
-                    </label>
-                </div>
-            </div>
-            <div class="form-group">
-                <div class="checkbox">
-                    <label>
-                        <input type="radio" name="Appointments_Required" value="0" class="form-control"> No<br>
-                        <input type="radio" name="Appointments_Required" value="1" class="form-control"> Yes<br>
-                        @Html.DisplayNameFor(model => model.Appointments_Required)
-                    </label>
-                </div>
-            </div>
-            <div class="form-group">                
                 <label asp-for="Additional_Comments" class="control-label"></label>
-                <input asp-for="Additional_Comments"  class="form-control" />
+                <input asp-for="Additional_Comments" class="form-control" />
                 <span asp-validation-for="Additional_Comments" class="text-danger"></span>
             </div>
             <div class="form-group">
                 <label asp-for="Last_Updated" class="control-label"></label>
-                <input name="Last_Updated" id="Last_Updated" value="@DateTime.Now" readonly/>
+                <input name="Last_Updated" id="Last_Updated" value="@DateTime.Now" readonly />
                 <span asp-validation-for="Additional_Comments" class="text-danger"></span>
             </div>
             <div class="form-group">
