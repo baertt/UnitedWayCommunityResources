@@ -2,7 +2,7 @@
     padding-top: 50px;
     padding-bottom: 20px;
     font-family: 'Helvetica Neue', 'Helvetica', 'Arial', 'sans-serif';
-    background-color: #FFFFFF
+    background-color: #2FFFFF
 }
 
 /* Wrapping element */
@@ -121,4 +121,8 @@ header {
 
 .show {
     display: block;
+}
+.col-sm-2{
+    font-weight:bold;
+    font-size:large;
 }

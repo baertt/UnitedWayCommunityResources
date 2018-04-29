@@ -15,15 +15,13 @@
 </head>
 
 <body>
-    
-<h2>Details</h2>
 
 <div>
     <header class="container">
 
         <div class="row">
 
-            <h1 class="col-sm-10" id="title">Community Resources</h1>
+            <h1 class="col-sm-10" id="title"> <dd> @Html.DisplayFor(model => model.Name) </dd></h1>
 
             <div class="col-sm-2" id="google_translate_element"></div>
             <script type="text/javascript">
@@ -37,34 +35,35 @@
 
         </div>
     </header>
-    <h4>Organization</h4>
     <hr />
     <dl class="dl-horizontal">
-<!--        <div class="col-sm-2">-->
-                <dt> @Html.DisplayNameFor(model => model.Name) </dt>
-<!--        </div>-->
-<!--        <div class="col-sm-10"-->
-                <dd> @Html.DisplayFor(model => model.Name) </dd>
-<!--        </div>-->
+            <div class="row">
 
+            <div class="col-sm-2"> Requirements:</div>
+            <div class="col-sm-10">
+                
         @if (Model.Photo_ID.Equals(1)) {
             <dt> @Html.DisplayNameFor(model => model.Photo_ID) </dt>
         }
-        @if (Model.Other_Requirements.Equals(1)) {
-            <dt> @Html.DisplayNameFor(model => model.Other_Requirements_Text) </dt>
-            <dd> @Html.DisplayFor(model => model.Other_Requirements_Text) </dd>
-        }
+
         @if (Model.Appointments_Available.Equals(1)) {
             <dt> @Html.DisplayNameFor(model => model.Appointments_Available) </dt>
         }
         @if (Model.Appointments_Required.Equals(1)) {
             <dt> @Html.DisplayNameFor(model => model.Appointments_Required) </dt>
         }
+        @if (Model.Other_Requirements.Equals(1)) {
+            <dt> @Html.DisplayNameFor(model => model.Other_Requirements_Text) </dt>
+            <dd> @Html.DisplayFor(model => model.Other_Requirements_Text) </dd>
+        }
         @if (Model.Additional_Comments.Any()) { 
             <dt> @Html.DisplayNameFor(model => model.Additional_Comments) </dt>
             <dd> @Html.DisplayFor(model => model.Additional_Comments) </dd>
         }
-       
+             </div>
+             </div>
+
+                
         <dt> @Html.DisplayNameFor(model => model.Contacts) </dt>
         <dd>
             <table class="table">
