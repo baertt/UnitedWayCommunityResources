@@ -22,7 +22,11 @@ namespace CommunityResources.Controllers
         // GET: Organizations
         public async Task<IActionResult> Index(string searchString)
         {
-            var organization = from s in _context.Organizations.Include(c => c.Contacts).OrderBy(s => s.Name)
+            var organization = from s in _context.Organizations
+                               .Include(c => c.Contacts)
+                               .Include(t => t.Times)
+                               .Include(r => r.Resources)
+                               .OrderBy(s => s.Name)
                                select s;
             if (searchString != null) {
                 organization = organization.Where(s => s.Name.ToLower().Contains(searchString.ToLower()));
@@ -67,16 +71,15 @@ namespace CommunityResources.Controllers
         [HttpPost]
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> Create(
-            [Bind("Name,Photo_ID,Other_Requirements,Other_Requirements_Text,Appointments_Availible,Appointments_Required,Additional_Comments")] Organization organization)
+            [Bind("Name,Photo_ID,Other_Requirements,Other_Requirements_Text,Appointments_Availible,Appointments_Required,Additional_Comments,Last_Updated")] Organization organization)
         {
             try
             {
-
                 if (ModelState.IsValid)
                 {
                     _context.Add(organization);
                     await _context.SaveChangesAsync();
-                    return RedirectToAction(nameof(Index));
+                    return RedirectToAction("Create","Contacts", new { id = organization.Id });
                 }
             }
             catch (DbUpdateException /* ex */)
@@ -145,6 +148,8 @@ namespace CommunityResources.Controllers
             }
             return View(organizationToUpdate);
         }
+
+        
 
         // GET: Organizations/Delete/5
         public async Task<IActionResult> Delete(int? id, bool? saveChangesError = false)

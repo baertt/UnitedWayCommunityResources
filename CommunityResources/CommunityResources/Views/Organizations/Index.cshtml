@@ -207,9 +207,21 @@
                         @Html.DisplayFor(modelItem => item.Contacts.Email)
                     </td>
                     <td>
-                        <a asp-action="Edit" asp-route-id="@item.Id">Edit</a> |
-                        <a asp-action="Details" asp-route-id="@item.Id">Details</a> |
-                        <a asp-action="Delete" asp-route-id="@item.Id">Delete</a>
+                        <p><a asp-action="Edit" asp-route-id="@item.Id">Edit Organization</a></p>
+                        <p>
+                            <a asp-controller="Contacts" asp-action="Edit" asp-route-id="@item.Contacts.Id">Edit Contact</a>
+                        </p>
+                        <p>
+                            <a asp-controller="Resources" asp-action="Edit" asp-route-id="@item.Resources.Id">Edit Resources</a>
+                        </p>
+                        <p>
+                            <a asp-controller="Times" asp-action="AddTimes" asp-route-id="@item.Id">Edit Times</a>
+                        </p>
+                        <p>
+                            <a asp-action="Details" asp-route-id="@item.Id">Details</a>
+                        </p>
+                        <p><a asp-action="Delete" asp-route-id="@item.Id">Delete</a>
+                        </p> 
                     </td>
                 </tr>
             }

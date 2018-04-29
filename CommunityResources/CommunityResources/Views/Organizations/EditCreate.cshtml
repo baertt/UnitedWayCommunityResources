@@ -1,17 +1,17 @@
 ﻿@model CommunityResources.Models.Organization
 
 @{
-    ViewData["Title"] = "Edit";
+    ViewData["Title"] = "EditCreate";
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
-<h2>Edit</h2>
+<h2>EditCreate</h2>
 
 <h4>Organization</h4>
 <hr />
 <div class="row">
     <div class="col-md-4">
-        <form asp-action="Edit">
+        <form asp-action="EditCreate">
             <div asp-validation-summary="ModelOnly" class="text-danger"></div>
             <input type="hidden" asp-for="Id" />
             <div class="form-group">
@@ -20,18 +20,14 @@
                 <span asp-validation-for="Name" class="text-danger"></span>
             </div>
             <div class="form-group">
-                <div class="checkbox">
-                    <label>
-                        <input asp-for="Photo_ID" /> @Html.DisplayNameFor(model => model.Photo_ID)
-                    </label>
-                </div>
+                <label asp-for="Photo_ID" class="control-label"></label>
+                <input asp-for="Photo_ID" class="form-control" />
+                <span asp-validation-for="Photo_ID" class="text-danger"></span>
             </div>
             <div class="form-group">
-                <div class="checkbox">
-                    <label>
-                        <input asp-for="Other_Requirements" /> @Html.DisplayNameFor(model => model.Other_Requirements)
-                    </label>
-                </div>
+                <label asp-for="Other_Requirements" class="control-label"></label>
+                <input asp-for="Other_Requirements" class="form-control" />
+                <span asp-validation-for="Other_Requirements" class="text-danger"></span>
             </div>
             <div class="form-group">
                 <label asp-for="Other_Requirements_Text" class="control-label"></label>
@@ -39,40 +35,30 @@
                 <span asp-validation-for="Other_Requirements_Text" class="text-danger"></span>
             </div>
             <div class="form-group">
-                <div class="checkbox">
-                    <label>
-                        <input asp-for="Appointments_Available" /> @Html.DisplayNameFor(model => model.Appointments_Available)
-                    </label>
-                </div>
+                <label asp-for="Appointments_Available" class="control-label"></label>
+                <input asp-for="Appointments_Available" class="form-control" />
+                <span asp-validation-for="Appointments_Available" class="text-danger"></span>
             </div>
             <div class="form-group">
-                <div class="checkbox">
-                    <label>
-                        <input asp-for="Appointments_Required" /> @Html.DisplayNameFor(model => model.Appointments_Required)
-                    </label>
-                </div>
+                <label asp-for="Appointments_Required" class="control-label"></label>
+                <input asp-for="Appointments_Required" class="form-control" />
+                <span asp-validation-for="Appointments_Required" class="text-danger"></span>
             </div>
-
             <div class="form-group">
                 <label asp-for="Additional_Comments" class="control-label"></label>
                 <input asp-for="Additional_Comments" class="form-control" />
                 <span asp-validation-for="Additional_Comments" class="text-danger"></span>
             </div>
             <div class="form-group">
-                <input type="submit" value="Save" class="btn btn-default" />
+                <label asp-for="Last_Updated" class="control-label"></label>
+                <input asp-for="Last_Updated" class="form-control" />
+                <span asp-validation-for="Last_Updated" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Next" class="btn btn-default" />
             </div>
         </form>
     </div>
-</div>
-<div>
-
-
-    <a asp-action="Index">Exit Without Saving</a> |
-
-
-
-
-
 </div>
 
 @section Scripts {

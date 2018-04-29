@@ -46,9 +46,10 @@ namespace CommunityResources.Controllers
         }
 
         // GET: Contacts/Create
-        public IActionResult Create()
+        public IActionResult Create(int? id)
         {
-            ViewData["OrganizationId"] = new SelectList(_context.Organizations, "Id", "Name");
+            ViewData["OrganizationId"] = new SelectList(_context.Organizations.Where(m=> m.Id.Equals(id)), "Id", "Name");
+            ViewData["FK"] = id;
             return View();
         }
 
@@ -63,7 +64,7 @@ namespace CommunityResources.Controllers
             {
                 _context.Add(contact);
                 await _context.SaveChangesAsync();
-                return RedirectToAction(nameof(Index));
+                return RedirectToAction("Create", "Resources", new { id = contact.OrganizationId});
             }
             ViewData["OrganizationId"] = new SelectList(_context.Organizations, "Id", "Name", contact.OrganizationId);
             return View(contact);
@@ -82,7 +83,7 @@ namespace CommunityResources.Controllers
             {
                 return NotFound();
             }
-            ViewData["OrganizationId"] = new SelectList(_context.Organizations, "Id", "Name", contact.OrganizationId);
+            ViewData["OrganizationId"] = new SelectList(_context.Organizations.Where(m => m.Id.Equals(id)), "Id", "Name", contact.OrganizationId);
             return View(contact);
         }
 
@@ -116,7 +117,7 @@ namespace CommunityResources.Controllers
                         throw;
                     }
                 }
-                return RedirectToAction(nameof(Index));
+                return RedirectToAction("Index", "Organizations", new { id = contact.OrganizationId });
             }
             ViewData["OrganizationId"] = new SelectList(_context.Organizations, "Id", "Name", contact.OrganizationId);
             return View(contact);

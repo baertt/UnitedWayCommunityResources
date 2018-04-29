@@ -48,20 +48,12 @@ namespace CommunityResources.Controllers
         // GET: Resources/Create
         public IActionResult Create(int? id)
         {
+            ViewData["OrganizationId"] = new SelectList(_context.Organizations.Where(m => m.Id.Equals(id)), "Id", "Name");
+            return View();
 
-            if (id == null)
-            {
-                return NotFound();
-            }
 
-            var resource = _context.Resources.SingleOrDefaultAsync(m => m.Id == id);
-            if (resource == null)
-            {
-                return NotFound();
-            }
-            ViewData["OrganizationId"] = new SelectList(_context.Organizations, "Id", "Name");
-            return View(resource);
-           
+
+
         }
 
         // POST: Resources/Create
@@ -81,7 +73,7 @@ namespace CommunityResources.Controllers
             {
                 _context.Add(resource);
                 await _context.SaveChangesAsync();
-                return RedirectToAction(nameof(Index));
+                return RedirectToAction("AddTimes", "Times", new { id = resource.OrganizationId });
             }
             ViewData["OrganizationId"] = new SelectList(_context.Organizations, "Id", "Name", resource.OrganizationId);
             return View(resource);
@@ -100,7 +92,7 @@ namespace CommunityResources.Controllers
             {
                 return NotFound();
             }
-            ViewData["OrganizationId"] = new SelectList(_context.Organizations, "Id", "Name", resource.OrganizationId);
+            ViewData["OrganizationId"] = new SelectList(_context.Organizations.Where(m => m.Id.Equals(id)), "Id", "Name", resource.OrganizationId);
             return View(resource);
         }
 
@@ -134,7 +126,7 @@ namespace CommunityResources.Controllers
                         throw;
                     }
                 }
-                return RedirectToAction(nameof(Index));
+                return RedirectToAction("Index", "Organizations", new { id = resource.OrganizationId });
             }
             ViewData["OrganizationId"] = new SelectList(_context.Organizations, "Id", "Name", resource.OrganizationId);
             return View(resource);

@@ -31,7 +31,7 @@ namespace CommunityResources.Models
         public int Appointments_Required { get; set; }
         [Display(Name = "Additional Comments")]
         public string Additional_Comments { get; set; }
-
+        [Display(Name = "Last Updated")]
         public string Last_Updated { get; set; }
 
         public Contact Contacts { get; set; }
