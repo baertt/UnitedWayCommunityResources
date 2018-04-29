@@ -20,9 +20,13 @@
 </ItemGroup>
   <ItemGroup>
     <None Remove="Views\Home\GracesResults.html" />
+    <None Remove="Views\Home\_Footer.cshtml" />
+    <None Remove="Views\Home\Layout.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Content Remove="wwwroot\css\updatedsite.cs" />
     <Content Remove="Views\Home\Contact.cshtml" />
+    <Content Remove="Views\Shared\_Footer.cshtml" />
+    <Content Remove="Views\Shared\_Header.cshtml" />
   </ItemGroup>
 </Project>
