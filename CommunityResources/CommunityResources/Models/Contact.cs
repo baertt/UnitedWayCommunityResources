@@ -54,7 +54,7 @@ namespace CommunityResources.Models
         [EmailAddress]
         public string Email { get; set; }
 
-        [RegularExpression(@"^[2 - 9]\d{2}-\d{3}-\d{4}$")]
+        [RegularExpression(@"((\(\d{3}\) ?)|(\d{3}-))?\d{3}-\d{4}$", ErrorMessage ="Please Enter in the format (XXX) XXX - XXXX")]
         public string Phone { get; set; }
 
         

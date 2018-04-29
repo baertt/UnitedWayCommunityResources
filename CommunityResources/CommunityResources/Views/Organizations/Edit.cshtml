@@ -5,9 +5,16 @@
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
-<h2>Edit</h2>
+<head>
+    <style>
+        th, td {
+            padding: 15px;
+        }
+    </style>
+</head>
 
-<h4>Organization</h4>
+<h2>Edit Organization Information</h2>
+
 <hr />
 <div class="row">
     <div class="col-md-4">
@@ -19,43 +26,115 @@
                 <input asp-for="Name" class="form-control" />
                 <span asp-validation-for="Name" class="text-danger"></span>
             </div>
-            <div class="form-group">
-                <div class="checkbox">
-                    <label>
-                        <input asp-for="Photo_ID" /> @Html.DisplayNameFor(model => model.Photo_ID)
-                    </label>
-                </div>
-            </div>
-            <div class="form-group">
-                <div class="checkbox">
-                    <label>
-                        <input asp-for="Other_Requirements" /> @Html.DisplayNameFor(model => model.Other_Requirements)
-                    </label>
-                </div>
-            </div>
+            <table>
+                <tr>
+                    <th></th>
+                    <th>No</th>
+                    <th>Yes</th>
+                </tr>
+
+                <tr class="form-group">
+                    <td>@Html.DisplayNameFor(model => model.Appointments_Available)</td>
+                    @if (Model.Appointments_Available.Equals(0))
+    {
+                <td>
+                    <input type="radio" name="Appointments_Available" value="0" class="form-control" checked="checked">
+                </td>
+                <td>
+                    <input type="radio" name="Appointments_Available" value="1" class="form-control">
+                </td>}
+                    @if (Model.Appointments_Available.Equals(1))
+    {
+                <td>
+                    <input type="radio" name="Appointments_Available" value="0" class="form-control">
+                </td>
+                <td>
+                    <input type="radio" name="Appointments_Available" value="1" class="form-control" checked="checked">
+                </td>
+                    }
+
+
+                </tr>
+                <tr class="form-group">
+                    <td>@Html.DisplayNameFor(model => model.Appointments_Required)</td>
+                    @if (Model.Appointments_Required.Equals(0))
+    {
+                <td>
+                    <input type="radio" name="Appointments_Required" value="0" class="form-control" checked="checked">
+                </td>
+                <td>
+                    <input type="radio" name="Appointments_Required" value="1" class="form-control">
+                </td>
+
+}
+                    @if (Model.Appointments_Required.Equals(1))
+    {
+                <td>
+                    <input type="radio" name="Appointments_Required" value="0" class="form-control">
+                </td>
+                <td>
+                    <input type="radio" name="Appointments_Required" value="1" class="form-control" checked="checked">
+                </td>
+
+}
+
+                </tr>
+                <tr class="form-group">
+                    <td>
+                        @Html.DisplayNameFor(model => model.Photo_ID)
+                    </td>@if (Model.Photo_ID.Equals(0))
+    {
+                    <td><input type="radio" name="Photo_ID" value="0" class="form-control" checked="checked"> </td>
+                    <td><input type="radio" name="Photo_ID" value="1" class="form-control">  </td>
+
+    }
+                    @if (Model.Photo_ID.Equals(1))
+    {
+                <td><input type="radio" name="Photo_ID" value="0" class="form-control"> </td>
+                <td><input type="radio" name="Photo_ID" value="1" class="form-control" checked="checked">  </td>
+
+} 
+                </tr>
+                <tr class="form-group">
+                    <td> @Html.DisplayNameFor(model => model.Other_Requirements)</td>
+                    @if (Model.Other_Requirements.Equals(0))
+    {
+
+                <td>
+                    <input type="radio" name="Other_Requirements" value="0" class="form-control" checked="checked">
+                </td>
+                <td>
+                    <input type="radio" name="Other_Requirements" value="1" class="form-control">
+                </td>
+
+}
+                    @if (Model.Other_Requirements.Equals(1))
+    {
+
+                <td>
+                    <input type="radio" name="Other_Requirements" value="0" class="form-control">
+                </td>
+                <td>
+                    <input type="radio" name="Other_Requirements" value="1" class="form-control" checked="checked">
+                </td>
+
+}
+
+                </tr>
+            </table>
             <div class="form-group">
                 <label asp-for="Other_Requirements_Text" class="control-label"></label>
                 <input asp-for="Other_Requirements_Text" class="form-control" />
                 <span asp-validation-for="Other_Requirements_Text" class="text-danger"></span>
             </div>
             <div class="form-group">
-                <div class="checkbox">
-                    <label>
-                        <input asp-for="Appointments_Available" /> @Html.DisplayNameFor(model => model.Appointments_Available)
-                    </label>
-                </div>
-            </div>
-            <div class="form-group">
-                <div class="checkbox">
-                    <label>
-                        <input asp-for="Appointments_Required" /> @Html.DisplayNameFor(model => model.Appointments_Required)
-                    </label>
-                </div>
-            </div>
-
-            <div class="form-group">
                 <label asp-for="Additional_Comments" class="control-label"></label>
                 <input asp-for="Additional_Comments" class="form-control" />
+                <span asp-validation-for="Additional_Comments" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Last_Updated" class="control-label"></label>
+                <input name="Last_Updated" id="Last_Updated" value="@DateTime.Now" readonly />
                 <span asp-validation-for="Additional_Comments" class="text-danger"></span>
             </div>
             <div class="form-group">
