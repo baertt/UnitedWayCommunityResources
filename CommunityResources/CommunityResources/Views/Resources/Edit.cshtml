@@ -19,66 +19,278 @@
                 <select asp-for="OrganizationId" class="form-control" asp-items="ViewBag.OrganizationId"></select>
                 <span asp-validation-for="OrganizationId" class="text-danger"></span>
             </div>
-            <div class="form-group">
-                <label asp-for="Clothing"  class="control-label"></label>
-                <input asp-for="Clothing" class="form-control" />
-                <span asp-validation-for="Clothing" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <label asp-for="Education" class="control-label"></label>
-                <input asp-for="Education" class="form-control" />
-                <span asp-validation-for="Education" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <label asp-for="Employment" class="control-label"></label>
-                <input asp-for="Employment" class="form-control" />
-                <span asp-validation-for="Employment" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <label asp-for="Finances" class="control-label"></label>
-                <input asp-for="Finances" class="form-control" />
-                <span asp-validation-for="Finances" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <label asp-for="Food" class="control-label"></label>
-                <input asp-for="Food" class="form-control" />
-                <span asp-validation-for="Food" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <label asp-for="Housing" class="control-label"></label>
-                <input asp-for="Housing" class="form-control" />
-                <span asp-validation-for="Housing" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <label asp-for="Natural_Disaster" class="control-label"></label>
-                <input asp-for="Natural_Disaster" class="form-control" />
-                <span asp-validation-for="Natural_Disaster" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <label asp-for="Senior" class="control-label"></label>
-                <input asp-for="Senior" class="form-control" />
-                <span asp-validation-for="Senior" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <label asp-for="Rent_Utilities" class="control-label"></label>
-                <input asp-for="Rent_Utilities" class="form-control" />
-                <span asp-validation-for="Rent_Utilities" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <label asp-for="Medical_Prescription" class="control-label"></label>
-                <input asp-for="Medical_Prescription" class="form-control" />
-                <span asp-validation-for="Medical_Prescription" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <label asp-for="Veterans" class="control-label"></label>
-                <input asp-for="Veterans" class="form-control" />
-                <span asp-validation-for="Veterans" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <label asp-for="Other_Resources" class="control-label"></label>
-                <input asp-for="Other_Resources" class="form-control" />
-                <span asp-validation-for="Other_Resources" class="text-danger"></span>
-            </div>
+            <table>
+                <tr>
+                    <th></th>
+                    <th>No</th>
+                    <th>Yes</th>
+                </tr>
+                <tr class="form-group">
+                    <td>
+                        <label asp-for="Clothing" class="control-label"></label>
+                    </td>
+                    @if (Model.Clothing.Equals(0))
+    {
+                <td>
+                    <input type="radio" name="Clothing" value="0" class="form-control" checked="checked">
+                </td>
+                <td>
+                    <input type="radio" name="Clothing" value="1" class="form-control">
+                </td>}
+                    @if (Model.Clothing.Equals(1))
+    {
+                <td>
+                    <input type="radio" name="Clothing" value="0" class="form-control" >
+                </td>
+                <td>
+                    <input type="radio" name="Clothing" value="1" class="form-control"checked="checked">
+                </td>}
+
+                </tr>
+                <tr class="form-group">
+                    <td>
+                        <label asp-for="Education" class="control-label"></label>
+                    </td>
+                    @if (Model.Education.Equals(0))
+    {
+                <td>
+                    <input type="radio" name="Education" value="0" class="form-control" checked="checked">
+                </td>
+                <td>
+                    <input type="radio" name="Education" value="1" class="form-control">
+                </td>}
+                    @if (Model.Education.Equals(1))
+    {
+                <td>
+                    <input type="radio" name="Education" value="0" class="form-control">
+                </td>
+                <td>
+                    <input type="radio" name="Education" value="1" class="form-control" checked="checked">
+                </td>}
+
+                </tr>
+                <tr class="form-group">
+                    <td>
+                        <label asp-for="Employment" class="control-label"></label>
+                    </td>
+                    @if (Model.Employment.Equals(0))
+    {
+                <td>
+                    <input type="radio" name="Employment" value="0" class="form-control" checked="checked">
+                </td>
+                <td>
+                    <input type="radio" name="Employment" value="1" class="form-control">
+                </td>}
+                    @if (Model.Employment.Equals(1))
+    {
+                <td>
+                    <input type="radio" name="Employment" value="0" class="form-control">
+                </td>
+                <td>
+                    <input type="radio" name="Employment" value="1" class="form-control" checked="checked">
+                </td>}
+
+                </tr>
+                <tr class="form-group">
+                    <td>
+                        <label asp-for="Finances" class="control-label"></label>
+                    </td>
+                    @if (Model.Finances.Equals(0))
+    {
+                <td>
+                    <input type="radio" name="Finances" value="0" class="form-control" checked="checked">
+                </td>
+                <td>
+                    <input type="radio" name="Finances" value="1" class="form-control">
+                </td>}
+                    @if (Model.Finances.Equals(1))
+    {
+                <td>
+                    <input type="radio" name="Finances" value="0" class="form-control">
+                </td>
+                <td>
+                    <input type="radio" name="Finances" value="1" class="form-control" checked="checked">
+                </td>}
+
+                </tr>
+                <tr class="form-group">
+                    <td>
+                        <label asp-for="Food" class="control-label"></label>
+                    </td>
+                    @if (Model.Food.Equals(0))
+    {
+                <td>
+                    <input type="radio" name="Food" value="0" class="form-control" checked="checked">
+                </td>
+                <td>
+                    <input type="radio" name="Food" value="1" class="form-control">
+                </td>}
+                    @if (Model.Food.Equals(1))
+    {
+                <td>
+                    <input type="radio" name="Food" value="0" class="form-control">
+                </td>
+                <td>
+                    <input type="radio" name="Food" value="1" class="form-control" checked="checked">
+                </td>}
+
+                </tr>
+                <tr class="form-group">
+                    <td>
+                        <label asp-for="Housing" class="control-label"></label>
+                    </td>
+                    @if (Model.Housing.Equals(0))
+    {
+                <td>
+                    <input type="radio" name="Housing" value="0" class="form-control" checked="checked">
+                </td>
+                <td>
+                    <input type="radio" name="Housing" value="1" class="form-control">
+                </td>}
+                    @if (Model.Housing.Equals(1))
+    {
+                <td>
+                    <input type="radio" name="Housing" value="0" class="form-control">
+                </td>
+                <td>
+                    <input type="radio" name="Housing" value="1" class="form-control" checked="checked">
+                </td>}
+
+                </tr>
+                <tr class="form-group">
+                    <td>
+                        <label asp-for="Natural_Disaster" class="control-label"></label>
+                    </td>
+                    @if (Model.Natural_Disaster.Equals(0))
+    {
+                <td>
+                    <input type="radio" name="Natural_Disaster" value="0" class="form-control" checked="checked">
+                </td>
+                <td>
+                    <input type="radio" name="Natural_Disaster" value="1" class="form-control">
+                </td>}
+                    @if (Model.Natural_Disaster.Equals(1))
+    {
+                <td>
+                    <input type="radio" name="Natural_Disaster" value="0" class="form-control">
+                </td>
+                <td>
+                    <input type="radio" name="Natural_Disaster" value="1" class="form-control" checked="checked">
+                </td>}
+
+                </tr>
+                <tr class="form-group">
+                    <td>
+                        <label asp-for="Senior" class="control-label"></label>
+                    </td>
+                    @if (Model.Senior.Equals(0))
+    {
+                <td>
+                    <input type="radio" name="Senior" value="0" class="form-control" checked="checked">
+                </td>
+                <td>
+                    <input type="radio" name="Senior" value="1" class="form-control">
+                </td>}
+                    @if (Model.Senior.Equals(1))
+    {
+                <td>
+                    <input type="radio" name="Senior" value="0" class="form-control">
+                </td>
+                <td>
+                    <input type="radio" name="Senior" value="1" class="form-control" checked="checked">
+                </td>}
+
+                </tr>
+                <tr class="form-group">
+                    <td>
+                        <label asp-for="Rent_Utilities" class="control-label"></label>
+                    </td>
+                    @if (Model.Rent_Utilities.Equals(0))
+    {
+                <td>
+                    <input type="radio" name="Rent_Utilities" value="0" class="form-control" checked="checked">
+                </td>
+                <td>
+                    <input type="radio" name="Rent_Utilities" value="1" class="form-control">
+                </td>}
+                    @if (Model.Rent_Utilities.Equals(1))
+    {
+                <td>
+                    <input type="radio" name="Rent_Utilities" value="0" class="form-control">
+                </td>
+                <td>
+                    <input type="radio" name="Rent_Utilities" value="1" class="form-control" checked="checked">
+                </td>}
+
+                </tr>
+                <tr class="form-group">
+                    <td>
+                        <label asp-for="Medical_Prescription" class="control-label"></label>
+                    </td>
+                    @if (Model.Medical_Prescription.Equals(0))
+    {
+                <td>
+                    <input type="radio" name="Medical_Prescription" value="0" class="form-control" checked="checked">
+                </td>
+                <td>
+                    <input type="radio" name="Medical_Prescription" value="1" class="form-control">
+                </td>}
+                    @if (Model.Medical_Prescription.Equals(1))
+    {
+                <td>
+                    <input type="radio" name="Medical_Prescription" value="0" class="form-control">
+                </td>
+                <td>
+                    <input type="radio" name="Medical_Prescription" value="1" class="form-control" checked="checked">
+                </td>}
+
+                </tr>
+                <tr class="form-group">
+                    <td>
+                        <label asp-for="Veterans" class="control-label"></label>
+                    </td>
+                    @if (Model.Veterans.Equals(0))
+    {
+                <td>
+                    <input type="radio" name="Veterans" value="0" class="form-control" checked="checked">
+                </td>
+                <td>
+                    <input type="radio" name="Veterans" value="1" class="form-control">
+                </td>}
+                    @if (Model.Veterans.Equals(1))
+    {
+                <td>
+                    <input type="radio" name="Veterans" value="0" class="form-control">
+                </td>
+                <td>
+                    <input type="radio" name="Veterans" value="1" class="form-control" checked="checked">
+                </td>}
+
+                
+                </tr>
+                <tr class="form-group">
+                    <td>
+                        <label asp-for="Other_Resources" class="control-label"></label>
+                    </td>
+                    @if (Model.Other_Resources.Equals(0))
+    {
+                <td>
+                    <input type="radio" name="Other_Resources" value="0" class="form-control" checked="checked">
+                </td>
+                <td>
+                    <input type="radio" name="Other_Resources" value="1" class="form-control">
+                </td>}
+                    @if (Model.Other_Resources.Equals(1))
+    {
+                <td>
+                    <input type="radio" name="Other_Resources" value="0" class="form-control">
+                </td>
+                <td>
+                    <input type="radio" name="Other_Resources" value="1" class="form-control" checked="checked">
+                </td>}
+
+                </tr>
+            </table>
             <div class="form-group">
                 <label asp-for="Other_Resources_Text" class="control-label"></label>
                 <input asp-for="Other_Resources_Text" class="form-control" />
