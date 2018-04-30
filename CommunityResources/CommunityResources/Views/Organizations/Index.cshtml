@@ -49,7 +49,7 @@
     </p>
     @using (Html.BeginForm("Index", "Organizations", FormMethod.Get))
     {
-        <div class="row">
+        <div class="row" id="org-filter">
             @Html.TextBox("searchString", "", new { placeholder = "Search By Name" })
             <input type="submit" placeholder="Search by Name" value="Filter" class="org-filt-btn"/>
         </div>
@@ -67,6 +67,7 @@
                 <th> @Html.DisplayNameFor(model => model.Appointments_Required) </th>
                 <th> @Html.DisplayNameFor(model => model.Additional_Comments) </th>-->
                 <th> @Html.DisplayNameFor(model => model.Contacts.Email) </th>
+                <th> Edit </th>
                 <th></th>
             </tr>
         </thead>
@@ -117,16 +118,18 @@
                         @Html.DisplayFor(modelItem => item.Contacts.Email)
                     </td>
                     <td>
-                        <p><a asp-action="Edit" asp-route-id="@item.Id">Edit Organization</a></p>
+                        <p><a asp-action="Edit" asp-route-id="@item.Id"><!--Edit--> Organization</a></p>
                         <p>
-                            <a asp-controller="Contacts" asp-action="Edit" asp-route-id="@item.Contacts.Id">Edit Contact</a>
+                            <a asp-controller="Contacts" asp-action="Edit" asp-route-id="@item.Contacts.Id"><!--Edit--> Contact</a>
                         </p>
                         <p>
-                            <a asp-controller="Resources" asp-action="Edit" asp-route-id="@item.Resources.Id">Edit Resources</a>
+                            <a asp-controller="Resources" asp-action="Edit" asp-route-id="@item.Resources.Id"><!--Edit--> Resources</a>
                         </p>
                         <p>
-                            <a asp-controller="Times" asp-action="AddTimes" asp-route-id="@item.Id">Edit Times</a>
+                            <a asp-controller="Times" asp-action="AddTimes" asp-route-id="@item.Id"><!--Edit--> Times</a>
                         </p>
+                     </td>
+                     <td>
                         <p>
                             <a asp-action="Details" asp-route-id="@item.Id">Details</a>
                         </p>
@@ -136,6 +139,20 @@
                 </tr>
             }
         </tbody>
+        <tfoot>
+            <tr>
+                <th> @Html.DisplayNameFor(model => model.Name) </th>
+                <!--<th> @Html.DisplayNameFor(model => model.Photo_ID) </th>
+                <th> @Html.DisplayNameFor(model => model.Other_Requirements) </th>
+                <th> @Html.DisplayNameFor(model => model.Other_Requirements_Text) </th>
+                <th> @Html.DisplayNameFor(model => model.Appointments_Available) </th>
+                <th> @Html.DisplayNameFor(model => model.Appointments_Required) </th>
+                <th> @Html.DisplayNameFor(model => model.Additional_Comments) </th>-->
+                <th> @Html.DisplayNameFor(model => model.Contacts.Email) </th>
+                <th> Edit </th>
+                <th></th>
+            </tr>
+        </tfoot>
     </table>
 </div>
 </body>

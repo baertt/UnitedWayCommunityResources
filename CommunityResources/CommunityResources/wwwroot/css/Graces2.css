@@ -242,15 +242,17 @@ body {
     border: 10px #FD9527;
 }
 
+#org-filter {
+    margin-left: 10px;
+}
 
 form input[type=text] {
-    margin-left: 20px;
     padding: 10px;
-    font-size: 17px;
+    font-size: 16px;
     float: left;
-    width: 85%;
+    width: 80%;
     background: white;
-    border: 1px solid #220081;
+    border: 1px solid #ff8f00;
 }
 
 form input[type=submit] {
@@ -258,7 +260,7 @@ form input[type=submit] {
     color: white;
     float: left;
     width: 10%;
-    background: #220081;
+    background: #ff8f00;
     border: 10px black
 }
 
@@ -270,4 +272,17 @@ form button {
     color: white;
     font-size: 17px;
     border: 10px #ff8f00
+}
+
+thead {
+    font-family: 'Open Sans', sans-serif;
+    font-weight: bolder;
+    font-size: x-large;
+}
+
+tfoot {
+    font-family: 'Open Sans', sans-serif;
+    font-weight: bolder;
+    font-size: x-large;
+
 }
