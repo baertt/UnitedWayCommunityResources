@@ -82,10 +82,12 @@ body {
 }
 
 .dl-horizontal {
-    margin: 50px;
+    padding: 50px;
 }
 
-
+.org-index {
+    padding: 50px;
+}
 
 .dropbtn {
     color: white;
@@ -200,8 +202,8 @@ body {
     color: #220081;
     font-size: 14px;
     padding-top: 15px;
-    padding-left: 20px;
-    padding-right: 20px;
+    padding-left: 25px;
+    padding-right: 25px;
 }
 
 .topfoottext {
@@ -213,8 +215,8 @@ body {
     font-family: Helvetica Nueve, Helvetica, Arial, san-serif;
     color: white;
     font-size: 14px;
-    padding-left: 20px;
-    padding-right: 20px;
+    padding-left: 10px;
+    padding-right: 10px;
     padding-bottom: 75px;
 
 }
@@ -227,18 +229,37 @@ body {
     margin-bottom: 0px;
 }
 
+.btn-default {
+    padding: 500px;
+    font-size: larger;
+    font-weight: bold;
+    background-color: #220081;
+    margin-left: 50px;
+    margin-bottom: 20px;
+}
+
 .search-container {
-    border: 10px #ff8f00
+    border: 10px #FD9527;
 }
 
 
 form input[type=text] {
+    margin-left: 20px;
     padding: 10px;
     font-size: 17px;
     float: left;
-    width: 80%;
+    width: 85%;
     background: white;
-    border: 10px #ff8f00
+    border: 1px solid #220081;
+}
+
+form input[type=submit] {
+    font-size: 16px;
+    color: white;
+    float: left;
+    width: 10%;
+    background: #220081;
+    border: 10px black
 }
 
 form button {
