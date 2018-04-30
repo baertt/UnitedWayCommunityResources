@@ -18,11 +18,12 @@ body {
 }
 
 #results-title {
+    font-family: Helvetica Nueve, Helvetica, Arial, san-serif;
     font-size: large;
     font-weight: 900;
     color: #121B7C;
-    padding-top: 50px;
-    padding-left: 50px;
+    padding-left: 50px
+
 }
 
 .col-md-1 {
@@ -79,6 +80,11 @@ body {
     border: 1px solid black;
     padding: 10px
 }
+
+.dl-horizontal {
+    margin: 50px;
+}
+
 
 
 .dropbtn {
@@ -192,20 +198,38 @@ body {
     background-color: #f2f2f2;
     font-family: 'Open Sans', sans-serif;
     color: #220081;
-    font-size: 14px
+    font-size: 14px;
+    padding-top: 15px;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+.topfoottext {
+     font-family: Helvetica Nueve, Helvetica, Arial, san-serif;
 }
 
 .bottomfoot {
     background-color: #808080;
-    font-family: 'Open Sans', sans-serif;
+    font-family: Helvetica Nueve, Helvetica, Arial, san-serif;
     color: white;
-    font-size: 14px
+    font-size: 14px;
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-bottom: 75px;
+
+}
+
+.bottomfoottext {
+    font-family: Helvetica Nueve, Helvetica, Arial, san-serif;
+    color: #CFCFCF;
+    font-size: 14px;
+    font-weight: normal;
+    margin-bottom: 0px;
 }
 
 .search-container {
     border: 10px #ff8f00
 }
-
 
 
 form input[type=text] {
