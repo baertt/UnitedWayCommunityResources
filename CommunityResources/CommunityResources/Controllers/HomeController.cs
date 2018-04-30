@@ -68,6 +68,8 @@ namespace CommunityResources.Controllers
                from c in _context.Times.Select(d => d.Day).Distinct().ToList() select c);
             ViewBag.day = weekdays;
 
+            ViewData["result"] = id;
+
             var reps = new SelectList(
                from c in _context.Times.Select(d => d.Repeat).Distinct().ToList() select c);
             ViewBag.repeats = reps;
