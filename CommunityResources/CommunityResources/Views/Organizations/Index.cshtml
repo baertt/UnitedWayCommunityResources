@@ -14,7 +14,82 @@
 
 </head>
 <body>
-    
+
+    <div class="row">
+        <div class="col-sm-3" id="results-title" style="font-size: 20px; font-weight: bolder; color: #121B7C;">
+            United Way <br>
+            of Central Arkansas
+        </div>
+        <div class='col-sm-1'>
+            <a href="https://www.uwcark.org/">
+                <img src="https://www.uwcark.org/sites/uwcark.org/files/live-united.png" alt="UWCARK" height='125'>
+            </a>
+        </div>
+        <div class='col-sm-1'></div>
+        <div class='col-sm-6'>
+            <div class="row">
+                <div class='col-sm-3'></div>
+                <div class='col-sm-3'>
+                    <div class="topbutton1" style="display: flex; justify-content: center; background: #220081; font-family: 'Open Sans', sans-serif; color: white; font-size: 12px; font-stretch: ultra-condensed; font-weight: bolder; padding-top: 20px; padding-bottom: 20px; border: solid white 1px; text-align: center; border-radius: 10px">
+                        Volunteer
+                    </div>
+                </div>
+                <div class='col-sm-3'>
+                    <div class='topbutton2' style="display: flex; justify-content: center; background: #ff0000; font-family: 'Open Sans', sans-serif; color: white; font-size: 12px; font-stretch: ultra-condensed; font-weight: bolder; padding-top: 20px; padding-bottom: 20px; border: solid white 1px; text-align: center; border-radius: 10px">
+                        Donate
+                    </div>
+                </div>
+                <div class='col-sm-3'>
+                    <div class='topbutton3' style="display: flex; justify-content: center; background: #ff8f00; font-family: 'Open Sans', sans-serif; color: white; font-size: 12px; font-stretch: ultra-condensed; font-weight: bolder; padding-top: 20px; padding-bottom: 20px; border: solid white 1px; text-align: center; border-radius: 10px">
+                        Share My Event
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class='col-md-6'></div>
+                <div class='col-md-1' style="vertical-align: bottom; display: table-cell; padding-top: 10px; padding-bottom: 20px; padding-left: 25px; padding-right: 25px;">
+                    <a href="https://www.facebook.com/uwcark">
+                        <img src="http://ameliaurgentcare.com/wp-content/uploads/2016/06/facebook-round-350-white-background.png" alt="UWCARK Facebook" height='50'>
+                    </a>
+                </div>
+                <div class='col-md-1' style="vertical-align: bottom; display: table-cell; padding-top: 10px; padding-bottom: 20px; padding-left: 25px; padding-right: 25px;">
+                    <a href="https://www.instagram.com/uwcark/">
+                        <img src="http://sguru.org/wp-content/uploads/2018/01/instagram-logo-png-transparent-background-1024x1024.png" alt="UWCARK Instagram" height='50'>
+                    </a>
+                </div>
+                <div class='col-md-1' style="vertical-align: bottom; display: table-cell; padding-top: 10px; padding-bottom: 20px; padding-left: 25px; padding-right: 25px;">
+                    <a href="https://twitter.com/UWCARK">
+                        <img src="http://www.transparentpng.com/thumb/twitter/twitter-png-3.png" alt="UWCARK Twitter" height='50'>
+                    </a>
+                </div>
+                <div class='col-md-1' style="vertical-align: bottom; display: table-cell; padding-top: 10px; padding-bottom: 20px; padding-left: 25px; padding-right: 25px;">
+                    <a href="https://www.uwcark.org/sites/uwcark.org/files/linked-in_1.png">
+                        <img src="https://cdn3.iconfinder.com/data/icons/free-social-icons/67/linkedin_circle_color-256.png" alt="UWCARK LinkedIn" height='50'>
+                    </a>
+                </div>
+                <div class='col-md-1' style="vertical-align: bottom; display: table-cell; padding-top: 10px; padding-bottom: 20px; padding-left: 25px; padding-right: 25px;">
+                    <a href="https://www.youtube.com/channel/UCY08y2xv6FmpcICnedFLhmQ">
+                        <img src="https://vignette.wikia.nocookie.net/ichc-channel/images/9/93/Youtube-circle.png/revision/latest?cb=20160419135307" alt="UWCARK Youtube" height='50'>
+                    </a>
+                </div>
+                <div class='col-md-1'></div>
+            </div>
+        </div>
+    </div>
+
+
+    <div class='toolbar'>
+        <div class='row'>
+            <div class='col-lg-2'>ABOUT US</div>
+            <div class='col-lg-2'>OUR WORK</div>
+            <div class='col-lg-2'>GET INVOLVED</div>
+            <div class='col-lg-2'><a asp-area="" asp-controller="Home" asp-action="Index" style="color: white">COMMUNITY RESOURCES</a></div>
+            <div class='col-lg-2'><a asp-area="" asp-controller="Home" asp-action="GracesResults2" style="color: white">EVENTS</a></div>
+            <div class='col-lg-2'><a asp-area="" asp-controller="Organizations" asp-action="Index" style="color: white">LOGIN</a></div>
+        </div>
+
+    </div>
+
     <header class="container">
 
 
@@ -41,7 +116,6 @@
 
 
     </header>
-<div class="org-index">
     <h2>Index</h2>
 
     <p>
@@ -49,9 +123,15 @@
     </p>
     @using (Html.BeginForm("Index", "Organizations", FormMethod.Get))
     {
+<<<<<<< HEAD
         <div class="row" id="org-filter">
             @Html.TextBox("searchString", "", new { placeholder = "Search By Name" })
             <input type="submit" placeholder="Search by Name" value="Filter" class="org-filt-btn"/>
+=======
+        <div>
+            @Html.TextBox("searchString", "Search By Name")
+            <input type="submit" value="Filter"/>
+>>>>>>> parent of df62de2... Organizations Details and Index
         </div>
     }
 
@@ -59,6 +139,7 @@
     <table class="table">
         <thead>
             <tr>
+<<<<<<< HEAD
                 <th> @Html.DisplayNameFor(model => model.Name) </th>
                 <!--<th> @Html.DisplayNameFor(model => model.Photo_ID) </th>
                 <th> @Html.DisplayNameFor(model => model.Other_Requirements) </th>
@@ -68,6 +149,32 @@
                 <th> @Html.DisplayNameFor(model => model.Additional_Comments) </th>-->
                 <th> @Html.DisplayNameFor(model => model.Contacts.Email) </th>
                 <th> Edit </th>
+=======
+                <th>
+                    @Html.DisplayNameFor(model => model.Name)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Photo_ID)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Other_Requirements)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Other_Requirements_Text)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Appointments_Available)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Appointments_Required)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Additional_Comments)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Contacts.Email)
+                </th>
+>>>>>>> parent of df62de2... Organizations Details and Index
                 <th></th>
             </tr>
         </thead>
@@ -79,41 +186,41 @@
                         <h5>@item.Name</h5>
 
                     </td>
-                    <!--<td>
+                    <td>
                         <script type="text/javascript">
                             if( @item.Photo_ID === 1 ) {
                                 document.write("✔");
                                 //@item.Photo_ID = 0;
                             }
                         </script>
-                    </td>-->
-                    <!--<td>
+                    </td>
+                    <td>
                         <script type="text/javascript">
                             if( @item.Other_Requirements === 1 ) {
                                 document.write("✔");
                             }
                         </script>
-                    </td>-->
-                    <!--<td>
+                    </td>
+                    <td>
                         @Html.DisplayFor(modelItem => item.Other_Requirements_Text)
-                    </td>-->
-                    <!--<td>
+                    </td>
+                    <td>
                         <script type="text/javascript">
                             if( @item.Appointments_Available === 1 ) {
                                 document.write("✔");
                             }
                         </script>
-                    </td>-->
-                    <!--<td>
+                    </td>
+                    <td>
                         <script type="text/javascript">
                             if( @item.Appointments_Required === 1 ) {
                                 document.write("✔");
                             }
                         </script>
-                    </td>-->
-                    <!--<td>
+                    </td>
+                    <td>
                         @Html.DisplayFor(modelItem => item.Additional_Comments)
-                    </td>-->
+                    </td>
                     <td>
                         @Html.DisplayFor(modelItem => item.Contacts.Email)
                     </td>
@@ -154,5 +261,4 @@
             </tr>
         </tfoot>
     </table>
-</div>
 </body>
