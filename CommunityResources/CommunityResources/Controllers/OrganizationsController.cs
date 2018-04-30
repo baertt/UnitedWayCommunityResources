@@ -36,12 +36,17 @@ namespace CommunityResources.Controllers
 
 
         // GET: Organizations/Details/5
-        public async Task<IActionResult> Details(int? id)
+        public async Task<IActionResult> Details(int? id, int? intitalResults)
         {
 
             if (id == null)
             {
                 return NotFound();
+            }
+            ViewData["adminview"] = "admin";
+            if (intitalResults != null)
+            {
+                ViewData["adminview"] = intitalResults;
             }
 
             var organization = await _context.Organizations
@@ -71,7 +76,7 @@ namespace CommunityResources.Controllers
         [HttpPost]
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> Create(
-            [Bind("Name,Photo_ID,Other_Requirements,Other_Requirements_Text,Appointments_Availible,Appointments_Required,Additional_Comments,Last_Updated")] Organization organization)
+            [Bind("Name,Photo_ID,Other_Requirements,Other_Requirements_Text,Appointments_Available,Appointments_Required,Additional_Comments,Last_Updated")] Organization organization)
         {
             try
             {
