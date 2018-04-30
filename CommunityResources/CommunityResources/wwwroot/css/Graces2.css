@@ -242,6 +242,7 @@ form input[type=text] {
     width: 80%;
     background: white;
 <<<<<<< HEAD
+<<<<<<< HEAD
     border: 1px solid #ff8f00;
 }
 
@@ -252,6 +253,9 @@ form input[type=submit] {
     width: 10%;
     background: #ff8f00;
     border: 10px black
+=======
+    border: 10px #ff8f00
+>>>>>>> parent of df62de2... Organizations Details and Index
 =======
     border: 10px #ff8f00
 >>>>>>> parent of df62de2... Organizations Details and Index
