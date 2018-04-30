@@ -74,13 +74,13 @@
             </div>
             <div class="form-group">
                 <label asp-for="Additional_Comments" class="control-label"></label>
-                <input asp-for="Additional_Comments" class="form-control" />
+                <input type="text" name="Additional_Comments" class="form-control" value="None"/>
                 <span asp-validation-for="Additional_Comments" class="text-danger"></span>
             </div>
             <div class="form-group">
                 <label asp-for="Last_Updated" class="control-label"></label>
                 <input name="Last_Updated" id="Last_Updated" value="@DateTime.Now" readonly />
-                <span asp-validation-for="Additional_Comments" class="text-danger"></span>
+                <span asp-validation-for="Last_Updated" class="text-danger"></span>
             </div>
             <div class="form-group">
                 <input type="submit" value="Next" class="btn btn-default" />

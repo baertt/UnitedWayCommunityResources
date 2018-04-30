@@ -56,7 +56,7 @@
             <dt> @Html.DisplayNameFor(model => model.Other_Requirements_Text) </dt>
             <dd> @Html.DisplayFor(model => model.Other_Requirements_Text) </dd>
         }
-        @if (Model.Additional_Comments.Any()) { 
+        @if (!Model.Additional_Comments.Equals("None")) { 
             <dt> @Html.DisplayNameFor(model => model.Additional_Comments) </dt>
             <dd> @Html.DisplayFor(model => model.Additional_Comments) </dd>
         }
