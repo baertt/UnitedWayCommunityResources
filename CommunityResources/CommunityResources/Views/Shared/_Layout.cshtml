@@ -9,7 +9,7 @@
 <div class="header">
     @RenderSection("Scripts", required: false)
       <div class = "row">
-   <div class = "col-sm-3" id="results-title" style="font-size: 20px; font-weight: bolder; color: #121B7C;">
+   <div class = "col-sm-3" id="results-title">
                 United Way <br>
                 of Central Arkansas
    </div>
@@ -23,18 +23,18 @@
    <div class="row">
        <div class = 'col-sm-3'></div>
        <div class = 'col-sm-3'>
-         <div class="topbutton1" style="display: flex; justify-content: center; background: #220081; font-family: 'Open Sans', sans-serif; color: white; font-size: 12px; font-stretch: ultra-condensed; font-weight: bolder; padding-top: 20px; padding-bottom: 20px; padding-right: -10px; border: solid white 1px; text-align: center; border-radius: 10px">
-            Volunteer
+         <div class="topbutton1">
+            <a href="https://www.uwcark.org/volunteer" style="color:white">VOLUNTEER</a>
          </div>
        </div>
        <div class = 'col-sm-3'>
-         <div class = 'topbutton2' style="display: flex; justify-content: center; background: #ff0000; font-family: 'Open Sans', sans-serif; color: white; font-size: 12px; font-stretch: ultra-condensed; font-weight: bolder; padding-top: 20px; padding-bottom: 20px; padding-right: -10px; border: solid white 1px; text-align: center; border-radius: 10px">
-            Donate
+         <div class = 'topbutton2'>
+            <a href="https://www.uwcark.org/civicrm/contribute/transact?reset=1&id=1" style="color:white">DONATE</a>
          </div>
        </div>
        <div class = 'col-sm-3'>
-         <div class = 'topbutton3' style="display: flex; justify-content: center; background: #ff8f00; font-family: 'Open Sans', sans-serif; color: white; font-size: 12px; font-stretch: ultra-condensed; font-weight: bolder; padding-top: 20px; padding-bottom: 20px; padding-right: -10px; border: solid white 1px; text-align: center; border-radius: 10px">
-            Share My Event
+         <div class = 'topbutton3'>
+            <a href="https://docs.google.com/forms/d/1TkIU-AyiK2KNc97sD-KghVBVcdfGPGast6ZIxdI9-m0/viewform?edit_requested=true" style="color:white">SHARE MY EVENT</a>
          </div>
        </div>
    </div>
@@ -70,9 +70,9 @@
         
 <div class = 'toolbar'>
    <div class = 'row'> 
-     <div class = 'col-lg-2'>ABOUT US</div>
-     <div class = 'col-lg-2'>OUR WORK</div>
-     <div class = 'col-lg-2'>GET INVOLVED</div>
+     <div class = 'col-lg-2'><a href="https://www.uwcark.org/about-us" style="color:white;">ABOUT US</a></div>
+     <div class = 'col-lg-2'><a href="https://www.uwcark.org/direct-services" style="color:white;">OUR WORK</a></div>
+     <div class = 'col-lg-2'><a href="https://www.uwcark.org/volunteer" style="color:white;">GET INVOLVED</a></div>
      <div class = 'col-lg-2'><a asp-area="" asp-controller="Home" asp-action="Index" style="color: white">COMMUNITY RESOURCES</a></div>
      <div class = 'col-lg-2'><a asp-area="" asp-controller="Home" asp-action="GracesResults2" style="color: white">EVENTS</a></div>
      <div class = 'col-lg-2'><a asp-area="" asp-controller="Organizations" asp-action="Index" style="color: white">LOGIN</a></div>

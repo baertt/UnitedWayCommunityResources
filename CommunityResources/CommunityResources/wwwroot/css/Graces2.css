@@ -1,6 +1,6 @@
 ﻿header {
     padding: 20px;
-    padding-bottom: 30px
+    padding-bottom: 30px;
 }
 
 
@@ -19,9 +19,10 @@ body {
 
 #results-title {
     font-size: large;
-    font-weight: bolder;
-    background-color: #FFFFFF;
-    color: #121B7C
+    font-weight: 900;
+    color: #121B7C;
+    padding-top: 50px;
+    padding-left: 50px;
 }
 
 .col-md-1 {
@@ -60,7 +61,8 @@ body {
     font-size: 25px;
     color: #11C7C;
     font-weight: bolder;
-    text-align: center
+    text-align: center;
+    padding-bottom: 75px;
 }
 
 #imgcred {
@@ -125,7 +127,8 @@ body {
     padding-top: 20px;
     padding-bottom: 20px;
     border: solid white 1px;
-    text-align: center
+    text-align: center;
+    font-size: 15px;
 }
 
 .topbutton1 {
@@ -134,11 +137,12 @@ body {
     background: #220081;
     font-family: 'Open Sans', sans-serif;
     color: white;
-    font-size: inherit;
+    font-size: 12px;
     font-stretch: ultra-condensed;
     font-weight: bolder;
-    padding-top: 20px;
-    padding-bottom: 20px;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    margin-top: 10px;
     border: solid white 1px;
     text-align: center;
     border-radius: 10px
@@ -150,11 +154,12 @@ body {
     background: #ff0000;
     font-family: 'Open Sans', sans-serif;
     color: white;
-    font-size: inherit;
+    font-size: 12px;
     font-stretch: ultra-condensed;
     font-weight: bolder;
-    padding-top: 20px;
-    padding-bottom: 20px;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    margin-top: 10px;
     border: solid white 1px;
     text-align: center;
     border-radius: 10px
@@ -163,14 +168,15 @@ body {
 .topbutton3 {
     display: flex;
     justify-content: center;
+    background: #ff8f00;
     font-family: 'Open Sans', sans-serif;
     color: white;
-    font-size: inherit;
+    font-size: 12px;
     font-stretch: ultra-condensed;
     font-weight: bolder;
-    background: #ff8f00;
-    padding-top: 0px;
-    padding-bottom: 20px;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    margin-top: 10px;
     border: solid white 1px;
     text-align: center;
     border-radius: 10px
@@ -178,7 +184,8 @@ body {
 
 .footer-link {
     color: white;
-    background: yellow;
+    background: yellow
+
 }
 
 .topfoot {
