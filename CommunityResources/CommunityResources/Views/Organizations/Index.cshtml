@@ -123,21 +123,9 @@
     </p>
     @using (Html.BeginForm("Index", "Organizations", FormMethod.Get))
     {
-<<<<<<< HEAD
-<<<<<<< HEAD
-        <div class="row" id="org-filter">
-            @Html.TextBox("searchString", "", new { placeholder = "Search By Name" })
-            <input type="submit" placeholder="Search by Name" value="Filter" class="org-filt-btn"/>
-=======
         <div>
             @Html.TextBox("searchString", "Search By Name")
             <input type="submit" value="Filter"/>
->>>>>>> parent of df62de2... Organizations Details and Index
-=======
-        <div>
-            @Html.TextBox("searchString", "Search By Name")
-            <input type="submit" value="Filter"/>
->>>>>>> parent of df62de2... Organizations Details and Index
         </div>
     }
 
@@ -145,20 +133,6 @@
     <table class="table">
         <thead>
             <tr>
-<<<<<<< HEAD
-<<<<<<< HEAD
-                <th> @Html.DisplayNameFor(model => model.Name) </th>
-                <!--<th> @Html.DisplayNameFor(model => model.Photo_ID) </th>
-                <th> @Html.DisplayNameFor(model => model.Other_Requirements) </th>
-                <th> @Html.DisplayNameFor(model => model.Other_Requirements_Text) </th>
-                <th> @Html.DisplayNameFor(model => model.Appointments_Available) </th>
-                <th> @Html.DisplayNameFor(model => model.Appointments_Required) </th>
-                <th> @Html.DisplayNameFor(model => model.Additional_Comments) </th>-->
-                <th> @Html.DisplayNameFor(model => model.Contacts.Email) </th>
-                <th> Edit </th>
-=======
-=======
->>>>>>> parent of df62de2... Organizations Details and Index
                 <th>
                     @Html.DisplayNameFor(model => model.Name)
                 </th>
@@ -183,10 +157,6 @@
                 <th>
                     @Html.DisplayNameFor(model => model.Contacts.Email)
                 </th>
-<<<<<<< HEAD
->>>>>>> parent of df62de2... Organizations Details and Index
-=======
->>>>>>> parent of df62de2... Organizations Details and Index
                 <th></th>
             </tr>
         </thead>
