@@ -290,13 +290,13 @@
                 </td>}
 
                 </tr>
-            </table>
+            </table><br />
             <div class="form-group">
-                <label asp-for="Other_Resources_Text" class="control-label"></label>
-                <input asp-for="Other_Resources_Text" class="form-control" />
+                <label asp-for="Other_Resources_Text" class="control-label"></label><br />
+                <input asp-for="Other_Resources_Text" class="form-control" style="border: 2px solid #CFCFCF"/>
                 <span asp-validation-for="Other_Resources_Text" class="text-danger"></span>
             </div>
-            <div class="form-group">
+            <div class="form-group"><br /><br />
                 <input type="submit" value="Save" class="btn btn-default" />
             </div>
         </form>
@@ -304,6 +304,6 @@
 </div>
 
 <div>
-    <a asp-action="Index">Back to List</a>
+    <a asp-controller="Organizations" asp-action="Index">Exit Without Saving</a>
 </div>
 

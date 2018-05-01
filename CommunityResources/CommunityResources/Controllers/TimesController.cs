@@ -38,7 +38,6 @@ namespace CommunityResources.Controllers
                     where ti.OrganizationId == id
                     select ti).ToList();
             }
-            ViewData["OrgName"] = orgs.First().Organization.Name;
             return View(orgs);
         }
 

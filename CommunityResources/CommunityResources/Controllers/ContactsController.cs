@@ -84,6 +84,7 @@ namespace CommunityResources.Controllers
                 return NotFound();
             }
             ViewData["OrganizationId"] = new SelectList(_context.Organizations.Where(m => m.Id.Equals(id)), "Id", "Name", contact.OrganizationId);
+        
             return View(contact);
         }
 

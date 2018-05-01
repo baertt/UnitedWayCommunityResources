@@ -12,7 +12,7 @@
 <div class="row">
     <div class="col-md-4">
         <form asp-action="Edit">
-            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div><br />
             <input type="hidden" asp-for="OrganizationId" />
             <div class="form-group">
                 <label asp-for="OrganizationId" class="control-label"></label>
@@ -20,36 +20,36 @@
                 <span asp-validation-for="OrganizationId" class="text-danger"></span>
             </div>
             <div class="form-group">
-                <label asp-for="Street_Address" class="control-label"></label>
-                <input asp-for="Street_Address" class="form-control" />
+                <label asp-for="Street_Address" class="control-label"></label><br />
+                <input asp-for="Street_Address" class="form-control" style="border: 2px solid #CFCFCF"/>
                 <span asp-validation-for="Street_Address" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <label asp-for="City" class="control-label"></label>
-                <input asp-for="City" class="form-control" />
+            </div><br />
+            <div class="form-group"><br />
+                <label asp-for="City" class="control-label"></label><br />
+                <input asp-for="City" class="form-control" style="border: 2px solid #CFCFCF"/>
                 <span asp-validation-for="City" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <label asp-for="Zip" class="control-label"></label>
-                <input asp-for="Zip" class="form-control" />
+            </div><br />
+            <div class="form-group"><br />
+                <label asp-for="Zip" class="control-label"></label><br />
+                <input asp-for="Zip" class="form-control" style="border: 2px solid #CFCFCF"/>
                 <span asp-validation-for="Zip" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <label asp-for="Email" class="control-label"></label>
-                <input asp-for="Email" class="form-control" />
+            </div><br />
+            <div class="form-group"><br />
+                <label asp-for="Email" class="control-label"></label><br />
+                <input asp-for="Email" class="form-control" style="border: 2px solid #CFCFCF"/>
                 <span asp-validation-for="Email" class="text-danger"></span>
             </div>
             <div class="form-group">
-                <label asp-for="Phone" class="control-label"></label>
-                <input asp-for="Phone" class="form-control" />
+                <label asp-for="Phone" class="control-label"></label><br />
+                <input asp-for="Phone" class="form-control" style="border: 2px solid #CFCFCF"/>
                 <span asp-validation-for="Phone" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <label asp-for="Website" class="control-label"></label>
-                <input asp-for="Website" class="form-control" />
+            </div><br />
+            <div class="form-group"><br />
+                <label asp-for="Website" class="control-label"></label><br />
+                <input asp-for="Website" class="form-control" style="border: 2px solid #CFCFCF"/>
                 <span asp-validation-for="Website" class="text-danger"></span>
-            </div>
-            <div class="form-group">
+            </div><br />
+            <div class="form-group"><br />
                 <input type="submit" value="Save" class="btn btn-default" />
             </div>
         </form>
@@ -57,6 +57,6 @@
 </div>
 
 <div>
-    <a asp-action="Index">Back to List</a>
+    <a asp-controller="Organizations" asp-action="Index">Exit Without Saving</a>
 </div>
 
