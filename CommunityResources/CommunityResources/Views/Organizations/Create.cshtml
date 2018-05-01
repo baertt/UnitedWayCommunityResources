@@ -8,6 +8,10 @@
     th, td {
         padding: 15px;
     }
+    #inputName {
+        border: 2px solid #CFCFCF;
+    }
+
 </style></head>
 
 <h2>Create Organization Information</h2>
@@ -18,8 +22,8 @@
         <form asp-action="Create">
             <div asp-validation-summary="ModelOnly" class="text-danger"></div>
             <div class="form-group">
-                <label asp-for="Name" class="control-label"></label>
-                <input asp-for="Name" class="form-control" />
+                <h3><label asp-for="Name" class="control-label"></label></h3>
+                <input asp-for="Name" class="form-control" id="inputName" />
                 <span asp-validation-for="Name" class="text-danger"></span>
             </div>
             <table>
@@ -68,17 +72,17 @@
                 </tr>
             </table>
             <div class="form-group">
-                <label asp-for="Other_Requirements_Text" class="control-label"></label>
-                <input asp-for="Other_Requirements_Text" class="form-control" />
+                <label asp-for="Other_Requirements_Text" class="control-label" style="margin-top:25px"></label>
+                <input asp-for="Other_Requirements_Text" class="form-control" style="border: 2px solid #CFCFCF" />
                 <span asp-validation-for="Other_Requirements_Text" class="text-danger"></span>
-            </div>
+            </div> <br />
             <div class="form-group">
-                <label asp-for="Additional_Comments" class="control-label"></label>
-                <input type="text" name="Additional_Comments" class="form-control" value="None"/>
+                <label asp-for="Additional_Comments" class="control-label" style="margin-top:25px"></label>
+                <input type="text" name="Additional_Comments" class="form-control" value="None" style="border: 2px solid #CFCFCF"/>
                 <span asp-validation-for="Additional_Comments" class="text-danger"></span>
-            </div>
+            </div> <br /><br />
             <div class="form-group">
-                <label asp-for="Last_Updated" class="control-label"></label>
+                <label asp-for="Last_Updated" class="control-label"style="margin-top:25px"></label>
                 <input name="Last_Updated" id="Last_Updated" value="@DateTime.Now" readonly />
                 <span asp-validation-for="Last_Updated" class="text-danger"></span>
             </div>
