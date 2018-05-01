@@ -14,7 +14,7 @@ namespace CommunityResources.Models
 
 
         // Foreign Key
-
+        [Display(Name = "Organization")]
         public int OrganizationId { get; set; }
 
         // Navigation property

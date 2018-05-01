@@ -26,7 +26,7 @@ namespace CommunityResources.Models
         public string Day { get; set; }
 
 
-
+        [Display(Name = "Organization")]
         public int OrganizationId { get; set; }
 
         public Organization Organization { get; set; }
