@@ -11,6 +11,7 @@ namespace CommunityResources.Models
         [Key]
         public int Id { get; set; }
 
+        [Display(Name = "Organization")]
         public int OrganizationId { get; set; }
 
         public Organization Organization { get; set; }
