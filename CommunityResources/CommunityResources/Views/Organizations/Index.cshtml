@@ -77,44 +77,57 @@
             </tr>
         </thead>
         <tbody>
-            @foreach (var item in Model)
-            {
-            <tr>
-                <td>
-                    <h5>@item.Name</h5>
+            @foreach (var item in Model) { 
+        <tr>
+            <td>
+                <h5>@item.Name</h5>
 
-                </td>
-                <td>
-                    @Html.DisplayFor(modelItem => item.Contacts.Phone)
-                </td>
-                <td>
-                    @Html.DisplayFor(modelItem => item.Contacts.Email)
-                </td>
-                <td>
-                    @Html.DisplayFor(modelItem => item.Last_Updated)
-                </td>
-                <td>
-                    <p><a asp-action="Edit" asp-route-id="@item.Id"><!--Edit--> Organization</a></p>
-                    <p>
-                        <a asp-controller="Contacts" asp-action="Edit" asp-route-id="@item.Contacts.Id"><!--Edit--> Contact</a>
-                    </p>
-                    <p>
-                        <a asp-controller="Resources" asp-action="Edit" asp-route-id="@item.Resources.Id"><!--Edit--> Resources</a>
-                    </p>
-                    <p>
-                        <a asp-controller="Times" asp-action="AddTimes" asp-route-id="@item.Id"><!--Edit--> Times</a>
-                    </p>
-                </td>
-                <td>
-                    <p>
-                        <a asp-action="Details" asp-route-id="@item.Id">Details</a>
-                    </p>
-                    <p>
-                        <a asp-action="Delete" asp-route-id="@item.Id">Delete</a>
-                    </p>
-                </td>
-            </tr>
-            }
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Contacts.Phone)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Contacts.Email)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Last_Updated)
+            </td>
+            <td>
+                <p><a asp-action="Edit" asp-route-id="@item.Id."><!--Edit--> Organization</a></p>
+                @if (item.Contacts != null)
+    {
+            <p>
+                <a asp-controller="Contacts" asp-action="Edit" asp-route-id="@item.Contacts.Id"><!--Edit--> Contact</a>
+            </p>}
+                @if (item.Contacts == null)
+    {
+            <p>
+                <a asp-controller="Contacts" asp-action="Create" asp-route-id="@item.Id"><!--Edit--> Contact</a>
+            </p>}
+                @if (item.Resources != null)
+    {
+            <p>
+                <a asp-controller="Resources" asp-action="Edit" asp-route-id="@item.Resources.Id"><!--Edit--> Resources</a>
+            </p>}
+                @if (item.Resources == null)
+    {
+            <p>
+                <a asp-controller="Resources" asp-action="Create" asp-route-id="@item.Id"><!--Edit--> Resources</a>
+            </p>}
+                <p>
+                    <a asp-controller="Times" asp-action="AddTimes" asp-route-id="@item.Id"><!--Edit--> Times</a>
+                </p>
+            </td>
+            <td>
+                <p>
+                    <a asp-action="Details" asp-route-id="@item.Id">Details</a>
+                </p>
+                <p>
+                    <a asp-action="Delete" asp-route-id="@item.Id">Delete</a>
+                </p>
+            </td>
+        </tr>
+}
         </tbody>
         <tfoot>
             <tr>

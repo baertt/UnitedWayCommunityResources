@@ -151,6 +151,7 @@ namespace CommunityResources.Controllers
                         "see your system administrator.");
                 }
             }
+            ViewData["HasContacts"] = true;
             return View(organizationToUpdate);
         }
 
