@@ -26,7 +26,7 @@ namespace CommunityResources.Controllers
                                .Include(c => c.Contacts)
                                .Include(t => t.Times)
                                .Include(r => r.Resources)
-                               .OrderBy(s => s.Name)
+                               .OrderBy(s => s.Last_Updated)
                                select s;
             if (searchString != null) {
                 organization = organization.Where(s => s.Name.ToLower().Contains(searchString.ToLower()));
@@ -136,7 +136,7 @@ namespace CommunityResources.Controllers
                 "",
                 org => org.Name, org => org.Photo_ID, org => org.Other_Requirements,
                 org => org.Other_Requirements_Text, org => org.Appointments_Available,
-                org => org.Appointments_Required, org => org.Additional_Comments))
+                org => org.Appointments_Required, org => org.Additional_Comments, org => org.Last_Updated))
             {
                 try
                 {
