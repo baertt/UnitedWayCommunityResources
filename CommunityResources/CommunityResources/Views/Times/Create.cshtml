@@ -30,12 +30,26 @@
             </div><br />
             <div class="form-group"><br />
                 <label asp-for="Repeat" class="control-label"></label><br />
-                <input asp-for="Repeat" class="form-control" style="border: 2px solid #CFCFCF" />
+                                                                      <select name="Repeat">
+                                                                          <option value="0">Every Week</option>
+                                                                          <option value="1">1st Week of the Month</option>
+                                                                          <option value="2">2nd Week of the Month</option>
+                                                                          <option value="3">3rd Week of the Month</option>
+                                                                          <option value="4">4th Week of the Month</option>
+                                                                      </select>
                 <span asp-validation-for="Repeat" class="text-danger"></span>
             </div>
             <div class="form-group">
                 <label asp-for="Day" class="control-label"></label><br />
-                <input asp-for="Day" class="form-control" style="border: 2px solid #CFCFCF" />
+                                                                   <select name="Day">
+                                                                       <option value="Monday">Monday</option>
+                                                                       <option value="Tuesday">Tuesday</option>
+                                                                       <option value="Wednesday">Wednesday</option>
+                                                                       <option value="Thursday">Thursday</option>
+                                                                       <option value="Friday">Friday</option>
+                                                                       <option value="Saturday">Saturday</option>
+                                                                       <option value="Sunday">Sunday</option>
+                                                                   </select>
                 <span asp-validation-for="Day" class="text-danger"></span>
             </div>
             <div class="form-group"><br /><br />

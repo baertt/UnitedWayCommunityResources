@@ -14,15 +14,15 @@ namespace CommunityResources.Models
 
         [Display(Name = "Opening Time")]
         public string Time_Start { get; set; } //Use Military Time
-
+        
         [Display(Name = "Closing Time")]
         public string Time_End { get; set; }
-
+        
         [Display(Name = "Week of the Month")]
         public int Repeat { get; set; } // Week of month event occurs
 
 
-
+        [Required]
         public string Day { get; set; }
 
 

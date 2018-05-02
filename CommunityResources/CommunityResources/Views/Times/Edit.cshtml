@@ -21,23 +21,146 @@
                 <span asp-validation-for="OrganizationId" class="text-danger"></span>
             </div>
             <div class="form-group">
-                <label asp-for="Time_Start" class="control-label"></label>
+                <label asp-for="Time_Start" class="control-label"></label><br />
                 <input asp-for="Time_Start" class="form-control" style="border: 2px solid #CFCFCF" />
                 <span asp-validation-for="Time_Start" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <label asp-for="Time_End" class="control-label"></label>
+            </div><br />
+            <div class="form-group"><br />
+                <label asp-for="Time_End" class="control-label"></label><br />
                 <input asp-for="Time_End" class="form-control" style="border: 2px solid #CFCFCF" />
                 <span asp-validation-for="Time_End" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <label asp-for="Repeat" class="control-label"></label>
-                <input asp-for="Repeat" class="form-control" style="border: 2px solid #CFCFCF" />
-                <span asp-validation-for="Repeat" class="text-danger"></span>
-            </div>
+            </div><br />
+                  <div class="form-group">
+                      <br />
+                      <label asp-for="Repeat" class="control-label"></label>
+
+                      @if (Model.Repeat.Equals(0))
+    {
+                  <select name="Repeat">
+                      <option value="0" selected="selected">Every Week</option>
+                      <option value="1">1st Week of the Month</option>
+                      <option value="2">2nd Week of the Month</option>
+                      <option value="3">3rd Week of the Month</option>
+                      <option value="4">4th Week of the Month</option>
+                  </select>}
+                      @if (Model.Repeat.Equals(1))
+    {
+                  <select name="Repeat">
+                      <option value="0">Every Week</option>
+                      <option value="1"  selected="selected">1st Week of the Month</option>
+                      <option value="2">2nd Week of the Month</option>
+                      <option value="3">3rd Week of the Month</option>
+                      <option value="4">4th Week of the Month</option>
+                  </select>}
+                      @if (Model.Repeat.Equals(2))
+    {
+                  <select name="Repeat">
+                      <option value="0">Every Week</option>
+                      <option value="1">1st Week of the Month</option>
+                      <option value="2"  selected="selected">2nd Week of the Month</option>
+                      <option value="3">3rd Week of the Month</option>
+                      <option value="4">4th Week of the Month</option>
+                  </select>}
+                      @if (Model.Repeat.Equals(3))
+    {
+                  <select name="Repeat">
+                      <option value="0">Every Week</option>
+                      <option value="1">1st Week of the Month</option>
+                      <option value="2">2nd Week of the Month</option>
+                      <option value="3"  selected="selected">3rd Week of the Month</option>
+                      <option value="4">4th Week of the Month</option>
+                  </select>}
+                      @if (Model.Repeat.Equals(4))
+    {
+                  <select name="Repeat">
+                      <option value="0">Every Week</option>
+                      <option value="1">1st Week of the Month</option>
+                      <option value="2">2nd Week of the Month</option>
+                      <option value="3"  selected="selected">3rd Week of the Month</option>
+                      <option value="4">4th Week of the Month</option>
+                  </select>}
+                      <span asp-validation-for="Repeat" class="text-danger"></span>
+                  </div>
             <div class="form-group">
                 <label asp-for="Day" class="control-label"></label><br />
-                <input asp-for="Day" class="form-control" style="border: 2px solid #CFCFCF" />
+                @if (Model.Day.Equals("Monday"))
+    {
+            <select name="Day">
+                <option value="Monday" selected="selected">Monday</option>
+                <option value="Tuesday" >Tuesday</option>
+                <option value="Wednesday">Wednesday</option>
+                <option value="Thursday">Thursday</option>
+                <option value="Friday">Friday</option>
+                <option value="Saturday">Saturday</option>
+                <option value="Sunday">Sunday</option>
+            </select>}
+                @if (Model.Day.Equals("Tuesday"))
+    {
+            <select name="Day">
+                <option value="Monday">Monday</option>
+                <option value="Tuesday" selected="selected">Tuesday</option>
+                <option value="Wednesday">Wednesday</option>
+                <option value="Thursday">Thursday</option>
+                <option value="Friday">Friday</option>
+                <option value="Saturday">Saturday</option>
+                <option value="Sunday">Sunday</option>
+            </select>}
+                @if (Model.Day.Equals("Wednesday"))
+    {
+            <select name="Day">
+                <option value="Monday">Monday</option>
+                <option value="Tuesday" >Tuesday</option>
+                <option value="Wednesday" selected="selected">Wednesday</option>
+                <option value="Thursday">Thursday</option>
+                <option value="Friday">Friday</option>
+                <option value="Saturday">Saturday</option>
+                <option value="Sunday">Sunday</option>
+            </select>}
+                @if (Model.Day.Equals("Thursday"))
+    {
+            <select name="Day">
+                <option value="Monday">Monday</option>
+                <option value="Tuesday" >Tuesday</option>
+                <option value="Wednesday">Wednesday</option>
+                <option value="Thursday"selected="selected">Thursday</option>
+                <option value="Friday">Friday</option>
+                <option value="Saturday">Saturday</option>
+                <option value="Sunday">Sunday</option>
+            </select>}
+                @if (Model.Day.Equals("Friday"))
+    {
+            <select name="Day">
+                <option value="Monday">Monday</option>
+                <option value="Tuesday"  >Tuesday</option>
+                <option value="Wednesday">Wednesday</option>
+                <option value="Thursday">Thursday</option>
+                <option value="Friday" selected="selected">Friday</option>
+                <option value="Saturday">Saturday</option>
+                <option value="Sunday">Sunday</option>
+            </select>}
+                @if (Model.Day.Equals("Saturday"))
+    {
+            <select name="Day">
+                <option value="Monday">Monday</option>
+                <option value="Tuesday" >Tuesday</option>
+                <option value="Wednesday">Wednesday</option>
+                <option value="Thursday">Thursday</option>
+                <option value="Friday">Friday</option>
+                <option value="Saturday"selected="selected">Saturday</option>
+                <option value="Sunday">Sunday</option>
+            </select>}
+                @if (Model.Day.Equals("Sunday"))
+    {
+            <select name="Day">
+                <option value="Monday">Monday</option>
+                <option value="Tuesday" >Tuesday</option>
+                <option value="Wednesday">Wednesday</option>
+                <option value="Thursday">Thursday</option>
+                <option value="Friday">Friday</option>
+                <option value="Saturday">Saturday</option>
+                <option value="Sunday"selected="selected">Sunday</option>
+            </select>}
+            @*<input asp-for="Day" class="form-control" style="border: 2px solid #CFCFCF" />*@
                 <span asp-validation-for="Day" class="text-danger"></span>
             </div>
             <div class="form-group"><br /><br />
