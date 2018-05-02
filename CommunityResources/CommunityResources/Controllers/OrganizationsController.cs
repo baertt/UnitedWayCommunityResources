@@ -83,6 +83,7 @@ namespace CommunityResources.Controllers
                 if (ModelState.IsValid)
                 {
                     _context.Add(organization);
+                   
                     await _context.SaveChangesAsync();
                     return RedirectToAction("Create","Contacts", new { id = organization.Id });
                 }

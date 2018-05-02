@@ -72,6 +72,8 @@ namespace CommunityResources.Controllers
             if (ModelState.IsValid)
             {
                 _context.Add(resource);
+
+                _context.Organizations.Where(m => m.Id == id).FirstOrDefault().Last_Updated = DateTime.Now.ToString();
                 await _context.SaveChangesAsync();
                 return RedirectToAction("AddTimes", "Times", new { id = resource.OrganizationId });
             }
@@ -113,6 +115,7 @@ namespace CommunityResources.Controllers
                 try
                 {
                     _context.Update(resource);
+                    _context.Organizations.Where(m => m.Id == id).FirstOrDefault().Last_Updated = DateTime.Now.ToString();
                     await _context.SaveChangesAsync();
                 }
                 catch (DbUpdateConcurrencyException)
