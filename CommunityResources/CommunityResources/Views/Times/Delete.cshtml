@@ -12,6 +12,13 @@
     <h4>Time</h4>
     <hr />
     <dl class="dl-horizontal">
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Organization)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Organization.Name)
+        </dd>
         <dt>
             @Html.DisplayNameFor(model => model.Time_Start)
         </dt>
@@ -28,25 +35,44 @@
             @Html.DisplayNameFor(model => model.Repeat)
         </dt>
         <dd>
-            @Html.DisplayFor(model => model.Repeat)
-        </dd>
-        <dt>
-            @Html.DisplayNameFor(model => model.Day)
-        </dt>
-        <dd>
-            @Html.DisplayFor(model => model.Day)
-        </dd>
-        <dt>
-            @Html.DisplayNameFor(model => model.Organization)
-        </dt>
-        <dd>
-            @Html.DisplayFor(model => model.Organization.Name)
-        </dd>
-    </dl>
+            @if (Model.Repeat.Equals(0))
+            {
+            <dd>
+                Every Week
+            </dd>}
+            @if (Model.Repeat.Equals(1))
+            {
+                <dd>
+                    1st Week
+                </dd>}
+            @if (Model.Repeat.Equals(2))
+            {
+                <dd>
+                    2nd Week
+                </dd>}
+            @if (Model.Repeat.Equals(3))
+            {
+                <dd>
+                    3rd Week
+                </dd>}
+            @if (Model.Repeat.Equals(4))
+            {
+                <dd>
+                    4th Week
+                </dd>}
+            <dt>
+                @Html.DisplayNameFor(model => model.Day)
+            </dt>
+            <dd>
+                @Html.DisplayFor(model => model.Day)
+                @ViewData["FK"]
+            </dd>
+        </dl>
+
+        <form asp-action="Delete">
+            <input type="hidden" asp-for="TimesId" />
+            <input type="submit" value="Delete" class="btn btn-default" /> |
+            <a asp-action="AddTimes" asp-route-id="@Model.OrganizationId">Cancel</a>
+        </form>
+    </div>
     
-    <form asp-action="Delete">
-        <input type="hidden" asp-for="TimesId" />
-        <input type="submit" value="Delete" class="btn btn-default" /> |
-        <a asp-action="Index">Back to List</a>
-    </form>
-</div>

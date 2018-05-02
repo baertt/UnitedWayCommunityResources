@@ -152,10 +152,10 @@ namespace CommunityResources.Controllers
             {
                 return NotFound();
             }
-
             var time = await _context.Times
                 .Include(t => t.Organization)
                 .SingleOrDefaultAsync(m => m.TimesId == id);
+            
             if (time == null)
             {
                 return NotFound();
