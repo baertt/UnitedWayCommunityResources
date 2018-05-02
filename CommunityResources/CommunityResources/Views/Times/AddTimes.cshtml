@@ -34,27 +34,49 @@
     <tbody>
         @foreach (var item in Model)
         {
-            <tr>
-                <td>
-                    @Html.DisplayFor(modelItem => item.Time_Start)
-                </td>
-                <td>
-                    @Html.DisplayFor(modelItem => item.Time_End)
-                </td>
-                <td>
-                    @Html.DisplayFor(modelItem => item.Repeat)
-                </td>
-                <td>
-                    @Html.DisplayFor(modelItem => item.Day)
-                </td>
-                <td>
-                    @Html.DisplayFor(modelItem => item.Organization.Name)
-                </td>
-                <td>
-                    <a asp-action="Edit" asp-route-id="@item.TimesId">Edit</a> |
-                    <a asp-action="Delete" asp-route-id="@item.TimesId">Delete</a>
-                </td>
-            </tr>
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Time_Start)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Time_End)
+            </td>
+            @if (item.Repeat.Equals(0))
+    {
+        <td>
+            Every Week
+        </td>}
+            @if (item.Repeat.Equals(1))
+    {
+        <td>
+            1st Week
+        </td>}
+            @if (item.Repeat.Equals(2))
+    {
+        <td>
+            2nd Week
+        </td>}
+            @if (item.Repeat.Equals(3))
+    {
+        <td>
+            3rd Week
+        </td>}
+            @if (item.Repeat.Equals(4))
+    {
+        <td>
+            4th Week
+        </td>}
+            <td>
+                @Html.DisplayFor(modelItem => item.Day)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Organization.Name)
+            </td>
+            <td>
+                <a asp-action="Edit" asp-route-id="@item.TimesId">Edit</a> |
+                <a asp-action="Delete" asp-route-id="@item.TimesId">Delete</a>
+            </td>
+        </tr>
         }
     </tbody>
 </table>

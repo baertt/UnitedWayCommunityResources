@@ -22,15 +22,16 @@ namespace CommunityResources.Controllers
         // GET: Times
         public async Task<IActionResult> Index()
         {
-            var communityResourcesContext = _context.Times.Include(t => t.Organization);
+            var communityResourcesContext = _context.Times
+                .Include(t => t.Organization);
             return View(await communityResourcesContext.ToListAsync());
         }
 
         public IActionResult AddTimes(int? id)
         {
             ViewData["FK"] = id;
-            List<Time> orgs = (from s in _context.Times.Include(c => c.Organization)
-                                       select s).ToList();
+            List<Time> orgs = (from i in _context.Times.Include(c => c.Organization)
+                               select i).ToList();
             if (id != null) { 
             orgs = (from ti in _context.Times
                     join u in _context.Organizations
