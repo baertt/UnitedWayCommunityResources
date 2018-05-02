@@ -78,17 +78,19 @@
                         <th>Email</th>
                         <th>Website</th>
                     </tr>
-                    <tr>
-                        <td>
-                            @Html.DisplayFor(modelItem => Model.Contacts.Street_Address)
-                            <br />
-                            @Html.DisplayFor(modelItem => Model.Contacts.Town_Address)
-                        </td>
-                        <td> @Html.DisplayFor(modelItem => Model.Contacts.Phone) </td>
-                        <td> @Html.DisplayFor(modelItem => Model.Contacts.Email) </td>
-                        <td> @Html.DisplayFor(modelItem => Model.Contacts.Website) </td>
-                    </tr>
-
+                    @if (Model.Contacts != null)
+    {
+                <tr>
+                    <td>
+                        @Html.DisplayFor(modelItem => Model.Contacts.Street_Address)
+                        <br />
+                        @Html.DisplayFor(modelItem => Model.Contacts.Town_Address)
+                    </td>
+                    <td> @Html.DisplayFor(modelItem => Model.Contacts.Phone) </td>
+                    <td> @Html.DisplayFor(modelItem => Model.Contacts.Email) </td>
+                    <td> @Html.DisplayFor(modelItem => Model.Contacts.Website) </td>
+                </tr>
+}
                 </table>
             </dd>
             @if (Model.Times.Any())
@@ -114,6 +116,8 @@
                     </table>
                 </dd>
             }
+            @if (Model.Resources != null)
+            {
             <dt> @Html.DisplayNameFor(model => model.Resources) </dt>
 
             @if (Model.Resources.Education.Equals(1))
@@ -161,7 +165,7 @@
                 <dd> @Html.DisplayNameFor(modelItem => Model.Resources.Senior) </dd>
             }
 
-            <dd> @Html.DisplayFor(modelItem => Model.Resources.Other_Resources_Text) </dd>
+            <dd> @Html.DisplayFor(modelItem => Model.Resources.Other_Resources_Text) </dd>}
         </dl>
     </div>
     @if (@ViewData["adminview"].Equals("admin"))
