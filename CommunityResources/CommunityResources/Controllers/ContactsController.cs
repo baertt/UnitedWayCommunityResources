@@ -64,7 +64,7 @@ namespace CommunityResources.Controllers
             {
                 _context.Add(contact);
 
-                _context.Organizations.Where(m => m.Id == id).FirstOrDefault().Last_Updated = DateTime.Now.ToString();
+                
                 await _context.SaveChangesAsync();
                 return RedirectToAction("Create", "Resources", new { id = contact.OrganizationId });
             }
