@@ -96,16 +96,6 @@ namespace CommunityResources.Controllers
             {
                 return NotFound();
             }
-            ViewBag["DayOptions"] = new SelectList(new List<SelectListItem>
-            {
-                new SelectListItem{Text="Monday"},
-                new SelectListItem{ Text="Tuesday"},
-                new SelectListItem{ Text="Wednesday"},
-                new SelectListItem{Text="Thursday"},
-                new SelectListItem{Text="Friday"},
-                new SelectListItem{ Text="Saturday"},
-                new SelectListItem{Text="Sunday"},
-            }, "Text");
             ViewData["OrganizationId"] = new SelectList(_context.Organizations.Where(m => m.Id.Equals(id)), "Id", "Name", resource.OrganizationId);
             return View(resource);
         }
