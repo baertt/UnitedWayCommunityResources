@@ -61,7 +61,10 @@ namespace CommunityResources.Controllers
 
         public ActionResult InitialResults(int?id, string day, int? repeats, string timeS, string timeE, string datepicker)
         {
-            List<Organization> organization = (from s in _context.Organizations.Include(c => c.Times).OrderBy(s => s.Name)
+            List<Organization> organization = (from s in _context.Organizations
+                                               .Include(c => c.Times)
+                                               .Include(c => c.Contacts)
+                                               .OrderBy(s => s.Name)
                                                select s).ToList();
 
             var weekdays = new SelectList(
