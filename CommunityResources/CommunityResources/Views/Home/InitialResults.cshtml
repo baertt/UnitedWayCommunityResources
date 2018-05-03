@@ -47,17 +47,18 @@
     
     @using (Html.BeginForm("InitialResults", "Home", FormMethod.Get))
     {
-        <div>
-            @Html.DropDownList("day", "Any Day")
-            @Html.DropDownList("repeats", "Which Week")
-            @Html.TextBox("timeS", "")
-            @Html.TextBox("timeE", "")
-            
-            <input id="datepicker" type="hidden" runat="server"/>
-         
-            
-            <input type="submit" value="Filter"  runat="server" OnClientClick="funct()" />
-        </div>
+    <div>
+        @Html.DropDownList("day", "Any Day")
+        @Html.DropDownList("repeats", "Which Week")<br />
+        <p>Start Time: </p>@Html.TextBox("timeS", "")<br /><br />
+        <p>End Time: </p> @Html.TextBox("timeE", "")<br />
+
+
+        <input id="datepicker" type="hidden" runat="server" />
+
+        <br />
+        <input type="submit" value="Filter" runat="server" OnClientClick="funct()" />
+    </div>
     }
     <table class="table">
         <thead>
