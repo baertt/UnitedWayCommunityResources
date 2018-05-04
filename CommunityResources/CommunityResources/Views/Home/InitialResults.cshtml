@@ -13,6 +13,8 @@
     <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
     <script src="//code.jquery.com/jquery-1.12.4.js"></script>
     <script src="//code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+    <script> src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-1.7-vsdoc.js"> </script>
+    
 </head>
 <body>
     <header class="container">
@@ -33,33 +35,52 @@
     </header>
     <h2>Results</h2>
 
-    
+
     <div id="datepicker">
-        <script> $( "#datepicker" ).datepicker();
-            $("#datepicker").on("change",function(){
+        <script>
+            $("#datepicker").datepicker();
+            $("#datepicker").on("change", function () {
                 var selected = $(this).val();
                 $('#displayDate').html(selected);
-                });
+            });
         </script>
     </div>
 
     <div id="displayDate"></div>
-    
+
     @using (Html.BeginForm("InitialResults", "Home", FormMethod.Get))
     {
-    <div>
-        @Html.DropDownList("day", "Any Day")
-        @Html.DropDownList("repeats", "Which Week")<br />
-        <p>Start Time: </p>@Html.TextBox("timeS", "")<br /><br />
-        <p>End Time: </p> @Html.TextBox("timeE", "")<br />
+        <div>
+            @Html.DropDownList("day", "Any Day")
+            @Html.DropDownList("repeats", "Which Week")<br />
+            <p>Start Time: </p>@Html.TextBox("timeS", "")<br /><br />
+            <p>End Time: </p> @Html.TextBox("timeE", "")<br />
 
 
-        <input id="datepicker" type="hidden" runat="server" />
+            <input id="datepicker" type="hidden" runat="server" />
 
-        <br />
-        <input type="submit" value="Filter" runat="server" OnClientClick="funct()" />
-    </div>
+            <br />
+            <input type="submit" value="Filter" runat="server" OnClientClick="funct()" />
+        </div>
     }
+    <table>
+        <tr>
+            <th>Start Time:</th>
+            <td>
+                <select name="stime" id="stime">
+                    <option value="">--Select start time--</option>
+                </select>
+            </td>
+
+            <th>End Time:</th>
+            <td>
+                <select name="etime" id="etime">
+                    <option value="">--Select end time--</option>
+                </select>
+            </td>
+        </tr>
+    </table>
+
     <table class="table">
         <thead>
             <tr>
@@ -105,4 +126,5 @@
             }
         </tbody>
     </table>
+    <script src="~/js/site.js"></script>
 </body>
