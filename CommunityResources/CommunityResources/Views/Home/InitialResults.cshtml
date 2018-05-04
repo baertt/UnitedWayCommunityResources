@@ -59,46 +59,52 @@
     {
     <div>
         @Html.DropDownList("day",
-            new List<SelectListItem> { 
-            new SelectListItem{Text="Sunday"},
-            new SelectListItem{Text="Monday"}, 
-            new SelectListItem{Text="Tuesday"},
-            new SelectListItem{Text="Wednesday"},
-            new SelectListItem{Text="Thursday"},
-            new SelectListItem{Text="Friday"},
-            new SelectListItem{Text="Saturday"}}, 
-            new{@id="day1"})
+             new List<SelectListItem> {
+new SelectListItem{Text="Sunday"},
+new SelectListItem{Text="Monday"},
+new SelectListItem{Text="Tuesday"},
+new SelectListItem{Text="Wednesday"},
+new SelectListItem{Text="Thursday"},
+new SelectListItem{Text="Friday"},
+new SelectListItem{Text="Saturday"}},
+             new { @id = "day1" })
         @Html.DropDownList("repeats",
-               new List<SelectListItem> { 
-            new SelectListItem{Text="1"},
-            new SelectListItem{Text="2"}, 
-            new SelectListItem{Text="3"},
-            new SelectListItem{Text="4"},
-            new SelectListItem{Text="5"},
-            new SelectListItem{Text="6"}}, 
-            new{@id="week1"})<br />
-        <p>Start Time: </p>@Html.TextBox("timeS", "")<br /><br />
-        <p>End Time: </p> @Html.TextBox("timeE", "")<br />
+                new List<SelectListItem> {
+new SelectListItem{Text="1"},
+new SelectListItem{Text="2"},
+new SelectListItem{Text="3"},
+new SelectListItem{Text="4"},
+new SelectListItem{Text="5"},
+new SelectListItem{Text="6"}},
+             new { @id = "week1" })<br />
+        <p>Start Time: </p>
+        <select name="timeS" id="stime">
+            <option value="">--Select start time--</option>
+        </select><br /><br />
+        <p>End Time: </p> 
+        <select name="timeE" id="etime">
+            <option value="">--Select end time--</option>
+        </select><br />
 
 
-            <input id="datepicker" type="hidden" runat="server" />
+        <input id="datepicker" type="hidden" runat="server" />
 
-            <br />
-            <input type="submit" value="Filter" runat="server" OnClientClick="funct()" />
-        </div>
+        <br />
+        <input type="submit" value="Filter" runat="server" OnClientClick="funct()" />
+    </div>
     }
     <table>
         <tr>
             <th>Start Time:</th>
             <td>
-                <select name="stime" id="stime">
+                <select name="timeS" id="stime">
                     <option value="">--Select start time--</option>
                 </select>
             </td>
 
             <th>End Time:</th>
             <td>
-                <select name="etime" id="etime">
+                <select name="timeE" id="etime">
                     <option value="">--Select end time--</option>
                 </select>
             </td>

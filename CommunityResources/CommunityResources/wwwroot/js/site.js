@@ -29,7 +29,7 @@ window.onclick = function (event) {
 $(document).ready(function () {
 
 
-    for (var i = 700; i <= 1700; i += 15) {
+    for (var i = 700; i <= 2100; i += 30) {
         var mins = i % 100;
         var hours = parseInt(i / 100);
 
@@ -61,7 +61,7 @@ $(document).ready(function () {
 
         $("#etime").html("<option value=\"\">--Select end time--</option>");
 
-        for (var i = sum; i <= 1700; i += meetingLength) {
+        for (var i = sum; i <= 2100; i += meetingLength) {
             var mins = i % 100;
             var hours = parseInt(i / 100);
 

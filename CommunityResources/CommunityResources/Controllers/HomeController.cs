@@ -193,11 +193,12 @@ namespace CommunityResources.Controllers
             }
             if (timeS != null && timeE != null)
             { 
+                
                 organization = (from s in organization
                                 join ti in _context.Times
                                 on s.Id equals ti.OrganizationId
-                                where (((DateTime.Compare(Convert.ToDateTime(ti.Time_End), Convert.ToDateTime(timeS)) > 0) )
-                                && (DateTime.Compare(Convert.ToDateTime(ti.Time_Start), Convert.ToDateTime(timeE)) < 0))
+                                where (Int32.Parse(ti.Time_End )> Int32.Parse(timeS)  )
+                                && (Int32.Parse(ti.Time_Start) < Int32.Parse(timeE))
                                 select s).Distinct().ToList();
             }
             return View(organization);
