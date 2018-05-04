@@ -21,7 +21,7 @@
 
             <div class="row">
 
-                <h1 class="col-sm-10" id="title"> <dd> @Html.DisplayFor(model => model.Name) </dd></h1>
+                <h1 class="col-sm-10" id="title"> @Html.DisplayFor(model => model.Name) </h1>
 
                 <div class="col-sm-2" id="google_translate_element"></div>
                 <script type="text/javascript">
@@ -106,36 +106,12 @@
                         </tr>
                         @foreach (var item in Model.Times)
                         {
-                        <tr>
-                            <td> @Html.DisplayFor(modelItem => item.Day) </td>
-                            @if (item.Repeat.Equals(0))
-    {
-                        <td>
-                            Every Week
-                        </td>}
-                            @if (item.Repeat.Equals(1))
-    {
-                        <td>
-                            1st Week
-                        </td>}
-                            @if (item.Repeat.Equals(2))
-    {
-                        <td>
-                            2nd Week
-                        </td>}
-                            @if (item.Repeat.Equals(3))
-    {
-                        <td>
-                            3rd Week
-                        </td>}
-                            @if (item.Repeat.Equals(4))
-    {
-                        <td>
-                            4th Week
-                        </td>}
-                            <td> @Html.DisplayFor(modelItem => item.Time_Start) </td>
-                            <td> @Html.DisplayFor(modelItem => item.Time_End) </td>
-                        </tr>
+                            <tr>
+                                <td> @Html.DisplayFor(modelItem => item.Day) </td>
+                                <td> @Html.DisplayFor(modelItem => item.Repeat) </td>
+                                <td> @Html.DisplayFor(modelItem => item.Time_Start) </td>
+                                <td> @Html.DisplayFor(modelItem => item.Time_End) </td>
+                            </tr>
                         }
                     </table>
                 </dd>

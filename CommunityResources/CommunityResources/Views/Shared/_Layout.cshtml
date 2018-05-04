@@ -9,9 +9,10 @@
 <div class="header">
     @RenderSection("Scripts", required: false)
       <div class = "row">
-   <div class = "col-sm-3" id="results-title">
-                United Way <br>
-                of Central Arkansas
+   <div class = "col-sm-3">
+      <h1 class="header-title">United Way <br>
+                               of Central Arkansas
+      </h1>
    </div>
    <div class = 'col-sm-1'>
         <a href="https://www.uwcark.org/">
@@ -38,29 +39,30 @@
          </div>
        </div>
    </div>
+ 
    <div class="row">
    <div class = 'col-md-6'></div>
-     <div class = 'col-md-1' style="vertical-align: bottom; display: table-cell; padding-top: 10px; padding-bottom: 20px; padding-left: 25px; padding-right: 25px;">
+     <div class = 'col-md-1'>
         <a href="https://www.facebook.com/uwcark">
             <img src="http://ameliaurgentcare.com/wp-content/uploads/2016/06/facebook-round-350-white-background.png" alt="UWCARK Facebook" height ='50'>
         </a>
      </div>
-     <div class = 'col-md-1' style="vertical-align: bottom; display: table-cell; padding-top: 10px; padding-bottom: 20px; padding-left: 25px; padding-right: 25px;">
+     <div class = 'col-md-1'>
         <a href="https://www.instagram.com/uwcark/">
             <img src="http://sguru.org/wp-content/uploads/2018/01/instagram-logo-png-transparent-background-1024x1024.png" alt="UWCARK Instagram" height ='50'>
         </a>
      </div>
-     <div class = 'col-md-1' style="vertical-align: bottom; display: table-cell; padding-top: 10px; padding-bottom: 20px; padding-left: 25px; padding-right: 25px;">
+     <div class = 'col-md-1'>
         <a href="https://twitter.com/UWCARK">
             <img src="http://www.transparentpng.com/thumb/twitter/twitter-png-3.png" alt="UWCARK Twitter" height ='50'>
         </a>
      </div>
-     <div class = 'col-md-1' style="vertical-align: bottom; display: table-cell; padding-top: 10px; padding-bottom: 20px; padding-left: 25px; padding-right: 25px;">
+     <div class = 'col-md-1'>
         <a href="https://www.uwcark.org/sites/uwcark.org/files/linked-in_1.png">
             <img src="https://cdn3.iconfinder.com/data/icons/free-social-icons/67/linkedin_circle_color-256.png" alt="UWCARK LinkedIn" height ='50'>
         </a>
      </div>
-     <div class = 'col-md-1' style="vertical-align: bottom; display: table-cell; padding-top: 10px; padding-bottom: 20px; padding-left: 25px; padding-right: 25px;">
+     <div class = 'col-md-1'>
         <a href="https://www.youtube.com/channel/UCY08y2xv6FmpcICnedFLhmQ">
             <img src="https://vignette.wikia.nocookie.net/ichc-channel/images/9/93/Youtube-circle.png/revision/latest?cb=20160419135307" alt="UWCARK Youtube" height ='50'>
         </a>
@@ -68,18 +70,29 @@
    <div class = 'col-md-1'></div> </div> </div></div>
 
         
-<div class = 'toolbar'>
-   <div class = 'row'> 
-     <div class = 'col-lg-2'><a href="https://www.uwcark.org/about-us" style="color:white;">ABOUT US</a></div>
-     <div class = 'col-lg-2'><a href="https://www.uwcark.org/direct-services" style="color:white;">OUR WORK</a></div>
-     <div class = 'col-lg-2'><a href="https://www.uwcark.org/volunteer" style="color:white;">GET INVOLVED</a></div>
-     <div class = 'col-lg-2'><a asp-area="" asp-controller="Home" asp-action="Index" style="color: white">COMMUNITY RESOURCES</a></div>
-     <div class = 'col-lg-2'><a asp-area="" asp-controller="Home" asp-action="GracesResults2" style="color: white">EVENTS</a></div>
-     <div class = 'col-lg-2'><a asp-area="" asp-controller="Organizations" asp-action="Index" style="color: white">LOGIN</a></div>
+<div class='topnav'>
+     <a href="https://www.uwcark.org/about-us" style="color:white;" id="firsttopnavitem">ABOUT US</a>
+     <a href="https://www.uwcark.org/direct-services" style="color:white;">OUR WORK</a>
+     <a href="https://www.uwcark.org/volunteer" style="color:white;">GET INVOLVED</a>
+     <a asp-area="" asp-controller="Home" asp-action="Index" style="color: white">COMMUNITY RESOURCES</a>
+     <a asp-area="" asp-controller="Home" asp-action="GracesResults2" style="color: white">EVENTS</a>
+     <a asp-area="" asp-controller="Organizations" asp-action="Index" id="lasttopnavitem" style="color: white">LOGIN</a>
+     <a href="javascript:void(0);" style="font-size:15px;" class="icon" onclick="topnavfunction()">&#9776;</a>
 </div>
 
- </div> 
-</div>
+    <script>       
+        function myFunction() {
+            var x = document.getElementById("myTopnav");
+            if (x.className === "topnav") {
+                x.className += " responsive";
+            } else {
+                x.className = "topnav";
+            }
+        }
+    </script>
+            
+ </div>
+        
 @RenderBody()
 
 

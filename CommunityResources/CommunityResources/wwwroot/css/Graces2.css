@@ -8,8 +8,9 @@ body {
     background-color: white
 }
 
-.toolbar {
+.topnav {
     background-color: #220081;
+    overflow: hidden;
     font-family: 'Open Sans', sans-serif;
     color: white;
     font-size: inherit;
@@ -17,7 +18,64 @@ body {
     font-weight: bolder
 }
 
-#results-title {
+.topnav a {
+    float: left;
+    dispaly: block;
+    color: white;
+    text-align: center;
+    padding: 16px 16px;
+    text-decoration: none;
+    font-size: 14px;
+    border-right: solid #7D81A0 1px;
+}
+
+.topnav a:hover {
+    background-color: #7D81A0;
+    color: #220081;
+    text-decoration: none;
+}
+
+.topnav .icon {
+    display: none;
+}
+
+#firsttopnavitem {
+    margin-left: 75px;
+    border-left: none;
+}
+
+#lasttopnavitem {
+    margin-right: 75px;
+    border-right: none
+
+}
+
+@media screen and (max-width: 600px) {
+    .topnav a.icon {
+        float: right;
+        display: block
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .topnav.responsive {
+        position: relative
+    }
+
+        .topnav.responsive .icon {
+            position: absolute;
+            right: 0;
+            top: 0
+        }
+
+        .topnav.responsive a {
+            float: none;
+            display: block;
+            text-align: left
+        }
+}
+
+.header-title {
     font-family: Helvetica Nueve, Helvetica, Arial, san-serif;
     font-size: large;
     font-weight: 900;
@@ -32,7 +90,7 @@ body {
     padding-top: 10px;
     padding-bottom: 20px;
     padding-left: 25px;
-    padding-right: 25px
+    padding-right: 25px;
 }
 
 #title {
@@ -126,15 +184,6 @@ body {
     padding-bottom: 20px;
     border: solid white 1px;
     text-align: center
-}
-
-.col-lg-2 {
-    color: white;
-    padding-top: 20px;
-    padding-bottom: 20px;
-    border: solid white 1px;
-    text-align: center;
-    font-size: 15px;
 }
 
 .topbutton1 {
