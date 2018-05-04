@@ -76,11 +76,12 @@ namespace CommunityResources.Controllers
             var reps = new SelectList(
                from c in _context.Times.Select(d => d.Repeat).Distinct().ToList() select c);
             ViewBag.repeats = reps;
-
+            ViewData["displayName"] = "Resources";
 
             System.Diagnostics.Debug.WriteLine("Trying to get clothing info");
             if (id == 1) {
-                organization = (from s in organization
+                ViewData["displayName"] = "Clothing";
+               organization = (from s in organization
                                 join ti in _context.Resources
                                 on s.Id equals ti.OrganizationId
                                 where ti.Clothing == 1
