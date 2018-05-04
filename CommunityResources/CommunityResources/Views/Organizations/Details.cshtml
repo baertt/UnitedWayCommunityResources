@@ -171,12 +171,12 @@
     @if (@ViewData["adminview"].Equals("admin"))
     {
         <div>
-            <a asp-action="Index">Back to List</a>
+            <a class="btn btn-primary" id="details-btn" asp-action="Index">Back to List</a>
         </div> }
     @if (!@ViewData["adminview"].Equals("admin"))
     {
         <div>
-            <a asp-area="" asp-controller="Home" asp-action="InitialResults" asp-route-id="@ViewData["adminview"]">Back to List</a>
+            <a class="btn btn-primary" id="details-btn" asp-area="" asp-controller="Home" asp-action="InitialResults" asp-route-id="@ViewData["adminview"]">Back to List</a>
 </div>}
     
 </body>
