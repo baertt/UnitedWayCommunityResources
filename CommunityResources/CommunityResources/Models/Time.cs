@@ -12,9 +12,11 @@ namespace CommunityResources.Models
         [Key]
         public int TimesId { get; set; }
 
+        [Required]
         [Display(Name = "Opening Time")]
         public string Time_Start { get; set; } //Use Military Time
         
+        [Required]
         [Display(Name = "Closing Time")]
         public string Time_End { get; set; }
         
