@@ -57,6 +57,7 @@
     <div>
         @Html.DropDownList("day",
             new List<SelectListItem> { 
+            new SelectListItem{Text=""},
             new SelectListItem{Text="Sunday"},
             new SelectListItem{Text="Monday"}, 
             new SelectListItem{Text="Tuesday"},
@@ -67,6 +68,7 @@
             new{@id="day1"})
         @Html.DropDownList("repeats",
                new List<SelectListItem> { 
+            new SelectListItem{Text=""},
             new SelectListItem{Text="1"},
             new SelectListItem{Text="2"}, 
             new SelectListItem{Text="3"},
