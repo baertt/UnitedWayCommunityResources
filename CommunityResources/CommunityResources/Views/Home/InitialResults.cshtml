@@ -39,7 +39,9 @@
             $("#datepicker").on("change",function(){
                 var selected = $(this).val();
                 var date = new Date(selected);
-                $('#displayDate').html(date.toLocaleDateString("en-US", { weekday: 'long' }));
+            
+                $("#myID").val(date.toLocaleDateString("en-US", { weekday: 'long' }));
+
                 });
         </script>
     </div>
@@ -49,7 +51,16 @@
     @using (Html.BeginForm("InitialResults", "Home", FormMethod.Get))
     {
     <div>
-        @Html.DropDownList("day", "Any Day")
+        @Html.DropDownList("day",  
+            new List<SelectListItem> { 
+            new SelectListItem{Text="Sunday"},
+            new SelectListItem{Text="Monday"}, 
+            new SelectListItem{Text="Tuesday"},
+            new SelectListItem{Text="Wednesday"},
+            new SelectListItem{Text="Thursday"},
+            new SelectListItem{Text="Friday"},
+            new SelectListItem{Text="Saturday"}}, 
+            new{@id="myID"})
         @Html.DropDownList("repeats", "Which Week")<br />
         <p>Start Time: </p>@Html.TextBox("timeS", "")<br /><br />
         <p>End Time: </p> @Html.TextBox("timeE", "")<br />
