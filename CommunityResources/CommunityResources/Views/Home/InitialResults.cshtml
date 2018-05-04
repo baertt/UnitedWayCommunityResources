@@ -38,7 +38,8 @@
         <script> $( "#datepicker" ).datepicker();
             $("#datepicker").on("change",function(){
                 var selected = $(this).val();
-                $('#displayDate').html(selected);
+                var date = new Date(selected);
+                $('#displayDate').html(date.toLocaleDateString("en-US", { weekday: 'long' }));
                 });
         </script>
     </div>
