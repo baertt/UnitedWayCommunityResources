@@ -123,8 +123,7 @@ namespace CommunityResources.Controllers
                 try
                 {
                     _context.Update(time);
-
-                    _context.Organizations.Where(m => m.Id == id).FirstOrDefault().Last_Updated = DateTime.Now.ToString();
+                    
                     await _context.SaveChangesAsync();
                 }
                 catch (DbUpdateConcurrencyException)

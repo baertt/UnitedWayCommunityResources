@@ -13,6 +13,8 @@
     <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
     <script src="//code.jquery.com/jquery-1.12.4.js"></script>
     <script src="//code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+    <script> src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-1.7-vsdoc.js"> </script>
+    
 </head>
 <body>
     <header class="container">
@@ -33,10 +35,11 @@
     </header>
     <h2>Results</h2>
 
-    
+
     <div id="datepicker">
-        <script> $( "#datepicker" ).datepicker();
-            $("#datepicker").on("change",function(){
+        <script>
+            $("#datepicker").datepicker();
+            $("#datepicker").on("change", function () {
                 var selected = $(this).val();
                 var date = new Date(selected);
 
@@ -51,7 +54,7 @@
     </div>
 
     <div id="displayDate"></div>
-    
+
     @using (Html.BeginForm("InitialResults", "Home", FormMethod.Get))
     {
     <div>
@@ -80,12 +83,14 @@
         <p>End Time: </p> @Html.TextBox("timeE", "")<br />
 
 
+
         <input id="datepicker" type="hidden" runat="server" />
 
         <br />
         <input type="submit" value="Filter" runat="server" OnClientClick="funct()" />
     </div>
     }
+
     <table class="table">
         <thead>
             <tr>
@@ -131,4 +136,5 @@
             }
         </tbody>
     </table>
+    <script src="~/js/site.js"></script>
 </body>

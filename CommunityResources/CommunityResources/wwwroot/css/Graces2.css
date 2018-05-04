@@ -30,8 +30,8 @@ body {
 }
 
 .topnav a:hover {
-    background-color: #7D81A0;
-    color: #220081;
+    background-color: #E7E8F2;
+    color: #161F7E;
     text-decoration: none;
 }
 
@@ -87,10 +87,18 @@ body {
 .col-md-1 {
     vertical-align: bottom;
     display: table-cell;
-    padding-top: 10px;
-    padding-bottom: 20px;
-    padding-left: 25px;
-    padding-right: 25px;
+    margin: 10px 0px;
+}
+
+ul#soc-med-list li {
+    margin-top: 15px;
+    margin-bottom: 5px;
+    display: inline-block;
+    text-align: 0 auto;
+}
+
+#firstsocmed {
+    margin-left: 50px;
 }
 
 #title {
@@ -313,5 +321,13 @@ tfoot {
     font-family: 'Open Sans', sans-serif;
     font-weight: bolder;
     font-size: x-large;
+}
+
+#details-btn {
+    font-size: 24px;
+    padding: 10px;
+    margin: 15px 50px;
+    background-color: #220081;
+    border: white;
 
 }
