@@ -49,6 +49,12 @@ $(document).ready(function () {
         } else {
             hours %= 13;
         }
+        if (hours == 12) {
+            standardTime = ' PM'
+        }
+        if (hours == 24) {
+            standardTime = ' AM'
+        }
 
         $('#stime').append('<option value="' + i + '">' + ('0' + (hours)).slice(-2) + ':' + ('0' + mins).slice(-2) + standardTime + '</option>');
     }
@@ -81,6 +87,12 @@ $(document).ready(function () {
             } else {
                 hours %= 13;
             }
+            if (hours == 12) {
+                standardTime = ' PM'
+            }
+            if (hours == 24) {
+                standardTime = ' AM'
+            }
             console.log("we are trying to add more times i =" + i + "");
             $('#etime').append('<option value="' + i + '">' + ('0' + (hours)).slice(-2) + ':' + ('0' + mins).slice(-2) + standardTime + '</option>');
         }
@@ -111,6 +123,12 @@ $(document).ready(function () {
             hours++;
         } else {
             hours %= 13;
+        }
+        if (hours == 12) {
+            standardTime = ' PM'
+        }
+        if (hours == 24) {
+            standardTime = ' AM'
         }
 
         $('#Start_Time').append('<option value="' + i + '">' + ('0' + (hours)).slice(-2) + ':' + ('0' + mins).slice(-2) + standardTime + '</option>');
@@ -144,6 +162,12 @@ $(document).ready(function () {
             } else {
                 hours %= 13;
             }
+            if (hours == 12) {
+                standardTime = ' PM'
+            }
+            if (hours == 24) {
+                standardTime = ' AM'
+            }
             console.log("we are trying to add more times i =" + i + "");
             $('#End_Time').append('<option value="' + i + '">' + ('0' + (hours)).slice(-2) + ':' + ('0' + mins).slice(-2) + standardTime + '</option>');
         }
@@ -175,41 +199,17 @@ $(document).ready(function () {
         } else {
             hours %= 13;
         }
+        if (hours == 12) {
+            standardTime = ' PM'
+        }
+        if (hours == 24) {
+            standardTime = ' AM'
+        }
 
         $('#S_Time').append('<option value="' + i + '">' + ('0' + (hours)).slice(-2) + ':' + ('0' + mins).slice(-2) + standardTime + '</option>');
+        $('#E_Time').append('<option value="' + i + '">' + ('0' + (hours)).slice(-2) + ':' + ('0' + mins).slice(-2) + standardTime + '</option>');
+
     }
-
-    $('#S_Time').on('change', function () {
-        console.log("just is just a test");
-        var meetingLength = 30;
-        var selectedTime = Number($('#S_Time').val());
-        var sum = meetingLength + selectedTime;
-        
-
-        for (var i = sum; i <= 2400; i += meetingLength) {
-            var mins = i % 100;
-            var hours = parseInt(i / 100);
-
-            if (mins > 59) {
-                mins = 0;
-                hours += 1;
-                i = hours * 100;
-            }
-
-            //Logic that converts hours to standard time am/pm
-            var standardTime = ' AM';
-
-            if (hours > 12) {
-                standardTime = ' PM';
-                hours %= 13;
-                hours++;
-            } else {
-                hours %= 13;
-            }
-            console.log("we are trying to add more times i =" + i + "");
-            $('#E_Time').append('<option value="' + i + '">' + ('0' + (hours)).slice(-2) + ':' + ('0' + mins).slice(-2) + standardTime + '</option>');
-        }
-    });
 
 });
 
