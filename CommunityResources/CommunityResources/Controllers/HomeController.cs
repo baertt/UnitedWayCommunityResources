@@ -80,7 +80,7 @@ namespace CommunityResources.Controllers
 
             System.Diagnostics.Debug.WriteLine("Trying to get clothing info");
             if (id == 1) {
-               ViewData["displayName"] = "Clothing";
+                ViewData["displayName"] = "Clothing";
                organization = (from s in organization
                                 join ti in _context.Resources
                                 on s.Id equals ti.OrganizationId
@@ -89,7 +89,6 @@ namespace CommunityResources.Controllers
             }
             else if (id == 2)
             {
-                ViewData["displayName"] = "Education";
                 organization = (from s in organization
                                 join ti in _context.Resources
                                 on s.Id equals ti.OrganizationId
@@ -98,7 +97,6 @@ namespace CommunityResources.Controllers
             }
             else if (id == 3)
             {
-                ViewData["displayName"] = "Employment";
                 organization = (from s in organization
                                 join ti in _context.Resources
                                 on s.Id equals ti.OrganizationId
@@ -107,7 +105,6 @@ namespace CommunityResources.Controllers
             }
             else if (id == 4)
             {
-                ViewData["displayName"] = "Finances";
                 organization = (from s in organization
                                 join ti in _context.Resources
                                 on s.Id equals ti.OrganizationId
@@ -116,7 +113,6 @@ namespace CommunityResources.Controllers
             }
             else if (id == 5)
             {
-                ViewData["displayName"] = "Food";
                 organization = (from s in organization
                                 join ti in _context.Resources
                                 on s.Id equals ti.OrganizationId
@@ -125,7 +121,6 @@ namespace CommunityResources.Controllers
             }
             else if (id == 6)
             {
-                ViewData["displayName"] = "Housing";
                 organization = (from s in organization
                                 join ti in _context.Resources
                                 on s.Id equals ti.OrganizationId
@@ -134,7 +129,6 @@ namespace CommunityResources.Controllers
             }
             else if (id == 7)
             {
-                ViewData["displayName"] = "Natural Disaster";
                 organization = (from s in organization
                                 join ti in _context.Resources
                                 on s.Id equals ti.OrganizationId
@@ -143,7 +137,6 @@ namespace CommunityResources.Controllers
             }
             else if (id == 8)
             {
-                ViewData["displayName"] = "Senior Assistance";
                 organization = (from s in organization
                                 join ti in _context.Resources
                                 on s.Id equals ti.OrganizationId
@@ -152,7 +145,6 @@ namespace CommunityResources.Controllers
             }
             else if (id == 9)
             {
-                ViewData["displayName"] = "Utilities / Rent Assistance";
                 organization = (from s in organization
                                 join ti in _context.Resources
                                 on s.Id equals ti.OrganizationId
@@ -161,7 +153,6 @@ namespace CommunityResources.Controllers
             }
             else if (id == 10)
             {
-                ViewData["displayName"] = "Medical / Prescription";
                 organization = (from s in organization
                                 join ti in _context.Resources
                                 on s.Id equals ti.OrganizationId
@@ -170,7 +161,6 @@ namespace CommunityResources.Controllers
             }
             else if (id == 11)
             {
-                ViewData["displayName"] = "Veterans Service";
                 organization = (from s in organization
                                 join ti in _context.Resources
                                 on s.Id equals ti.OrganizationId
@@ -179,7 +169,6 @@ namespace CommunityResources.Controllers
             }
             else if (id == 12)
             {
-                ViewData["displayName"] = "Miscellaneous / Other";
                 organization = (from s in organization
                                 join ti in _context.Resources
                                 on s.Id equals ti.OrganizationId

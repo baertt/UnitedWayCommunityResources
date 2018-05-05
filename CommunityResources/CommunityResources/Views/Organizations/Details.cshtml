@@ -24,16 +24,17 @@
                 <h1 class="col-sm-10" id="title"> @Html.DisplayFor(model => model.Name) </h1>
 
                 <div class="col-sm-2" id="google_translate_element"></div>
-                <div class="col-sm-3" id="google_translate_element">
-                    <script type="text/javascript">
-                        function googleTranslateElementInit() {
-                            new google.translate.TranslateElement({ pageLanguage: 'en', includedLanguages: 'de,es,fr,it,zh-CN,en', layout: google.translate.TranslateElement.InlineLayout.SIMPLE, autoDisplay: false }, 'google_translate_element');
-                        }
-                    </script>
-                    <script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit">
-                    </script>
-                </div>
-</header>
+                <script type="text/javascript">
+
+                    function googleTranslateElementInit() {
+                        new google.translate.TranslateElement({ pageLanguage: 'en', layout: google.translate.TranslateElement.InlineLayout.SIMPLE, autoDisplay: false }, 'google_translate_element');
+                    }
+
+                </script>
+                <script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+
+            </div>
+        </header>
         <hr />
         <dl class="dl-horizontal">
             <div class="row">
