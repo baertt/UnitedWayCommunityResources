@@ -25,7 +25,7 @@
 
                 function googleTranslateElementInit() {
 
-                    new google.translate.TranslateElement({ pageLanguage: 'en', includedLanguages: 'de,es,fr,it,zh-CN', layout: google.translate.TranslateElement.InlineLayout.SIMPLE, autoDisplay: false }, 'google_translate_element');
+                    new google.translate.TranslateElement({ pageLanguage: 'en', layout: google.translate.TranslateElement.InlineLayout.SIMPLE, autoDisplay: false }, 'google_translate_element');
 
                 }
 
@@ -40,7 +40,7 @@
 >>>>>>> 02f2ac911c9147f5f591037b4cf000532c26c36a
 
 
-    <div class="container" id="datepicker">
+    <div id="datepicker">
         <script>
             $("#datepicker").datepicker();
             $("#datepicker").on("change", function () {
@@ -61,6 +61,7 @@
 
     @using (Html.BeginForm("InitialResults", "Home", FormMethod.Get))
     {
+    <div>
         @Html.DropDownList("day",
              new List<SelectListItem> {
 new SelectListItem{Text=""},
@@ -81,32 +82,16 @@ new SelectListItem{Text="3"},
 new SelectListItem{Text="4"},
 new SelectListItem{Text="5"},
 new SelectListItem{Text="6"}},
-             new { @id = "week1" })
-        </div>
-       </div>
-      <div class="row" style="margin-left: 10px;">
-        <div class="col-md-2">Start Time:</div>
-          <div class="col-md-2">
-          <select name="timeS" id="stime">
              new { @id = "week1" })<br />
         <p>Start Time: </p>
                 <select name="timeS" id="stime">
             
             <option value="">--Select start time--</option>
-          </select>
-          </div>
-       </div>
-       <div class="row" style="margin-left: 10px;">
-        <div class="col-md-2">End Time:</div>
-          <div class="col-md-2">
-          <select name="timeE" id="etime">
                    </select><br /><br />
                 <p>End Time: </p>
                 <select name="timeE" id="etime">
             
             <option value="">--Select end time--</option>
-          </select>
-        </div>
                     </select><br />
 
 
@@ -117,6 +102,11 @@ new SelectListItem{Text="6"}},
             <input class="btn btn-primary" id="filter-btn" type="submit" value="Filter" runat="server" OnClientClick="funct()" style="margin:20px;"/>
         </div>
 =======
+        <input id="datepicker" type="hidden" runat="server" />
+
+        <br />
+        <input type="submit" value="Filter" runat="server" OnClientClick="funct()" />
+    </div>
 >>>>>>> 02f2ac911c9147f5f591037b4cf000532c26c36a
     }
 
@@ -177,5 +167,6 @@ new SelectListItem{Text="6"}},
   <script src="~/js/site.js"></script>
     
 =======
+    <script src="~/js/site.js"></script>
 >>>>>>> 02f2ac911c9147f5f591037b4cf000532c26c36a
 </body>
