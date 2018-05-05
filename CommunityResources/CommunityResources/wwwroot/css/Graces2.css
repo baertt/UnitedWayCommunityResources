@@ -50,6 +50,8 @@ body {
 
 }
 
+
+
 @media screen and (max-width: 600px) {
     .topnav a.icon {
         float: right;
@@ -110,26 +112,27 @@ ul#soc-med-list li {
     justify-content: center
 }
 
-#lang {
-    background-color: #220081;
-    color: white;
-    font-weight: bolder
-}
-
 .img-responsive {
     font-family: Helvetica Nueve, Helvetica, Arial, san-serif;
     display: block;
     margin-left: auto;
     margin-right: auto;
-    padding: 20px
 }
 
-.caption {
-    font-size: 25px;
-    color: #11C7C;
-    font-weight: bolder;
+.col-sm-3 a {
+    dispaly: block;
+    color: #220081;
     text-align: center;
-    padding-bottom: 75px;
+    padding: 16px 16px;
+    text-decoration: none;
+    font-size: 25px;
+    font-weight: 600;
+}
+
+.col-sm-3:hover {
+    background-color: #E7E8F2;
+    color: #220081;
+    text-decoration: none
 }
 
 #imgcred {
