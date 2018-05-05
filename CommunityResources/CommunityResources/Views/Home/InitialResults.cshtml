@@ -33,13 +33,16 @@
             <script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
         </div>
     </header>
+<<<<<<< HEAD
   <div class="init-results">
+=======
+    <h2>Results</h2>
+>>>>>>> 02f2ac911c9147f5f591037b4cf000532c26c36a
 
 
     <div class="container" id="datepicker">
         <script>
             $("#datepicker").datepicker();
-<!--            $("#datepicker").css({"display":"inline-block", "width":"400px"})-->
             $("#datepicker").on("change", function () {
                 var selected = $(this).val();
                 var date = new Date(selected);
@@ -58,9 +61,6 @@
 
     @using (Html.BeginForm("InitialResults", "Home", FormMethod.Get))
     {
-    <div class="row" style="margin-left: 10px;">
-      <div class="col-md-2">Select Date:</div>
-        <div class="col-md-2">
         @Html.DropDownList("day",
              new List<SelectListItem> {
 new SelectListItem{Text=""},
@@ -88,6 +88,10 @@ new SelectListItem{Text="6"}},
         <div class="col-md-2">Start Time:</div>
           <div class="col-md-2">
           <select name="timeS" id="stime">
+             new { @id = "week1" })<br />
+        <p>Start Time: </p>
+                <select name="timeS" id="stime">
+            
             <option value="">--Select start time--</option>
           </select>
           </div>
@@ -96,18 +100,24 @@ new SelectListItem{Text="6"}},
         <div class="col-md-2">End Time:</div>
           <div class="col-md-2">
           <select name="timeE" id="etime">
+                   </select><br /><br />
+                <p>End Time: </p>
+                <select name="timeE" id="etime">
+            
             <option value="">--Select end time--</option>
           </select>
         </div>
+                    </select><br />
 
-    </div>
 
-        <div class="row">
 
+<<<<<<< HEAD
             <input id="datepicker" type="hidden" runat="server" />
             
             <input class="btn btn-primary" id="filter-btn" type="submit" value="Filter" runat="server" OnClientClick="funct()" style="margin:20px;"/>
         </div>
+=======
+>>>>>>> 02f2ac911c9147f5f591037b4cf000532c26c36a
     }
 
     <h2>Results</h2>
@@ -156,6 +166,7 @@ new SelectListItem{Text="6"}},
             }
         </tbody>
     </table>
+<<<<<<< HEAD
 
     <div>
         <a class="btn btn-primary" id="ews-btn" asp-action="Index">Back to Resources</a>
@@ -165,4 +176,6 @@ new SelectListItem{Text="6"}},
 
   <script src="~/js/site.js"></script>
     
+=======
+>>>>>>> 02f2ac911c9147f5f591037b4cf000532c26c36a
 </body>

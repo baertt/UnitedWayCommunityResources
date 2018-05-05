@@ -73,8 +73,6 @@ body {
 
 }
 
-
-
 @media screen and (max-width: 600px) {
     .topnav a.icon {
         float: right;
@@ -135,6 +133,12 @@ ul#soc-med-list li {
     justify-content: center
 }
 
+#lang {
+    background-color: #220081;
+    color: white;
+    font-weight: bolder
+}
+
 .img-responsive {
     font-family: Helvetica Nueve, Helvetica, Arial, san-serif;
     display: block;
@@ -148,10 +152,8 @@ ul#soc-med-list li {
     text-align: center;
     padding: 16px 16px;
     text-decoration: none;
+.caption {
     font-size: 25px;
-    font-weight: 600;
-}
-
 .col-sm-3#home:hover {
     background-color: #E7E8F2;
     color: #220081;
@@ -413,6 +415,7 @@ tfoot {
         margin: 25px 50px
     }
 
+<<<<<<< HEAD
 #datepicker {
     font-size: 100%;
 }
@@ -429,4 +432,6 @@ tfoot {
 
 .table {
     width: 100%;
+=======
+>>>>>>> 02f2ac911c9147f5f591037b4cf000532c26c36a
 }
