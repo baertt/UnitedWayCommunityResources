@@ -13,90 +13,95 @@
     }
 
 </style></head>
+<body>
+  <div class="create-page">
+        
+    <h2>Create: Organization Information</h2>
+    <hr />
+        
+    <div class="row">
+        <div class="col-md-4">
+            <form asp-action="Create">
+                <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+                <div class="form-group">
+                    <h3><label asp-for="Name" class="control-label"></label></h3>
+                    <input asp-for="Name" class="form-control" id="inputName" />
+                    <br><br>
+                    <span asp-validation-for="Name" class="text-danger"></span>
+                </div>
+                <table>
+                    <tr>
+                        <th></th>
+                        <th>No</th>
+                        <th>Yes</th>
+                    </tr>
 
-<h2>Create Organization Information</h2>
+                    <tr class="form-group">
+                        <td>@Html.DisplayNameFor(model => model.Appointments_Available)</td>
+                        <td>
+                            <input type="radio" name="Appointments_Available" value="0" class="form-control" checked="checked">
+                        </td>
+                        <td>
+                            <input type="radio" name="Appointments_Available" value="1" class="form-control">
+                        </td>
 
-<hr />
-<div class="row">
-    <div class="col-md-4">
-        <form asp-action="Create">
-            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
-            <div class="form-group">
-                <h3><label asp-for="Name" class="control-label"></label></h3>
-                <input asp-for="Name" class="form-control" id="inputName" />
-                <span asp-validation-for="Name" class="text-danger"></span>
-            </div>
-            <table>
-                <tr>
-                    <th></th>
-                    <th>No</th>
-                    <th>Yes</th>
-                </tr>
+                    </tr>
+                    <tr class="form-group">
+                        <td>@Html.DisplayNameFor(model => model.Appointments_Required)</td>
 
-                <tr class="form-group">
-                    <td>@Html.DisplayNameFor(model => model.Appointments_Available)</td>
-                    <td>
-                        <input type="radio" name="Appointments_Available" value="0" class="form-control" checked="checked">
-                    </td>
-                    <td>
-                        <input type="radio" name="Appointments_Available" value="1" class="form-control">
-                    </td>
+                        <td>
+                            <input type="radio" name="Appointments_Required" value="0" class="form-control" checked="checked">
+                        </td>
+                        <td>
+                            <input type="radio" name="Appointments_Required" value="1" class="form-control">
+                        </td>
+                    </tr>
+                    <tr class="form-group">
+                        <td>
+                            @Html.DisplayNameFor(model => model.Photo_ID)
+                        </td>
+                        <td><input type="radio" name="Photo_ID" value="0" class="form-control" checked="checked"> </td>
+                        <td><input type="radio" name="Photo_ID" value="1" class="form-control">  </td>
+                    </tr>
+                    <tr class="form-group">
+                        <td> @Html.DisplayNameFor(model => model.Other_Requirements)</td>
+                        <td>
+                            <input type="radio" name="Other_Requirements" value="0" class="form-control" checked="checked">
+                        </td>
+                        <td>
+                            <input type="radio" name="Other_Requirements" value="1" class="form-control"> 
+                        </td>
 
-                </tr>
-                <tr class="form-group">
-                    <td>@Html.DisplayNameFor(model => model.Appointments_Required)</td>
-
-                    <td>
-                        <input type="radio" name="Appointments_Required" value="0" class="form-control" checked="checked">
-                    </td>
-                    <td>
-                        <input type="radio" name="Appointments_Required" value="1" class="form-control">
-                    </td>
-                </tr>
-                <tr class="form-group">
-                    <td>
-                        @Html.DisplayNameFor(model => model.Photo_ID)
-                    </td>
-                    <td><input type="radio" name="Photo_ID" value="0" class="form-control" checked="checked"> </td>
-                    <td><input type="radio" name="Photo_ID" value="1" class="form-control">  </td>
-                </tr>
-                <tr class="form-group">
-                    <td> @Html.DisplayNameFor(model => model.Other_Requirements)</td>
-                    <td>
-                        <input type="radio" name="Other_Requirements" value="0" class="form-control" checked="checked">
-                    </td>
-                    <td>
-                        <input type="radio" name="Other_Requirements" value="1" class="form-control"> 
-                    </td>
-
-                </tr>
-            </table>
-            <div class="form-group">
-                <label asp-for="Other_Requirements_Text" class="control-label" style="margin-top:25px"></label>
-                <input asp-for="Other_Requirements_Text" class="form-control" style="border: 2px solid #CFCFCF" />
-                <span asp-validation-for="Other_Requirements_Text" class="text-danger"></span>
-            </div> <br />
-            <div class="form-group">
-                <label asp-for="Additional_Comments" class="control-label" style="margin-top:25px"></label>
-                <input type="text" name="Additional_Comments" class="form-control" value="None" style="border: 2px solid #CFCFCF"/>
-                <span asp-validation-for="Additional_Comments" class="text-danger"></span>
-            </div> <br /><br />
-            <div class="form-group">
-                <label asp-for="Last_Updated" class="control-label"style="margin-top:25px"></label>
-                <input name="Last_Updated" id="Last_Updated" value="@DateTime.Now" readonly />
-                <span asp-validation-for="Last_Updated" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <input type="submit" value="Next" class="btn btn-default" />
-            </div>
-        </form>
+                    </tr>
+                </table>
+                <div class="form-group">
+                    <label asp-for="Other_Requirements_Text" class="control-label" style="margin-top:25px"></label>
+                    <input asp-for="Other_Requirements_Text" class="form-control" style="border: 2px solid #CFCFCF" />
+                    <span asp-validation-for="Other_Requirements_Text" class="text-danger"></span>
+                </div> <br />
+                <div class="form-group">
+                    <label asp-for="Additional_Comments" class="control-label" style="margin-top:25px"></label>
+                    <input type="text" name="Additional_Comments" class="form-control" value="None" style="border: 2px solid #CFCFCF"/>
+                    <span asp-validation-for="Additional_Comments" class="text-danger"></span>
+                </div> <br /><br />
+                <div class="form-group">
+                    <label asp-for="Last_Updated" class="control-label"style="margin-top:25px"></label>
+                    <input name="Last_Updated" id="Last_Updated" value="@DateTime.Now" readonly />
+                    <span asp-validation-for="Last_Updated" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <input type="submit" value="Next" class="btn btn-default" id="save-edit-btn"/>
+                </div>
+            </form>
+        </div>
     </div>
-</div>
 
-<div>
-    <a asp-action="Index">Exit</a> |
-</div>
+    <div>
+        <a class="btn btn-primary" id="ews-btn" asp-action="Index">Exit</a>
+    </div>
 
-@section Scripts {
-    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
-}
+    @section Scripts {
+        @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+    }
+  </div>
+</body>

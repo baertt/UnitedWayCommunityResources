@@ -8,6 +8,29 @@ body {
     background-color: white
 }
 
+.index-page {
+    margin: 25px 50px
+
+}
+
+.create-page {
+    margin: 25px 50px
+
+}
+
+.details-page {
+    margin: 25px 50px;
+}
+
+.edit-page {
+    margin: 25px 50px
+
+}
+
+.delete-page {
+    margin: 25px 50px;
+}
+
 .topnav {
     background-color: #220081;
     overflow: hidden;
@@ -79,10 +102,10 @@ body {
 
 .header-title {
     font-family: Helvetica Nueve, Helvetica, Arial, san-serif;
-    font-size: large;
+    font-size: x-large;
     font-weight: 900;
     color: #121B7C;
-    padding-left: 50px
+    padding: 65px 0 0 50px;
 
 }
 
@@ -148,10 +171,6 @@ ul#soc-med-list li {
 .col-sm-5 {
     border: 1px solid black;
     padding: 10px
-}
-
-.dl-horizontal {
-    margin: 50px;
 }
 
 
@@ -291,8 +310,72 @@ ul#soc-med-list li {
     border: 10px #ff8f00
 }
 
+#org-index-create-btn {
+    font-size: 24px;
+    padding: 10px;
+    background-color: #220081;
+    border: white;
+}
+
+#org-index-create-btn:hover {
+    background-color: #7077B0
+}
+
+#filter-btn {
+    font-size: 20px;
+    color: white;
+    padding: 5px 20px;
+    background-color: #FF8F00;
+    border: white;
+    border-radius: 0;
+}
+
+#filter-btn:hover {
+    background-color: #FEBF7D;
+}
+
 #org-filter {
-    margin-left: 10px;
+    margin-left: 5px;
+}
+
+#save-edit-btn {
+    font-size:24px; 
+    color:white; 
+    padding:10x 25px; 
+    background-color: #FF8F00; 
+    border:white; 
+    border-radius:5px;
+}
+
+
+#save-edit-btn:hover {
+    background-color: #FEBF7D;
+}
+
+#delete-btn {
+    font-size: 24px;
+    color: white;
+    padding: 10x 25px;
+    background-color: #FF0000;
+    border: white;
+    border-radius: 5px
+}
+
+
+#delete-btn:hover {
+    background-color: #F5847D;
+
+}
+
+#ews-btn {
+    font-size: 24px;
+    padding: 10px;
+    background-color: #220081;
+    border: white
+}
+
+#ews-btn:hover {
+    background-color: #7077B0
 }
 
 form input[type=text] {
@@ -326,39 +409,24 @@ tfoot {
     font-size: x-large;
 }
 
-#details-btn {
-    font-size: 24px;
-    padding: 10px;
-    margin: 15px 50px;
-    background-color: #220081;
-    border: white;
-
-}
-
-#init-restuls-back-btn {
-    font-size: 24px;
-    padding: 10px;
-    margin: 15px 50px;
-    background-color: #220081;
-    border: white
-}
-
-#init-restuls-filter {
-    font-size: 16px;
-    padding: 10px;
-    margin: 15px 50px;
-    background-color: #FF8F00;
-    border: white;
-}
-
 .init-results {
-    margin: 25px 50px;
-}
+        margin: 25px 50px
+    }
 
 #datepicker {
     font-size: 100%;
 }
 
 .col-md-2 {
-    margin: 10px 0px;
+    margin: 10px 0 5px 0;
+    padding: 0;
+
+}
+
+.contacts-page {
+    margin: 25px 50px;
+}
+
+.table {
+    width: 100%;
 }

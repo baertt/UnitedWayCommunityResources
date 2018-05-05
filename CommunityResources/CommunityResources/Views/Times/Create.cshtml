@@ -17,69 +17,80 @@
 
 </head>
 <body>
-<h2>Create</h2>
+  <div class="create-page">
 
-<h4>Time</h4>
-<hr />
-<div class="row">
-    <div class="col-md-4">
-        <form asp-action="Create">
-            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+    <h2>Create: Time</h2>
+    <hr />
+        
+    <div class="row">
+        <div class="col-md-4">
+            <form asp-action="Create">
+                <div asp-validation-summary="ModelOnly" class="text-danger"></div>
 
-            <div class="form-group">
-                <label asp-for="OrganizationId" class="control-label"></label>
-                <select asp-for="OrganizationId" class="form-control" asp-items="ViewBag.OrganizationId" style="border: 2px solid #CFCFCF"></select>
-            </div>
-            <div class="form-group">
-                <label asp-for="Time_Start" class="control-label"></label><br />
-                <p>Start Time: </p>
-                <select name="Time_Start" id="Start_Time">
-                    <option value="">--Select start time--</option>
-                </select><br /><br />
-                <span asp-validation-for="Time_Start" class="text-danger"></span><br />
-            </div>
-            <div class="form-group">
-                <br />
-                <label asp-for="Time_End" class="control-label"></label><br />
-                <select name="Time_End" id="End_Time">
-                    <option value="">--Select start time--</option>
-                </select><br /><br />
-                <span asp-validation-for="Time_End" class="text-danger"></span>
-            </div><br />
-
-            <div class="form-group"><br />
-                <label asp-for="Repeat" class="control-label"></label><br />
-                                                                      <select name="Repeat">
-                                                                          <option value="0">Every Week</option>
-                                                                          <option value="1">1st Week of the Month</option>
-                                                                          <option value="2">2nd Week of the Month</option>
-                                                                          <option value="3">3rd Week of the Month</option>
-                                                                          <option value="4">4th Week of the Month</option>
-                                                                      </select>
-                <span asp-validation-for="Repeat" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <label asp-for="Day" class="control-label"></label><br />
-                                                                   <select name="Day">
-                                                                       <option value="Monday">Monday</option>
-                                                                       <option value="Tuesday">Tuesday</option>
-                                                                       <option value="Wednesday">Wednesday</option>
-                                                                       <option value="Thursday">Thursday</option>
-                                                                       <option value="Friday">Friday</option>
-                                                                       <option value="Saturday">Saturday</option>
-                                                                       <option value="Sunday">Sunday</option>
-                                                                   </select>
-                <span asp-validation-for="Day" class="text-danger"></span>
-            </div>
-            <div class="form-group"><br /><br />
-                <input type="submit" value="Create" class="btn btn-default" />
-            </div>
-        </form>
+                <div class="form-group">
+                    <label asp-for="OrganizationId" class="control-label"></label>
+                    <select asp-for="OrganizationId" class="form-control" asp-items="ViewBag.OrganizationId" style="border: 2px solid #CFCFCF"></select>
+                </div>
+                    
+                <div class="form-group">
+                    <label asp-for="Time_Start" class="control-label"></label>
+                    <br>
+                    <select name="Time_Start" id="Start_Time">
+                        <option value="">--Select start time--</option>
+                    </select>
+                    <br>
+                    <span asp-validation-for="Time_Start" class="text-danger"></span>
+                </div>
+                    
+                <div class="form-group">
+                    <label asp-for="Time_End" class="control-label"></label>
+                    <br>
+                    <select name="Time_End" id="End_Time">
+                        <option value="">--Select start time--</option>
+                    </select>
+                    <br>
+                    <span asp-validation-for="Time_End" class="text-danger"></span>
+                </div>
+                    
+                <div class="form-group">
+                    <label asp-for="Repeat" class="control-label"></label>
+                    <br>
+                                                                          <select name="Repeat">
+                                                                              <option value="0">Every Week</option>
+                                                                              <option value="1">1st Week of the Month</option>
+                                                                              <option value="2">2nd Week of the Month</option>
+                                                                              <option value="3">3rd Week of the Month</option>
+                                                                              <option value="4">4th Week of the Month</option>
+                                                                          </select>
+                    <br>
+                    <span asp-validation-for="Repeat" class="text-danger"></span>
+                </div>
+                    
+                <div class="form-group">
+                    <label asp-for="Day" class="control-label"></label>
+                    <br>
+                                                                       <select name="Day">
+                                                                           <option value="Monday">Monday</option>
+                                                                           <option value="Tuesday">Tuesday</option>
+                                                                           <option value="Wednesday">Wednesday</option>
+                                                                           <option value="Thursday">Thursday</option>
+                                                                           <option value="Friday">Friday</option>
+                                                                           <option value="Saturday">Saturday</option>
+                                                                           <option value="Sunday">Sunday</option>
+                                                                       </select>
+                    <span asp-validation-for="Day" class="text-danger"></span>
+                </div>
+                    
+                <div class="form-group">
+                    <input type="submit" value="Create" class="btn btn-default" id="save-edit-btn"/>
+                </div>
+            </form>
+        </div>
     </div>
-</div>
 
-<div>
-    <a asp-action="AddTimes" asp-route-id="@ViewData["FK"]">Cancel</a>
-</div>
-<script src="~/js/site.js"></script>
+    <div>
+        <a class="btn btn-primary" id="ews-btn" asp-action="AddTimes" asp-route-id="@ViewData["FK"]">Cancel</a>
+    </div>
+  </div>
+    <script src="~/js/site.js"></script>
 </body>

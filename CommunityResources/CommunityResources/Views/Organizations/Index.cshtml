@@ -44,17 +44,19 @@
 
     </header>
 
-<div class='organization-index'>
-    
+<div class='index-page'>
+        
     <h2>
-        <a asp-action="Create">Create New Resource</a>
+        <a class="btn btn-primary" id="org-index-create-btn" asp-action="Create">Create New Resource</a>
     </h2><br />
     @using (Html.BeginForm("Index", "Organizations", FormMethod.Get))
     {
     <div>
-        <h4> Search Organization By Name:</h4>
-        <input type="text" name="searchString" value="" style="border: 2px solid #CFCFCF" />
-        <input type="submit" value="Filter" size="5" />
+        <h4> Search Organization by Name:</h4>
+        <div class="row" id="org-filter">
+            <input type="text" name="searchString" value="" style="border: 2px solid #CFCFCF;" />
+            <input class="btn btn-primary" id="filter-btn" type="submit" value="Filter" size="5"/>
+        </div>
     </div>
     }
 

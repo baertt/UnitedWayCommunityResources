@@ -34,7 +34,6 @@
         </div>
     </header>
   <div class="init-results">
-    <h2>Results</h2>
 
 
     <div class="container" id="datepicker">
@@ -73,8 +72,6 @@ new SelectListItem{Text="Thursday"},
 new SelectListItem{Text="Friday"},
 new SelectListItem{Text="Saturday"}},
              new { @id = "day1" })
-        </div>
-        <div class="col-md-2">
         @Html.DropDownList("repeats",
                 new List<SelectListItem> {
 new SelectListItem{Text=""},
@@ -109,10 +106,11 @@ new SelectListItem{Text="6"}},
 
             <input id="datepicker" type="hidden" runat="server" />
             
-            <input type="submit" value="Filter" runat="server" OnClientClick="funct()" style="font-size:20px; color:white; padding:5px 20px; margin:10px 20px 50px 20px; background-color:#FF8F00; border:white; border-radius:5px"/>
+            <input class="btn btn-primary" id="filter-btn" type="submit" value="Filter" runat="server" OnClientClick="funct()" style="margin:20px;"/>
         </div>
     }
 
+    <h2>Results</h2>
     <table class="table">
         <thead>
             <tr>
@@ -158,11 +156,13 @@ new SelectListItem{Text="6"}},
             }
         </tbody>
     </table>
-    <script src="~/js/site.js"></script>
-  </div>
 
     <div>
-        <a class="btn btn-primary" id="init-restuls-back-btn" asp-action="Index">Back to Resources</a>
+        <a class="btn btn-primary" id="ews-btn" asp-action="Index">Back to Resources</a>
     </div>
+        
+  </div>
+
+  <script src="~/js/site.js"></script>
     
 </body>

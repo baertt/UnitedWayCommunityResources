@@ -3,83 +3,90 @@
     ViewData["Title"] = "AddTimes";
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
+<body>
+  <div class="edit-page">
+        
+    <h2> Edit Times</h2>
+    <hr />
 
-<h2> Add More Times </h2>
+    <h3>
+        <a class="btn btn-primary" id="org-index-create-btn" asp-action="Create" asp-route-id=@ViewData["FK"]>Add Another Time</a>
+    </h3>
 
-<h3>
-    <a asp-action="Create" asp-route-id=@ViewData["FK"]>Add Another Time</a>
-</h3>
-
-<table class="table">
-    <thead>
-        <tr>
-            <th>
-                @Html.DisplayNameFor(model => model.Time_Start)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.Time_End)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.Repeat)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.Day)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.Organization)
-            </th>
-            <th></th>
-        </tr>
-    </thead>
-    <tbody>
-        @foreach (var item in Model)
+    <table class="table">
+        <thead>
+            <tr>
+                <th>
+                    @Html.DisplayNameFor(model => model.Organization)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Day)
+                </th>
+                <!--<th>
+                    @Html.DisplayNameFor(model => model.Repeat)
+                </th>-->
+                <th>
+                    @Html.DisplayNameFor(model => model.Time_Start)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Time_End)
+                </th>
+                <th></th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var item in Model)
+            {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Organization.Name)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Day)
+                </td>
+                <!--@if (item.Repeat.Equals(0))
         {
-        <tr>
             <td>
-                @Html.DisplayFor(modelItem => item.Time_Start)
-            </td>
+                Every Week
+            </td>}
+                @if (item.Repeat.Equals(1))
+        {
             <td>
-                @Html.DisplayFor(modelItem => item.Time_End)
-            </td>
-            @if (item.Repeat.Equals(0))
-    {
-        <td>
-            Every Week
-        </td>}
-            @if (item.Repeat.Equals(1))
-    {
-        <td>
-            1st Week
-        </td>}
-            @if (item.Repeat.Equals(2))
-    {
-        <td>
-            2nd Week
-        </td>}
-            @if (item.Repeat.Equals(3))
-    {
-        <td>
-            3rd Week
-        </td>}
-            @if (item.Repeat.Equals(4))
-    {
-        <td>
-            4th Week
-        </td>}
+                1st Week
+            </td>}
+                @if (item.Repeat.Equals(2))
+        {
             <td>
-                @Html.DisplayFor(modelItem => item.Day)
-            </td>
+                2nd Week
+            </td>}
+                @if (item.Repeat.Equals(3))
+        {
             <td>
-                @Html.DisplayFor(modelItem => item.Organization.Name)
-            </td>
+                3rd Week
+            </td>}
+                @if (item.Repeat.Equals(4))
+        {
             <td>
-                <a asp-action="Edit" asp-route-id="@item.TimesId">Edit</a> |
-                <a asp-action="Delete" asp-route-id="@item.TimesId" >Delete</a>
-            </td>
-        </tr>
-        }
-    </tbody>
-</table>
-<h3>
-    <a asp-controller="Organizations" asp-action="Index">Finish</a>
-</h3>
+                4th Week
+            </td>}-->
+                <td>
+                    @Html.DisplayFor(modelItem => item.Time_Start)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Time_End)
+                </td>
+                <td>
+                    <a asp-action="Edit" asp-route-id="@item.TimesId">Edit</a> |
+                    <a asp-action="Delete" asp-route-id="@item.TimesId" >Delete</a>
+                </td>
+            </tr>
+            }
+        </tbody>
+    </table>
+    <h3>
+        <a class="btn btn-primary" id="ews-btn" asp-controller="Organizations" asp-action="Index">Finish</a>
+    </h3>
+  </div>
+</body>
+
+<script src="~/js/site.js"></script>

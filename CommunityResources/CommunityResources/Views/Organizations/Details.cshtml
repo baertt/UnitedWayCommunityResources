@@ -15,7 +15,7 @@
 </head>
 
 <body>
-
+  <div class="details-page">
     <div>
         <header class="container">
 
@@ -100,7 +100,7 @@
                     <table class="table">
                         <tr>
                             <th>Day</th>
-                            <th>Week of the Month</th>
+<!--                            <th>Week of the Month</th>-->
                             <th>Opening Time</th>
                             <th>Closing Time</th>
                         </tr>
@@ -108,7 +108,7 @@
                         {
                             <tr>
                                 <td> @Html.DisplayFor(modelItem => item.Day) </td>
-                                <td> @Html.DisplayFor(modelItem => item.Repeat) </td>
+<!--                                <td> @Html.DisplayFor(modelItem => item.Repeat) </td>-->
                                 <td> @Html.DisplayFor(modelItem => item.Time_Start) </td>
                                 <td> @Html.DisplayFor(modelItem => item.Time_End) </td>
                             </tr>
@@ -168,15 +168,17 @@
             <dd> @Html.DisplayFor(modelItem => Model.Resources.Other_Resources_Text) </dd>}
         </dl>
     </div>
+    <br><br>
     @if (@ViewData["adminview"].Equals("admin"))
     {
         <div>
-            <a class="btn btn-primary" id="details-btn" asp-action="Index">Back to List</a>
+            <a class="btn btn-primary" id="ews-btn" asp-action="Index">Back to List</a>
         </div> }
     @if (!@ViewData["adminview"].Equals("admin"))
     {
         <div>
-            <a class="btn btn-primary" id="details-btn" asp-area="" asp-controller="Home" asp-action="InitialResults" asp-route-id="@ViewData["adminview"]">Back to List</a>
-</div>}
+            <a class="btn btn-primary" id="ews-btn" asp-area="" asp-controller="Home" asp-action="InitialResults" asp-route-id="@ViewData["adminview"]">Back to List</a>
+        </div>}
+  </div>
     
 </body>

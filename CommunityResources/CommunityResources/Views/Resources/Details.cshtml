@@ -5,99 +5,107 @@
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
-<h2>Details</h2>
+<body>
+  <div class="details-page">
 
-<div>
-    <h4>Resource</h4>
-    <hr />
-    <dl class="dl-horizontal">
-        <dt>
-            @Html.DisplayNameFor(model => model.Clothing)
-        </dt>
-        <dd>
-            @Html.DisplayFor(model => model.Clothing)
-        </dd>
-        <dt>
-            @Html.DisplayNameFor(model => model.Education)
-        </dt>
-        <dd>
-            @Html.DisplayFor(model => model.Education)
-        </dd>
-        <dt>
-            @Html.DisplayNameFor(model => model.Employment)
-        </dt>
-        <dd>
-            @Html.DisplayFor(model => model.Employment)
-        </dd>
-        <dt>
-            @Html.DisplayNameFor(model => model.Finances)
-        </dt>
-        <dd>
-            @Html.DisplayFor(model => model.Finances)
-        </dd>
-        <dt>
-            @Html.DisplayNameFor(model => model.Food)
-        </dt>
-        <dd>
-            @Html.DisplayFor(model => model.Food)
-        </dd>
-        <dt>
-            @Html.DisplayNameFor(model => model.Housing)
-        </dt>
-        <dd>
-            @Html.DisplayFor(model => model.Housing)
-        </dd>
-        <dt>
-            @Html.DisplayNameFor(model => model.Natural_Disaster)
-        </dt>
-        <dd>
-            @Html.DisplayFor(model => model.Natural_Disaster)
-        </dd>
-        <dt>
-            @Html.DisplayNameFor(model => model.Senior)
-        </dt>
-        <dd>
-            @Html.DisplayFor(model => model.Senior)
-        </dd>
-        <dt>
-            @Html.DisplayNameFor(model => model.Rent_Utilities)
-        </dt>
-        <dd>
-            @Html.DisplayFor(model => model.Rent_Utilities)
-        </dd>
-        <dt>
-            @Html.DisplayNameFor(model => model.Medical_Prescription)
-        </dt>
-        <dd>
-            @Html.DisplayFor(model => model.Medical_Prescription)
-        </dd>
-        <dt>
-            @Html.DisplayNameFor(model => model.Veterans)
-        </dt>
-        <dd>
-            @Html.DisplayFor(model => model.Veterans)
-        </dd>
-        <dt>
-            @Html.DisplayNameFor(model => model.Other_Resources)
-        </dt>
-        <dd>
-            @Html.DisplayFor(model => model.Other_Resources)
-        </dd>
-        <dt>
-            @Html.DisplayNameFor(model => model.Other_Resources_Text)
-        </dt>
-        <dd>
-            @Html.DisplayFor(model => model.Other_Resources_Text)
-        </dd>
-        <dt>
-            @Html.DisplayNameFor(model => model.Organization)
-        </dt>
-        <dd>
-            @Html.DisplayFor(model => model.Organization.Name)
-        </dd>
-    </dl>
-</div>
-<div>
-    <a asp-action="Edit" asp-route-id="@Model.Id">Edit</a> |
-    <a asp-action="Index">Back to List</a>
-</div>
+    <h2>Details</h2>
+
+    <div>
+        <h4>Resource</h4>
+        <hr />
+        <dl class="dl-horizontal">
+            <dt>
+                @Html.DisplayNameFor(model => model.Clothing)
+            </dt>
+            <dd>
+                @Html.DisplayFor(model => model.Clothing)
+            </dd>
+            <dt>
+                @Html.DisplayNameFor(model => model.Education)
+            </dt>
+            <dd>
+                @Html.DisplayFor(model => model.Education)
+            </dd>
+            <dt>
+                @Html.DisplayNameFor(model => model.Employment)
+            </dt>
+            <dd>
+                @Html.DisplayFor(model => model.Employment)
+            </dd>
+            <dt>
+                @Html.DisplayNameFor(model => model.Finances)
+            </dt>
+            <dd>
+                @Html.DisplayFor(model => model.Finances)
+            </dd>
+            <dt>
+                @Html.DisplayNameFor(model => model.Food)
+            </dt>
+            <dd>
+                @Html.DisplayFor(model => model.Food)
+            </dd>
+            <dt>
+                @Html.DisplayNameFor(model => model.Housing)
+            </dt>
+            <dd>
+                @Html.DisplayFor(model => model.Housing)
+            </dd>
+            <dt>
+                @Html.DisplayNameFor(model => model.Natural_Disaster)
+            </dt>
+            <dd>
+                @Html.DisplayFor(model => model.Natural_Disaster)
+            </dd>
+            <dt>
+                @Html.DisplayNameFor(model => model.Senior)
+            </dt>
+            <dd>
+                @Html.DisplayFor(model => model.Senior)
+            </dd>
+            <dt>
+                @Html.DisplayNameFor(model => model.Rent_Utilities)
+            </dt>
+            <dd>
+                @Html.DisplayFor(model => model.Rent_Utilities)
+            </dd>
+            <dt>
+                @Html.DisplayNameFor(model => model.Medical_Prescription)
+            </dt>
+            <dd>
+                @Html.DisplayFor(model => model.Medical_Prescription)
+            </dd>
+            <dt>
+                @Html.DisplayNameFor(model => model.Veterans)
+            </dt>
+            <dd>
+                @Html.DisplayFor(model => model.Veterans)
+            </dd>
+            <dt>
+                @Html.DisplayNameFor(model => model.Other_Resources)
+            </dt>
+            <dd>
+                @Html.DisplayFor(model => model.Other_Resources)
+            </dd>
+            <dt>
+                @Html.DisplayNameFor(model => model.Other_Resources_Text)
+            </dt>
+            <dd>
+                @Html.DisplayFor(model => model.Other_Resources_Text)
+            </dd>
+            <dt>
+                @Html.DisplayNameFor(model => model.Organization)
+            </dt>
+            <dd>
+                @Html.DisplayFor(model => model.Organization.Name)
+            </dd>
+        </dl>
+    </div>
+    <div>
+        <a asp-action="Edit" asp-route-id="@Model.Id" class="btn btn-default" id="save-edit-btn">Edit</a>
+    </div>
+    <br><br>
+    <div>
+        <a class="btn btn-primary" id="ews-btn" asp-action="Index">Back to List</a>
+    </div>
+  </div>
+</body>

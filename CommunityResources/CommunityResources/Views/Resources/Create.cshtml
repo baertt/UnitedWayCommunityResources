@@ -5,169 +5,170 @@
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
-<h2>Create</h2>
-
-<h4>Resource</h4>
-<hr />
-<div class="row">
-    <div class="col-md-4">
-        <form asp-action="Create">
-            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
-            <div class="form-group">
-                <label asp-for="OrganizationId" class="control-label"></label>
-                <select asp-for="OrganizationId" class="form-control" asp-items="ViewBag.OrganizationId"></select>
-            </div>
-            <table>
-                <tr>
-                    <th></th>
-                    <th>No</th>
-                    <th>Yes</th>
-                </tr>
-                <tr class="form-group">
-                    <td>
-                        <label asp-for="Clothing" class="control-label"></label>
-                    </td>
-                    <td>
-                        <input type="radio" name="Clothing" value="0" class="form-control" checked="checked">
-                    </td>
-                    <td>
-                        <input type="radio" name="Clothing" value="1" class="form-control">
-                    </td>
-                </tr>
-                <tr class="form-group">
-                    <td>
-                        <label asp-for="Education" class="control-label"></label>
-                    </td>
-                    <td>
-                        <input type="radio" name="Education" value="0" class="form-control" checked="checked">
-                    </td>
-                    <td>
-                        <input type="radio" name="Education" value="1" class="form-control">
-                    </td>
-                </tr>
-                <tr class="form-group">
-                    <td>
-                        <label asp-for="Employment" class="control-label"></label>
-                    </td>
-                    <td>
-                        <input type="radio" name="Employment" value="0" class="form-control" checked="checked">
-                    </td>
-                    <td>
-                        <input type="radio" name="Employment" value="1" class="form-control">
-                    </td>
-                </tr>
-                <tr class="form-group">
-                    <td>
-                        <label asp-for="Finances" class="control-label"></label>
-                    </td>
-                    <td>
-                        <input type="radio" name="Finances" value="0" class="form-control" checked="checked">
-                    </td>
-                    <td>
-                        <input type="radio" name="Finances" value="1" class="form-control">
-                    </td>
-                </tr>
-                <tr class="form-group">
-                    <td>
-                        <label asp-for="Food" class="control-label"></label>
-                    </td>
-                    <td>
-                        <input type="radio" name="Food" value="0" class="form-control" checked="checked">
-                    </td>
-                    <td>
-                        <input type="radio" name="Food" value="1" class="form-control">
-                    </td>
-                </tr>
-                <tr class="form-group">
-                    <td>
-                        <label asp-for="Housing" class="control-label"></label>
-                    </td>
-                    <td>
-                        <input type="radio" name="Housing" value="0" class="form-control" checked="checked">
-                    </td>
-                    <td>
-                        <input type="radio" name="Housing" value="1" class="form-control">
-                    </td>
-                </tr>
-                <tr class="form-group">
-                    <td>
-                        <label asp-for="Natural_Disaster" class="control-label"></label>
-                    </td>
-                    <td>
-                        <input type="radio" name="Natural_Disaster" value="0" class="form-control" checked="checked">
-                    </td>
-                    <td>
-                        <input type="radio" name="Natural_Disaster" value="1" class="form-control">
-                    </td>
-                </tr>
-                <tr class="form-group">
-                    <td>
-                        <label asp-for="Senior" class="control-label"></label>
-                    </td>
-                    <td>
-                        <input type="radio" name="Senior" value="0" class="form-control" checked="checked">
-                    </td>
-                    <td>
-                        <input type="radio" name="Senior" value="1" class="form-control">
-                    </td>
-                </tr>
-                <tr class="form-group">
-                    <td>
-                        <label asp-for="Rent_Utilities" class="control-label"></label>
-                    </td>
-                    <td>
-                        <input type="radio" name="Rent_Utilities" value="0" class="form-control" checked="checked">
-                    </td>
-                    <td>
-                        <input type="radio" name="Rent_Utilities" value="1" class="form-control">
-                    </td>
-                </tr>
-                <tr class="form-group">
-                    <td>
-                        <label asp-for="Medical_Prescription" class="control-label"></label>
-                    </td>
-                    <td>
-                        <input type="radio" name="Medical_Prescription" value="0" class="form-control" checked="checked">
-                    </td>
-                    <td>
-                        <input type="radio" name="Medical_Prescription" value="1" class="form-control">
-                    </td>
-                </tr>
-                <tr class="form-group">
-                    <td>
-                        <label asp-for="Veterans" class="control-label"></label>
-                    </td>
-                    <td>
-                        <input type="radio" name="Veterans" value="0" class="form-control" checked="checked">
-                    </td>
-                    <td>
-                        <input type="radio" name="Veterans" value="1" class="form-control">
-                    </td>
-                </tr>
-                <tr class="form-group">
-                    <td>
-                        <label asp-for="Other_Resources" class="control-label"></label>
-                    </td>
-                    <td>
-                        <input type="radio" name="Other_Resources" value="0" class="form-control" checked="checked">
-                    </td>
-                    <td>
-                        <input type="radio" name="Other_Resources" value="1" class="form-control">
-                    </td>
-                </tr>
-            </table>
-                <div class="form-group"><br />
-                    
-                        <label asp-for="Other_Resources_Text" class="control-label"></label>
-                    <input asp-for="Other_Resources_Text" class="form-control" style="border: 2px solid #CFCFCF"/>
-                        <span asp-validation-for="Other_Resources_Text" class="text-danger"></span>
-</div>
-                
-                    <div class="form-group"><br /><br />
-                        <input type="submit" value="Next" class="btn btn-default" />
-                    </div>
-</form>
+<body>
+  <div class="create-page">
+    <h2>Create: Resource Information</h2>
+    <hr />
+    <div class="row">
+        <div class="col-md-4">
+            <form asp-action="Create">
+                <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+                <div class="form-group">
+                    <label asp-for="OrganizationId" class="control-label"></label>
+                    <select asp-for="OrganizationId" class="form-control" asp-items="ViewBag.OrganizationId"></select>
+                </div>
+                <table>
+                    <tr>
+                        <th></th>
+                        <th>No</th>
+                        <th>Yes</th>
+                    </tr>
+                    <tr class="form-group">
+                        <td>
+                            <label asp-for="Clothing" class="control-label"></label>
+                        </td>
+                        <td>
+                            <input type="radio" name="Clothing" value="0" class="form-control" checked="checked">
+                        </td>
+                        <td>
+                            <input type="radio" name="Clothing" value="1" class="form-control">
+                        </td>
+                    </tr>
+                    <tr class="form-group">
+                        <td>
+                            <label asp-for="Education" class="control-label"></label>
+                        </td>
+                        <td>
+                            <input type="radio" name="Education" value="0" class="form-control" checked="checked">
+                        </td>
+                        <td>
+                            <input type="radio" name="Education" value="1" class="form-control">
+                        </td>
+                    </tr>
+                    <tr class="form-group">
+                        <td>
+                            <label asp-for="Employment" class="control-label"></label>
+                        </td>
+                        <td>
+                            <input type="radio" name="Employment" value="0" class="form-control" checked="checked">
+                        </td>
+                        <td>
+                            <input type="radio" name="Employment" value="1" class="form-control">
+                        </td>
+                    </tr>
+                    <tr class="form-group">
+                        <td>
+                            <label asp-for="Finances" class="control-label"></label>
+                        </td>
+                        <td>
+                            <input type="radio" name="Finances" value="0" class="form-control" checked="checked">
+                        </td>
+                        <td>
+                            <input type="radio" name="Finances" value="1" class="form-control">
+                        </td>
+                    </tr>
+                    <tr class="form-group">
+                        <td>
+                            <label asp-for="Food" class="control-label"></label>
+                        </td>
+                        <td>
+                            <input type="radio" name="Food" value="0" class="form-control" checked="checked">
+                        </td>
+                        <td>
+                            <input type="radio" name="Food" value="1" class="form-control">
+                        </td>
+                    </tr>
+                    <tr class="form-group">
+                        <td>
+                            <label asp-for="Housing" class="control-label"></label>
+                        </td>
+                        <td>
+                            <input type="radio" name="Housing" value="0" class="form-control" checked="checked">
+                        </td>
+                        <td>
+                            <input type="radio" name="Housing" value="1" class="form-control">
+                        </td>
+                    </tr>
+                    <tr class="form-group">
+                        <td>
+                            <label asp-for="Natural_Disaster" class="control-label"></label>
+                        </td>
+                        <td>
+                            <input type="radio" name="Natural_Disaster" value="0" class="form-control" checked="checked">
+                        </td>
+                        <td>
+                            <input type="radio" name="Natural_Disaster" value="1" class="form-control">
+                        </td>
+                    </tr>
+                    <tr class="form-group">
+                        <td>
+                            <label asp-for="Senior" class="control-label"></label>
+                        </td>
+                        <td>
+                            <input type="radio" name="Senior" value="0" class="form-control" checked="checked">
+                        </td>
+                        <td>
+                            <input type="radio" name="Senior" value="1" class="form-control">
+                        </td>
+                    </tr>
+                    <tr class="form-group">
+                        <td>
+                            <label asp-for="Rent_Utilities" class="control-label"></label>
+                        </td>
+                        <td>
+                            <input type="radio" name="Rent_Utilities" value="0" class="form-control" checked="checked">
+                        </td>
+                        <td>
+                            <input type="radio" name="Rent_Utilities" value="1" class="form-control">
+                        </td>
+                    </tr>
+                    <tr class="form-group">
+                        <td>
+                            <label asp-for="Medical_Prescription" class="control-label"></label>
+                        </td>
+                        <td>
+                            <input type="radio" name="Medical_Prescription" value="0" class="form-control" checked="checked">
+                        </td>
+                        <td>
+                            <input type="radio" name="Medical_Prescription" value="1" class="form-control">
+                        </td>
+                    </tr>
+                    <tr class="form-group">
+                        <td>
+                            <label asp-for="Veterans" class="control-label"></label>
+                        </td>
+                        <td>
+                            <input type="radio" name="Veterans" value="0" class="form-control" checked="checked">
+                        </td>
+                        <td>
+                            <input type="radio" name="Veterans" value="1" class="form-control">
+                        </td>
+                    </tr>
+                    <tr class="form-group">
+                        <td>
+                            <label asp-for="Other_Resources" class="control-label"></label>
+                        </td>
+                        <td>
+                            <input type="radio" name="Other_Resources" value="0" class="form-control" checked="checked">
+                        </td>
+                        <td>
+                            <input type="radio" name="Other_Resources" value="1" class="form-control">
+                        </td>
+                    </tr>
+                </table>
+                    <div class="form-group"><br />
+                        
+                            <label asp-for="Other_Resources_Text" class="control-label"></label>
+                        <input asp-for="Other_Resources_Text" class="form-control" style="border: 2px solid #CFCFCF"/>
+                            <span asp-validation-for="Other_Resources_Text" class="text-danger"></span>
     </div>
-</div>
-
+                    
+                        <div class="form-group"><br /><br />
+                            <input type="submit" value="Next" class="btn btn-default" id="save-edit-btn"/>
+                        </div>
+    </form>
+        </div>
+    </div>
+  </div>
+</body>
 
