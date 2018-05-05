@@ -25,7 +25,7 @@
 
                 function googleTranslateElementInit() {
 
-                    new google.translate.TranslateElement({ pageLanguage: 'en', layout: google.translate.TranslateElement.InlineLayout.SIMPLE, autoDisplay: false }, 'google_translate_element');
+                    new google.translate.TranslateElement({ pageLanguage: 'en', includedLanguages: 'de,es,fr,it,zh-CN,en', layout: google.translate.TranslateElement.InlineLayout.SIMPLE, autoDisplay: false }, 'google_translate_element');
 
                 }
 
@@ -33,12 +33,14 @@
             <script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
         </div>
     </header>
+  <div class="init-results">
     <h2>Results</h2>
 
 
-    <div id="datepicker">
+    <div class="container" id="datepicker">
         <script>
             $("#datepicker").datepicker();
+<!--            $("#datepicker").css({"display":"inline-block", "width":"400px"})-->
             $("#datepicker").on("change", function () {
                 var selected = $(this).val();
                 var date = new Date(selected);
@@ -57,7 +59,9 @@
 
     @using (Html.BeginForm("InitialResults", "Home", FormMethod.Get))
     {
-    <div>
+    <div class="row" style="margin-left: 10px;">
+      <div class="col-md-2">Select Date:</div>
+        <div class="col-md-2">
         @Html.DropDownList("day",
              new List<SelectListItem> {
 new SelectListItem{Text=""},
@@ -69,6 +73,8 @@ new SelectListItem{Text="Thursday"},
 new SelectListItem{Text="Friday"},
 new SelectListItem{Text="Saturday"}},
              new { @id = "day1" })
+        </div>
+        <div class="col-md-2">
         @Html.DropDownList("repeats",
                 new List<SelectListItem> {
 new SelectListItem{Text=""},
@@ -78,25 +84,33 @@ new SelectListItem{Text="3"},
 new SelectListItem{Text="4"},
 new SelectListItem{Text="5"},
 new SelectListItem{Text="6"}},
-             new { @id = "week1" })<br />
-        <p>Start Time: </p>
-                <select name="timeS" id="stime">
-            
+             new { @id = "week1" })
+        </div>
+       </div>
+      <div class="row" style="margin-left: 10px;">
+        <div class="col-md-2">Start Time:</div>
+          <div class="col-md-2">
+          <select name="timeS" id="stime">
             <option value="">--Select start time--</option>
-                   </select><br /><br />
-                <p>End Time: </p>
-                <select name="timeE" id="etime">
-            
+          </select>
+          </div>
+       </div>
+       <div class="row" style="margin-left: 10px;">
+        <div class="col-md-2">End Time:</div>
+          <div class="col-md-2">
+          <select name="timeE" id="etime">
             <option value="">--Select end time--</option>
-                    </select><br />
+          </select>
+        </div>
 
-
-
-        <input id="datepicker" type="hidden" runat="server" />
-
-        <br />
-        <input type="submit" value="Filter" runat="server" OnClientClick="funct()" />
     </div>
+
+        <div class="row">
+
+            <input id="datepicker" type="hidden" runat="server" />
+            
+            <input type="submit" value="Filter" runat="server" OnClientClick="funct()" style="font-size:20px; color:white; padding:5px 20px; margin:10px 20px 50px 20px; background-color:#FF8F00; border:white; border-radius:5px"/>
+        </div>
     }
 
     <table class="table">
@@ -145,4 +159,10 @@ new SelectListItem{Text="6"}},
         </tbody>
     </table>
     <script src="~/js/site.js"></script>
+  </div>
+
+    <div>
+        <a class="btn btn-primary" id="init-restuls-back-btn" asp-action="Index">Back to Resources</a>
+    </div>
+    
 </body>

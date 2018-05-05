@@ -17,21 +17,20 @@
     <div class="row">
       <h1 class="col-sm-9" id="title">Community Resources</h1>
       <div class="col-sm-3" id="google_translate_element">
-                <script type="text/javascript">
-                        function googleTranslateElementInit() {
-                          new google.translate.TranslateElement({pageLanguage: 'en', layout: google.translate.TranslateElement.InlineLayout.SIMPLE, autoDisplay: false}, 'google_translate_element');
-                        }
-                </script>
-                <script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit">
-                </script>
-
+          <script type="text/javascript">
+              function googleTranslateElementInit() {
+                  new google.translate.TranslateElement({ pageLanguage: 'en', includedLanguages: 'de,es,fr,it,zh-CN,en', layout: google.translate.TranslateElement.InlineLayout.SIMPLE, autoDisplay: false }, 'google_translate_element');
+              }
+          </script>
+          <script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit">
+          </script>
 
       </div>
     </div>
   </header>
   <div class="container">
       <div class="row">
-          <div class="col-sm-3">
+          <div class="col-sm-3" id="home"=>
                                   <a asp-area="" asp-controller="Home" asp-action="InitialResults" asp-route-id="1">
                       <img src="https://png.icons8.com/ios/100/000000/hanger.png" class="img-responsive" alt="Clothing">
                       <div class="caption">
@@ -39,7 +38,7 @@
                       </div>
                   </a>
           </div>
-          <div class="col-sm-3">
+          <div class="col-sm-3" id="home">
                                  <a asp-area="" asp-controller="Home" asp-action="InitialResults" asp-route-id="2">
                       <img src="https://png.icons8.com/ios/100/000000/reading.png" class="img-responsive" alt="Education">
                       <div class="caption">
@@ -48,7 +47,7 @@
                       </div>
                   </a>
           </div>
-          <div class="col-sm-3">
+          <div class="col-sm-3" id="home">
                                   <a asp-area="" asp-controller="Home" asp-action="InitialResults" asp-route-id="3">
                       <img src="https://png.icons8.com/ios/100/000000/new-job.png" class="img-responsive" alt="Employment">
                       <div class="caption">
@@ -56,7 +55,7 @@
                       </div>
                   </a>
           </div>
-          <div class="col-sm-3">
+          <div class="col-sm-3" id="home">
                                   <a asp-area="" asp-controller="Home" asp-action="InitialResults" asp-route-id="4">
                       <img src="https://png.icons8.com/ios/100/000000/exchange.png" class="img-responsive" alt="Finances">
                       <div class="caption">
@@ -66,7 +65,7 @@
           </div>
       </div>
       <div class="row">
-          <div class="col-sm-3">
+          <div class="col-sm-3" id="home">
                                   <a asp-area="" asp-controller="Home" asp-action="InitialResults" asp-route-id="5">
                       <img src="https://png.icons8.com/wired/100/000000/restaurant.png" class="img-responsive" alt="Food">
                       <div class="caption">
@@ -74,7 +73,7 @@
                       </div>
                   </a>
           </div>
-          <div class="col-sm-3">
+          <div class="col-sm-3" id="home">
                                   <a asp-area="" asp-controller="Home" asp-action="InitialResults" asp-route-id="6">
                       <img src="https://png.icons8.com/ios/100/000000/real-estate.png" class="img-responsive" alt="Housing">
                       <div class="caption">
@@ -82,7 +81,7 @@
                       </div>
                   </a>
           </div>
-          <div class="col-sm-3">
+          <div class="col-sm-3" id="home">
                                   <a asp-area="" asp-controller="Home" asp-action="InitialResults" asp-route-id="7">
                       <img src="https://png.icons8.com/ios/100/000000/tornado.png" class="img-responsive" alt="Natural Disaster">
                       <div class="caption">
@@ -90,7 +89,7 @@
                       </div>
                   </a>
           </div>
-          <div class="col-sm-3">
+          <div class="col-sm-3" id="home">
                                  <a asp-area="" asp-controller="Home" asp-action="InitialResults" asp-route-id="8">
                       <img src="https://png.icons8.com/ios/100/000000/elderly-person.png" class="img-responsive" alt="Senior Assistance">
                       <div class="caption">
@@ -100,7 +99,7 @@
           </div>
       </div>
       <div class="row">
-          <div class="col-sm-3">
+          <div class="col-sm-3" id="home">
                                   <a asp-area="" asp-controller="Home" asp-action="InitialResults" asp-route-id="9">
                       <img src="https://png.icons8.com/wired/100/000000/purchase-order.png" class="img-responsive" alt="Utilities / Rent Assistance">
                       <div class="caption">
@@ -108,7 +107,7 @@
                       </div>
                   </a>
           </div>
-          <div class="col-sm-3">
+          <div class="col-sm-3" id="home">
                                  <a asp-area="" asp-controller="Home" asp-action="InitialResults" asp-route-id="10">
                       <img src="https://png.icons8.com/ios/100/000000/doctors-bag.png" class="img-responsive" alt="Medical / Prescription">
                       <div class="caption">
@@ -116,7 +115,7 @@
                       </div>
                   </a>
           </div>
-          <div class="col-sm-3">
+          <div class="col-sm-3" id="home">
                                 <a asp-area="" asp-controller="Home" asp-action="InitialResults" asp-route-id="11">
                       <img src="https://png.icons8.com/wired/100/000000/medal.png" class="img-responsive" alt="Veterans Service">
                       <div class="caption">
@@ -124,7 +123,7 @@
                       </div>
                   </a>
           </div>
-          <div class="col-sm-3">
+          <div class="col-sm-3" id="home">
                                  <a asp-area="" asp-controller="Home" asp-action="InitialResults" asp-route-id="12">
                       <img src="https://png.icons8.com/ios/100/000000/more.png" class="img-responsive" alt="Miscellaneous / Other">
                       <div class="caption">
@@ -134,11 +133,11 @@
           </div>
       </div>
   </div>
-        <script src='https://maps.googleapis.com/maps/api/js?v=3.exp&key=AIzaSyDieJJJlyg3LG4s39l91FZQZDT9Skr_UiI'></script><div style='overflow:hidden;height:300px;width:314px;'><div id='gmap_canvas' style='height:300px;width:314px;'></div><style>#gmap_canvas img{max-width:none!important;background:none!important}</style></div> <a href='https://www.embedmap.net/'>adding google maps to a website</a> <script type='text/javascript' src='https://embedmaps.com/google-maps-authorization/script.js?id=0cb2e246fe45a4c638712ea1bf6291ff7c03bb6c'></script><script type='text/javascript'>function init_map(){var myOptions = {zoom:15,center:new google.maps.LatLng(35.0909959,-92.44029599999999),mapTypeId: google.maps.MapTypeId.ROADMAP};map = new google.maps.Map(document.getElementById('gmap_canvas'), myOptions);marker = new google.maps.Marker({map: map,position: new google.maps.LatLng(35.0909959,-92.44029599999999)});infowindow = new google.maps.InfoWindow({content:'<strong>United Way Conway</strong><br>1110 W Oak St, Conway, AR 72032<br>72032 Conway<br>'});google.maps.event.addListener(marker, 'click', function(){infowindow.open(map,marker);});infowindow.open(map,marker);}google.maps.event.addDomListener(window, 'load', init_map);</script>
+    <script src='https://maps.googleapis.com/maps/api/js?v=3.exp&key=AIzaSyDieJJJlyg3LG4s39l91FZQZDT9Skr_UiI'></script><div style='display-block:flex;overflow:hidden;height:350px;width:350px;margin:25px auto'><div id='gmap_canvas' style='height:300px;width:314px;'></div><style>#gmap_canvas img{max-width:none!important;background:none!important}</style></div> <a href='https://www.embedmap.net/'>adding google maps to a website</a> <script type='text/javascript' src='https://embedmaps.com/google-maps-authorization/script.js?id=0cb2e246fe45a4c638712ea1bf6291ff7c03bb6c'></script><script type='text/javascript'>function init_map(){var myOptions = {zoom:15,center:new google.maps.LatLng(35.0909959,-92.44029599999999),mapTypeId: google.maps.MapTypeId.ROADMAP};map = new google.maps.Map(document.getElementById('gmap_canvas'), myOptions);marker = new google.maps.Marker({map: map,position: new google.maps.LatLng(35.0909959,-92.44029599999999)});infowindow = new google.maps.InfoWindow({content:'<strong>United Way Conway</strong><br>1110 W Oak St, Conway, AR 72032<br>72032 Conway<br>'});google.maps.event.addListener(marker, 'click', function(){infowindow.open(map,marker);});infowindow.open(map,marker);}google.maps.event.addDomListener(window, 'load', init_map);</script>
 
     <footer>
         <!-- Start of SimpleHitCounter Code -->
-    <div align="center"><a href="http://www.simplehitcounter.com" target="_blank"><img src="http://simplehitcounter.com/hit.php?uid=2354943&f=0&b=16777215" border="0" height="18" width="83" alt="web counter"></a><br><a href="http://www.simplehitcounter.com" target="_blank" style="text-decoration:none;">web counter</a></div>
+    <div align="center"><a href="http://www.simplehitcounter.com" target="_blank"><img src="http://simplehitcounter.com/hit.php?uid=2354943&f=0&b=16777215" border="0" height="18" width="83" alt="web counter"></a><br><a href="http://www.simplehitcounter.com" target="_blank" style="text-decoration:none;margin:10px auto;">web counter</a></div>
     <!-- End of SimpleHitCounter Code -->
         </footer>
   
