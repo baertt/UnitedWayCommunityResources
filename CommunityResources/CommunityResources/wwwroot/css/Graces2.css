@@ -119,7 +119,7 @@ ul#soc-med-list li {
     margin-right: auto;
 }
 
-.col-sm-3 a {
+.col-sm-3#home a {
     dispaly: block;
     color: #220081;
     text-align: center;
@@ -129,7 +129,7 @@ ul#soc-med-list li {
     font-weight: 600;
 }
 
-.col-sm-3:hover {
+.col-sm-3#home:hover {
     background-color: #E7E8F2;
     color: #220081;
     text-decoration: none
@@ -333,4 +333,32 @@ tfoot {
     background-color: #220081;
     border: white;
 
+}
+
+#init-restuls-back-btn {
+    font-size: 24px;
+    padding: 10px;
+    margin: 15px 50px;
+    background-color: #220081;
+    border: white
+}
+
+#init-restuls-filter {
+    font-size: 16px;
+    padding: 10px;
+    margin: 15px 50px;
+    background-color: #FF8F00;
+    border: white;
+}
+
+.init-results {
+    margin: 25px 50px;
+}
+
+#datepicker {
+    font-size: 100%;
+}
+
+.col-md-2 {
+    margin: 10px 0px;
 }
