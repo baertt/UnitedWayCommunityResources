@@ -5,12 +5,12 @@
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
 <body>
-  <div class="contacts-page">
-    <h2>Index</h2>
-
-    <p>
-        <a asp-action="Create">Create New</a>
-    </p>
+  <div class="index-page">
+    <h2>Contacts</h2>
+    <br><br>
+    <h2>
+        <a class="btn btn-primary" id="org-index-create-btn" asp-action="Create">Create New Contact</a>
+    </h2>
     <table class="table">
         <thead>
             <tr>
@@ -76,6 +76,32 @@
             </tr>
     }
         </tbody>
+        <tfoot>
+            <tr>
+                    <th>
+                        @Html.DisplayNameFor(model => model.Street_Address)
+                    </th>
+                    <th>
+                        @Html.DisplayNameFor(model => model.City)
+                    </th>
+                    <th>
+                        @Html.DisplayNameFor(model => model.Zip)
+                    </th>
+                    <th>
+                        @Html.DisplayNameFor(model => model.Email)
+                    </th>
+                    <th>
+                        @Html.DisplayNameFor(model => model.Phone)
+                    </th>
+                    <th>
+                        @Html.DisplayNameFor(model => model.Website)
+                    </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Organization)
+                </th>
+                <th></th>
+            </tr>
+        </tfoot>
     </table>
   </div>
 </body>
