@@ -3,32 +3,12 @@
     padding-bottom: 30px;
 }
 
-
 body {
     background-color: white
 }
 
-.index-page {
+.index-page, .create-page, .details-page, .edit-page, .delete-page {
     margin: 25px 50px
-
-}
-
-.create-page {
-    margin: 25px 50px
-
-}
-
-.details-page {
-    margin: 25px 50px;
-}
-
-.edit-page {
-    margin: 25px 50px
-
-}
-
-.delete-page {
-    margin: 25px 50px;
 }
 
 .topnav {
@@ -115,6 +95,7 @@ body {
     text-align: center;
     text-decoration: none;
     padding: 20px 0px;
+    margin: 0px;
     border: solid white 3px;
     border-radius: 5px
 }
@@ -179,11 +160,6 @@ ul#soc-med-list li {
     text-align: center;
     font-weight: bold;
     font-size: large
-}
-
-.col-sm-5 {
-    border: 1px solid black;
-    padding: 10px
 }
 
 
@@ -319,18 +295,19 @@ ul#soc-med-list li {
     margin-bottom: 0px;
 }
 
-.search-container {
-    border: 10px #ff8f00
+#search-container {
+    width: 90%;
+    border: 10px #FF8F00;
 }
 
-#org-index-create-btn {
+#index-create-btn {
     font-size: 24px;
     padding: 10px;
     background-color: #220081;
     border: white;
 }
 
-#org-index-create-btn:hover {
+#index-create-btn:hover {
     background-color: #7077B0
 }
 

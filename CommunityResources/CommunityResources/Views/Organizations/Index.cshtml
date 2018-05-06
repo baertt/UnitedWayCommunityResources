@@ -7,7 +7,6 @@
 
 <head>
     <meta charset="UTF-8">
-    <link rel="stylesheet" href="~/css/site.css" type="text/css" runat="server"/>
     <link rel="stylesheet" href="~/css/Graces2.css" type="text/css" runat="server"/>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
 
@@ -25,9 +24,9 @@
 
 
 
-            <h1 class="col-sm-10" id="title">Community Resources Admin Page</h1>
+            <h1 class="col-sm-9" id="title">Community Resources Admin Page</h1>
 
-            <div id="google_translate_element"></div>
+            <div class="col-s-3" id="google_translate_element"></div>
             <script type="text/javascript">
 
                 function googleTranslateElementInit() {
@@ -47,8 +46,8 @@
 <div class='index-page'>
         
     <h2>
-        <a class="btn btn-primary" id="org-index-create-btn" asp-action="Create">Create New Resource</a>
-    </h2><br />
+        <a class="btn btn-primary" id="index-create-btn" asp-action="Create">Create New Resource</a>
+    </h2><br>
     @using (Html.BeginForm("Index", "Organizations", FormMethod.Get))
     {
     <div>
@@ -142,7 +141,9 @@
                 <th> @Html.DisplayNameFor(model => model.Appointments_Available) </th>
                 <th> @Html.DisplayNameFor(model => model.Appointments_Required) </th>
                 <th> @Html.DisplayNameFor(model => model.Additional_Comments) </th>-->
+                <th> @Html.DisplayNameFor(model => model.Contacts.Phone) </th>
                 <th> @Html.DisplayNameFor(model => model.Contacts.Email) </th>
+                <th> @Html.DisplayNameFor(model => model.Last_Updated) </th>
                 <th> Edit </th>
                 <th></th>
             </tr>

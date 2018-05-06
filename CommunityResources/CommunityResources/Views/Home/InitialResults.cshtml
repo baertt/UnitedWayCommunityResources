@@ -7,10 +7,9 @@
 
 <head>
     <meta charset="UTF-8">
-    <link rel="stylesheet" href="~/css/site.css" type="text/css" runat="server">
+    <link rel="stylesheet" href="~/css/Graces2.css" type="text/css" runat="server">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
     <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/smoothness/jquery-ui.css">
-    <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
     <script src="//code.jquery.com/jquery-1.12.4.js"></script>
     <script src="//code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
     <script> src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-1.7-vsdoc.js"> </script>
@@ -19,8 +18,8 @@
 <body>
     <header class="container">
         <div class="row">
-            <h1 class="col-sm-10" id="title">@ViewData["displayName"]</h1>
-            <div id="google_translate_element"></div>
+            <h1 class="col-sm-9" id="title">@ViewData["displayName"]</h1>
+            <div class="col-sm-3" id="google_translate_element"></div>
             <script type="text/javascript">
 
                 function googleTranslateElementInit() {
@@ -62,7 +61,7 @@
     {
     <div>
       <div class="row">
-        <div class="col-sm-2">Day/Week: </div>
+        <div class="col-sm-2">Day / Week: </div>
         <div class="col-sm-2">
         @Html.DropDownList("day",
              new List<SelectListItem> {

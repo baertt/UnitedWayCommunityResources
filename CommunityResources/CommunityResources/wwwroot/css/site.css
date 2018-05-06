@@ -83,12 +83,6 @@ header {
     font-size: large;
 }
 
-.col-sm-5 {
-    border: 1px solid black;
-    padding: 10px;
-}
-
-
 .dropbtn {
     color: white;
     padding: 16px;

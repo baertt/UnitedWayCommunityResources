@@ -5,15 +5,23 @@
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
-<h2>Delete</h2>
-<p class="text-danger">@ViewData["ErrorMessage"]</p>
+<body>
+  <div class="delete-page">
 
-<h3>
-    Are you sure you want to delete  @Html.DisplayFor(model => model.Name)? </h3>
-    <div>
-        <form asp-action="Delete">
-            <input type="hidden" asp-for="Id" />
-            <input type="submit" value="Delete" class="btn btn-default" /> |
-            <a asp-action="Index">Back to List</a>
-        </form>
-    </div>
+    <h2>Delete Organization</h2>
+    <p class="text-danger">@ViewData["ErrorMessage"]</p>
+    <h3>Are you sure you want to delete  @Html.DisplayFor(model => model.Name)? </h3>
+    <hr>
+        
+        <div>
+            <form asp-action="Delete">
+                <input type="hidden" asp-for="Id" />
+                <input type="submit" value="Delete" class="btn btn-default" id="delete-btn"/>
+                <br><br>
+                <div>
+                    <a class="btn btn-primary" id="ews-btn" asp-action="Index">Back to List</a>
+                </div>
+            </form>
+        </div>
+  </div>
+</body>

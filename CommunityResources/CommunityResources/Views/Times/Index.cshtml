@@ -5,56 +5,61 @@
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
-<h2>Index</h2>
+<body>
+  <div class="index-page">
 
-<p>
-    <a asp-action="Create">Create New</a>
-</p>
-<table class="table">
-    <thead>
-        <tr>
+    <h2>Times</h2>
+
+    <p>
+        <a class="btn btn-primary" id="index-create-btn" asp-action="Create">Create New Time</a>
+    </p>
+    <table class="table">
+        <thead>
+            <tr>
+                    <th>
+                        @Html.DisplayNameFor(model => model.Time_Start)
+                    </th>
+                    <th>
+                        @Html.DisplayNameFor(model => model.Time_End)
+                    </th>
+                    <th>
+                        @Html.DisplayNameFor(model => model.Repeat)
+                    </th>
+                    <th>
+                        @Html.DisplayNameFor(model => model.Day)
+                    </th>
                 <th>
-                    @Html.DisplayNameFor(model => model.Time_Start)
+                    @Html.DisplayNameFor(model => model.Organization)
                 </th>
-                <th>
-                    @Html.DisplayNameFor(model => model.Time_End)
-                </th>
-                <th>
-                    @Html.DisplayNameFor(model => model.Repeat)
-                </th>
-                <th>
-                    @Html.DisplayNameFor(model => model.Day)
-                </th>
-            <th>
-                @Html.DisplayNameFor(model => model.Organization)
-            </th>
-            <th></th>
-        </tr>
-    </thead>
-    <tbody>
-@foreach (var item in Model) {
-        <tr>
-            <td>
-                @Html.DisplayFor(modelItem => item.Time_Start)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Time_End)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Repeat)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Day)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Organization.Name)
-            </td>
-            <td>
-                <a asp-action="Edit" asp-route-id="@item.TimesId">Edit</a> |
-                <a asp-action="Details" asp-route-id="@item.TimesId">Details</a> |
-                <a asp-action="Delete" asp-route-id="@item.TimesId">Delete</a>
-            </td>
-        </tr>
-}
-    </tbody>
-</table>
+                <th></th>
+            </tr>
+        </thead>
+        <tbody>
+    @foreach (var item in Model) {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Time_Start)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Time_End)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Repeat)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Day)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Organization.Name)
+                </td>
+                <td>
+                    <p> <a asp-action="Edit" asp-route-id="@item.TimesId">Edit</a> </p>
+                    <p> <a asp-action="Details" asp-route-id="@item.TimesId">Details</a> </p>
+                    <p> <a asp-action="Delete" asp-route-id="@item.TimesId">Delete</a> </p>
+                </td>
+            </tr>
+    }
+        </tbody>
+    </table>
+  </div>
+</body>

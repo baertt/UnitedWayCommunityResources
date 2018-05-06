@@ -5,110 +5,114 @@
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
-<h2>Index</h2>
+<body>
+  <div class="index-page">
+    <h2>Resources</h2>
 
-<p>
-    <a asp-action="Create">Create New</a>
-</p>
-<table class="table">
-    <thead>
-        <tr>
+    <p>
+        <a class="btn btn-primary" id="index-create-btn" asp-action="Create">Create New Resource</a>
+    </p>
+    <table class="table">
+        <thead>
+            <tr>
+                    <th>
+                        @Html.DisplayNameFor(model => model.Clothing)
+                    </th>
+                    <th>
+                        @Html.DisplayNameFor(model => model.Education)
+                    </th>
+                    <th>
+                        @Html.DisplayNameFor(model => model.Employment)
+                    </th>
+                    <th>
+                        @Html.DisplayNameFor(model => model.Finances)
+                    </th>
+                    <th>
+                        @Html.DisplayNameFor(model => model.Food)
+                    </th>
+                    <th>
+                        @Html.DisplayNameFor(model => model.Housing)
+                    </th>
+                    <th>
+                        @Html.DisplayNameFor(model => model.Natural_Disaster)
+                    </th>
+                    <th>
+                        @Html.DisplayNameFor(model => model.Senior)
+                    </th>
+                    <th>
+                        @Html.DisplayNameFor(model => model.Rent_Utilities)
+                    </th>
+                    <th>
+                        @Html.DisplayNameFor(model => model.Medical_Prescription)
+                    </th>
+                    <th>
+                        @Html.DisplayNameFor(model => model.Veterans)
+                    </th>
+                    <th>
+                        @Html.DisplayNameFor(model => model.Other_Resources)
+                    </th>
+                    <th>
+                        @Html.DisplayNameFor(model => model.Other_Resources_Text)
+                    </th>
                 <th>
-                    @Html.DisplayNameFor(model => model.Clothing)
+                    @Html.DisplayNameFor(model => model.Organization)
                 </th>
-                <th>
-                    @Html.DisplayNameFor(model => model.Education)
-                </th>
-                <th>
-                    @Html.DisplayNameFor(model => model.Employment)
-                </th>
-                <th>
-                    @Html.DisplayNameFor(model => model.Finances)
-                </th>
-                <th>
-                    @Html.DisplayNameFor(model => model.Food)
-                </th>
-                <th>
-                    @Html.DisplayNameFor(model => model.Housing)
-                </th>
-                <th>
-                    @Html.DisplayNameFor(model => model.Natural_Disaster)
-                </th>
-                <th>
-                    @Html.DisplayNameFor(model => model.Senior)
-                </th>
-                <th>
-                    @Html.DisplayNameFor(model => model.Rent_Utilities)
-                </th>
-                <th>
-                    @Html.DisplayNameFor(model => model.Medical_Prescription)
-                </th>
-                <th>
-                    @Html.DisplayNameFor(model => model.Veterans)
-                </th>
-                <th>
-                    @Html.DisplayNameFor(model => model.Other_Resources)
-                </th>
-                <th>
-                    @Html.DisplayNameFor(model => model.Other_Resources_Text)
-                </th>
-            <th>
-                @Html.DisplayNameFor(model => model.Organization)
-            </th>
-            <th></th>
-        </tr>
-    </thead>
-    <tbody>
-@foreach (var item in Model) {
-        <tr>
-            <td>
-                @Html.DisplayFor(modelItem => item.Clothing)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Education)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Employment)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Finances)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Food)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Housing)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Natural_Disaster)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Senior)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Rent_Utilities)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Medical_Prescription)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Veterans)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Other_Resources)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Other_Resources_Text)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Organization.Name)
-            </td>
-            <td>
-                <a asp-action="Edit" asp-route-id="@item.Id">Edit</a> |
-                <a asp-action="Details" asp-route-id="@item.Id">Details</a> |
-                <a asp-action="Delete" asp-route-id="@item.Id">Delete</a>
-            </td>
-        </tr>
-}
-    </tbody>
-</table>
+                <th></th>
+            </tr>
+        </thead>
+        <tbody>
+    @foreach (var item in Model) {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Clothing)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Education)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Employment)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Finances)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Food)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Housing)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Natural_Disaster)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Senior)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Rent_Utilities)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Medical_Prescription)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Veterans)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Other_Resources)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Other_Resources_Text)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Organization.Name)
+                </td>
+                <td>
+                    <p> <a asp-action="Edit" asp-route-id="@item.Id">Edit</a> </p>
+                    <p> <a asp-action="Details" asp-route-id="@item.Id">Details</a>  </p>
+                    <p> <a asp-action="Delete" asp-route-id="@item.Id">Delete</a>  </p>
+                </td>
+            </tr>
+    }
+        </tbody>
+    </table>
+  </div>
+</body>
