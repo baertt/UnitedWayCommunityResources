@@ -115,16 +115,20 @@ body {
     text-align: center;
     text-decoration: none;
     padding: 20px 0px;
-    border: solid white 2px;
-    border-radius: 3px
+    border: solid white 3px;
+    border-radius: 5px
 }
 
 .col-sm-3#home:hover {
     background-color: #FEFEFE;
     color: white;
     text-decoration: none;
-    border: solid #7D81A0 2px;
-    border-radius: 3px;
+    border: solid #7D81A0 3px;
+    border-radius: 5px;
+}
+
+.col-sm-2 {
+    margin: 5px;
 }
 
 .col-md-1 {
@@ -422,7 +426,6 @@ tfoot {
         margin: 25px 50px
     }
 
-<<<<<<< HEAD
 #datepicker {
     font-size: 100%;
 }
@@ -435,6 +438,4 @@ tfoot {
 
 .table {
     width: 100%;
-=======
->>>>>>> 02f2ac911c9147f5f591037b4cf000532c26c36a
 }
