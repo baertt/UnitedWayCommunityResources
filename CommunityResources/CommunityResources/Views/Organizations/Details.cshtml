@@ -105,12 +105,48 @@
                         </tr>
                         @foreach (var item in Model.Times)
                         {
-                            <tr>
-                                <td> @Html.DisplayFor(modelItem => item.Day) </td>
-<!--                                <td> @Html.DisplayFor(modelItem => item.Repeat) </td>-->
-                                <td> @Html.DisplayFor(modelItem => item.Time_Start) </td>
-                                <td> @Html.DisplayFor(modelItem => item.Time_End) </td>
-                            </tr>
+                        <tr>
+                            <td> @Html.DisplayFor(modelItem => item.Day) </td>
+                            <!-- <td> @Html.DisplayFor(modelItem => item.Repeat) </td>-->
+                            @if (Int32.Parse(item.Time_Start.Substring(0, item.Time_Start.Length - 2)) > 12)
+    {
+
+                        <td>
+                            @(Int32.Parse(item.Time_Start.Substring(0, item.Time_Start.Length - 2)) - 12)
+                            :  @item.Time_Start.Substring(item.Time_Start.Length - 2, 2) PM
+                        </td>
+
+}
+                            @if (Int32.Parse(item.Time_Start.Substring(0, item.Time_Start.Length - 2)) < 12 || Int32.Parse(item.Time_Start.Substring(0, item.Time_Start.Length - 2)) == 24)
+    {
+                        <td> @item.Time_Start.Substring(0, item.Time_Start.Length - 2) :  @item.Time_Start.Substring(item.Time_Start.Length - 2, 2) AM</td>
+
+}
+                            @if (Int32.Parse(item.Time_Start.Substring(0, item.Time_Start.Length - 2)) == 12)
+    {
+                        <td> @item.Time_Start.Substring(0, item.Time_Start.Length - 2) :  @item.Time_Start.Substring(item.Time_Start.Length - 2, 2) PM</td>
+
+}
+                            @if (Int32.Parse(item.Time_End.Substring(0, item.Time_End.Length - 2)) > 12)
+    {
+
+                        <td>
+                            @(Int32.Parse(item.Time_End.Substring(0, item.Time_End.Length - 2)) - 12)
+                            :  @item.Time_End.Substring(item.Time_End.Length - 2, 2) PM
+                        </td>
+
+}
+                            @if (Int32.Parse(item.Time_End.Substring(0, item.Time_End.Length - 2)) < 12 || Int32.Parse(item.Time_End.Substring(0, item.Time_End.Length - 2)) == 24)
+    {
+                        <td> @item.Time_End.Substring(0, item.Time_End.Length - 2) :  @item.Time_End.Substring(item.Time_End.Length - 2, 2) AM</td>
+
+}
+                            @if (Int32.Parse(item.Time_End.Substring(0, item.Time_End.Length - 2)) == 12)
+    {
+                        <td> @item.Time_End.Substring(0, item.Time_End.Length - 2) :  @item.Time_End.Substring(item.Time_End.Length - 2, 2) PM</td>
+
+}
+                        </tr>
                         }
                     </table>
                 </dd>
@@ -164,8 +200,10 @@
                 <dd> @Html.DisplayNameFor(modelItem => Model.Resources.Senior) </dd>
             }
 
-            <dd> @Html.DisplayFor(modelItem => Model.Resources.Other_Resources_Text) </dd>}
+            <dd> @Html.DisplayFor(modelItem => Model.Resources.Other_Resources_Text) </dd>
+            }
         </dl>
+        
     </div>
     <br><br>
     @if (@ViewData["adminview"].Equals("admin"))
