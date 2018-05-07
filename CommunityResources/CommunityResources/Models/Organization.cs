@@ -25,7 +25,7 @@ namespace CommunityResources.Models
 
 
         // Appointments
-        [Display(Name = "Appointments are Availible")]
+        [Display(Name = "Appointments are Available")]
         public int Appointments_Available { get; set; }
         [Display(Name = "Appointments are Required")]
         public int Appointments_Required { get; set; }
